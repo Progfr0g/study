@@ -1,0 +1,388 @@
+09 ÿםג. 2021 05:08:31,115 [main] ERROR ru.sfedu.photosearch.Database - Database connection failure: Ïףעü םוÿגםמ ÿגכÿועסÿ מעםמסטעוכüםûל הכÿ עוךףשודמ נאבמקודמ ךאעאכמדא ט םו המןףסעטל ג URL באחû האםםûץ "jdbc:h2:/dbFile/photosearch". Èסןמכüחףיעו אבסמכ‏עםûי ןףעü, ~/name, ./name, טכט םאסענמיךף baseDir.
+A file path that is implicitly relative to the current working directory is not allowed in the database URL "jdbc:h2:/dbFile/photosearch". Use an absolute path, ~/name, ./name, or the baseDir setting instead. [90011-200]
+09 ÿםג. 2021 05:12:08,193 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Òאבכטצא "USERS" םו םאיהוםא
+Table "USERS" not found; SQL statement:
+INSERT INTO USERS (name, last_name, age, date_of_registration, role, town) VALUES (evgeniy,govor,21,2021-01-09,customer,rostov) [42102-200]
+09 ÿםג. 2021 05:12:08,195 [main] INFO  ru.sfedu.photosearch.Main - false newProfile
+09 ÿםג. 2021 05:36:05,628 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Òאבכטצא "USERS" םו םאיהוםא
+Table "USERS" not found; SQL statement:
+INSERT INTO USERS (name, last_name, age, date_of_registration, role, town) VALUES (evgeniy,govor,21,2021-01-09,customer,rostov) [42102-200]
+09 ÿםג. 2021 05:36:05,630 [main] INFO  ru.sfedu.photosearch.Main - false newProfile
+09 ÿםג. 2021 05:43:31,026 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 05:43:31,040 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Ñעמכבוצ "EVGENIY" םו םאיהום
+Column "EVGENIY" not found; SQL statement:
+INSERT INTO USERS (name, last_name, age, date_of_registration, role, town) VALUES (evgeniy,govor,21,2021-01-09,customer,rostov) [42122-200]
+09 ÿםג. 2021 05:43:31,041 [main] INFO  ru.sfedu.photosearch.Main - false newProfile
+09 ÿםג. 2021 05:47:40,572 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 05:47:40,582 [main] INFO  ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+09 ÿםג. 2021 05:47:40,583 [main] INFO  ru.sfedu.photosearch.Main - true newProfile
+09 ÿםג. 2021 05:59:36,265 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 05:59:36,277 [main] INFO  ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+09 ÿםג. 2021 05:59:36,278 [main] INFO  ru.sfedu.photosearch.Main - true newEvent
+09 ÿםג. 2021 06:57:09,848 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 06:57:09,862 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 06:57:09,863 [main] INFO  ru.sfedu.photosearch.Main - ID: 1
+NAME: evgeniy
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 07:00:08,858 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 07:00:08,872 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 07:00:08,872 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: evgeniy
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 07:00:28,817 [main] INFO  ru.sfedu.photosearch.Database - Tables created succesfully!
+09 ÿםג. 2021 07:00:28,832 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+09 ÿםג. 2021 07:00:28,832 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:08:38,361 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:08:38,363 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:08:38,476 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:08:38,489 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+09 ÿםג. 2021 07:08:38,489 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:22:32,043 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:22:32,046 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:22:32,158 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:22:32,171 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+09 ÿםג. 2021 07:22:32,171 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:22:57,075 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:22:57,077 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:22:57,198 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 07:22:57,198 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:22:57,212 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+09 ÿםג. 2021 07:22:57,212 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:23:50,375 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:23:50,377 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:23:50,491 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:23:50,504 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:25:14,953 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:25:14,955 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:25:15,085 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:25:15,099 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:25:45,056 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:25:45,058 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:25:45,175 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:25:45,188 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: null
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: null
+PAID: FALSE
+PAYMENT_DATE: null
+STATUS: uncompleted
+
+09 ÿםג. 2021 07:36:00,221 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 07:36:00,224 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 07:36:00,340 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 07:36:00,353 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+09 ÿםג. 2021 08:07:39,018 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:07:39,020 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:07:39,135 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:07:39,136 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:07:39,140 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "MAKSIM" םו םאיהום
+Column "MAKSIM" not found; SQL statement:
+UPDATE USERS SET name = Maksim WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:07:39,145 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = Maksim WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:08:38,571 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:08:38,573 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:08:38,686 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:08:38,686 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:08:38,691 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:08:38,696 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:12:58,016 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:12:58,018 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:12:58,141 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:12:58,142 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:12:58,147 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:12:58,152 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:15:18,239 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:15:18,241 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:15:18,352 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:15:18,352 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:15:18,368 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+09 ÿםג. 2021 08:15:18,368 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+09 ÿםג. 2021 08:15:57,869 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:15:57,871 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:15:57,992 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:15:57,993 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:15:57,995 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - USERS
+09 ÿםג. 2021 08:15:58,001 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - EVENTS
+09 ÿםג. 2021 08:15:58,001 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - PHOTOS
+09 ÿםג. 2021 08:15:58,002 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - COMMENTS
+09 ÿםג. 2021 08:15:58,005 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:15:58,009 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:17:42,505 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:17:42,507 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:17:42,635 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:17:42,635 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:17:42,637 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - UPDATE USERS SET name = 'Maksim' WHERE id = 1
+09 ÿםג. 2021 08:17:42,647 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:17:42,651 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:19:39,451 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:19:39,453 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:19:39,565 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:19:39,565 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:19:39,568 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - UPDATE USERS SET name = 'Maksim' WHERE id = 1
+09 ÿםג. 2021 08:19:39,571 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:19:39,576 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:22:25,689 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:22:25,692 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:22:25,805 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:22:25,805 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:22:25,821 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 08:22:25,821 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: Maksim
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 08:22:36,988 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:22:36,989 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:22:37,113 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:22:37,113 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:22:37,115 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - UPDATE USERS SET name = 'Maksim' WHERE id = 1
+09 ÿםג. 2021 08:22:37,124 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:22:37,126 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:24:41,409 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:24:41,411 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:24:41,526 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:24:41,526 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:24:41,533 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:24:41,536 [main] INFO  ru.sfedu.photosearch.DataProviderDatabase - UPDATE EVENTS SET name = 'Maksim' WHERE id = 10-
+09 ÿםג. 2021 08:24:41,538 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:28:43,809 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:28:43,810 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:28:43,947 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:28:43,947 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:28:43,953 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:28:43,956 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Ñעמכבוצ "NAME" םו םאיהום
+Column "NAME" not found; SQL statement:
+UPDATE EVENTS SET name = 'Maksim' WHERE id = 1 [42122-200]
+09 ÿםג. 2021 08:30:58,530 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:30:58,532 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:30:58,647 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:30:58,647 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:30:58,652 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:34:08,718 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:34:08,720 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:34:08,832 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:34:08,832 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:34:08,842 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:34:08,842 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 1 !****
+09 ÿםג. 2021 08:34:31,039 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:34:31,041 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:34:31,160 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:34:31,161 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:34:31,166 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:34:31,166 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 1 !****
+09 ÿםג. 2021 08:34:39,384 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:34:39,387 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:34:39,504 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:34:39,504 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:34:39,517 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 08:34:39,518 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: Alexey
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 08:34:48,752 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:34:48,754 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:34:48,872 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:34:48,872 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:34:48,885 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 08:34:48,885 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: Alexey
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 08:35:09,152 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:35:09,153 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:35:09,270 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:35:09,270 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:35:09,275 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:35:09,276 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 1 !****
+09 ÿםג. 2021 08:35:32,115 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:35:32,116 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:35:32,227 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:35:32,227 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:35:32,241 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 08:35:32,241 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: Alexey
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+09 ÿםג. 2021 08:35:43,361 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:35:43,363 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:35:43,479 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:35:43,480 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:35:43,485 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+09 ÿםג. 2021 08:35:43,485 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 1 !****
+09 ÿםג. 2021 08:35:49,415 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+09 ÿםג. 2021 08:35:49,418 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+09 ÿםג. 2021 08:35:49,532 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+09 ÿםג. 2021 08:35:49,532 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+09 ÿםג. 2021 08:35:49,552 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+09 ÿםג. 2021 08:35:49,553 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: Evgeniy
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+

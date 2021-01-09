@@ -14,7 +14,7 @@ public class Database {
             connection = DriverManager.getConnection(Constants.DB_FILE_PATH);
             return true;
         } catch (SQLException ex) {
-            log.error("Database connection failure: " + ex.getMessage());
+            log.error(Constants.ERROR_FAILED_DB_CONNECTION + ex.getMessage());
         }
         return false;
     }
@@ -24,7 +24,7 @@ public class Database {
             ResultSet result = connection.prepareStatement(query).executeQuery();
             return result;
         } catch (SQLException ex) {
-            log.error("SELECT query failed to execute: " + ex.getMessage());
+            log.error(Constants.ERROR_SELECT_QUERY + ex.getMessage());
         }
         return null;
     }
@@ -32,11 +32,10 @@ public class Database {
     public int insert(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
-
-            log.info(String.format("[INSERTED %d rows]", result));
+            log.debug(String.format(Constants.DEBUG_SUCCESS_INSERT, result));
             return result;
         } catch (SQLException ex) {
-            log.error("SELECT query failed to execute: " + ex.getMessage());
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
         }
         return 0;
     }
@@ -44,10 +43,10 @@ public class Database {
     public int update(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
-            log.debug(String.format("[UPDATED %d rows]", result));
+            log.debug(String.format(Constants.DEBUG_SUCCESS_UPDATE, result));
             return result;
         } catch (SQLException ex) {
-            log.error("UPDATE query failed to execute: " + ex.getMessage());
+            log.error(Constants.ERROR_UPDATE_QUERY + ex.getMessage());
         }
         return 0;
     }
@@ -55,10 +54,10 @@ public class Database {
     public int delete(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
-            log.debug(String.format("[DELETED %d rows]", result));
+            log.debug(String.format(Constants.DEBUG_SUCCESS_DELETE, result));
             return result;
         } catch (SQLException ex) {
-            log.error("UPDATE query failed to execute: " + ex.getMessage());
+            log.error(Constants.ERROR_DELETE_QUERY + ex.getMessage());
         }
         return 0;
     }
@@ -68,7 +67,7 @@ public class Database {
             connection.prepareStatement(query).execute();
             return true;
         } catch (SQLException ex) {
-            log.error("Query failed to execute: " + ex.getMessage());
+            log.error(Constants.ERROR_EXECUTE_QUERY + ex.getMessage());
         }
         return false;
     }
@@ -78,33 +77,18 @@ public class Database {
             connection.close();
             return true;
         } catch (SQLException ex) {
-            log.error("Failed to close connection: " + ex.getMessage());
+            log.error(Constants.ERROR_FAILED_DB_CONNECTION_CLOSE + ex.getMessage());
         }
         return false;
     }
 
-//    try (
-//    Connection db = DriverManager.getConnection("jdbc:h2:~/test")) {
-//        try (Statement dataQuery = db.createStatement()) {
-//            dataQuery.execute(CREATE_USERS);
-//            dataQuery.execute(CREATE_EVENTS);
-//            dataQuery.execute(CREATE_PHOTOS);
-//            dataQuery.execute(CREATE_COMMENTS);
-////                dataQuery.execute(DATA_QUERY);
-//        }
-//
-//        try (PreparedStatement query =
-//                     db.prepareStatement("SELECT * FROM USERS")) {
-//            ResultSet rs = query.executeQuery();
-//            while (rs.next()) {
-//                System.out.println(String.format("%s, %s, %s!",
-//                        rs.getString(1),
-//                        rs.getString("age"),
-//                        rs.getString("role")));
-//            }
-//            rs.close();
-//        }
-//    } catch (SQLException ex) {
-//        System.out.println();
-//    }
+    public void createTables() {
+        run(Constants.TABLE_USERS);
+        run(Constants.TABLE_EVENTS);
+        run(Constants.TABLE_EVENTS);
+        run(Constants.TABLE_COMMENTS);
+        run(Constants.TABLE_RATES);
+        log.debug(Constants.SUCCESS_TABLES_CREATING);
+    }
+
 }

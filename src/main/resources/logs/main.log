@@ -175,3 +175,14 @@ This method is not allowed for a prepared statement; use a regular statement ins
 08 янв. 2021 21:51:01,017 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - true
 09 янв. 2021 03:56:45,867 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
 09 янв. 2021 04:23:11,750 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 04:49:40,473 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 04:50:06,215 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:04:20,128 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:04:51,554 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:06:47,469 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:34:19,674 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:34:39,849 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 05:42:40,949 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 06:04:49,057 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 06:09:09,441 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+09 янв. 2021 06:55:01,617 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER

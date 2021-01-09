@@ -30,7 +30,7 @@ public class ConfigurationUtil {
         } else {
             newFile = new File(DEFAULT_CONFIG_PATH);
         }
-        // DEFAULT_CONFIG_PATH.getClass().getResourceAsStream(DEFAULT_CONFIG_PATH);
+//        DEFAULT_CONFIG_PATH.getClass().getResourceAsStream(DEFAULT_CONFIG_PATH);
         try (InputStream in = new FileInputStream(newFile)) {
             configuration.load(in);
         } catch (IOException ex) {

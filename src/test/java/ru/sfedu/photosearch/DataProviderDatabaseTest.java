@@ -8,11 +8,6 @@ import ru.sfedu.photosearch.providers.DataProvider;
 
 class DataProviderDatabaseTest {
     private static Logger log = LogManager.getLogger(DataProviderDatabaseTest.class);
-    @Test
-    void hh(){
-        DataProviderDatabase data = new DataProviderDatabase();
 
-        log.info(data.editProfileById("5", "age", "2"));
-    }
 
 }

@@ -17,12 +17,21 @@ public interface DataProvider{
             Integer price,
             Float quantity);
 
-    boolean editProfileById(String id, String field, String value);
+    String getProfile(
+            String id);
 
-    boolean editEventById(String id, String field, String value);
+    String getEvent(
+            String id);
+
+    void editProfileById(String id, String field, String value);
+
+    void editEventById(String id, String field, String value);
 
     void addPhotoByProfileId(String id, String field, String path);
 
+    void deleteProfileById();
+
+    void deleteEventById();
 
 
 }

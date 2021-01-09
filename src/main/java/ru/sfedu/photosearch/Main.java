@@ -25,6 +25,7 @@ public class Main {
             case Constants.DATAPROVIDER_DB: {
                 DataProviderDatabase provider = new DataProviderDatabase();
                 provider.DB.connect();
+                provider.DB.createTables();
                 if (provider != null) return provider;
             }
         }
@@ -34,7 +35,8 @@ public class Main {
 
 
     private static String chooseMethod(DataProvider provider, List<String> args) {
-        switch (args.get(1).toLowerCase()){
+
+        switch (args.get(1)){
             case Constants.M_CREATE_NEW_PROFILE:{
                 String name = args.get(2);
                 String last_name = args.get(3);
@@ -42,14 +44,15 @@ public class Main {
                 String date_of_registration = LocalDate.now().toString();
                 String role = args.get(5).toLowerCase();
                 String town = args.get(6);
-
-                return provider.createNewProfile(
+                if (provider.createNewProfile(
                         name,
                         last_name,
                         Integer.valueOf(age),
                         date_of_registration,
                         role,
-                        town) + " newProfile";
+                        town)) {
+                    return Constants.SUCCESS_NEW_PROFILE;
+                } else return null;
             }
             case Constants.M_CREATE_NEW_EVENT:{
                 String title = args.get(2);
@@ -59,33 +62,47 @@ public class Main {
                 String price = args.get(5);
                 String quantity = args.get(6);
 
-                return provider.createNewEvent(
+                if (provider.createNewEvent(
                         title,
                         description,
                         customer,
                         event_date,
                         Integer.valueOf(price),
-                        Float.valueOf(quantity)) + " newEvent";
+                        Float.valueOf(quantity))){
+                    return Constants.SUCCESS_NEW_EVENT;
+                }else return null;
+            }
+            case Constants.M_GET_PROFILE: {
+                String id = args.get(2);
+                return provider.getProfile(id);
+            }
+            case Constants.M_GET_EVENT: {
+                String id = args.get(2);
+                return provider.getEvent(id);
+            }
+            case Constants.M_EDIT_PROFILE: {
+                String id = args.get(2);
+                String field = args.get(3);
+                String value = args.get(4);
+                provider.editProfileById(id, field, value);
+                return String.format(Constants.SUCCESS_UPDATE_PROFILE, id);
+            }
+            case Constants.M_EDIT_EVENT: {
+                String id = args.get(2);
+                String field = args.get(3);
+                String value = args.get(4);
+                provider.editEventById(id, field, value);
+                return String.format(Constants.SUCCESS_UPDATE_EVENT, id);
             }
 
-//            case Constants.M_EDIT_PROFILE: {
-//
-//            }
-//            case Constants.M_EDIT_EVENT: {
-//
-//            }
-//            case Constants.M_GET_PROFILE: {
-//
-//            }
-//            case Constants.M_GET_EVENT: {
-//
-//            }
-//            case Constants.M_DELETE_PROFILE: {
-//
-//            }
-//            case Constants.M_DELETE_EVENT: {
-//
-//            }
+            case Constants.M_DELETE_PROFILE: {
+                String id = args.get(2);
+                return provider.deleteProfile(id);
+            }
+            case Constants.M_DELETE_EVENT: {
+                String id = args.get(2);
+                return provider.deleteEvent(id);
+            }
 //            case Constants.M_ADD_PHOTO: {
 //
 //            }
@@ -116,10 +133,13 @@ public class Main {
                 log.error(Constants.ERROR_EMPTY_INPUT_ARGS);
             } else {
                 String argProvider = listArgs.get(0);
+                log.info(Constants.APP_STARTING);
+                log.info(Constants.DP_STARTING);
                 DataProvider provider = chooseDataProvider(argProvider);
                 if (provider != null){
+                    log.info(Constants.SUCCESS_APP_STARTING);
                     String answerMsg = chooseMethod(provider, listArgs);
-                    if (answerMsg != null) log.info(answerMsg.toString());
+                    if (answerMsg != null) log.info(answerMsg);
                 }
             }
             System.exit(1);

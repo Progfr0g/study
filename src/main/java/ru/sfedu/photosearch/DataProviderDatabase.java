@@ -1,28 +1,17 @@
 package ru.sfedu.photosearch;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.sfedu.photosearch.enums.Tables;
 import ru.sfedu.photosearch.providers.DataProvider;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 
 public class DataProviderDatabase implements DataProvider {
+    private static Logger log = LogManager.getLogger(DataProviderDatabase.class);
     public Database DB = new Database();
-
-
-//        ArrayList<String> a;
-//        String[] b;
-//        List<String> c;
-//        Map<String, Object> d = new HashMap<>();
-//
-//        Object value = d.get("cock");
-//        if (value instanceof Integer){
-//            Integer n = (Integer) value;
-//        } else if (value instanceof String){
-//
-//        } else {
-//            HashMap<String, Object> nn = (HashMap<String, Object>) value;
-//            nn.get("offset_y");
-//        }
-
 
     @Override
     public boolean createNewProfile(String name, String last_name, Integer age, String date_of_registration, String role, String town) {
@@ -37,23 +26,81 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public boolean editProfileById(String id, String field, String value) {
-        String query = "";
-        query = String.format("UPDATE %s SET %s = %s WHERE id = %s", Tables.USERS.toString(), field, value, String.valueOf(id));
-        return DB.connect() && (DB.update(query)>0) && DB.closeConnection();
+    public String getProfile(String id) {
+        String query = Constants.SELECT_PROFILE_QUERY + id;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            String result = Constants.UTIL_NEW_LINE;
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    String value = "";
+                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
+                    result += rs.getMetaData().getColumnName(i+1)
+                            + Constants.UTIL_DOUBLE_DOTS
+                            + Constants.UTIL_SPACE
+                            + value
+                            + Constants.UTIL_NEW_LINE;
+                }
+            }
+            DB.closeConnection();
+            log.debug(String.format(Constants.SUCCESS_GET_PROFILE, id));
+            return result;
+        } catch (SQLException ex) {
+            log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex.getMessage());
+        }
+        return null;
     }
 
     @Override
-    public boolean editEventById(String id, String field, String value) {
-        String query = "";
-        query = String.format("UPDATE %s SET %s = %s WHERE id = %s", Tables.EVENTS.toString(), field, value, String.valueOf(id));
-        return DB.connect() && (DB.update(query)>0) && DB.closeConnection();
+    public String getEvent(String id) {
+        String query = Constants.SELECT_EVENT_QUERY + id;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            String result = Constants.UTIL_NEW_LINE;
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    String value = "";
+                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
+                    result += rs.getMetaData().getColumnName(i+1)
+                            + Constants.UTIL_DOUBLE_DOTS
+                            + Constants.UTIL_SPACE
+                            + value
+                            + Constants.UTIL_NEW_LINE;
+                }
+            }
+            DB.closeConnection();
+            log.debug(String.format(Constants.SUCCESS_GET_EVENT, id));
+            return result;
+        } catch (SQLException ex) {
+            log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public void editProfileById(String id, String field, String value) {
+        DB.connect();
+        String query = String.format(Constants.UPDATE_PROFILE_QUERY, Tables.USERS.toString(), field, value) + id;
+        DB.update(query);
+        DB.closeConnection();
+
+    }
+
+    @Override
+    public void editEventById(String id, String field, String value) {
+        DB.connect();
+        String query = String.format(Constants.UPDATE_EVENT_QUERY, Tables.EVENTS.toString(), field, value) + id;
+        DB.update(query);
+        DB.closeConnection();
     }
 
     @Override
     public void addPhotoByProfileId(String id, String field, String path) {
 
     }
-
 
 }

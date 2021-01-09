@@ -1,11 +1,11 @@
 package ru.sfedu.photosearch;
 
 public class Constants2 {
-    public static final String DATAPROVIDER_DB = "dataprovider.db";
-    public static final String DATAPROVIDER_CSV = "dataprovider.db";
-    public static final String DATAPROVIDER_XML = "dataprovider.db";
+    public static final String DATAPROVIDER_DB = "db";
+    public static final String DATAPROVIDER_CSV = "csv";
+    public static final String DATAPROVIDER_XML = "xml";
 
-    public static final String CONFIG_PATH = "config.path";
+//    public static final String CONFIG_PATH = "config.path";
 
 
 //  Queries for create tables
