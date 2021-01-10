@@ -35,7 +35,7 @@ public class DataProviderDatabase implements DataProvider {
             String result = Constants.UTIL_NEW_LINE;
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = "";
+                    String value = Constants.UTIL_EMPTY_STRING;
                     if (rs.getString(i+1) != null) value = rs.getString(i+1);
                     result += rs.getMetaData().getColumnName(i+1)
                             + Constants.UTIL_DOUBLE_DOTS
@@ -45,8 +45,13 @@ public class DataProviderDatabase implements DataProvider {
                 }
             }
             DB.closeConnection();
-            log.debug(String.format(Constants.SUCCESS_GET_PROFILE, id));
-            return result;
+
+            if (result == Constants.UTIL_NEW_LINE){
+                return String.format(Constants.EMPTY_GET_PROFILE, id);
+            } else
+                log.debug(String.format(Constants.SUCCESS_GET_PROFILE, id));
+                return result;
+
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex.getMessage());
         }
@@ -63,7 +68,7 @@ public class DataProviderDatabase implements DataProvider {
             String result = Constants.UTIL_NEW_LINE;
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = "";
+                    String value = Constants.UTIL_EMPTY_STRING;
                     if (rs.getString(i+1) != null) value = rs.getString(i+1);
                     result += rs.getMetaData().getColumnName(i+1)
                             + Constants.UTIL_DOUBLE_DOTS
@@ -73,8 +78,12 @@ public class DataProviderDatabase implements DataProvider {
                 }
             }
             DB.closeConnection();
-            log.debug(String.format(Constants.SUCCESS_GET_EVENT, id));
-            return result;
+
+            if (result == Constants.UTIL_NEW_LINE){
+                return String.format(Constants.EMPTY_GET_EVENT, id);
+            } else
+                log.debug(String.format(Constants.SUCCESS_GET_EVENT, id));
+                return result;
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex.getMessage());
         }
@@ -101,6 +110,22 @@ public class DataProviderDatabase implements DataProvider {
     @Override
     public void addPhotoByProfileId(String id, String field, String path) {
 
+    }
+
+    @Override
+    public void deleteProfileById(String id) {
+        DB.connect();
+        String query = String.format(Constants.DELETE_PROFILE_QUERY, Tables.USERS.toString()) + id;
+        DB.delete(query);
+        DB.closeConnection();
+    }
+
+    @Override
+    public void deleteEventById(String id) {
+        DB.connect();
+        String query = String.format(Constants.DELETE_EVENT_QUERY, Tables.EVENTS.toString()) + id;
+        DB.delete(query);
+        DB.closeConnection();
     }
 
 }

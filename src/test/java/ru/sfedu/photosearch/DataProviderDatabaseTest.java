@@ -10,4 +10,11 @@ class DataProviderDatabaseTest {
     private static Logger log = LogManager.getLogger(DataProviderDatabaseTest.class);
 
 
+    @Test
+    void getProfile() {
+        DataProviderDatabase provider = new DataProviderDatabase();
+        provider.DB.connect();
+        String result = provider.getProfile("1");
+        log.info(result);
+    }
 }

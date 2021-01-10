@@ -29,9 +29,9 @@ public interface DataProvider{
 
     void addPhotoByProfileId(String id, String field, String path);
 
-    void deleteProfileById();
+    void deleteProfileById(String id);
 
-    void deleteEventById();
+    void deleteEventById(String id);
 
 
 }

@@ -186,3 +186,172 @@ This method is not allowed for a prepared statement; use a regular statement ins
 09 янв. 2021 06:04:49,057 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
 09 янв. 2021 06:09:09,441 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
 09 янв. 2021 06:55:01,617 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
+11 янв. 2021 00:29:58,016 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:29:58,019 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+
+11 янв. 2021 00:30:09,699 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:41:30,428 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+
+11 янв. 2021 00:47:49,294 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:47:54,505 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
+11 янв. 2021 01:00:11,737 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 01:00:11,739 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
+11 янв. 2021 01:00:33,788 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 01:00:33,791 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
+11 янв. 2021 01:01:11,830 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 01:01:11,833 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Evgeniy
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 01:01:41,944 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:01:41,949 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:01:51,232 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:01:51,235 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:02:58,149 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:02:58,153 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:03:25,172 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:03:25,176 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:04:27,936 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:04:27,951 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:07:02,414 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:02,428 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 янв. 2021 01:07:06,149 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:06,154 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAID: FALSE
+STATUS: uncompleted
+
+11 янв. 2021 01:07:28,408 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:28,411 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+11 янв. 2021 01:08:02,648 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 01:08:02,651 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Evgeniy
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+

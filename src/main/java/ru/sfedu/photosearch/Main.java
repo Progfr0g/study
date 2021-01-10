@@ -97,11 +97,14 @@ public class Main {
 
             case Constants.M_DELETE_PROFILE: {
                 String id = args.get(2);
-                return provider.deleteProfile(id);
+                provider.deleteProfileById(id);
+                return String.format(Constants.SUCCESS_DELETE_PROFILE, id);
+
             }
             case Constants.M_DELETE_EVENT: {
                 String id = args.get(2);
-                return provider.deleteEvent(id);
+                provider.deleteEventById(id);
+                return String.format(Constants.SUCCESS_DELETE_EVENT, id);
             }
 //            case Constants.M_ADD_PHOTO: {
 //

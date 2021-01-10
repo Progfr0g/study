@@ -77,8 +77,8 @@ public class Constants {
     public static final String M_EDIT_EVENT = "EDIT_EVENT";
     public static final String M_GET_PROFILE = "GET_PROFILE";
     public static final String M_GET_EVENT = "GET_EVENT";
-    public static final String M_DELETE_PROFILE = "GET_PROFILE";
-    public static final String M_DELETE_EVENT = "GET_EVENT";
+    public static final String M_DELETE_PROFILE = "DELETE_PROFILE";
+    public static final String M_DELETE_EVENT = "DELETE_EVENT";
     public static final String M_ADD_PHOTO = "ADD_PHOTO";
     public static final String M_ADD_COMMENT = "ADD_COMMENT";
     public static final String M_ADD_RATE = "ADD_RATE";
@@ -94,6 +94,8 @@ public class Constants {
     public static final String SELECT_EVENT_QUERY = "SELECT * FROM EVENTS WHERE id = ";
     public static final String UPDATE_PROFILE_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String UPDATE_EVENT_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
+    public static final String DELETE_PROFILE_QUERY = "DELETE FROM %s WHERE id = ";
+    public static final String DELETE_EVENT_QUERY = "DELETE FROM %s WHERE id = ";
 //    public static final String;
 //    public static final String;
 //    public static final String;
@@ -130,6 +132,8 @@ public class Constants {
     public static final String SUCCESS_GET_EVENT = "****Successfully get event with id %s !****";
     public static final String SUCCESS_UPDATE_PROFILE = "****Successfully updated profile with id %s !****";
     public static final String SUCCESS_UPDATE_EVENT = "****Successfully updated event with id %s !****";
+    public static final String SUCCESS_DELETE_PROFILE = "****Successfully deleted profile with id %s !****";
+    public static final String SUCCESS_DELETE_EVENT = "****Successfully deleted event with id %s !****";
 
     public static final String ERROR_INCORRECTLY_CHOSEN_PROVIDER = "Dataprovider was chosen incorrectly: ";
     public static final String ERROR_EMPTY_INPUT_ARGS = "Input args is empty.";
@@ -144,9 +148,13 @@ public class Constants {
     public static final String ERROR_DELETE_QUERY = "DELETE query failed to execute: ";
     public static final String ERROR_EXECUTE_QUERY = "Query failed to execute: ";
 
+    public static final String EMPTY_GET_PROFILE = "Profile with id %s not exists. Empty response received.";
+    public static final String EMPTY_GET_EVENT = "Event with id %s not exists. Empty response received.";
+
     public static final String UTIL_SPACE = " ";
     public static final String UTIL_NEW_LINE = "\n";
     public static final String UTIL_DOUBLE_DOTS = ":";
+    public static final String UTIL_EMPTY_STRING = "";
     public static final String UTIL_R_BOX = "]";
     public static final String UTIL_L_BOX = "[";
     public static final String UTIL_R_FIG = "}";

@@ -386,3 +386,145 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
+11 џэт. 2021 00:24:05,334 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:24:05,335 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:24:05,451 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:24:05,451 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:24:05,465 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 00:24:05,465 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+11 џэт. 2021 00:24:24,731 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:24:24,732 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:24:24,844 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:24:24,844 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:24:24,856 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 2 !****
+11 џэт. 2021 00:24:24,856 [main] INFO  ru.sfedu.photosearch.Main - 
+
+11 џэт. 2021 00:24:32,372 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:24:32,374 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:24:32,485 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:24:32,485 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:24:32,497 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 3 !****
+11 џэт. 2021 00:24:32,497 [main] INFO  ru.sfedu.photosearch.Main - 
+
+11 џэт. 2021 00:57:25,986 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:57:25,987 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:57:26,101 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:57:26,101 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:57:26,113 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 3 !****
+11 џэт. 2021 00:57:26,113 [main] INFO  ru.sfedu.photosearch.Main - Event with id 3 not exists. Empty response received.
+11 џэт. 2021 00:58:53,307 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:58:53,309 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:58:53,441 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:58:53,441 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:58:53,453 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 3 !****
+11 џэт. 2021 00:58:53,453 [main] INFO  ru.sfedu.photosearch.Main - Event with id 3 not exists. Empty response received.
+11 џэт. 2021 00:58:59,157 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 00:58:59,159 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 00:58:59,274 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 00:58:59,274 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 00:58:59,288 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 00:58:59,288 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+
+PAID: FALSE
+PAYMENT_DATE: 
+
+STATUS: uncompleted
+
+11 џэт. 2021 01:08:21,034 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:08:21,036 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:08:21,155 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:08:21,156 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:08:21,169 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 01:08:21,170 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: firstevent
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+11 џэт. 2021 01:08:57,615 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:08:57,616 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:08:57,733 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:08:57,734 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:08:57,738 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+11 џэт. 2021 01:08:57,738 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 1 !****
+11 џэт. 2021 01:09:08,377 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:09:08,378 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:09:08,493 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:09:08,494 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:09:08,507 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 01:09:08,507 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: updated_first_event
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+11 џэт. 2021 01:09:14,513 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:09:14,514 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:09:14,625 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:09:14,626 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:09:14,639 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 01:09:14,639 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+TITLE: updated_first_event
+DESCRIPTION: this is first event ever created
+CUSTOMER: 1
+EXECUTOR: 
+EVENT_DATE: 2021-01-09
+PRICE: 150
+QUANTITY: 2.5
+PAYMENT_METHOD: 
+PAID: FALSE
+PAYMENT_DATE: 
+STATUS: uncompleted
+
+11 џэт. 2021 01:09:26,179 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:09:26,180 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:09:26,300 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:09:26,300 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:09:26,304 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+11 џэт. 2021 01:09:26,304 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id 1 !****
+11 џэт. 2021 01:09:30,978 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 џэт. 2021 01:09:30,979 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 џэт. 2021 01:09:31,097 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 џэт. 2021 01:09:31,098 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 џэт. 2021 01:09:31,109 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 џэт. 2021 01:09:31,109 [main] INFO  ru.sfedu.photosearch.Main - Event with id 1 not exists. Empty response received.
