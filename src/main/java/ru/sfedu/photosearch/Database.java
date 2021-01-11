@@ -85,7 +85,7 @@ public class Database {
     public void createTables() {
         run(Constants.TABLE_USERS);
         run(Constants.TABLE_EVENTS);
-        run(Constants.TABLE_EVENTS);
+        run(Constants.TABLE_PHOTOS);
         run(Constants.TABLE_COMMENTS);
         run(Constants.TABLE_RATES);
         log.debug(Constants.SUCCESS_TABLES_CREATING);

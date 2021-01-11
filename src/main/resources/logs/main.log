@@ -355,3 +355,462 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
+11 янв. 2021 04:26:34,538 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 04:26:34,541 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Evgeniy
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 04:27:38,268 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 04:27:38,271 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Evgeniy
+LAST_NAME: Govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-09
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 04:32:28,859 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Таблица "USERS" не найдена
+Table "USERS" not found; SQL statement:
+SELECT * FROM USERS WHERE id = 1 [42102-200]
+11 янв. 2021 04:39:13,633 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 04:39:13,655 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 04:39:31,671 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 04:39:31,726 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 04:40:15,529 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 04:40:15,556 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 04:40:41,226 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 04:40:41,250 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 04:41:30,611 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 04:41:30,671 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:10:11,905 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:10:11,958 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:12:51,932 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:13:49,997 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:15:24,184 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:15:24,231 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:15:24,245 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:15:24,245 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:15:24,246 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:15:49,200 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:15:49,248 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PATH" не найден
+Column "PATH" not found; SQL statement:
+INSERT INTO PHOTOS (user_id, path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:15:49,261 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:15:49,261 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:15:49,261 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:16:52,438 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:16:52,488 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:16:52,502 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:16:52,503 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:16:52,503 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:18:55,650 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:18:55,697 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+INSERT INTO PHOTOS(user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:18:55,710 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:18:55,711 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:18:55,711 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:35,137 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:19:35,183 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+INSERT INTO photos (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:19:35,196 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:35,197 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:35,198 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:55,747 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:19:55,790 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [42122-200]
+11 янв. 2021 07:19:55,804 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:55,805 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:19:55,805 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:21:30,194 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:21:30,211 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Нарушение ссылочной целостности: "CONSTRAINT_8C: PUBLIC.PHOTOS FOREIGN KEY(USER_ID) REFERENCES PUBLIC.USERS(ID) (1)"
+Referential integrity constraint violation: "CONSTRAINT_8C: PUBLIC.PHOTOS FOREIGN KEY(USER_ID) REFERENCES PUBLIC.USERS(ID) (1)"; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Downloads\2742096282.jpg') [23506-200]
+11 янв. 2021 07:21:30,220 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:21:30,220 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 1 not exists.] Empty response received.
+11 янв. 2021 07:21:30,221 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 1 not exists.] Empty response received.
+11 янв. 2021 07:23:56,984 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:23:57,022 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:23:57,023 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
+11 янв. 2021 07:23:57,025 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:23:57,047 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:23:57,048 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:23:57,049 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:23:57,049 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+-------------------------
+USER_ID: 1
+-------------------------
+EVENT_ID: 
+-------------------------
+TITLE: 
+-------------------------
+DESCRIPTION: 
+-------------------------
+TAG: 
+-------------------------
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+-------------------------
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:23:57,049 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:26:05,581 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:26:05,628 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:26:05,629 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
+11 янв. 2021 07:26:05,630 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:26:05,644 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:26:05,645 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:26:05,646 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:26:05,646 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+ID: 3
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:26:05,646 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:26:50,773 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:26:50,807 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:26:50,808 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
+11 янв. 2021 07:26:50,809 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:26:50,822 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:26:50,823 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 07:26:50,824 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:26:50,824 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+ID: 3
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:26:50,824 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:27:25,157 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:27:25,194 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 янв. 2021 07:27:25,194 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
+11 янв. 2021 07:27:25,208 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:27:25,209 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:27:25,209 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:27:25,210 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:27:25,210 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+ID: 3
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:27:25,210 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 1
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:28:26,629 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:28:26,683 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:28:26,684 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:28:26,684 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:28:26,685 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:28:26,685 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:28:26,685 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:29:05,310 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:29:05,361 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:29:05,362 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:29:05,362 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:29:05,362 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:29:05,363 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:29:05,363 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:35:40,165 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:35:40,226 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:35:40,226 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:35:40,227 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:35:40,227 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:35:40,228 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:35:40,228 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:35:40,346 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
+11 янв. 2021 07:44:07,125 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:44:07,184 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:44:07,184 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:44:07,185 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:44:07,185 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:44:07,186 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:44:07,187 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:44:07,238 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
+11 янв. 2021 07:46:00,248 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:46:00,305 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:46:00,305 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:46:00,306 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:46:00,306 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:46:00,307 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:46:00,307 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to get photo path with id 2. Нет данных
+No data is available [2000-200]
+11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.NullPointerException
+11 янв. 2021 07:46:44,860 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 07:46:44,912 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:46:44,912 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 07:46:44,913 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:46:44,913 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+
+11 янв. 2021 07:46:44,914 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:46:44,914 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 07:46:44,915 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****

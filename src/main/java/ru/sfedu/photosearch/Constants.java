@@ -7,9 +7,8 @@ public class Constants {
 
     public static final String CONFIG_PATH = "config.path";
 
-
     //  Queries for create tables
-    public static final String DB_FILE_PATH = "jdbc:h2:~/dbFile/photosearch";
+    public static final String DB_FILE_PATH = "jdbc:h2:./dbFile/photosearch";
     public static final String TABLE_USERS =
             "CREATE TABLE IF NOT EXISTS USERS (" +
                     "id IDENTITY, " +
@@ -80,6 +79,11 @@ public class Constants {
     public static final String M_DELETE_PROFILE = "DELETE_PROFILE";
     public static final String M_DELETE_EVENT = "DELETE_EVENT";
     public static final String M_ADD_PHOTO = "ADD_PHOTO";
+    public static final String M_GET_PHOTO = "GET_PHOTO";
+    public static final String M_EDIT_PHOTO = "EDIT_PHOTO";
+    public static final String M_DELETE_PHOTO = "DELETE_PHOTO";
+    public static final String M_GET_PORTFOLIO = "GET_PORTFOLIO";
+    public static final String M_SHOW_PHOTO = "SHOW_PHOTO";
     public static final String M_ADD_COMMENT = "ADD_COMMENT";
     public static final String M_ADD_RATE = "ADD_RATE";
     public static final String M_MARK_PHOTOGRAPHER = "MARK_PHOTOGRAPHER";
@@ -96,8 +100,21 @@ public class Constants {
     public static final String UPDATE_EVENT_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String DELETE_PROFILE_QUERY = "DELETE FROM %s WHERE id = ";
     public static final String DELETE_EVENT_QUERY = "DELETE FROM %s WHERE id = ";
-//    public static final String;
-//    public static final String;
+
+    public static final String SELECT_PHOTO_QUERY = "SELECT * FROM PHOTOS WHERE id = ";
+    public static final String INSERT_PHOTO_QUERY = "INSERT INTO %s " +
+            "(user_id, photo_path) " +
+            "VALUES ('%s','%s')";
+    public static final String UPDATE_PHOTO_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
+    public static final String DELETE_PHOTO_QUERY = "DELETE FROM %s WHERE id = ";
+
+    public static final String SELECT_COMMENTS_QUERY = "SELECT * FROM СOMMENTS WHERE id = ";
+    public static final String INSERT_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
+    public static final String UPDATE_COMMENTS_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
+    public static final String DELETE_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
+
+    public static final String SELECT_PORTFOLIO_QUERY = "SELECT * FROM PHOTOS WHERE user_id = ";
+    public static final String SELECT_PHOTO_PATH_QUERY = "SELECT photo_path FROM PHOTOS WHERE id = ";
 //    public static final String;
 //    public static final String;
 //    public static final String;
@@ -134,6 +151,12 @@ public class Constants {
     public static final String SUCCESS_UPDATE_EVENT = "****Successfully updated event with id %s !****";
     public static final String SUCCESS_DELETE_PROFILE = "****Successfully deleted profile with id %s !****";
     public static final String SUCCESS_DELETE_EVENT = "****Successfully deleted event with id %s !****";
+    public static final String SUCCESS_ADD_PHOTO = "****Successfully added event for profile with id %s !****";
+    public static final String SUCCESS_GET_PHOTO = "****Successfully get photo from profile with id %s !****";
+    public static final String SUCCESS_UPDATE_PHOTO = "****Successfully updated photo from profile with id %s !****";
+    public static final String SUCCESS_DELETE_PHOTO = "****Successfully deleted photo from profile with id %s !****";
+    public static final String SUCCESS_GET_PORTFOLIO = "****Successfully get portfolio from profile with id %s !****";
+    public static final String SUCCESS_GET_PHOTO_PATH = "****Successfully get photo path from photo with id %s !****";
 
     public static final String ERROR_INCORRECTLY_CHOSEN_PROVIDER = "Dataprovider was chosen incorrectly: ";
     public static final String ERROR_EMPTY_INPUT_ARGS = "Input args is empty.";
@@ -147,14 +170,22 @@ public class Constants {
     public static final String ERROR_UPDATE_QUERY = "UPDATE query failed to execute: ";
     public static final String ERROR_DELETE_QUERY = "DELETE query failed to execute: ";
     public static final String ERROR_EXECUTE_QUERY = "Query failed to execute: ";
+    public static final String ERROR_GET_PHOTO = "Failed to get photo with id %s. ";
+    public static final String ERROR_GET_PORTFOLIO = "Failed to get portfolio with profile id %s. ";
+    public static final String ERROR_SHOW_PHOTO = "Failed to show photo with id %s. ";
+    public static final String ERROR_GET_PHOTO_PATH = "Failed to get photo path with id %s. ";
 
-    public static final String EMPTY_GET_PROFILE = "Profile with id %s not exists. Empty response received.";
-    public static final String EMPTY_GET_EVENT = "Event with id %s not exists. Empty response received.";
+    public static final String EMPTY_GET_PROFILE = "[Profile with id %s not exists.] Empty response received.";
+    public static final String EMPTY_GET_EVENT = "[Event with id %s not exists.] Empty response received.";
+    public static final String EMPTY_GET_PHOTO = "[Photo with id %s not exists.] Empty response received.";
+    public static final String EMPTY_GET_PORTFOLIO = "[Portfolio with profile id %s not exists.] Empty response received.";
+    public static final String EMPTY_GET_PHOTO_PATH = "[Photo path with photo id %s not exists.] Empty response received.";
 
     public static final String UTIL_SPACE = " ";
     public static final String UTIL_NEW_LINE = "\n";
     public static final String UTIL_DOUBLE_DOTS = ":";
     public static final String UTIL_EMPTY_STRING = "";
+    public static final String UTIL_SEPARATOR = "-------------------------";
     public static final String UTIL_R_BOX = "]";
     public static final String UTIL_L_BOX = "[";
     public static final String UTIL_R_FIG = "}";

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import ru.sfedu.photosearch.providers.DataProvider;
+import ru.sfedu.photosearch.utils.PhotoViewer;
 //import ru.sfedu.photosearch.providers.DataProviderCSV;
 //import ru.sfedu.photosearch.providers.DataProviderJDBC;
 //import ru.sfedu.photosearch.providers.DataProviderXML;
@@ -106,9 +107,42 @@ public class Main {
                 provider.deleteEventById(id);
                 return String.format(Constants.SUCCESS_DELETE_EVENT, id);
             }
-//            case Constants.M_ADD_PHOTO: {
-//
-//            }
+            case Constants.M_ADD_PHOTO: {
+                String id = args.get(2);
+                String path = args.get(3);
+                provider.addPhoto(id, path);
+                return String.format(Constants.SUCCESS_ADD_PHOTO, id);
+            }
+            case Constants.M_EDIT_PHOTO: {
+                String id = args.get(2);
+                String field = args.get(3);
+                String value = args.get(3);
+                provider.editPhotoById(id, field, value);
+                return String.format(Constants.SUCCESS_UPDATE_PHOTO, id);
+            }
+            case Constants.M_GET_PHOTO: {
+                String id = args.get(2);
+                provider.getPhoto(id);
+                return String.format(Constants.SUCCESS_GET_PHOTO, id);
+            }
+            case Constants.M_DELETE_PHOTO: {
+                String id = args.get(2);
+                provider.deletePhotoById(id);
+                return String.format(Constants.SUCCESS_DELETE_PHOTO, id);
+            }
+
+            case Constants.M_GET_PORTFOLIO: {
+                String user_id = args.get(2);
+                provider.getPortfolio(user_id);
+                return String.format(Constants.SUCCESS_GET_PHOTO, user_id);
+            }
+
+            case Constants.M_SHOW_PHOTO: {
+                String id = args.get(2);
+                String path = provider.getPhotoPathById(id);
+                PhotoViewer.showPhoto(path);
+                return String.format(Constants.SUCCESS_GET_PHOTO, id);
+            }
 //            case Constants.M_ADD_COMMENT: {
 //
 //            }

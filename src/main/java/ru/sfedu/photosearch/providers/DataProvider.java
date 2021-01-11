@@ -27,11 +27,20 @@ public interface DataProvider{
 
     void editEventById(String id, String field, String value);
 
-    void addPhotoByProfileId(String id, String field, String path);
-
     void deleteProfileById(String id);
 
     void deleteEventById(String id);
 
+    void addPhoto(String id, String path);
+
+    String getPhoto(String id);
+
+    void editPhotoById(String id, String field, String value);
+
+    void deletePhotoById(String id);
+
+    String getPortfolio(String user_id);
+
+    String getPhotoPathById(String id);
 
 }

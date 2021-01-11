@@ -1,5 +1,6 @@
 package ru.sfedu.photosearch;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.sql.ResultSet;
@@ -8,7 +9,6 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DatabaseTest {
-
 
     @Test
     void check() throws SQLException {
