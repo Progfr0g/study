@@ -1,0 +1,12 @@
+<users_table>
+   <users length="1">
+      <user id="fdc75ebb-f1e1-4968-b47c-14f1b5734ffd">
+         <name>evgeniy</name>
+         <last_name>govor</last_name>
+         <age>21</age>
+         <date_of_registration>2021-01-12</date_of_registration>
+         <town>customer</town>
+         <rating>rostov</rating>
+      </user>
+   </users>
+</users_table>

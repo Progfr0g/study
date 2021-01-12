@@ -186,19 +186,19 @@ This method is not allowed for a prepared statement; use a regular statement ins
 09 янв. 2021 06:04:49,057 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
 09 янв. 2021 06:09:09,441 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
 09 янв. 2021 06:55:01,617 [main] INFO  ru.sfedu.photosearch.enums.RoleTest - CUSTOMER
-11 янв. 2021 00:29:58,016 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:29:58,016 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 00:29:58,019 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 
-11 янв. 2021 00:30:09,699 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:30:09,699 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 00:41:30,428 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 
-11 янв. 2021 00:47:49,294 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 00:47:49,294 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 00:47:54,505 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
-11 янв. 2021 01:00:11,737 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 01:00:11,737 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 01:00:11,739 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
-11 янв. 2021 01:00:33,788 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 01:00:33,788 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 01:00:33,791 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - Profile with id 2 not exists. Empty response received.
-11 янв. 2021 01:01:11,830 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 01:01:11,830 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 01:01:11,833 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 NAME: Evgeniy
@@ -209,7 +209,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 01:01:41,944 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:01:41,944 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:01:41,949 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -227,7 +227,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:01:51,232 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:01:51,232 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:01:51,235 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -245,7 +245,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:02:58,149 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:02:58,149 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:02:58,153 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -263,7 +263,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:03:25,172 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:03:25,172 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:03:25,176 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -281,7 +281,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:04:27,936 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:04:27,936 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:04:27,951 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -299,7 +299,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:07:02,414 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:02,414 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:07:02,428 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -317,7 +317,7 @@ PAYMENT_DATE:
 
 STATUS: uncompleted
 
-11 янв. 2021 01:07:06,149 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:06,149 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:07:06,154 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -329,7 +329,7 @@ QUANTITY: 2.5
 PAID: FALSE
 STATUS: uncompleted
 
-11 янв. 2021 01:07:28,408 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get event with id 1 !****
+11 янв. 2021 01:07:28,408 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
 11 янв. 2021 01:07:28,411 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 TITLE: firstevent
@@ -344,7 +344,7 @@ PAID: FALSE
 PAYMENT_DATE: 
 STATUS: uncompleted
 
-11 янв. 2021 01:08:02,648 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 01:08:02,648 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 01:08:02,651 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 NAME: Evgeniy
@@ -355,7 +355,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 04:26:34,538 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 04:26:34,538 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 04:26:34,541 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 NAME: Evgeniy
@@ -366,7 +366,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 04:27:38,268 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 04:27:38,268 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 04:27:38,271 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 1
 NAME: Evgeniy
@@ -447,9 +447,9 @@ INSERT INTO PHOTOS (user_id, photo_path) VALUES ('1','C:\Users\cucumber\Download
 11 янв. 2021 07:23:57,022 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
 11 янв. 2021 07:23:57,023 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
 11 янв. 2021 07:23:57,025 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
-11 янв. 2021 07:23:57,047 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:23:57,047 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 07:23:57,048 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
-11 янв. 2021 07:23:57,049 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:23:57,049 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
 11 янв. 2021 07:23:57,049 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 -------------------------
@@ -482,9 +482,9 @@ RATING: 0.0
 11 янв. 2021 07:26:05,628 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
 11 янв. 2021 07:26:05,629 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
 11 янв. 2021 07:26:05,630 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
-11 янв. 2021 07:26:05,644 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:26:05,644 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 07:26:05,645 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
-11 янв. 2021 07:26:05,646 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:26:05,646 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
 11 янв. 2021 07:26:05,646 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -519,9 +519,9 @@ RATING: 0.0
 11 янв. 2021 07:26:50,807 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
 11 янв. 2021 07:26:50,808 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
 11 янв. 2021 07:26:50,809 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
-11 янв. 2021 07:26:50,822 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:26:50,822 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
 11 янв. 2021 07:26:50,823 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
-11 янв. 2021 07:26:50,824 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:26:50,824 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
 11 янв. 2021 07:26:50,824 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -555,8 +555,8 @@ RATING: 0.0
 11 янв. 2021 07:27:25,157 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
 11 янв. 2021 07:27:25,194 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
 11 янв. 2021 07:27:25,194 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - true
-11 янв. 2021 07:27:25,208 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
-11 янв. 2021 07:27:25,209 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:27:25,208 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 янв. 2021 07:27:25,209 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:27:25,209 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -567,7 +567,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:27:25,210 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 янв. 2021 07:27:25,210 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
 11 янв. 2021 07:27:25,210 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -599,8 +599,8 @@ TOWN: rostov
 RATING: 0.0
 
 11 янв. 2021 07:28:26,629 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:28:26,683 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
-11 янв. 2021 07:28:26,684 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:28:26,683 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:28:26,684 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:28:26,684 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -611,7 +611,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:28:26,685 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:28:26,685 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:28:26,685 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -634,7 +634,7 @@ TOWN: rostov
 RATING: 0.0
 
 11 янв. 2021 07:29:05,310 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:29:05,361 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:29:05,361 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 07:29:05,362 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 NAME: Maksim
@@ -645,7 +645,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 07:29:05,362 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:29:05,362 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:29:05,362 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -656,7 +656,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:29:05,363 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:29:05,363 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:29:05,363 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -669,7 +669,7 @@ RATING: 0
 -------------------------
 
 11 янв. 2021 07:35:40,165 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:35:40,226 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:35:40,226 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 07:35:40,226 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 NAME: Maksim
@@ -680,7 +680,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 07:35:40,227 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:35:40,227 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:35:40,227 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -691,7 +691,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:35:40,228 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:35:40,228 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:35:40,228 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -703,9 +703,9 @@ PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 -------------------------
 
-11 янв. 2021 07:35:40,346 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
+11 янв. 2021 07:35:40,346 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
 11 янв. 2021 07:44:07,125 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:44:07,184 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:44:07,184 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 07:44:07,184 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 NAME: Maksim
@@ -716,7 +716,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 07:44:07,185 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:44:07,185 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:44:07,185 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -727,7 +727,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:44:07,186 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:44:07,186 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:44:07,187 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -739,9 +739,9 @@ PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 -------------------------
 
-11 янв. 2021 07:44:07,238 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
+11 янв. 2021 07:44:07,238 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: 2 doesn't exist.
 11 янв. 2021 07:46:00,248 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:46:00,305 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:46:00,305 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 07:46:00,305 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 NAME: Maksim
@@ -752,7 +752,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 07:46:00,306 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:46:00,306 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:46:00,306 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -763,7 +763,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:46:00,307 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:46:00,307 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:46:00,307 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -775,11 +775,11 @@ PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 -------------------------
 
-11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to get photo path with id 2. Нет данных
+11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get photo path with id 2. Нет данных
 No data is available [2000-200]
-11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.DataProviderDatabase - Failed to show photo with id %s. java.lang.NullPointerException
+11 янв. 2021 07:46:00,310 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.NullPointerException
 11 янв. 2021 07:46:44,860 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
-11 янв. 2021 07:46:44,912 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 07:46:44,912 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
 11 янв. 2021 07:46:44,912 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 NAME: Maksim
@@ -790,7 +790,7 @@ ROLE: customer
 TOWN: rostov
 RATING: 0.0
 
-11 янв. 2021 07:46:44,913 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
+11 янв. 2021 07:46:44,913 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo from profile with id 2 !****
 11 янв. 2021 07:46:44,913 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 2
 USER_ID: 1
@@ -801,7 +801,7 @@ TAG:
 PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 
-11 янв. 2021 07:46:44,914 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 07:46:44,914 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
 11 янв. 2021 07:46:44,914 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
 ID: 4
 USER_ID: 2
@@ -813,4 +813,267 @@ PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
 RATING: 0
 -------------------------
 
-11 янв. 2021 07:46:44,915 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 07:46:44,915 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 23:24:04,636 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:24:04,734 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 23:24:04,734 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 23:24:46,175 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:24:46,181 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 23:24:46,181 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 23:24:46,184 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 23:24:56,740 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:24:56,841 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 23:24:56,842 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 23:25:29,731 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:25:29,738 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 23:25:29,738 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 23:25:29,741 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 23:25:32,652 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:25:32,716 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 23:25:32,716 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 23:25:37,799 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:25:37,802 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 23:25:37,803 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 23:25:37,804 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 23:25:43,675 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:25:43,769 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 2 !****
+11 янв. 2021 23:25:43,769 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 2
+NAME: Maksim
+LAST_NAME: Gorky
+AGE: 30
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 янв. 2021 23:25:43,770 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:25:43,771 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get portfolio from profile with id 2 !****
+11 янв. 2021 23:25:43,771 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - 
+ID: 4
+USER_ID: 2
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\2742096282.jpg
+RATING: 0
+-------------------------
+
+11 янв. 2021 23:25:43,772 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+11 янв. 2021 23:27:07,574 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:27:07,601 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 2 not exists.] Empty response received.
+11 янв. 2021 23:27:07,602 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:27:07,602 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 2 not exists.] Empty response received.
+11 янв. 2021 23:27:07,606 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get photo path with id 2. Нет данных
+No data is available [2000-200]
+11 янв. 2021 23:27:07,607 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.NullPointerException
+11 янв. 2021 23:32:07,332 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 янв. 2021 23:32:07,397 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Profile with id 2 not exists.] Empty response received.
+11 янв. 2021 23:32:07,398 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
+11 янв. 2021 23:32:07,399 [main] INFO  ru.sfedu.photosearch.DataProviderDatabaseTest - [Portfolio with profile id 2 not exists.] Empty response received.
+11 янв. 2021 23:32:07,402 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get photo path with id 2. Нет данных
+No data is available [2000-200]
+11 янв. 2021 23:32:07,403 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.NullPointerException
+12 янв. 2021 02:35:49,425 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:10:08,055 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:10:08,116 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 03:20:38,658 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:20:38,733 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 03:25:44,017 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:25:44,079 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 03:26:31,526 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:26:31,595 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 03:50:09,596 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 03:50:09,669 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:00:03,040 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:00:03,107 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:10:32,448 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:10:32,508 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:10:38,764 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:10:38,825 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:10:49,611 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:10:49,676 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:11:10,559 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:11:10,640 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:17:48,723 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:17:48,784 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:39:33,581 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:39:33,642 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 04:50:07,333 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 04:50:07,402 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:00:01,586 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 05:00:01,645 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:20:03,430 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 05:20:03,489 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:20:18,771 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 05:20:18,840 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:26:55,635 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 05:26:55,696 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:27:10,149 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 05:27:10,226 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 05:27:10,236 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - cd8fa56b-2c9e-4da0-a1df-456bdadcc359, Evgeniy, Govor, 21
+12 янв. 2021 05:27:10,236 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:01:40,331 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:01:40,388 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:01:40,398 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - c4cc0f72-61c6-4123-8a3f-fa68476b135a, Evgeniy, Govor, 21
+12 янв. 2021 06:01:40,398 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:27:27,784 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:27:27,853 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:27:27,864 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 3a05522d-0dfd-4295-819e-ce399c5be1e7, Evgeniy, Govor, 21
+12 янв. 2021 06:27:27,864 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:27:35,638 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File created: users.xml
+12 янв. 2021 06:27:59,902 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:27:59,968 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:27:59,977 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - f91cef23-a109-4ebe-9ebe-6b28a37acb47, Evgeniy, Govor, 21
+12 янв. 2021 06:27:59,977 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:28:17,750 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:28:17,819 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:28:17,828 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - f91cef23-a109-4ebe-9ebe-6b28a37acb47, Evgeniy, Govor, 21
+12 янв. 2021 06:28:17,828 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:28:33,888 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:28:33,956 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:29:16,129 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:29:16,198 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:29:16,208 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - fa651320-8230-4dfe-8663-2e5c737485fe, Evgeniy, Govor, 21
+12 янв. 2021 06:29:16,208 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:29:22,560 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:29:22,629 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:29:22,639 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 9d244f1b-6cb7-4725-8bc2-0542ee85e7fb, Evgeniy, Govor, 21
+12 янв. 2021 06:29:22,639 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:29:25,952 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:29:26,031 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:29:26,040 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - e27ba28a-2d2a-4f23-892f-3914d075c26d, Evgeniy, Govor, 21
+12 янв. 2021 06:29:26,040 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:29:36,315 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:29:36,385 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:29:36,396 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 8f1be777-105a-4734-bee8-7693abe139e8, Evgeniy, Govor, 21
+12 янв. 2021 06:29:36,396 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:31:51,353 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new records
+12 янв. 2021 06:31:51,416 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - writed class to xml
+12 янв. 2021 06:31:51,426 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:31:51,426 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:34:26,652 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File already exists.
+12 янв. 2021 06:34:26,914 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:34:26,914 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:35:36,433 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:35:36,702 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:35:36,702 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:38:16,522 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:38:18,824 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:38:19,090 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:38:19,090 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:39:10,767 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:39:11,032 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:39:11,032 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:43:21,901 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:43:21,979 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - created new records
+12 янв. 2021 06:43:22,164 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:43:22,164 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:43:39,498 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:43:39,586 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - created new records
+12 янв. 2021 06:44:23,665 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:44:23,748 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - created new records
+12 янв. 2021 06:44:23,940 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - writed class to xml
+12 янв. 2021 06:44:23,942 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 73d7a9e7-ed3a-4a85-b82c-c4a68e3ef355, Evgeniy, Govor, 21
+12 янв. 2021 06:44:23,943 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:44:23,943 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 5c7d9f58-bd32-4314-987f-350d3357b99e, evgeniy, govor, 21
+12 янв. 2021 06:44:23,943 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 06:59:01,666 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:59:11,606 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:59:23,158 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 06:59:37,484 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:01:32,424 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:11:28,733 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:11:28,771 [main] INFO  ru.sfedu.photosearch.utils.XML_util - An error occurred.ParseError at [row,col]:[1,1]
+Message: Premature end of file.
+12 янв. 2021 07:18:33,966 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:18:42,207 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:20:12,508 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:20:32,604 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:23:42,754 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:23:55,502 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:24:19,310 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:26:39,861 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:31:17,110 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:35:44,487 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:35:44,762 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - writed class to xml
+12 янв. 2021 07:35:44,773 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - c5e28c06-fbd0-4114-9079-777b9c076621, evgeniy, govor, 21
+12 янв. 2021 07:35:44,773 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:35:51,633 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:35:51,721 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - created new records
+12 янв. 2021 07:35:51,915 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - writed class to xml
+12 янв. 2021 07:35:51,917 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - c5e28c06-fbd0-4114-9079-777b9c076621, evgeniy, govor, 21
+12 янв. 2021 07:35:51,917 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:35:51,918 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 40144dfc-fd22-45ab-b477-50b7738dbc7f, evgeniy, govor, 21
+12 янв. 2021 07:35:51,918 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:36:04,464 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 янв. 2021 07:36:04,543 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - created new records
+12 янв. 2021 07:36:04,737 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - writed class to xml
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - c5e28c06-fbd0-4114-9079-777b9c076621, evgeniy, govor, 21
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 40144dfc-fd22-45ab-b477-50b7738dbc7f, evgeniy, govor, 21
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - 631bdffd-868c-454d-82ec-2f787defa6fc, evgeniy, govor, 21
+12 янв. 2021 07:36:04,740 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml
+12 янв. 2021 07:36:38,141 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+12 янв. 2021 07:36:38,403 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - writed class to xml
+12 янв. 2021 07:36:38,413 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - fdc75ebb-f1e1-4968-b47c-14f1b5734ffd, evgeniy, govor, 21
+12 янв. 2021 07:36:38,413 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - created new class from xml

@@ -1,3 +1,6 @@
-2021-01-11 07:46:00 jdbc[7]: exception
+2021-01-11 23:27:07 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
+No data is available [2000-200]
+2021-01-11 23:32:07 jdbc[7]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
 No data is available [2000-200]

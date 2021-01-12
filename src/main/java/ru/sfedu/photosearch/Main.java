@@ -4,7 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import ru.sfedu.photosearch.providers.DataProvider;
+import ru.sfedu.photosearch.providers.DataProviderDatabase;
+import ru.sfedu.photosearch.providers.DataProviderXML;
 import ru.sfedu.photosearch.utils.PhotoViewer;
+import ru.sfedu.photosearch.utils.XML_util;
 //import ru.sfedu.photosearch.providers.DataProviderCSV;
 //import ru.sfedu.photosearch.providers.DataProviderJDBC;
 //import ru.sfedu.photosearch.providers.DataProviderXML;
@@ -27,6 +30,11 @@ public class Main {
                 DataProviderDatabase provider = new DataProviderDatabase();
                 provider.DB.connect();
                 provider.DB.createTables();
+                if (provider != null) return provider;
+            }
+            case Constants.DATAPROVIDER_XML: {
+                DataProviderXML provider = new DataProviderXML();
+                XML_util.createFiles();
                 if (provider != null) return provider;
             }
         }
@@ -122,8 +130,7 @@ public class Main {
             }
             case Constants.M_GET_PHOTO: {
                 String id = args.get(2);
-                provider.getPhoto(id);
-                return String.format(Constants.SUCCESS_GET_PHOTO, id);
+                return provider.getPhoto(id);
             }
             case Constants.M_DELETE_PHOTO: {
                 String id = args.get(2);
@@ -133,8 +140,7 @@ public class Main {
 
             case Constants.M_GET_PORTFOLIO: {
                 String user_id = args.get(2);
-                provider.getPortfolio(user_id);
-                return String.format(Constants.SUCCESS_GET_PHOTO, user_id);
+                return provider.getPortfolio(user_id);
             }
 
             case Constants.M_SHOW_PHOTO: {

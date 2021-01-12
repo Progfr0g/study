@@ -3,8 +3,7 @@ package ru.sfedu.photosearch.utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.sfedu.photosearch.Constants;
-import ru.sfedu.photosearch.DataProviderDatabase;
-import ru.sfedu.photosearch.Main;
+import ru.sfedu.photosearch.providers.DataProviderDatabase;
 
 import java.awt.Desktop;
 import java.io.File;

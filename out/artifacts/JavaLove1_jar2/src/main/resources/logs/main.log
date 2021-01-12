@@ -563,3 +563,205 @@ PAID: FALSE
 PAYMENT_DATE: 
 STATUS: uncompleted
 
+11 ÿםג. 2021 23:21:02,396 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:21:02,399 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:21:02,534 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:21:02,534 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:21:02,541 [main] INFO  ru.sfedu.photosearch.Main - [Profile with id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:21:52,395 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:21:52,396 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:21:52,515 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:21:52,515 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:21:52,523 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 ÿםג. 2021 23:21:52,523 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 ÿםג. 2021 23:22:05,696 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:22:05,698 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:22:05,818 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:22:05,818 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:22:05,830 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get profile with id 1 !****
+11 ÿםג. 2021 23:22:05,830 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: evgeniy
+LAST_NAME: govor
+AGE: 21
+DATE_OF_REGISTRATION: 2021-01-11
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+11 ÿםג. 2021 23:22:16,692 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:22:16,694 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:22:16,814 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:22:16,814 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:22:16,825 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:26:47,999 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:26:48,002 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:26:48,136 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:26:48,136 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:26:48,149 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:28:36,923 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:28:36,926 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:28:37,050 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:28:37,050 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:28:37,061 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:29:29,348 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:29:29,350 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:29:29,475 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:29:29,475 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:29:29,487 [main] INFO  ru.sfedu.photosearch.Main - [Photo with id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:31:35,463 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:31:35,465 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:31:35,591 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:31:35,591 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:31:35,623 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:31:35,624 [main] INFO  ru.sfedu.photosearch.Main - [Photo with id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:32:22,018 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:32:22,020 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:32:22,143 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:32:22,144 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:32:22,156 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:32:22,157 [main] INFO  ru.sfedu.photosearch.Main - [Photo with id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:44:57,310 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:44:57,312 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:44:57,440 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:44:57,440 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:44:57,451 [main] INFO  ru.sfedu.photosearch.Main - [Photo with id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:45:01,844 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:45:01,846 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:45:01,971 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:45:01,971 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:45:01,982 [main] INFO  ru.sfedu.photosearch.Main - [Photo with id 0 not exists.] Empty response received.
+11 ÿםג. 2021 23:45:14,255 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:45:14,259 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:45:14,380 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:45:14,380 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:45:14,381 [main] ERROR ru.sfedu.photosearch.Main - Input args is incorrect.
+11 ÿםג. 2021 23:45:21,045 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:45:21,047 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:45:21,167 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:45:21,168 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:45:21,182 [main] INFO  ru.sfedu.photosearch.Main - [Portfolio with profile id 1 not exists.] Empty response received.
+11 ÿםג. 2021 23:46:13,352 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:46:13,354 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:46:13,474 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:46:13,474 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:46:13,477 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 ÿםג. 2021 23:46:13,478 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added event for profile with id 1 !****
+11 ÿםג. 2021 23:46:44,893 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:46:44,895 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:46:45,017 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:46:45,017 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:46:45,023 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 ÿםג. 2021 23:46:45,023 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+11 ÿםג. 2021 23:46:48,026 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:46:48,028 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:46:48,153 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:46:48,153 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:46:48,166 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 ÿםג. 2021 23:46:48,166 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\5ctoFayXAQo.jpg
+RATING: 0
+-------------------------
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\5ctoFayXAQo.jpg
+RATING: 0
+-------------------------
+
+11 ÿםג. 2021 23:47:00,802 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:47:00,804 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:47:00,924 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:47:00,924 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:47:00,931 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo path from photo with id 1 !****
+11 ÿםג. 2021 23:47:01,216 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+11 ÿםג. 2021 23:47:31,592 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:47:31,594 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:47:31,715 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:47:31,716 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:47:31,719 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 ÿםג. 2021 23:47:31,719 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+11 ÿםג. 2021 23:47:39,795 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:47:39,797 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:47:39,919 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:47:39,920 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:47:39,931 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get portfolio from profile with id 1 !****
+11 ÿםג. 2021 23:47:39,932 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\5ctoFayXAQo.jpg
+RATING: 0
+-------------------------
+ID: 2
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\5ctoFayXAQo.jpg
+RATING: 0
+-------------------------
+ID: 3
+USER_ID: 1
+EVENT_ID: 
+TITLE: 
+DESCRIPTION: 
+TAG: 
+PHOTO_PATH: C:\Users\cucumber\Downloads\typhoon-storm-clouds-sky-nature.jpg
+RATING: 0
+-------------------------
+
+11 ÿםג. 2021 23:47:50,619 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:47:50,621 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:47:50,740 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:47:50,740 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:47:50,748 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo path from photo with id 3 !****
+11 ÿםג. 2021 23:47:51,032 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+11 ÿםג. 2021 23:48:01,146 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 ÿםג. 2021 23:48:01,148 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 ÿםג. 2021 23:48:01,269 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 ÿםג. 2021 23:48:01,269 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 ÿםג. 2021 23:48:01,277 [main] DEBUG ru.sfedu.photosearch.DataProviderDatabase - ****Successfully get photo path from photo with id 3 !****
+11 ÿםג. 2021 23:48:01,554 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+12 ÿםג. 2021 06:02:30,436 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:02:30,437 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:02:30,438 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:06:37,625 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:06:37,626 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:06:37,627 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:07:00,058 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:07:00,061 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:07:00,062 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:20:58,813 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:20:58,815 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:20:58,817 [main] INFO  ru.sfedu.photosearch.DataProviderXML - An error occurred.Ñטסעולו םו ףהאועסÿ םאיעט ףךאחאםםûי ןףעü
+12 ÿםג. 2021 06:20:58,818 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:21:54,832 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:21:54,833 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:21:54,835 [main] INFO  ru.sfedu.photosearch.DataProviderXML - An error occurred.Ñטסעולו םו ףהאועסÿ םאיעט ףךאחאםםûי ןףעü
+12 ÿםג. 2021 06:21:54,835 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:52:40,638 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:52:40,640 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:52:40,642 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+12 ÿםג. 2021 06:52:40,643 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:52:54,406 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:52:54,408 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:52:54,410 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 ÿםג. 2021 06:52:54,410 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+12 ÿםג. 2021 06:53:33,731 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+12 ÿםג. 2021 06:53:33,733 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+12 ÿםג. 2021 06:53:33,735 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists.
+12 ÿםג. 2021 06:53:33,735 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------

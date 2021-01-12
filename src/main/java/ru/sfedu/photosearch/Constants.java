@@ -9,6 +9,8 @@ public class Constants {
 
     //  Queries for create tables
     public static final String DB_FILE_PATH = "jdbc:h2:./dbFile/photosearch";
+    public static final String XML_DIR_PATH = "./xmlFiles";
+    public static final String XML_USERS_FILE_PATH = "./xmlFiles/users.xml";
     public static final String TABLE_USERS =
             "CREATE TABLE IF NOT EXISTS USERS (" +
                     "id IDENTITY, " +
@@ -151,7 +153,7 @@ public class Constants {
     public static final String SUCCESS_UPDATE_EVENT = "****Successfully updated event with id %s !****";
     public static final String SUCCESS_DELETE_PROFILE = "****Successfully deleted profile with id %s !****";
     public static final String SUCCESS_DELETE_EVENT = "****Successfully deleted event with id %s !****";
-    public static final String SUCCESS_ADD_PHOTO = "****Successfully added event for profile with id %s !****";
+    public static final String SUCCESS_ADD_PHOTO = "****Successfully added photo for profile with id %s !****";
     public static final String SUCCESS_GET_PHOTO = "****Successfully get photo from profile with id %s !****";
     public static final String SUCCESS_UPDATE_PHOTO = "****Successfully updated photo from profile with id %s !****";
     public static final String SUCCESS_DELETE_PHOTO = "****Successfully deleted photo from profile with id %s !****";
@@ -174,12 +176,16 @@ public class Constants {
     public static final String ERROR_GET_PORTFOLIO = "Failed to get portfolio with profile id %s. ";
     public static final String ERROR_SHOW_PHOTO = "Failed to show photo with id %s. ";
     public static final String ERROR_GET_PHOTO_PATH = "Failed to get photo path with id %s. ";
+    public static final String ERROR_XML_SAME_ID = "Some records in xml_table %s has similar id's";
 
     public static final String EMPTY_GET_PROFILE = "[Profile with id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_EVENT = "[Event with id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_PHOTO = "[Photo with id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_PORTFOLIO = "[Portfolio with profile id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_PHOTO_PATH = "[Photo path with photo id %s not exists.] Empty response received.";
+
+    public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlast_name: %s\nage: %s\ndate_of_registration: %s\ntown: %s\nrating: %s\n";
+    public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\ncustomer: %s\nexecutor: %s\nevent_date: %s\nprice: %s\nquantity: %s\npayment_method: %s\npaid: %s\npayment_date: %s\nstatus: %s\n";
 
     public static final String UTIL_SPACE = " ";
     public static final String UTIL_NEW_LINE = "\n";
