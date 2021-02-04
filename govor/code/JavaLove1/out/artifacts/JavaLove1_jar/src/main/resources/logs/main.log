@@ -1,0 +1,10 @@
+26 окт. 2020 10:40:27,578 [main] DEBUG ru.sfedu.photosearch.PhotoSearchClient - Client[0]: starting application...
+26 окт. 2020 10:40:27,579 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Launching the application...
+26 окт. 2020 10:40:27,579 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Operating System: Windows 10 10.0
+26 окт. 2020 10:40:27,580 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - JRE: 15
+26 окт. 2020 10:40:27,580 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Java Launched From: C:\Program Files\Java\jdk-15
+26 окт. 2020 10:40:27,580 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Class Path: JavaLove1.jar
+26 окт. 2020 10:40:27,580 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Library Path: C:\Program Files\Java\jdk-15\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk-15\bin;C:\Users\cucumber\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\cucumber\AppData\Local\Programs\Python\Python37\;C:\Users\cucumber\AppData\Local\Microsoft\WindowsApps;;D:\ProgramFiles\IntelliJ IDEA Community Edition 2020.2.3\bin;;.
+26 окт. 2020 10:40:27,582 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - User Home Directory: C:\Users\cucumber
+26 окт. 2020 10:40:27,582 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - User Working Directory: C:\Users\cucumber\IdeaProjects\JavaLove1\out\artifacts\JavaLove1_jar
+26 окт. 2020 10:40:27,582 [main] INFO  ru.sfedu.photosearch.PhotoSearchClient - Test INFO logging.

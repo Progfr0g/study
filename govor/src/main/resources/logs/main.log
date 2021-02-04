@@ -1,0 +1,33 @@
+13 џэт. 2021 10:00:28,696 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+13 џэт. 2021 10:00:28,697 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+13 џэт. 2021 10:00:28,817 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+13 џэт. 2021 10:00:28,817 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+13 џэт. 2021 10:00:28,824 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+13 џэт. 2021 10:00:28,824 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+13 џэт. 2021 10:00:36,843 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+13 џэт. 2021 10:00:36,845 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+13 џэт. 2021 10:00:36,957 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+13 џэт. 2021 10:00:36,958 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+13 џэт. 2021 10:00:36,968 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+13 џэт. 2021 10:00:36,969 [main] INFO  ru.sfedu.photosearch.Main - 
+ID: 1
+NAME: boris
+LAST_NAME: zmaylov
+AGE: 40
+DATE_OF_REGISTRATION: 2021-01-13
+ROLE: customer
+TOWN: rostov
+RATING: 0.0
+
+13 џэт. 2021 10:01:35,722 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+13 џэт. 2021 10:01:35,724 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+13 џэт. 2021 10:01:35,839 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+13 џэт. 2021 10:01:35,840 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+13 џэт. 2021 10:01:35,843 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+13 џэт. 2021 10:01:35,843 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+13 џэт. 2021 10:01:42,372 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+13 џэт. 2021 10:01:42,374 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+13 џэт. 2021 10:01:42,490 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+13 џэт. 2021 10:01:42,490 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+13 џэт. 2021 10:01:42,497 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 1 !****
+13 џэт. 2021 10:01:42,926 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****

@@ -1,6 +1,16 @@
-2021-01-11 23:27:07 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
-No data is available [2000-200]
-2021-01-11 23:32:07 jdbc[7]: exception
-org.h2.jdbc.JdbcSQLNonTransientException: Нет данных
-No data is available [2000-200]
+2021-01-13 08:36:30 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE PHOTOS SET TITLE = 'test_photo' WHERE ID = [*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE PHOTOS SET TITLE = 'test_photo' WHERE ID = [*]"; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE PHOTOS SET title = 'test_photo' WHERE id =  [42001-200]
+2021-01-13 08:36:30 jdbc[59]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "'****Successfully created new profile!****' (PHOTOS: ""USER_ID"" INT)"
+Data conversion error converting "'****Successfully created new profile!****' (PHOTOS: ""USER_ID"" INT)"; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('****Successfully created new profile!****','./testPhotos/1.jpg') [22018-200]
+2021-01-13 08:36:42 jdbc[27]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE PHOTOS SET TITLE = 'test_photo' WHERE ID = [*]"; ожидалось "ALL, ANY, SOME"
+Syntax error in SQL statement "UPDATE PHOTOS SET TITLE = 'test_photo' WHERE ID = [*]"; expected "ALL, ANY, SOME"; SQL statement:
+UPDATE PHOTOS SET title = 'test_photo' WHERE id =  [42001-200]
+2021-01-13 08:36:42 jdbc[59]: exception
+org.h2.jdbc.JdbcSQLDataException: Ошибка преобразования данных при конвертации "'****Successfully created new profile!****' (PHOTOS: ""USER_ID"" INT)"
+Data conversion error converting "'****Successfully created new profile!****' (PHOTOS: ""USER_ID"" INT)"; SQL statement:
+INSERT INTO PHOTOS (user_id, photo_path) VALUES ('****Successfully created new profile!****','./testPhotos/1.jpg') [22018-200]

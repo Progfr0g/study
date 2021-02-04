@@ -1,0 +1,50 @@
+<photos_table>
+   <photos class="java.util.ArrayList">
+      <photo id="a19ec0f6-1d9b-4c3a-a1c3-4fec7266bec7">
+         <user_id>96c93970-7057-45cd-ad6c-c03edf6fe9e5</user_id>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="665fa28f-d828-4795-8b3c-c0720996151e">
+         <user_id>9d1f5ad6-9606-4e13-844a-9f7de3af5bef</user_id>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="a9e7d1b5-c669-41b1-b07d-208349b39b04">
+         <user_id>f7ef44b1-7198-4050-a4ad-6b5e61de1131</user_id>
+         <title>test_photo</title>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="09a4df4c-b881-473e-9f88-e5c3f2347f22">
+         <user_id>ff72f2f5-d13c-443d-83ac-581f6083e7d7</user_id>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="eb763d67-5a6e-48f8-b7fe-0ce8246ce384">
+         <user_id>dab46d54-7672-4742-8fe1-98570a2f635c</user_id>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="09cc499c-25cf-4b7c-9697-6a9169efbe7d">
+         <user_id>488bf0cc-9fee-4376-a47b-f6541f1451b3</user_id>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="1722e9d3-1537-4a36-a1b1-6fb7a66c509f">
+         <user_id>0545e46e-6da9-4867-8cf0-01b12d8064e4</user_id>
+         <title>test_photo</title>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+      <photo id="13b702f2-a429-4092-8d6d-1d18136c1f09">
+         <user_id>8a7b5f84-0bc1-4585-80d0-c91589b69356</user_id>
+         <event_id></event_id>
+         <title></title>
+         <description></description>
+         <tag></tag>
+         <photo_path>./testPhotos/1.jpg</photo_path>
+         <rating>0.0</rating>
+      </photo>
+   </photos>
+</photos_table>
