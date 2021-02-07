@@ -1,41 +1,51 @@
 package ru.sfedu.photosearch.providers;
 
+import ru.sfedu.photosearch.enums.EventType;
+import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Photo;
+import ru.sfedu.photosearch.newModels.User;
+
+import java.util.Date;
+
 public interface DataProvider{
-     String createNewProfile(
+     Boolean createNewProfile(
              String name,
              String last_name,
-             Integer age,
-             String date_of_registration,
-             String role,
+             Date birthDay,
+             Date dateOfRegistration,
+             Role role,
              String town);
 
-    String createNewEvent(
+    User getProfile(
+            String id);
+
+    Boolean editProfileById(String id, String field, String value);
+
+    Boolean deleteProfileById(String id);
+
+    Boolean createNewEvent(
             String title,
             String description,
             String customer,
-            String event_date,
+            Date eventDate,
+            Date creationDate,
             Integer price,
-            Float quantity);
+            Float quantity,
+            EventType type);
 
-    String getProfile(
+    Event getEvent(
             String id);
 
-    String getEvent(
-            String id);
+    Boolean editEventById(String id, String field, String value);
 
-    void editProfileById(String id, String field, String value);
+    Boolean deleteEventById(String id);
 
-    void editEventById(String id, String field, String value);
+    Boolean addPhoto(String id, String path);
 
-    void deleteProfileById(String id);
+    Photo getPhoto(String id);
 
-    void deleteEventById(String id);
-
-    String addPhoto(String id, String path);
-
-    String getPhoto(String id);
-
-    void editPhotoById(String id, String field, String value);
+    Boolean editPhotoById(String id, String field, String value);
 
     void deletePhotoById(String id);
 

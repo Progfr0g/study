@@ -9806,3 +9806,866 @@ INSERT INTO PHOTOS (user_id, photo_path) VALUES ('****Successfully created new p
 13 янв. 2021 08:36:42,866 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - [Photo with id 1 not exists.] Empty response received.
 13 янв. 2021 08:36:42,868 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
 13 янв. 2021 08:36:42,869 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+05 февр. 2021 21:49:57,294 [main] ERROR ru.sfedu.photosearch.Database - Query failed to execute: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY INT,DATEOFREGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; ожидалось "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY INT,DATEOFREGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS USERS (id IDENTITY, name VARCHAR(30),last_name VARCHAR(30),birthDay INT,dateOfRegistration DATE,role ENUM('customer', 'photographer', 'none'),town VARCHAR(100),wallet FLOAT(1) default 0.0,rating FLOAT(1) default 0.0,experience INT default 0costLevel ENUM('cheap', 'average', 'expensive', 'none')) [42001-200]
+05 февр. 2021 21:49:57,320 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 21:52:07,931 [main] ERROR ru.sfedu.photosearch.Database - Query failed to execute: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY INT,DATEOFREGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; ожидалось "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY INT,DATEOFREGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS USERS (id IDENTITY, name VARCHAR(30),last_name VARCHAR(30),birthDay INT,dateOfRegistration DATE,role ENUM('customer', 'photographer', 'none'),town VARCHAR(100),wallet FLOAT(1) default 0.0,rating FLOAT(1) default 0.0,experience INT default 0costLevel ENUM('cheap', 'average', 'expensive', 'none')) [42001-200]
+05 февр. 2021 21:52:07,936 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 21:54:26,272 [main] ERROR ru.sfedu.photosearch.Database - Query failed to execute: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY DATE,DATE_OF_REGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; ожидалось "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS USERS (ID IDENTITY, NAME VARCHAR(30),LAST_NAME VARCHAR(30),BIRTHDAY DATE,DATE_OF_REGISTRATION DATE,ROLE ENUM('customer', 'photographer', 'none'),TOWN VARCHAR(100),WALLET FLOAT(1) DEFAULT 0.0,RATING FLOAT(1) DEFAULT 0.0,EXPERIENCE INT DEFAULT 0COSTLEVEL[*] ENUM('cheap', 'average', 'expensive', 'none'))"; expected "[, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ON, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS USERS (id IDENTITY, name VARCHAR(30),last_name VARCHAR(30),birthday DATE,date_of_registration DATE,role ENUM('customer', 'photographer', 'none'),town VARCHAR(100),wallet FLOAT(1) default 0.0,rating FLOAT(1) default 0.0,experience INT default 0costLevel ENUM('cheap', 'average', 'expensive', 'none')) [42001-200]
+05 февр. 2021 21:54:26,291 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 21:55:58,455 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 21:56:47,613 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 21:56:47,636 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Синтаксическая ошибка в выражении SQL "INSERT INTO USERS (NAME, LAST_NAME, BIRTHDAY, DATE_OF_REGISTRATION, ROLE, TOWN) VALUES ('Nikolay','Tolstoy',MON OCT[*] 11 00:00:00 MSD 1999,'Fri Feb 05 00:00:00 MSK 2021','CUSTOMER','Moscow')"; ожидалось "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO USERS (NAME, LAST_NAME, BIRTHDAY, DATE_OF_REGISTRATION, ROLE, TOWN) VALUES ('Nikolay','Tolstoy',MON OCT[*] 11 00:00:00 MSD 1999,'Fri Feb 05 00:00:00 MSK 2021','CUSTOMER','Moscow')"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO USERS (name, last_name, birthday, date_of_registration, role, town) VALUES ('Nikolay','Tolstoy',Mon Oct 11 00:00:00 MSD 1999,'Fri Feb 05 00:00:00 MSK 2021','CUSTOMER','Moscow') [42001-200]
+05 февр. 2021 21:56:47,637 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.
+05 февр. 2021 22:00:36,527 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 22:00:36,550 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Невозможно преобразование строки "Mon Oct 11 00:00:00 MSD 1999" в тип "DATE"
+Cannot parse "DATE" constant "Mon Oct 11 00:00:00 MSD 1999"; SQL statement:
+INSERT INTO USERS (name, last_name, birthday, date_of_registration, role, town) VALUES ('Nikolay','Tolstoy','Mon Oct 11 00:00:00 MSD 1999','Fri Feb 05 00:00:00 MSK 2021','CUSTOMER','Moscow') [22007-200]
+05 февр. 2021 22:00:36,550 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.
+05 февр. 2021 22:16:16,766 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 22:16:16,788 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Невозможно преобразование строки "11-10-1999" в тип "DATE"
+Cannot parse "DATE" constant "11-10-1999"; SQL statement:
+INSERT INTO USERS (name, last_name, birthday, date_of_registration, role, town) VALUES ('Nikolay','Tolstoy','11-10-1999','05-02-2021','CUSTOMER','Moscow') [22007-200]
+05 февр. 2021 22:16:16,789 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.
+05 февр. 2021 22:18:43,050 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+05 февр. 2021 22:18:43,079 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+05 февр. 2021 22:18:43,079 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 05:07:29,343 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:07:29,381 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 05:07:29,382 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 05:07:38,576 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:07:59,340 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:08:27,669 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:08:58,462 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:09:28,041 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:09:53,833 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:10:55,184 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:11:43,029 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:13:38,908 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:13:38,941 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:13:38,957 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 05:13:38,957 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 05:13:44,979 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:15:47,426 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:15:51,030 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:16:05,421 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:16:25,844 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:16:55,759 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get profile with id 1. Недопустимое значение "0" для параметра "columnIndex"
+Invalid value "0" for parameter "columnIndex" [90008-200]
+06 февр. 2021 05:17:01,404 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:17:01,467 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 05:17:01,467 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 05:17:34,487 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:18:17,925 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 05:18:17,988 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 05:18:17,988 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 05:18:41,690 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:22:13,991 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:22:14,015 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:22:14,015 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:22:53,465 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:23:32,801 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:23:50,630 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:24:00,211 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:24:00,236 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:24:00,237 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get profile with id %s !****
+06 февр. 2021 17:26:11,608 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:26:11,632 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:27:26,421 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:27:26,444 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 17:27:26,445 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:29:02,941 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:29:59,606 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:31:31,421 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 17:31:31,421 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:31:34,795 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:34:03,656 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get profile with id 1. Объект уже закрыт
+The object is already closed [90007-200]
+06 февр. 2021 17:34:03,656 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:34:07,074 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:34:07,097 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get profile with id 1. Набор записей не является прокручиваемым. Возможно необходимо использовать conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..).
+The result set is not scrollable and can not be reset. You may need to use conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ..). [90128-200]
+06 февр. 2021 17:34:07,097 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:35:34,319 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:35:49,558 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 17:35:49,559 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:36:04,063 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:36:09,751 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 17:36:09,751 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:36:16,837 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:37:22,682 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:39:10,257 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:39:15,016 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 100 not exists.] Empty response received.
+06 февр. 2021 17:39:18,769 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 17:39:41,793 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:39:43,845 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 100 not exists.] Empty response received.
+06 февр. 2021 17:39:46,701 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:39:46,719 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 100 not exists.] Empty response received.
+06 февр. 2021 17:40:01,414 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:40:01,435 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 10 not exists.] Empty response received.
+06 февр. 2021 17:40:08,615 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:40:08,639 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 3 !****
+06 февр. 2021 17:40:08,644 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 3
+name: Nikolay
+last_name: Tolstoy
+age: Sun Mar 21 00:00:00 MSK 17
+date_of_registration: Fri Aug 14 00:00:00 MSK 11
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 17:41:42,966 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:42:15,995 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 17:42:23,447 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 17:43:03,636 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:43:28,564 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 4 not exists.] Empty response received.
+06 февр. 2021 17:43:54,402 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:43:54,430 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 17:43:54,430 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 17:44:01,281 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:48:19,667 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:48:19,685 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Mar 22 00:00:00 MSK 18
+date_of_registration: Fri Aug 14 00:00:00 MSK 11
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 17:48:33,909 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:48:52,600 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:48:52,603 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Mar 22 00:00:00 MSK 18
+date_of_registration: Fri Aug 14 00:00:00 MSK 11
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 17:51:33,283 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:51:38,149 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:51:38,154 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 17:51:41,196 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:52:27,226 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 17:52:27,226 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 17:52:49,266 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:52:49,285 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+06 февр. 2021 17:52:59,332 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:52:59,344 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Столбец "I" не найден
+Column "I" not found; SQL statement:
+SELECT * FROM USERS WHERE id = i [42122-200]
+06 февр. 2021 17:53:28,914 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 17:53:28,931 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+06 февр. 2021 23:18:00,583 [main] ERROR ru.sfedu.photosearch.Database - Query failed to execute: Неизвестный тип данных: "DATEPRICE"
+Unknown data type: "DATEPRICE"; SQL statement:
+CREATE TABLE IF NOT EXISTS EVENTS (id IDENTITY, title VARCHAR(100),description VARCHAR,event_date DATE,creation_date DATEprice INT,quantity FLOAT(2),customer INT,executor INT,status ENUM('uncompleted', 'completed', 'reservation', 'approved', 'none') default 'none') [50004-200]
+06 февр. 2021 23:18:00,586 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:18:00,589 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'10"
+06 февр. 2021 23:22:07,327 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:22:07,336 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'10"
+06 февр. 2021 23:22:35,638 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:22:35,648 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'10"
+06 февр. 2021 23:23:40,966 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:23:40,973 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'14-02-2021'"
+06 февр. 2021 23:23:40,985 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Столбец "CREATION_DATE" не найден
+Column "CREATION_DATE" not found; SQL statement:
+INSERT INTO EVENTS (title, description, customer, event_date, creation_date, price, quantity) VALUES ('auto_race','competition','s',TO_DATE('1','dd-MM-yyyy'),TO_DATE('null','dd-MM-yyyy'),Sat Feb 06 00:00:00 MSK 2021,150) [42122-200]
+06 февр. 2021 23:23:40,985 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+06 февр. 2021 23:24:12,775 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:24:12,782 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'14-02-2021'"
+06 февр. 2021 23:24:12,797 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Синтаксическая ошибка в выражении SQL "INSERT INTO EVENTS (TITLE, DESCRIPTION, CUSTOMER, EVENT_DATE, CREATION_DATE, PRICE, QUANTITY) VALUES ('auto_race','competition','s',TO_DATE('1','dd-MM-yyyy'),TO_DATE('null','dd-MM-yyyy'),SAT FEB[*] 06 00:00:00 MSK 2021,150)"; ожидалось "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO EVENTS (TITLE, DESCRIPTION, CUSTOMER, EVENT_DATE, CREATION_DATE, PRICE, QUANTITY) VALUES ('auto_race','competition','s',TO_DATE('1','dd-MM-yyyy'),TO_DATE('null','dd-MM-yyyy'),SAT FEB[*] 06 00:00:00 MSK 2021,150)"; expected "(, ., [, ::, AT, FORMAT, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO EVENTS (title, description, customer, event_date, creation_date, price, quantity) VALUES ('auto_race','competition','s',TO_DATE('1','dd-MM-yyyy'),TO_DATE('null','dd-MM-yyyy'),Sat Feb 06 00:00:00 MSK 2021,150) [42001-200]
+06 февр. 2021 23:24:12,798 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+06 февр. 2021 23:24:35,265 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:24:35,273 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'14-02-2021'"
+06 февр. 2021 23:24:35,299 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Функция "TO_DATE": Неверный формат даты: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('null', 'dd-MM-yyyy')
+             ^    ,  ^ <-- Parsing failed at this point"
+Function "TO_DATE": Invalid date format: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('null', 'dd-MM-yyyy')
+             ^    ,  ^ <-- Parsing failed at this point"; SQL statement:
+INSERT INTO EVENTS (title, description, customer, event_date, creation_date, price, quantity) VALUES ('auto_race','competition','1',TO_DATE('null','dd-MM-yyyy'),TO_DATE('Sat Feb 06 00:00:00 MSK 2021','dd-MM-yyyy'),150,2.5) [90056-200]
+06 февр. 2021 23:24:35,299 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+06 февр. 2021 23:24:59,288 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:24:59,298 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "'14-02-2021'"
+06 февр. 2021 23:25:10,083 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Функция "TO_DATE": Неверный формат даты: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('null', 'dd-MM-yyyy')
+             ^    ,  ^ <-- Parsing failed at this point"
+Function "TO_DATE": Invalid date format: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('null', 'dd-MM-yyyy')
+             ^    ,  ^ <-- Parsing failed at this point"; SQL statement:
+INSERT INTO EVENTS (title, description, customer, event_date, creation_date, price, quantity) VALUES ('auto_race','competition','1',TO_DATE('null','dd-MM-yyyy'),TO_DATE('Sat Feb 06 00:00:00 MSK 2021','dd-MM-yyyy'),150,2.5) [90056-200]
+06 февр. 2021 23:25:10,084 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+06 февр. 2021 23:25:25,486 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:25:43,540 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Функция "TO_DATE": Неверный формат даты: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('Sun Feb 14 00:00:00 MSK 2021', 'dd-MM-yyyy')
+             ^                            ,  ^ <-- Parsing failed at this point"
+Function "TO_DATE": Invalid date format: " Issue happened when parsing token 'DD'. Details: 
+    TO_DATE('Sun Feb 14 00:00:00 MSK 2021', 'dd-MM-yyyy')
+             ^                            ,  ^ <-- Parsing failed at this point"; SQL statement:
+INSERT INTO EVENTS (title, description, customer, event_date, creation_date, price, quantity) VALUES ('auto_race','competition','1',TO_DATE('Sun Feb 14 00:00:00 MSK 2021','dd-MM-yyyy'),TO_DATE('Sat Feb 06 00:00:00 MSK 2021','dd-MM-yyyy'),150,2.5) [90056-200]
+06 февр. 2021 23:25:55,945 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+06 февр. 2021 23:25:59,379 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:27:14,544 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:27:33,190 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:27:37,443 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+06 февр. 2021 23:28:39,255 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:28:39,276 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 3 not exists.] Empty response received.
+06 февр. 2021 23:28:39,276 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+06 февр. 2021 23:28:50,450 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:28:50,476 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2.5 not exists.] Empty response received.
+06 февр. 2021 23:28:50,477 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 23:29:26,260 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:32:35,483 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2.5 not exists.] Empty response received.
+06 февр. 2021 23:32:35,486 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 23:46:53,939 [main] ERROR ru.sfedu.photosearch.Database - Query failed to execute: Синтаксическая ошибка в выражении SQL "CREATE TABLE IF NOT EXISTS EVENTS (ID IDENTITY, TITLE VARCHAR(100),DESCRIPTION VARCHAR,EVENT_DATE DATE,CREATION_DATE DATE,PRICE INT,QUANTITY FLOAT(2),CUSTOMER INT,EXECUTOR INT,STATUS ENUM('uncompleted', 'completed', 'reservation', 'approved', 'none') DEFAULT 'none'),[*]TYPE ENUM('offer', 'order', 'none') DEFAULT 'none')"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS EVENTS (ID IDENTITY, TITLE VARCHAR(100),DESCRIPTION VARCHAR,EVENT_DATE DATE,CREATION_DATE DATE,PRICE INT,QUANTITY FLOAT(2),CUSTOMER INT,EXECUTOR INT,STATUS ENUM('uncompleted', 'completed', 'reservation', 'approved', 'none') DEFAULT 'none'),[*]TYPE ENUM('offer', 'order', 'none') DEFAULT 'none')"; SQL statement:
+CREATE TABLE IF NOT EXISTS EVENTS (id IDENTITY, title VARCHAR(100),description VARCHAR,event_date DATE,creation_date DATE,price INT,quantity FLOAT(2),customer INT,executor INT,status ENUM('uncompleted', 'completed', 'reservation', 'approved', 'none') default 'none'),type ENUM('offer', 'order', 'none') default 'none') [42000-200]
+06 февр. 2021 23:46:53,947 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:46:53,951 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Таблица "EVENTS" не найдена
+Table "EVENTS" not found; SQL statement:
+SELECT * FROM EVENTS WHERE id = 1 [42102-200]
+06 февр. 2021 23:47:56,071 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:47:56,091 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 1 not exists.] Empty response received.
+06 февр. 2021 23:47:56,092 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+06 февр. 2021 23:48:14,785 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:48:14,805 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+06 февр. 2021 23:48:47,471 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:48:47,498 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:48:47,498 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+06 февр. 2021 23:48:56,073 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:48:56,093 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+06 февр. 2021 23:48:56,093 [main] INFO  ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+06 февр. 2021 23:49:11,326 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:49:11,354 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:49:11,358 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:49:11,358 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:49:24,099 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:49:24,127 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:49:24,127 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:49:24,142 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:49:24,142 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+06 февр. 2021 23:54:39,130 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:54:39,155 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:54:39,155 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:54:39,170 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:54:39,170 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+06 февр. 2021 23:55:16,870 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:55:16,898 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:55:16,903 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:55:16,918 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:55:16,918 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+06 февр. 2021 23:55:28,933 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:55:32,380 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:55:32,396 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - 
+id: 1
+name: Sergey
+last_name: Tolstoy
+age: Tue Oct 12 00:00:00 MSD 1999
+date_of_registration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+rating: 0.0
+
+06 февр. 2021 23:56:04,993 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:56:05,017 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:56:05,031 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+06 февр. 2021 23:56:05,031 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+06 февр. 2021 23:56:15,798 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:56:15,820 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2.5 not exists.] Empty response received.
+06 февр. 2021 23:56:15,824 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:56:15,826 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:56:45,008 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:56:47,568 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2.5 not exists.] Empty response received.
+06 февр. 2021 23:56:47,577 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:56:47,581 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:57:07,991 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:57:58,142 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2.5 not exists.] Empty response received.
+06 февр. 2021 23:57:58,154 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:57:58,159 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:58:06,993 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:58:07,021 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:58:07,023 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+06 февр. 2021 23:58:07,024 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:58:18,087 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:58:30,633 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:58:30,636 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+06 февр. 2021 23:58:30,640 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:58:35,834 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:58:53,610 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:58:53,613 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+06 февр. 2021 23:58:53,617 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+06 февр. 2021 23:58:56,301 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+06 февр. 2021 23:59:00,412 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+06 февр. 2021 23:59:24,899 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+06 февр. 2021 23:59:51,340 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+07 февр. 2021 00:06:23,201 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:06:38,411 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:06:40,540 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+07 февр. 2021 00:07:31,875 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+07 февр. 2021 00:11:10,568 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:11:27,599 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:11:27,599 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+07 февр. 2021 00:11:31,780 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:11:31,807 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:11:31,807 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+07 февр. 2021 00:11:49,689 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:11:54,300 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:12:30,201 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+07 февр. 2021 00:12:33,457 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:12:35,092 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:13:44,226 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get event with id 1 !****
+07 февр. 2021 00:13:47,670 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:14:08,588 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 1 !****
+07 февр. 2021 00:18:49,172 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:18:49,198 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 1 !****
+07 февр. 2021 00:18:49,203 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 1
+executor: 
+status: none
+type: order
+
+07 февр. 2021 00:51:36,554 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:51:36,563 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 00:51:36,563 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 1 !****
+07 февр. 2021 00:51:43,911 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:51:43,938 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 1 !****
+07 февр. 2021 00:51:43,938 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Alexey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Sat Feb 06 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+07 февр. 2021 00:52:14,990 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:52:14,999 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+07 февр. 2021 00:52:14,999 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 1 !****
+07 февр. 2021 00:52:29,327 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:52:29,346 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 00:52:29,346 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+07 февр. 2021 00:52:46,775 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:52:46,799 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 00:52:46,807 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 1 !****
+07 февр. 2021 00:52:46,815 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+07 февр. 2021 00:53:20,867 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:53:20,876 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 00:53:20,876 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 1 !****
+07 февр. 2021 00:53:28,114 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:53:28,129 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 00:53:28,129 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 4 !****
+07 февр. 2021 00:53:42,836 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:53:42,860 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 00:53:42,864 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 4 !****
+07 февр. 2021 00:53:42,871 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+title: running
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+07 февр. 2021 00:53:54,912 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:53:54,919 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 0 rows]
+07 февр. 2021 00:53:54,920 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_EVENT
+07 февр. 2021 00:59:29,957 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 00:59:29,978 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 40 not exists.] Empty response received.
+07 февр. 2021 01:03:15,309 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 01:03:15,331 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 10 not exists.] Empty response received.
+07 февр. 2021 01:03:52,090 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 01:03:52,109 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 40 not exists.] Empty response received.
+07 февр. 2021 01:04:02,237 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 01:04:02,265 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 01:04:02,274 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+07 февр. 2021 01:04:02,275 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id 4 !****
+07 февр. 2021 03:45:44,760 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 03:45:44,781 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 04:19:42,688 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:19:42,696 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 04:19:42,696 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+07 февр. 2021 04:20:28,832 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:21:30,255 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:21:30,274 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:21:30,275 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+07 февр. 2021 04:21:30,275 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:24:01,727 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:24:01,748 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 10 not exists.] Empty response received.
+07 февр. 2021 04:24:11,306 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:24:11,325 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:24:24,916 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:24:24,936 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:24:24,936 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+07 февр. 2021 04:24:44,259 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:24:44,279 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 2 not exists.] Empty response received.
+07 февр. 2021 04:24:55,057 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:24:55,088 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 04:24:55,088 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+07 февр. 2021 04:24:59,994 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:25:00,016 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 2 !****
+07 февр. 2021 04:25:00,021 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Sun Feb 07 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+07 февр. 2021 04:25:12,293 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:25:12,318 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 04:25:12,318 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+07 февр. 2021 04:25:21,966 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:25:21,986 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:25:21,987 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+07 февр. 2021 04:25:21,987 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:27:34,429 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:27:34,448 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:27:42,414 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:27:42,439 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 04:27:42,439 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2 !****
+07 февр. 2021 04:27:48,868 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:27:48,895 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:27:48,896 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+07 февр. 2021 04:27:48,896 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:27:57,583 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:27:57,603 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 04:27:57,604 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+07 февр. 2021 04:27:57,604 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:28:04,495 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:28:04,523 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 04:28:04,523 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:28:14,660 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:28:14,679 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 4 not exists.] Empty response received.
+07 февр. 2021 04:28:14,679 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+07 февр. 2021 04:54:30,026 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:54:30,055 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 04:54:30,055 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:55:55,257 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:58:02,368 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 04:58:02,369 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:58:04,074 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:58:25,464 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 04:58:25,465 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:59:28,596 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 04:59:38,597 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 04:59:38,599 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 04:59:43,752 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:00:09,360 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:00:09,362 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:00:15,241 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:00:52,574 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:00:52,574 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:01:07,333 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:01:15,117 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 05:01:19,392 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:01:20,816 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 05:01:37,806 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:01:37,836 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:01:37,846 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Столбец "EVENT" не найден
+Column "EVENT" not found; SQL statement:
+UPDATE PHOTOS SET event = '3' WHERE id =  [42122-200]
+07 февр. 2021 05:01:37,846 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:01:44,837 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:01:44,866 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:01:44,871 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Столбец "EVENT" не найден
+Column "EVENT" not found; SQL statement:
+UPDATE PHOTOS SET event = '1' WHERE id =  [42122-200]
+07 февр. 2021 05:01:44,871 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:02:31,984 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:02:32,004 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:02:32,007 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 1 !****
+07 февр. 2021 05:02:32,011 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+title: running
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+07 февр. 2021 05:02:38,984 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:02:39,013 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:02:39,019 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Столбец "EVENT" не найден
+Column "EVENT" not found; SQL statement:
+UPDATE PHOTOS SET event = '1' WHERE id =  [42122-200]
+07 февр. 2021 05:02:39,019 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:03:23,081 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:03:23,112 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:03:23,117 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Столбец "EVENT" не найден
+Column "EVENT" not found; SQL statement:
+UPDATE PHOTOS SET event = '1' WHERE id =  [42122-200]
+07 февр. 2021 05:03:23,117 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:03:56,334 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:03:56,359 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:03:59,162 [main] ERROR ru.sfedu.photosearch.Database - UPDATE query failed to execute: Столбец "EVENT" не найден
+Column "EVENT" not found; SQL statement:
+UPDATE PHOTOS SET event = '1' WHERE id = 3 [42122-200]
+07 февр. 2021 05:04:06,782 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:05:25,207 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:05:25,234 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:05:25,234 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:06:13,809 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:06:35,535 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:06:35,535 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:07:08,017 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:07:16,904 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:07:16,905 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:09:22,860 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:10:11,631 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:10:11,662 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.3
+07 февр. 2021 05:11:40,449 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:11:40,475 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:11:40,476 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:12:31,605 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:12:31,630 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+07 февр. 2021 05:12:44,912 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:12:44,944 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:12:44,948 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:12:44,948 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:13:20,951 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:13:23,955 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:13:41,800 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:13:41,812 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:13:41,813 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:13:46,193 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:14:19,666 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:14:19,668 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:14:19,671 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:14:19,671 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:14:22,673 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:15:20,180 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:20,189 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:41,287 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:15:44,490 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:44,493 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:49,993 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:15:49,993 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:15:53,602 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:15:54,176 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:54,179 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:15:54,182 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:15:54,182 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:16:14,111 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:18:08,284 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:18:34,585 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:18:41,345 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:18:48,027 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:18:51,237 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:18:51,265 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:18:51,269 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:18:51,274 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:18:51,274 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:19:06,415 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:19:19,953 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:19:19,956 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:19:19,959 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:19:19,959 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:19:31,950 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:19:37,514 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:19:43,056 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:19:45,888 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:19:45,889 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:19:48,803 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:19:54,019 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:20:05,473 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:20:05,484 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:20:05,485 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:20:18,935 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:21:27,695 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:22:06,211 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:22:06,223 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:22:06,224 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:23:00,300 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:23:05,867 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:23:39,985 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:23:42,464 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:23:43,630 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:24:11,861 [main] ERROR ru.sfedu.photosearch.Database - Database connection failure: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+07 февр. 2021 05:24:19,174 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:24:19,202 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:24:19,205 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:24:19,205 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 1
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 05:24:34,094 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:24:34,120 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:24:34,123 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 05:25:16,460 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:25:16,479 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 40 not exists.] Empty response received.
+07 февр. 2021 05:25:27,871 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:25:27,893 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:25:27,899 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:25:27,902 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+07 февр. 2021 05:25:27,902 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id 2 !****
+07 февр. 2021 05:25:58,548 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:25:58,566 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 2 not exists.] Empty response received.
+07 февр. 2021 05:26:06,608 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:26:06,632 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:26:06,636 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 3 !****
+07 февр. 2021 05:26:06,639 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+07 февр. 2021 05:26:16,752 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:26:16,777 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:26:47,390 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:26:47,413 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:27:48,315 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:27:48,337 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:28:11,844 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:28:11,867 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:28:29,826 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:28:29,849 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:29:44,987 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:29:44,988 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 3 !****
+07 февр. 2021 05:29:48,294 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:30:02,561 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:30:06,237 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 3 !****
+07 февр. 2021 05:30:20,714 [main] ERROR ru.sfedu.photosearch.Database - Database connection failure: База данных уже используется: null. Возможные решения: закрыть все другие соединения; использовать режим сервера
+Database may be already in use: null. Possible solutions: close all other connection(s); use the server mode [90020-200]
+07 февр. 2021 05:30:29,085 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:30:29,104 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 05:30:40,160 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:30:40,192 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:30:40,195 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+07 февр. 2021 05:30:55,852 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:30:55,877 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 05:30:55,883 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+07 февр. 2021 05:30:55,884 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:31:02,162 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:31:02,194 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:31:02,195 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 3
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg

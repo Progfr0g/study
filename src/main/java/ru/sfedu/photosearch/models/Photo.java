@@ -6,14 +6,9 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 import ru.sfedu.photosearch.Constants;
-import ru.sfedu.photosearch.enums.PaymentMethod;
-import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.enums.Status;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Root(name="photo")
 public class Photo{

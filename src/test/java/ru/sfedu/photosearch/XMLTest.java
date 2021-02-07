@@ -8,7 +8,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.models.User;
-import ru.sfedu.photosearch.providers.DataProviderXML;
+//import ru.sfedu.photosearch.providers.DataProviderXML;
 import ru.sfedu.photosearch.utils.XML_util;
 import ru.sfedu.photosearch.xmlTables.XML_UsersTable;
 

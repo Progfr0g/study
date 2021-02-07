@@ -107,7 +107,6 @@ public class User {
         } else {
             return value;
         }
-
     }
 
     public String getUserOutput(){

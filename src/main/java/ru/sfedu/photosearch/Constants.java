@@ -1,11 +1,5 @@
 package ru.sfedu.photosearch;
 
-import org.simpleframework.xml.Attribute;
-import org.simpleframework.xml.Element;
-import ru.sfedu.photosearch.enums.PaymentMethod;
-import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.enums.Status;
-
 public class Constants {
     public static final String DATAPROVIDER_DB = "db";
     public static final String DATAPROVIDER_CSV = "csv";
@@ -41,47 +35,48 @@ public class Constants {
                     "id IDENTITY, " +
                     "name VARCHAR(30)," +
                     "last_name VARCHAR(30)," +
-                    "age INT," +
+                    "birthday DATE," +
                     "date_of_registration DATE," +
-                    "role ENUM('customer', 'executor', 'none')," +
+                    "role ENUM('customer', 'photographer', 'none')," +
                     "town VARCHAR(100)," +
-                    "rating FLOAT(1) default 0.0)";
+                    "wallet FLOAT(1) default 0.0," +
+                    "rating FLOAT(1) default 0.0," +
+                    "experience INT default 0," +
+                    "costLevel ENUM('cheap', 'average', 'expensive', 'none'))";
     public static final String TABLE_EVENTS =
             "CREATE TABLE IF NOT EXISTS EVENTS (" +
                     "id IDENTITY, " +
                     "title VARCHAR(100)," +
                     "description VARCHAR," +
-                    "customer INT," +
-                    "executor INT," +
                     "event_date DATE," +
+                    "creation_date DATE," +
                     "price INT," +
                     "quantity FLOAT(2)," +
-                    "payment_method ENUM('cash', 'online_payment', 'none')," +
-                    "paid BOOLEAN DEFAULT FALSE," +
-                    "payment_date DATE," +
-                    "status ENUM('uncompleted', 'completed', 'approved', 'none') default 'uncompleted')";
+                    "customer INT," +
+                    "executor INT," +
+                    "status ENUM('uncompleted', 'completed', 'reservation', 'approved', 'none') default 'none'," +
+                    "type ENUM('offer', 'order', 'none') default 'none')";
     public static final String TABLE_PHOTOS =
             "CREATE TABLE IF NOT EXISTS PHOTOS (" +
                     "id IDENTITY, " +
-                    "user_id INT," +
-                    "event_id INT," +
+                    "userId INT," +
+                    "eventId INT," +
                     "title VARCHAR(100)," +
                     "description VARCHAR," +
                     "tag VARCHAR(50)," +
-                    "photo_path VARCHAR," +
-                    "rating INT default 0.0)";
+                    "photoPath VARCHAR)";
     public static final String TABLE_COMMENTS =
-            "CREATE TABLE IF NOT EXISTS PHOTOS (" +
+            "CREATE TABLE IF NOT EXISTS СOMMENTS (" +
                     "id IDENTITY, " +
-                    "user_id INT," +
-                    "photo_id INT," +
-                    "text VARCHAR," +
+                    "userId INT," +
+                    "photoId INT," +
+                    "comment VARCHAR," +
                     "date DATE)";
     public static final String TABLE_RATES =
             "CREATE TABLE IF NOT EXISTS RATES (" +
                     "id IDENTITY, " +
-                    "user_id INT," +
-                    "photo_id INT," +
+                    "userId INT," +
+                    "photoId INT," +
                     "rate FLOAT(2)," +
                     "date DATE)";
 
@@ -105,10 +100,10 @@ public class Constants {
     public static final String M_SEARCH_PHOTOGRAPHER = "SEARCH_PHOTOGRAPHER";
 
     public static final String INSERT_USERS_QUERY = "INSERT INTO USERS " +
-            "(name, last_name, age, date_of_registration, role, town) VALUES ('%s','%s',%s,'%s','%s','%s')";
+            "(name, last_name, birthday, date_of_registration, role, town) VALUES ('%s','%s',TO_DATE('%s','dd-MM-yyyy'),TO_DATE('%s','dd-MM-yyyy'),'%s','%s')";
     public static final String INSERT_EVENTS_QUERY = "INSERT INTO EVENTS " +
-            "(title, description, customer, event_date, price, quantity) " +
-            "VALUES ('%s','%s',%s,'%s',%s,%s)";
+            "(title, description, customer, event_date, creation_date, price, quantity, type) " +
+            "VALUES ('%s','%s','%s',TO_DATE('%s','dd-MM-yyyy'),TO_DATE('%s','dd-MM-yyyy'),%s, %s,'%s')";
     public static final String SELECT_PROFILE_QUERY = "SELECT * FROM USERS WHERE id = ";
     public static final String SELECT_EVENT_QUERY = "SELECT * FROM EVENTS WHERE id = ";
     public static final String UPDATE_PROFILE_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
@@ -118,7 +113,7 @@ public class Constants {
 
     public static final String SELECT_PHOTO_QUERY = "SELECT * FROM PHOTOS WHERE id = ";
     public static final String INSERT_PHOTO_QUERY = "INSERT INTO %s " +
-            "(user_id, photo_path) " +
+            "(userId, photoPath) " +
             "VALUES ('%s','%s')";
     public static final String UPDATE_PHOTO_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String DELETE_PHOTO_QUERY = "DELETE FROM %s WHERE id = ";
@@ -216,9 +211,9 @@ public class Constants {
     public static final String EMPTY_GET_PORTFOLIO = "[Portfolio with profile id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_PHOTO_PATH = "[Photo path with photo id %s not exists.] Empty response received.";
 
-    public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlast_name: %s\nage: %s\ndate_of_registration: %s\nrole: %s\ntown: %s\nrating: %s\n";
-    public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\ncustomer: %s\nexecutor: %s\nevent_date: %s\nprice: %s\nquantity: %s\npayment_method: %s\npaid: %s\npayment_date: %s\nstatus: %s\n";
-    public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s\nrating";
+    public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
+    public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
+    public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
 
     public static final String CSV_USERS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
@@ -242,9 +237,13 @@ public class Constants {
     public static final String EVENTS_TITLE = "title";
     public static final String EVENTS_DESCRIPTION = "description";
     public static final String EVENTS_PRICE = "price";
+    public static final String EVENTS_EXECUTOR = "executor";
+    public static final String EVENTS_CUSTOMER = "customer";
     public static final String EVENTS_QUANTITY = "quantity";
 
     public static final String PHOTOS_TITLE = "title";
+    public static final String PHOTOS_USER = "user";
+    public static final String PHOTOS_EVENT = "eventId";
     public static final String PHOTOS_DESCRIPTION = "description";
     public static final String PHOTOS_TAG = "tag";
     public static final String PHOTOS_PATH = "path";

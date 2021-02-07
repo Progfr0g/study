@@ -4,10 +4,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Database;
+import ru.sfedu.photosearch.enums.EventType;
+import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.enums.Tables;
+import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Photo;
+import ru.sfedu.photosearch.newModels.User;
+import ru.sfedu.photosearch.utils.Formatter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
+
 
 
 public class DataProviderDatabase implements DataProvider {
@@ -15,50 +23,50 @@ public class DataProviderDatabase implements DataProvider {
     public Database DB = new Database();
 
     @Override
-    public String createNewProfile(String name, String last_name, Integer age, String date_of_registration, String role, String town) {
-        String query = String.format(Constants.INSERT_USERS_QUERY, name, last_name, age.toString(), date_of_registration, role, town);
+    public Boolean createNewProfile(String name,
+                                   String last_name,
+                                   Date birthDay,
+                                   Date dateOfRegistration,
+                                   Role role,
+                                   String town) {
+
+        String query = String.format(
+                Constants.INSERT_USERS_QUERY,
+                name,
+                last_name,
+                Formatter.normalFormatDay(birthDay),
+                Formatter.dateOfRegistration(dateOfRegistration),
+                role,
+                town);
         if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
-            return Constants.SUCCESS_NEW_PROFILE;
+            return true;
         }
-        return null;
+        return false;
     }
 
     @Override
-    public String createNewEvent(String title, String description, String customer, String event_date, Integer price, Float quantity) {
-        String query = String.format(Constants.INSERT_EVENTS_QUERY, title, description, customer, event_date, price.toString(), quantity.toString());
-        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
-            return Constants.SUCCESS_NEW_PROFILE;
-        }
-        return null;
-    }
-
-    @Override
-    public String getProfile(String id) {
+    public User getProfile(String id) {
         String query = Constants.SELECT_PROFILE_QUERY + id;
         try {
             DB.connect();
             ResultSet rs = DB.select(query);
             int rsMetaSize = rs.getMetaData().getColumnCount();
-            String result = Constants.UTIL_NEW_LINE;
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = Constants.UTIL_EMPTY_STRING;
-                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
-                    result += rs.getMetaData().getColumnName(i+1)
-                            + Constants.UTIL_DOUBLE_DOTS
-                            + Constants.UTIL_SPACE
-                            + value
-                            + Constants.UTIL_NEW_LINE;
+                    strings[i] = rs.getString(i+1);
                 }
+                rows++;
             }
             DB.closeConnection();
-
-            if (result == Constants.UTIL_NEW_LINE){
-                return String.format(Constants.EMPTY_GET_PROFILE, id);
-            } else
-                log.debug(String.format(Constants.SUCCESS_GET_PROFILE, id));
-                return result;
-
+            if (rows == 0){
+                log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
+                return null;
+            } else{
+                User resultUser = new User<String>(strings);
+                return resultUser;
+            }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex.getMessage());
         }
@@ -66,31 +74,82 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public String getEvent(String id) {
+    public Boolean editProfileById(String id, String field, String value) {
+        String query = String.format(Constants.UPDATE_PROFILE_QUERY, Tables.USERS.toString(), field, value) + id;
+        if (DB.connect() && (DB.update(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean deleteProfileById(String id) {
+        String query = String.format(Constants.DELETE_PROFILE_QUERY, Tables.USERS.toString()) + id;
+        if (DB.connect() && (DB.delete(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean createNewEvent(String title,
+                                  String description,
+                                  String customer,
+                                  Date eventDate,
+                                  Date creationDate,
+                                  Integer price,
+                                  Float quantity,
+                                  EventType type) {
+        String query = String.format(
+                Constants.INSERT_EVENTS_QUERY,
+                title,
+                description,
+                customer,
+                Formatter.normalFormatDay(eventDate),
+                Formatter.dateOfRegistration(creationDate),
+                price.toString(),
+                quantity.toString(),
+                type);
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Event getEvent(String id) {
         String query = Constants.SELECT_EVENT_QUERY + id;
         try {
             DB.connect();
             ResultSet rs = DB.select(query);
             int rsMetaSize = rs.getMetaData().getColumnCount();
-            String result = Constants.UTIL_NEW_LINE;
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = Constants.UTIL_EMPTY_STRING;
-                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
-                    result += rs.getMetaData().getColumnName(i+1)
-                            + Constants.UTIL_DOUBLE_DOTS
-                            + Constants.UTIL_SPACE
-                            + value
-                            + Constants.UTIL_NEW_LINE;
+                    strings[i] = rs.getString(i+1);
                 }
+                rows++;
             }
             DB.closeConnection();
-
-            if (result == Constants.UTIL_NEW_LINE){
-                return String.format(Constants.EMPTY_GET_EVENT, id);
-            } else
-                log.debug(String.format(Constants.SUCCESS_GET_EVENT, id));
-                return result;
+            if (rows == 0){
+                log.info(String.format(Constants.EMPTY_GET_EVENT, id));
+                return null;
+            } else{
+                User costumer;
+                if (strings[7]!=null) {
+                    costumer = getProfile(strings[7]);
+                } else
+                    costumer = null;
+                User executor;
+                if (strings[8]!=null) {
+                    executor = getProfile(strings[8]);
+                } else {
+                    executor = null;
+                };
+                Event resultEvent = new Event<String>(strings, costumer, executor);
+                return resultEvent;
+            }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex.getMessage());
         }
@@ -98,71 +157,63 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public void editProfileById(String id, String field, String value) {
-        DB.connect();
-        String query = String.format(Constants.UPDATE_PROFILE_QUERY, Tables.USERS.toString(), field, value) + id;
-        DB.update(query);
-        DB.closeConnection();
-    }
-
-    @Override
-    public void deleteProfileById(String id) {
-        DB.connect();
-        String query = String.format(Constants.DELETE_PROFILE_QUERY, Tables.USERS.toString()) + id;
-        DB.delete(query);
-        DB.closeConnection();
-    }
-
-    @Override
-    public void deleteEventById(String id) {
-        DB.connect();
-        String query = String.format(Constants.DELETE_EVENT_QUERY, Tables.EVENTS.toString()) + id;
-        DB.delete(query);
-        DB.closeConnection();
-    }
-
-    @Override
-    public void editEventById(String id, String field, String value) {
-        DB.connect();
+    public Boolean editEventById(String id, String field, String value) {
         String query = String.format(Constants.UPDATE_EVENT_QUERY, Tables.EVENTS.toString(), field, value) + id;
-        DB.update(query);
-        DB.closeConnection();
-    }
-
-    @Override
-    public String addPhoto(String id, String path) {
-        String query = String.format(Constants.INSERT_PHOTO_QUERY, Tables.PHOTOS.toString(), id, path);
-        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()){
-            return Constants.SUCCESS_ADD_PHOTO;
+        if (DB.connect() && (DB.update(query) > 0) && DB.closeConnection()) {
+            return true;
         }
-        return null;
+        return false;
     }
 
     @Override
-    public String getPhoto(String id) {
+    public Boolean deleteEventById(String id) {
+        String query = String.format(Constants.DELETE_EVENT_QUERY, Tables.EVENTS.toString()) + id;
+        if (DB.connect() && (DB.delete(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean addPhoto(String userId, String path) {
+        String query = String.format(Constants.INSERT_PHOTO_QUERY, Tables.PHOTOS.toString(), userId, path);
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Photo getPhoto(String id) {
         String query = Constants.SELECT_PHOTO_QUERY + id;
         try {
             DB.connect();
             ResultSet rs = DB.select(query);
             int rsMetaSize = rs.getMetaData().getColumnCount();
-            String result = Constants.UTIL_NEW_LINE;
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = Constants.UTIL_EMPTY_STRING;
-                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
-                    result += rs.getMetaData().getColumnName(i+1)
-                            + Constants.UTIL_DOUBLE_DOTS
-                            + Constants.UTIL_SPACE
-                            + value
-                            + Constants.UTIL_NEW_LINE;
+                    strings[i] = rs.getString(i+1);
                 }
+                rows++;
             }
             DB.closeConnection();
-            if (result == Constants.UTIL_NEW_LINE){
-                return String.format(Constants.EMPTY_GET_PHOTO, id);
-            } else
-                log.debug(String.format(Constants.SUCCESS_GET_PHOTO, id));
-            return result;
+            if (rows == 0){
+                log.info(String.format(Constants.EMPTY_GET_PHOTO, id));
+                return null;
+            } else{
+                User user;
+                if (strings[1]!=null) {
+                    user = getProfile(strings[1]);
+                } else user = null;
+                Event event;
+                if (strings[2]!=null) {
+                    event = getEvent(strings[2]);
+                } else event = null;
+                Photo resultPhoto = new Photo<String>(strings, user, event);
+                return resultPhoto;
+            }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PHOTO, id) + ex.getMessage());
         }
@@ -170,11 +221,12 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public void editPhotoById(String id, String field, String value) {
-        DB.connect();
-        String query = String.format(Constants.UPDATE_PHOTO_QUERY, Tables.PHOTOS.toString(), field, value);
-        DB.update(query);
-        DB.closeConnection();
+    public Boolean editPhotoById(String id, String field, String value) {
+        String query = String.format(Constants.UPDATE_PHOTO_QUERY, Tables.PHOTOS.toString(), field, value) + id;
+        if (DB.connect() && (DB.update(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
     }
 
     @Override

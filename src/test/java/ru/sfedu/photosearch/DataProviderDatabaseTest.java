@@ -24,7 +24,7 @@ class DataProviderDatabaseTest {
         provider.DB.connect();
 //        provider.createNewProfile("Maksim","Gorky", 30, LocalDate.now().toString(), Role.CUSTOMER.name(), "rostov");
 //        provider.addPhoto("1", "C:\\Users\\cucumber\\Downloads\\2742096282.jpg");
-        log.info(provider.getProfile("2"));
+//        log.info(provider.getProfile("2"));
         log.info(provider.getPhoto("1"));
         log.info(provider.getPortfolio("2"));
 

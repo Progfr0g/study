@@ -3,7 +3,7 @@ package ru.sfedu.photosearch.xmlTables;
 import org.simpleframework.xml.ElementArray;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.photosearch.models.Event;
+//import ru.sfedu.photosearch.models.Event;
 import ru.sfedu.photosearch.models.Photo;
 import ru.sfedu.photosearch.models.User;
 
