@@ -14,6 +14,7 @@ import ru.sfedu.photosearch.utils.Formatter;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -24,7 +25,7 @@ public class DataProviderDatabase implements DataProvider {
 
     @Override
     public Boolean createNewProfile(String name,
-                                   String last_name,
+                                   String lastName,
                                    Date birthDay,
                                    Date dateOfRegistration,
                                    Role role,
@@ -33,7 +34,7 @@ public class DataProviderDatabase implements DataProvider {
         String query = String.format(
                 Constants.INSERT_USERS_QUERY,
                 name,
-                last_name,
+                lastName,
                 Formatter.normalFormatDay(birthDay),
                 Formatter.dateOfRegistration(dateOfRegistration),
                 role,
@@ -230,42 +231,49 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public void deletePhotoById(String id) {
-        DB.connect();
+    public Boolean deletePhotoById(String id) {
         String query = String.format(Constants.DELETE_PHOTO_QUERY, Tables.PHOTOS.toString())+ id;
-        DB.delete(query);
-        DB.closeConnection();
+        if (DB.connect() && (DB.delete(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public String getPortfolio(String user_id) {
-        String query = Constants.SELECT_PORTFOLIO_QUERY + user_id;
+    public ArrayList<Photo> getPortfolio(String userId) {
+        String query = Constants.SELECT_PORTFOLIO_QUERY + userId;
         try {
             DB.connect();
             ResultSet rs = DB.select(query);
             int rsMetaSize = rs.getMetaData().getColumnCount();
-            String result = Constants.UTIL_NEW_LINE;
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
+            ArrayList<Photo> photos = new ArrayList<Photo>();
             while (rs.next()){
                 for (int i = 0; i < rsMetaSize; i++) {
-                    String value = Constants.UTIL_EMPTY_STRING;
-                    if (rs.getString(i+1) != null) value = rs.getString(i+1);
-                    result += rs.getMetaData().getColumnName(i+1)
-                            + Constants.UTIL_DOUBLE_DOTS
-                            + Constants.UTIL_SPACE
-                            + value
-                            + Constants.UTIL_NEW_LINE;
+                    strings[i] = rs.getString(i+1);
                 }
-                result += Constants.UTIL_SEPARATOR
-                        + Constants.UTIL_NEW_LINE;
+                rows++;
+                User user;
+                if (strings[1]!=null) {
+                    user = getProfile(strings[1]);
+                } else user = null;
+                Event event;
+                if (strings[2]!=null) {
+                    event = getEvent(strings[2]);
+                } else event = null;
+                Photo resultPhoto = new Photo<String>(strings, user, event);
+                photos.add(resultPhoto);
             }
             DB.closeConnection();
-            if (result == Constants.UTIL_NEW_LINE){
-                return String.format(Constants.EMPTY_GET_PORTFOLIO, user_id);
-            } else
-                log.debug(String.format(Constants.SUCCESS_GET_PORTFOLIO, user_id));
-            return result;
+            if (rows == 0){
+                log.info(String.format(Constants.EMPTY_GET_PORTFOLIO, userId));
+                return null;
+            } else{
+                return photos;
+            }
         } catch (SQLException ex) {
-            log.error(String.format(Constants.ERROR_GET_PORTFOLIO, user_id) + ex.getMessage());
+            log.error(String.format(Constants.ERROR_GET_PORTFOLIO, userId) + ex.getMessage());
         }
         return null;
     }

@@ -10659,3 +10659,435 @@ Database may be already in use: null. Possible solutions: close all other connec
 07 февр. 2021 05:30:55,877 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
 07 февр. 2021 05:30:55,883 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
 07 февр. 2021 05:30:55,884 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 3 !****
+07 февр. 2021 05:31:02,162 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 05:31:02,194 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 3 !****
+07 февр. 2021 05:31:02,195 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 3
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 19:09:15,509 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:09:15,529 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+07 февр. 2021 19:09:15,532 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+07 февр. 2021 19:09:15,532 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 1 !****
+07 февр. 2021 19:09:27,161 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:09:27,181 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+07 февр. 2021 19:27:44,338 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:27:44,358 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Столбец "USER_ID" не найден
+Column "USER_ID" not found; SQL statement:
+SELECT * FROM PHOTOS WHERE user_id = 2 [42122-200]
+07 февр. 2021 19:35:50,072 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:35:50,106 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 2 !****
+07 февр. 2021 19:35:50,106 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 3
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 19:36:00,596 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:36:00,624 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 19:36:00,625 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2 !****
+07 февр. 2021 19:36:03,868 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:36:03,893 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 19:36:03,894 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2 !****
+07 февр. 2021 19:36:06,274 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:36:06,299 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+07 февр. 2021 19:36:06,300 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2 !****
+07 февр. 2021 19:36:10,659 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+07 февр. 2021 19:36:10,686 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 2 !****
+07 февр. 2021 19:36:10,686 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 3
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 19:36:10,687 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 19:36:10,687 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 5
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+07 февр. 2021 19:36:10,687 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 6
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+08 февр. 2021 00:27:36,455 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:27:36,488 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+08 февр. 2021 00:27:36,488 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2 !****
+08 февр. 2021 00:28:09,879 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:28:09,908 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 2 !****
+08 февр. 2021 00:28:09,908 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+user_id: 2
+event_id: 3
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+08 февр. 2021 00:28:09,908 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+08 февр. 2021 00:28:09,909 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 5
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+08 февр. 2021 00:28:09,909 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 6
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/1.jpg
+08 февр. 2021 00:28:09,909 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 7
+user_id: 2
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+08 февр. 2021 00:28:41,963 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:28:41,983 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+08 февр. 2021 00:28:50,379 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:28:52,570 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+08 февр. 2021 00:29:15,012 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:29:15,040 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+08 февр. 2021 00:30:27,724 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:30:27,754 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+08 февр. 2021 00:30:34,073 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:30:34,099 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+08 февр. 2021 00:30:41,785 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:31:26,721 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PHOTO
+08 февр. 2021 00:33:33,401 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:33:33,431 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+08 февр. 2021 00:33:33,431 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 7 !****
+08 февр. 2021 00:33:47,937 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:33:47,963 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 7 !****
+08 февр. 2021 00:33:47,964 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 7
+user_id: 2
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+08 февр. 2021 00:34:03,720 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:34:03,736 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Столбец "PHOTO_PATH" не найден
+Column "PHOTO_PATH" not found; SQL statement:
+SELECT photo_path FROM PHOTOS WHERE id = 2 [42122-200]
+08 февр. 2021 00:34:59,816 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:34:59,832 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:34:59,832 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+08 февр. 2021 00:34:59,930 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to show photo with id %s. java.lang.IllegalArgumentException: The file: .\testPhotos\1.jpg doesn't exist.
+08 февр. 2021 00:40:40,410 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:40:40,426 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:40:40,426 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+08 февр. 2021 00:40:40,480 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - java.lang.IllegalArgumentException: The file: .\testPhotos\1.jpg doesn't exist.
+08 февр. 2021 00:41:07,903 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:41:07,921 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:41:07,921 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+08 февр. 2021 00:41:07,975 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - java.lang.IllegalArgumentException: The file: .\testPhotos\1.jpg doesn't exist.
+08 февр. 2021 00:41:07,975 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 2. 
+08 февр. 2021 00:41:07,975 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:41:33,500 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:41:33,513 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:41:33,514 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+08 февр. 2021 00:41:33,572 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - java.lang.IllegalArgumentException: The file: .\testPhotos\1.jpg doesn't exist.
+08 февр. 2021 00:41:33,573 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 2. 
+08 февр. 2021 00:41:33,573 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:43:41,671 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:43:41,685 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:43:41,686 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 2 !****
+08 февр. 2021 00:43:41,741 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/1.jpg doesn't exist.]
+08 февр. 2021 00:43:41,742 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 2. 
+08 февр. 2021 00:43:41,742 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:44:19,817 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:44:19,835 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 2 !****
+08 февр. 2021 00:44:19,891 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/1.jpg doesn't exist.]
+08 февр. 2021 00:44:19,891 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 2. 
+08 февр. 2021 00:44:19,891 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:44:41,232 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:44:41,246 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 7 !****
+08 февр. 2021 00:44:41,300 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/test.jpg doesn't exist.]
+08 февр. 2021 00:44:41,300 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 7. 
+08 февр. 2021 00:44:41,301 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:45:37,955 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:45:37,969 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 7 !****
+08 февр. 2021 00:47:32,258 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,276 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,303 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,303 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,308 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,310 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+08 февр. 2021 00:47:32,313 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+08 февр. 2021 00:47:32,314 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 2 !****
+08 февр. 2021 00:47:32,316 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,318 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get photo path with id 8. Нет данных
+No data is available [2000-200]
+08 февр. 2021 00:47:32,318 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+08 февр. 2021 00:47:32,322 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,323 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,325 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,329 [main] DEBUG ru.sfedu.photosearch.Database - [UPDATED 1 rows]
+08 февр. 2021 00:47:32,329 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 7 !****
+08 февр. 2021 00:47:32,332 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,333 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,333 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+08 февр. 2021 00:47:32,335 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,336 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+08 февр. 2021 00:47:32,338 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,339 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Portfolio with profile id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,339 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PORTFOLIO
+08 февр. 2021 00:47:32,342 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,343 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+08 февр. 2021 00:47:32,346 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,347 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+08 февр. 2021 00:47:32,351 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,352 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id 4 not exists.] Empty response received.
+08 февр. 2021 00:47:32,352 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+08 февр. 2021 00:47:32,355 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,357 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 7 !****
+08 февр. 2021 00:47:32,357 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 7
+user_id: 2
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+08 февр. 2021 00:47:32,360 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 00:47:32,368 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+08 февр. 2021 00:47:32,368 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 01:47:13,165 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+08 февр. 2021 01:47:13,170 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/events.csv
+08 февр. 2021 01:47:13,170 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+08 февр. 2021 01:47:13,171 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+08 февр. 2021 01:47:13,171 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/rates.csv
+08 февр. 2021 01:47:13,388 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 01:48:04,462 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: users.csv
+08 февр. 2021 01:48:04,466 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: events.csv
+08 февр. 2021 01:48:04,466 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: photos.csv
+08 февр. 2021 01:48:04,467 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: comments.csv
+08 февр. 2021 01:48:04,467 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: rates.csv
+08 февр. 2021 01:48:04,684 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 01:48:09,173 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: users.csv
+08 февр. 2021 01:48:09,176 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: events.csv
+08 февр. 2021 01:48:09,176 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: photos.csv
+08 февр. 2021 01:48:09,176 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: comments.csv
+08 февр. 2021 01:48:09,177 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: rates.csv
+08 февр. 2021 01:48:09,393 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 01:48:27,594 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: users.csv
+08 февр. 2021 01:48:27,596 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: events.csv
+08 февр. 2021 01:48:27,597 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: photos.csv
+08 февр. 2021 01:48:27,597 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: comments.csv
+08 февр. 2021 01:48:27,597 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: rates.csv
+08 февр. 2021 01:48:27,602 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "customer"
+08 февр. 2021 01:50:08,161 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: users.csv
+08 февр. 2021 01:50:08,164 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: events.csv
+08 февр. 2021 01:50:08,164 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: photos.csv
+08 февр. 2021 01:50:08,165 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: comments.csv
+08 февр. 2021 01:50:08,165 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: rates.csv
+08 февр. 2021 01:50:08,170 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "customer"
+08 февр. 2021 01:50:08,177 [main] ERROR ru.sfedu.photosearch.Main - java.lang.IllegalArgumentException: No enum constant ru.sfedu.photosearch.enums.Role.MOSCOW
+08 февр. 2021 01:51:37,835 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: users.csv
+08 февр. 2021 01:51:37,838 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: events.csv
+08 февр. 2021 01:51:37,838 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: photos.csv
+08 февр. 2021 01:51:37,838 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: comments.csv
+08 февр. 2021 01:51:37,838 [main] INFO  ru.sfedu.photosearch.utils.CSV_util - File already exists: rates.csv
+08 февр. 2021 01:51:38,063 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 12ca9470-d61d-4eb7-9d9f-e744d0e4103f
+08 февр. 2021 01:51:38,063 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 02:17:55,524 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+08 февр. 2021 02:17:55,527 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 03:42:26,749 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:42:26,752 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:42:26,753 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:42:26,753 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:42:26,754 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:42:26,755 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:53:40,720 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:40,724 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:40,725 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:40,726 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:40,726 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:40,726 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:40,726 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:40,726 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:40,727 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:40,727 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:40,728 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:53:49,659 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:49,662 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:49,663 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:49,663 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:53:49,664 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:53:49,665 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:54:08,686 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:08,690 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:08,691 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:08,692 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:08,693 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:08,693 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:54:17,261 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:17,265 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:17,271 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:17,272 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:17,273 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:17,274 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:17,277 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:17,277 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:17,277 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:17,278 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:17,280 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:54:20,804 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:20,808 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:20,809 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:54:20,810 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:54:20,811 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 03:56:03,346 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 03:56:03,360 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Mon Feb 08 00:00:00 MSK 2021"
+08 февр. 2021 03:56:03,364 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "Tue Oct 12 00:00:00 MSD 1999"
+08 февр. 2021 05:02:08,384 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 05:02:21,198 [main] INFO  ru.sfedu.photosearch.Main - 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee,Evgeniy,Tolstoy,Tue Mar 22 00:00:00 MSK 18,Sun Aug 13 00:00:00 MSK 13,CUSTOMER,Moscow,0.0
+08 февр. 2021 05:04:49,368 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 05:04:49,373 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+name: Evgeniy
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Sun Aug 13 00:00:00 MSK 13
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 05:05:19,195 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 05:05:19,225 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 3 !****
+08 февр. 2021 05:05:19,230 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Mon Feb 08 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 05:09:31,861 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+08 февр. 2021 05:09:31,889 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 3 !****
+08 февр. 2021 05:09:31,895 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Mon Feb 08 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 05:09:36,637 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fe not exists.] Empty response received.
+08 февр. 2021 05:09:36,642 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+08 февр. 2021 05:09:47,759 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 05:09:47,763 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+name: Evgeniy
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Sun Aug 13 00:00:00 MSK 13
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 05:57:37,805 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 05:57:37,809 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+name: Evgeniy
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Sun Aug 13 00:00:00 MSK 13
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 05:57:40,974 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated profile with id: 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+08 февр. 2021 05:57:40,981 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 243ab70a-fb5c-4f6a-911b-f2bd00ba1fee !****
+08 февр. 2021 05:57:52,838 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 1
+08 февр. 2021 05:57:52,841 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+08 февр. 2021 05:57:52,841 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+08 февр. 2021 06:53:14,980 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 1
+08 февр. 2021 06:53:14,983 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+08 февр. 2021 06:53:14,984 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+08 февр. 2021 06:53:32,093 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+08 февр. 2021 06:53:32,096 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/events.csv
+08 февр. 2021 06:53:32,097 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+08 февр. 2021 06:53:32,097 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+08 февр. 2021 06:53:32,097 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/rates.csv
+08 февр. 2021 06:53:32,322 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 253bec95-a136-4710-8780-bf7c0a39841d
+08 февр. 2021 06:53:32,322 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 06:53:38,043 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: f3148187-21a3-467d-add8-b4a7780d3399
+08 февр. 2021 06:53:38,045 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+08 февр. 2021 06:53:53,375 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id f3148187-21a3-467d-add8-b4a7780d3399 !****
+08 февр. 2021 06:53:53,381 [main] INFO  ru.sfedu.photosearch.Main - f3148187-21a3-467d-add8-b4a7780d3399,Evgeniy,Tolstoy,Tue Mar 22 00:00:00 MSK 18,Sun Aug 13 00:00:00 MSK 13,CUSTOMER,Moscow,0.0
+08 февр. 2021 06:54:31,307 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id f3148187-21a3-467d-add8-b4a7780d3399 !****
+08 февр. 2021 06:54:31,311 [main] INFO  ru.sfedu.photosearch.Main - 
+id: f3148187-21a3-467d-add8-b4a7780d3399
+name: Evgeniy
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Sun Aug 13 00:00:00 MSK 13
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+08 февр. 2021 06:54:48,144 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated profile with id: f3148187-21a3-467d-add8-b4a7780d3399
+08 февр. 2021 06:54:48,150 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id f3148187-21a3-467d-add8-b4a7780d3399 !****

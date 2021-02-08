@@ -3,6 +3,8 @@ package ru.sfedu.photosearch.newModels;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.utils.Formatter;
@@ -13,13 +15,21 @@ import java.util.List;
 
 public class User<T> {
     public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.User.class);
+    @Attribute
     private T id;
+    @Element
     private String name;
+    @Element
     private String lastName;
+    @Element
     private Date birthDay;
+    @Element
     private Date dateOfRegistration;
+    @Element
     private Role role;
+    @Element
     private String town;
+    @Element
     private Float wallet;
 
     public T getId() {
@@ -86,7 +96,9 @@ public class User<T> {
         this.wallet = wallet;
     }
 
-    public User(){};
+    public User() {
+        super();
+    }
 
     public User(T id, String name, String lastName, Date birthDay, Date dateOfRegistration, Role role, String town, Float wallet) {
         this.id = id;
@@ -124,7 +136,7 @@ public class User<T> {
                 checkNull(getId().toString()),
                 checkNull(getName()),
                 checkNull(getLastName()),
-                checkNull(String.valueOf(getBirthDay())),
+                checkNull(getBirthDay().toString()),
                 checkNull(getDateOfRegistration().toString()),
                 checkNull(getRole().toString()),
                 checkNull(getTown()),
@@ -136,6 +148,12 @@ public class User<T> {
         try {
             List<ru.sfedu.photosearch.newModels.User> users = new ArrayList<>();
             for (String[] line : data) {
+                if (line[3] != null){
+                    line[3] = Formatter.normalFormatDay(Formatter.csvDateFromString(line[3]));
+                }
+                if (line[4] != null){
+                    line[4] = Formatter.normalFormatDay(Formatter.csvDateFromString(line[4]));
+                }
                 users.add(new ru.sfedu.photosearch.newModels.User(line));
             }
             return users;

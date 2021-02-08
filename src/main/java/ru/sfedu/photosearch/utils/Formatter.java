@@ -9,9 +9,11 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.Locale;
 
 public class Formatter {
     private static SimpleDateFormat dayFormatter = new SimpleDateFormat("dd-MM-yyyy");
+    private static DateFormat csvDayFormatter = new SimpleDateFormat("EEE MMM dd kk:mm:ss z yyyy", Locale.ENGLISH);
     private static SimpleDateFormat dayFormatterFromDB  = new SimpleDateFormat("yyyy-MM-dd");
     private static DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
     private static DateFormat dateFormatFromDB = new SimpleDateFormat("yyyy-MM-dd");
@@ -66,6 +68,16 @@ public class Formatter {
         Date dateOfRegistration;
         try {
             dateOfRegistration = dayFormatterFromDB.parse(date);
+            return dateOfRegistration;
+        } catch (ParseException e) {
+            log.error(e);
+        }
+        return null;
+    }
+    public static Date csvDateFromString(String date){
+        Date dateOfRegistration;
+        try {
+            dateOfRegistration = csvDayFormatter.parse(date);
             return dateOfRegistration;
         } catch (ParseException e) {
             log.error(e);

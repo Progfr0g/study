@@ -9,15 +9,16 @@ import java.awt.Desktop;
 import java.io.File;
 
 public class PhotoViewer {
-    private static Logger log = LogManager.getLogger(DataProviderDatabase.class);
-    public static void showPhoto(String path) {
+    private static Logger log = LogManager.getLogger(PhotoViewer.class);
+    public static Boolean showPhoto(String path) {
         try {
             File f = new File(path);
             Desktop dt = Desktop.getDesktop();
             dt.open(f);
+            return true;
         } catch (Exception er) {
-            log.error(Constants.ERROR_SHOW_PHOTO + er);
+            log.info(String.format(Constants.ERROR_FILE_DOESNT_EXISTS, path));
+            return false;
         }
-
     }
 }

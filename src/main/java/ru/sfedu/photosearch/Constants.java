@@ -123,8 +123,8 @@ public class Constants {
     public static final String UPDATE_COMMENTS_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String DELETE_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
 
-    public static final String SELECT_PORTFOLIO_QUERY = "SELECT * FROM PHOTOS WHERE user_id = ";
-    public static final String SELECT_PHOTO_PATH_QUERY = "SELECT photo_path FROM PHOTOS WHERE id = ";
+    public static final String SELECT_PORTFOLIO_QUERY = "SELECT * FROM PHOTOS WHERE userId = ";
+    public static final String SELECT_PHOTO_PATH_QUERY = "SELECT photoPath FROM PHOTOS WHERE id = ";
 //    public static final String;
 //    public static final String;
 //    public static final String;
@@ -202,6 +202,7 @@ public class Constants {
     public static final String ERROR_PHOTO_CONVERT = "Photo convertion from csv to Photo() has been failed";
     public static final String ERROR_COMMENT_CONVERT = "Comment convertion from csv to Comment() has been failed";
     public static final String ERROR_RATE_CONVERT = "Rate convertion from csv to Rate() has been failed";
+    public static final String ERROR_FILE_DOESNT_EXISTS = "[The file: %s doesn't exist.]";
 
     public static final String FAILURE = "Failed to run method.";
 
@@ -215,9 +216,13 @@ public class Constants {
     public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
 
-    public static final String CSV_USERS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s";
-    public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
-    public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s";
+
+    public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s";
+//    public static final String CSV_USERS_OUTPUT= "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
+//    public static final String CSV_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
+//    public static final String CSV_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
 
     public static final String UTIL_SPACE = " ";
     public static final String UTIL_NEW_LINE = "\n";
@@ -231,7 +236,8 @@ public class Constants {
 
     public static final String USERS_NAME = "name";
     public static final String USERS_LAST_NAME = "last_name";
-    public static final String USERS_AGE = "age";
+    public static final String USERS_BIRTHDAY = "birthday";
+    public static final String USERS_EXPERIENCE = "experience";
     public static final String USERS_TOWN = "town";
 
     public static final String EVENTS_TITLE = "title";
@@ -250,6 +256,9 @@ public class Constants {
 
 
     public static final String UTIL_GET_WORD = "get";
-    public static final double DEFAULT_RATING = 0.0;
+    public static final Float DEFAULT_RATING = 0.0f;
+
+    public static final String FILE_CREATED = "File created: ";
+    public static final String FILE_EXISTS = "File already exists: ";
 
 }

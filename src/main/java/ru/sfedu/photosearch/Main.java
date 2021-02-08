@@ -9,17 +9,15 @@ import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
 import ru.sfedu.photosearch.providers.DataProvider;
-//import ru.sfedu.photosearch.providers.DataProviderCSV;
+import ru.sfedu.photosearch.providers.DataProviderCSV;
 import ru.sfedu.photosearch.providers.DataProviderDatabase;
-//import ru.sfedu.photosearch.providers.DataProviderXML;
+import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.Formatter;
-//import ru.sfedu.photosearch.providers.DataProviderCSV;
-//import ru.sfedu.photosearch.providers.DataProviderJDBC;
-//import ru.sfedu.photosearch.providers.DataProviderXML;
-//import ru.sfedu.photosearch.utils.BaseUtil;
-//import ru.sfedu.photosearch.utils.Response;
+import ru.sfedu.photosearch.utils.PhotoViewer;
+
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -43,11 +41,11 @@ public class Main {
 //                XML_util.createFiles();
 //                if (provider != null) return provider;
 //            }
-//            case Constants.DATAPROVIDER_CSV: {
-//                DataProviderCSV provider = new DataProviderCSV();
-//                CSV_util.createFiles();
-//                if (provider != null) return provider;
-//            }
+            case Constants.DATAPROVIDER_CSV: {
+                DataProviderCSV provider = new DataProviderCSV();
+                CSV_util.createFiles();
+                if (provider != null) return provider;
+            }
         }
         log.error(Constants.ERROR_INCORRECTLY_CHOSEN_PROVIDER + argProvider);
         return null;
@@ -58,26 +56,32 @@ public class Main {
 
         switch (args.get(1)) {
             case Constants.M_CREATE_NEW_PROFILE: {
-                String name = args.get(2);
-                String lastName = args.get(3);
-                Date birthDay = Formatter.normalFormatDay(args.get(4));
-                Date dateOfRegistration = Formatter.localAsDate(LocalDate.now());
-                Role role = Role.valueOf(args.get(5).toUpperCase());
-                String town = args.get(6);
-                Boolean result = provider.createNewProfile(
-                        name,
-                        lastName,
-                        birthDay,
-                        dateOfRegistration,
-                        role,
-                        town);
-                if (result != false) {
-                    log.info(Constants.SUCCESS_NEW_PROFILE);
-                    return true;
-                } else {
-                    log.error(Constants.FAILURE + args.get(1));
+                try {
+                    String name = args.get(2);
+                    String lastName = args.get(3);
+                    Date birthDay = Formatter.normalFormatDay(args.get(4));
+                    Date dateOfRegistration = Formatter.localAsDate(LocalDate.now());
+                    Role role = Role.valueOf(args.get(5).toUpperCase());
+                    String town = args.get(6);
+                    Boolean result = provider.createNewProfile(
+                            name,
+                            lastName,
+                            birthDay,
+                            dateOfRegistration,
+                            role,
+                            town);
+                    if (result != false) {
+                        log.info(Constants.SUCCESS_NEW_PROFILE);
+                        return true;
+                    } else {
+                        log.error(Constants.FAILURE + args.get(1));
+                        return false;
+                    }
+                } catch (Exception ex){
+                    log.error(ex);
                     return false;
                 }
+
             }
             case Constants.M_GET_PROFILE: {
                 String id = args.get(2);
@@ -207,11 +211,19 @@ public class Main {
                         } else {
                             return false;
                         }
+                    } else {
+                        Boolean result = provider.editEventById(id, field, value);
+                        if (result != false) {
+                            log.info(String.format(Constants.SUCCESS_UPDATE_EVENT, id));
+                            return true;
+                        } else {
+                            log.error(Constants.FAILURE + args.get(1));
+                            return false;
+                        }
                     }
                 } else {
                     return false;
                 }
-                return false;
             }
             case Constants.M_DELETE_EVENT: {
                 String id = args.get(2);
@@ -281,12 +293,20 @@ public class Main {
                         } else {
                             return false;
                         }
+                    } else {
+                        Boolean result = provider.editPhotoById(id, field, value);
+                        if (result != false) {
+                            log.info(String.format(Constants.SUCCESS_UPDATE_PHOTO, id));
+                            return true;
+                        } else {
+                            log.error(Constants.FAILURE + args.get(1));
+                            return false;
+                        }
                     }
                 } else {
+                    log.error(Constants.FAILURE + args.get(1));
                     return false;
                 }
-                log.error(Constants.FAILURE + args.get(1));
-                return false;
             }
             case Constants.M_GET_PHOTO: {
                 String id = args.get(2);
@@ -300,23 +320,55 @@ public class Main {
                     return false;
                 }
             }
-//            case Constants.M_DELETE_PHOTO: {
-//                String id = args.get(2);
-//                provider.deletePhotoById(id);
-//                return String.format(Constants.SUCCESS_DELETE_PHOTO, id);
-//            }
-//
-//            case Constants.M_GET_PORTFOLIO: {
-//                String user_id = args.get(2);
-//                return provider.getPortfolio(user_id);
-//            }
-//
-//            case Constants.M_SHOW_PHOTO: {
-//                String id = args.get(2);
-//                String path = provider.getPhotoPathById(id);
-//                PhotoViewer.showPhoto(path);
-//                return String.format(Constants.SUCCESS_GET_PHOTO, id);
-//            }
+            case Constants.M_DELETE_PHOTO: {
+                String id = args.get(2);
+                Photo photo = provider.getPhoto(id.toLowerCase());;
+                if (photo != null){
+                    Boolean result = provider.deletePhotoById(id);
+                    if (result != false) {
+                        log.info(String.format(Constants.SUCCESS_DELETE_PHOTO, id));
+                        return true;
+                    } else {
+                        log.error(Constants.FAILURE + args.get(1));
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+
+            case Constants.M_GET_PORTFOLIO: {
+                String userId = args.get(2);
+                ArrayList<Photo> result = provider.getPortfolio(userId);
+                if (result != null) {
+                    log.debug(String.format(Constants.SUCCESS_GET_PORTFOLIO, userId));
+                    for (Photo photo: result){
+                        log.info(photo.getPhotoOutput());
+                    }
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+
+            case Constants.M_SHOW_PHOTO: {
+                String id = args.get(2);
+                String result = provider.getPhotoPathById(id);
+                if (result != null) {
+                    Boolean showResult = PhotoViewer.showPhoto(result);
+                    if (showResult != false) {
+                        return true;
+                    } else {
+                        log.error(String.format(Constants.ERROR_SHOW_PHOTO, id));
+                        log.error(Constants.FAILURE + args.get(1));
+                        return false;
+                    }
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
 
             default:
                 throw new IllegalStateException("Unexpected method: " + args.get(1));

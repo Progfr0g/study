@@ -6,12 +6,13 @@ import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public interface DataProvider{
      Boolean createNewProfile(
              String name,
-             String last_name,
+             String lastName,
              Date birthDay,
              Date dateOfRegistration,
              Role role,
@@ -47,9 +48,9 @@ public interface DataProvider{
 
     Boolean editPhotoById(String id, String field, String value);
 
-    void deletePhotoById(String id);
+    Boolean deletePhotoById(String id);
 
-    String getPortfolio(String user_id);
+    ArrayList<Photo> getPortfolio(String user_id);
 
     String getPhotoPathById(String id);
 

@@ -60,11 +60,11 @@ public class CSV_util {
                         }
                     }
                     writer.close();
-                    log.info("File created: " + path);
-                } else {
-                    log.info("File already exists: "+ check_file.getName());
+                    log.debug(Constants.FILE_CREATED + path);
                 }
-
+//                else {
+//                    log.debug(Constants.FILE_EXISTS + check_file.getName());
+//                }
             }
 
         } catch (Exception ex) {
