@@ -118,7 +118,7 @@ public class Event<T> {
     public Event() {
     }
 
-    public Event(T id, String title, String description, Date date, Date creationDate, Integer price, Float quantity, User costumer, User executor, EventStatus status, EventType type) {
+    public Event(T id, String title, String description, Date date, Date creationDate, Integer price, Float quantity, User costumer, EventStatus status, EventType type) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -127,7 +127,6 @@ public class Event<T> {
         this.price = price;
         this.quantity = quantity;
         this.costumer = costumer;
-        this.executor = executor;
         this.status = status;
         this.type = type;
     }
@@ -172,18 +171,25 @@ public class Event<T> {
                 checkNull(getCreationDate().toString()),
                 checkNull(getPrice().toString()),
                 checkNull(getQuantity().toString()),
-                checkNull(getCostumer().getId().toString()),
-                checkNull(getExecutor().getId().toString()),
+                checkNullUser(getCostumer()),
+                checkNullUser(getExecutor()),
                 checkNull(getStatus().toString().toLowerCase()),
                 checkNull(getType().toString().toLowerCase()));
         return result;
     }
 
-    public static List<Event> convertFromCSV(List<String[]> data, User costumer, User executor){
+    public static List<Event> convertFromCSV(List<String[]> data, List<User> costumers, List<User> executors){
         try {
             List<Event> events = new ArrayList<>();
-            for (String[] line : data) {
-                events.add(new Event(line, costumer, executor));
+//            for (String[] line : data) {
+            for (int i = 0; i < data.size(); i++) {
+                if (data.get(i)[3] != null){
+                    data.get(i)[3] = Formatter.normalFormatDay(Formatter.csvDateFromString(data.get(i)[3]));
+                }
+                if (data.get(i)[4] != null){
+                    data.get(i)[4] = Formatter.normalFormatDay(Formatter.csvDateFromString(data.get(i)[4]));
+                }
+                events.add(new Event(data.get(i), costumers.get(i), executors.get(i)));
             }
             return events;
         }catch (Exception ex){

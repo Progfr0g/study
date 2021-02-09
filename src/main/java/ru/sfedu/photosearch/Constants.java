@@ -1,5 +1,7 @@
 package ru.sfedu.photosearch;
 
+import ru.sfedu.photosearch.newModels.Event;
+
 public class Constants {
     public static final String DATAPROVIDER_DB = "db";
     public static final String DATAPROVIDER_CSV = "csv";
@@ -217,7 +219,7 @@ public class Constants {
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
 
 
-    public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s";
 //    public static final String CSV_USERS_OUTPUT= "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";

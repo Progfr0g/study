@@ -1,1 +1,4 @@
 "id","user_id","event_id","title","description","tag","photo_path","rating"
+"1e6a0624-7a81-41c9-9dc4-e465bbc37188","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","test_photo","","","./testPhotos/test.jpg"
+"26b84608-e526-4be5-8054-d66979bf6181","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","","","","./testPhotos/test.jpg"
+"b78cf427-f639-41ff-b2d8-1f63d4e9eb5a","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","","","","./testPhotos/test.jpg"

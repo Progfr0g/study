@@ -1,3 +1,2 @@
 "id","name","lastName","age","dateOfRegistration","role","town","rating"
-"253bec95-a136-4710-8780-bf7c0a39841d","Evgeniy","Tolstoy","Tue Mar 22 00:00:00 MSK 18","Sun Aug 13 00:00:00 MSK 13","CUSTOMER","Moscow","0.0"
-"f3148187-21a3-467d-add8-b4a7780d3399","Alexey","Tolstoy","Tue Mar 22 00:00:00 MSK 18","Sun Aug 13 00:00:00 MSK 13","CUSTOMER","Moscow","0.0"
+"512e9b91-bf5e-4b8a-a0e5-f22b9e1c2646","Evgeniy","Tolstoy","Wed Mar 18 00:00:00 MSK 22","Tue Aug 14 00:00:00 MSK 14","CUSTOMER","Moscow"

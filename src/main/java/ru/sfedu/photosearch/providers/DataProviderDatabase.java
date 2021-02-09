@@ -147,14 +147,14 @@ public class DataProviderDatabase implements DataProvider {
                     executor = getProfile(strings[8]);
                 } else {
                     executor = null;
-                };
+                }
                 Event resultEvent = new Event<String>(strings, costumer, executor);
                 return resultEvent;
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex.getMessage());
+            return null;
         }
-        return null;
     }
 
     @Override

@@ -133,11 +133,11 @@ public class Photo<T> {
         return result;
     }
 
-    public static List<Photo> convertFromCSV(List<String[]> data, User user, Event event){
+    public static List<Photo> convertFromCSV(List<String[]> data, List<User> users, List<Event> events){
         try {
             List<ru.sfedu.photosearch.newModels.Photo> photos = new ArrayList<>();
-            for (String[] line : data) {
-                photos.add(new ru.sfedu.photosearch.newModels.Photo(line, user, event));
+            for (int i = 0; i < data.size(); i++) {
+                photos.add(new ru.sfedu.photosearch.newModels.Photo(data.get(i), users.get(i), events.get(i)));
             }
             return photos;
         }catch (Exception ex){

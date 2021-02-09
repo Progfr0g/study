@@ -11102,3 +11102,347 @@ role: CUSTOMER
 town: Moscow
 wallet: 0.0
 
+09 февр. 2021 01:44:26,567 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_PROFILE
+09 февр. 2021 01:44:50,731 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id f3148187-21a3-467d-add8-b4a7780d3399 not exists.] Empty response received.
+09 февр. 2021 01:45:50,139 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 253bec95-a136-4710-8780-bf7c0a39841d not exists.] Empty response received.
+09 февр. 2021 01:46:21,277 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 253bec95-a136-4710-8780-bf7c0a39841d !****
+09 февр. 2021 01:47:32,675 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+09 февр. 2021 01:47:32,913 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: d91fc922-7419-4b70-95e2-a9e7e742bc38
+09 февр. 2021 01:47:32,913 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+09 февр. 2021 01:48:03,742 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 01:48:03,746 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_PROFILE
+09 февр. 2021 01:49:02,138 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 01:49:56,716 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_PROFILE
+09 февр. 2021 01:50:48,496 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 2c0841c9-97ab-419b-8145-39d83f5f7f2a
+09 февр. 2021 01:50:48,498 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+09 февр. 2021 01:52:04,314 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_PROFILE
+09 февр. 2021 01:55:09,879 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+09 февр. 2021 01:55:09,881 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+09 февр. 2021 01:55:16,322 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 512e9b91-bf5e-4b8a-a0e5-f22b9e1c2646
+09 февр. 2021 01:55:16,324 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+09 февр. 2021 01:55:19,484 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: c0bac61d-55ea-4ba9-823a-172dc49ccbb0
+09 февр. 2021 01:55:19,486 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+09 февр. 2021 01:55:46,408 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 !****
+09 февр. 2021 01:56:04,458 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccb not exists.] Empty response received.
+09 февр. 2021 01:56:16,041 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 not exists.] Empty response received.
+09 февр. 2021 01:56:28,107 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 not exists.] Empty response received.
+09 февр. 2021 01:56:34,555 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 not exists.] Empty response received.
+09 февр. 2021 02:57:43,488 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 3 not exists.] Empty response received.
+09 февр. 2021 02:58:09,160 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 02:58:09,162 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 02:59:05,906 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 02:59:05,919 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 02:59:31,114 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 02:59:31,127 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 03:00:25,306 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 03:00:25,320 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 03:01:54,706 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 03:01:54,720 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 03:03:23,537 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: null
+09 февр. 2021 03:03:23,540 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+09 февр. 2021 03:03:37,763 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New event id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+09 февр. 2021 03:03:42,609 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+09 февр. 2021 03:52:15,755 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 03:52:15,760 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 03:52:15,762 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+title: auto_race
+description: competition
+eventDate: Mon Aug 14 00:00:00 MSK 19
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+executor: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+status: none
+type: order
+
+09 февр. 2021 03:52:57,858 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 03:52:57,863 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 03:52:57,866 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+title: auto_race
+description: competition
+eventDate: Mon Aug 14 00:00:00 MSK 19
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+executor: 
+status: none
+type: order
+
+09 февр. 2021 03:54:32,973 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 03:54:32,978 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f41 not exists.] Empty response received.
+09 февр. 2021 03:54:32,979 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_EVENT
+09 февр. 2021 03:57:09,395 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 03:57:09,409 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 03:57:09,411 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+title: auto_race
+description: competition
+eventDate: Mon Aug 14 00:00:00 MSK 19
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+executor: 
+status: none
+type: order
+
+09 февр. 2021 03:58:25,356 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New event id: 107f7926-8341-4b19-b329-d916485a88fe
+09 февр. 2021 03:58:25,358 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+09 февр. 2021 03:58:27,392 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New event id: 348e1169-30a0-41e2-813f-a53ff1d9a639
+09 февр. 2021 03:58:27,395 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+09 февр. 2021 03:58:30,579 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New event id: cedb689e-5123-427c-9c97-f46adf595525
+09 февр. 2021 03:58:30,582 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+09 февр. 2021 03:59:13,156 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New event id: a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+09 февр. 2021 03:59:13,159 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+09 февр. 2021 04:10:10,358 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,366 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,368 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,370 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,372 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,379 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,381 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,383 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,385 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,387 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:10:10,389 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated event with id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+09 февр. 2021 04:10:10,393 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 04:14:00,588 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,595 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,598 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,600 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,602 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,609 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,612 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,615 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,617 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,619 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:14:00,620 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated event with id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+09 февр. 2021 04:14:00,624 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 04:15:32,660 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated event with id: 8e0f8a56-05f7-4dcd-ae1b-60811778f413
+09 февр. 2021 04:15:32,666 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 04:29:07,551 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 04:29:07,554 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_EVENT
+09 февр. 2021 04:29:21,633 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 04:29:21,635 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_EVENT
+09 февр. 2021 04:30:11,922 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 04:30:11,936 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_EVENT
+09 февр. 2021 04:31:46,553 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - DELETE query failed to execute: null
+09 февр. 2021 04:31:46,567 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.DELETE_EVENT
+09 февр. 2021 04:31:49,742 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id 8e0f8a56-05f7-4dcd-ae1b-60811778f413 !****
+09 февр. 2021 04:55:25,706 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 348e1169-30a0-41e2-813f-a53ff1d9a639 not exists.] Empty response received.
+09 февр. 2021 04:56:00,071 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:00,076 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:00,078 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:00,080 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:00,083 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 04:56:00,084 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+09 февр. 2021 04:56:00,084 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+09 февр. 2021 04:56:51,748 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:51,752 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:51,754 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:51,756 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:56:51,766 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 04:57:52,623 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+09 февр. 2021 04:57:52,624 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+09 февр. 2021 04:57:57,097 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:57:57,101 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:57:57,103 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:57:57,105 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:57:57,114 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 04:58:10,407 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+09 февр. 2021 04:58:10,408 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+09 февр. 2021 04:58:13,769 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:58:13,774 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:58:13,776 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:58:13,778 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:58:13,787 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 04:59:13,961 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+09 февр. 2021 04:59:13,962 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+09 февр. 2021 04:59:17,959 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:59:17,963 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:59:17,965 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:59:17,967 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 04:59:17,975 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 04:59:22,482 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+09 февр. 2021 05:14:28,727 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. Index 7 out of bounds for length 7
+09 февр. 2021 05:14:28,730 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+09 февр. 2021 05:14:55,493 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. Index 7 out of bounds for length 7
+09 февр. 2021 05:14:55,496 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+09 февр. 2021 05:15:07,105 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. Index 7 out of bounds for length 7
+09 февр. 2021 05:15:07,107 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+09 февр. 2021 05:16:13,804 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. Index 7 out of bounds for length 7
+09 февр. 2021 05:16:13,818 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+09 февр. 2021 05:16:29,803 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:16:29,808 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:16:29,810 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:16:29,812 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:16:29,816 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:16:29,817 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1e6a0624-7a81-41c9-9dc4-e465bbc37188 !****
+09 февр. 2021 05:16:29,818 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:17:20,229 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:20,236 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:20,239 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:20,242 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:20,247 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:17:20,248 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1e6a0624-7a81-41c9-9dc4-e465bbc37188 !****
+09 февр. 2021 05:17:20,248 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:17:28,883 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,888 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,890 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,892 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,896 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,900 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,902 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,904 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,906 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,907 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:17:28,907 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated photo with id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+09 февр. 2021 05:17:28,909 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 1e6a0624-7a81-41c9-9dc4-e465bbc37188 !****
+09 февр. 2021 05:17:36,094 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:36,100 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:36,102 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:36,105 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:17:36,107 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:17:36,107 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1e6a0624-7a81-41c9-9dc4-e465bbc37188 !****
+09 февр. 2021 05:17:36,107 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:33:58,829 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:33:58,834 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:33:58,836 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:33:58,838 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:33:58,841 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:33:58,843 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+09 февр. 2021 05:34:02,767 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:02,771 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:02,773 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:02,775 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:02,778 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:34:02,780 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+09 февр. 2021 05:34:09,465 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:09,470 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:09,473 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:09,475 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:34:09,478 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:34:09,480 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+09 февр. 2021 05:35:02,976 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,981 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,983 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,985 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,989 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,992 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,994 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,996 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,998 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:02,999 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,002 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,003 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,005 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,007 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,008 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,012 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,013 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,016 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,017 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,019 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,022 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,024 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,026 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,027 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,029 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,031 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,033 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,034 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,036 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,037 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,038 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,039 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,041 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,042 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,042 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,044 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,045 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,047 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,048 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,049 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:03,052 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 2edbee71-9c58-433d-a675-dab4377a528b !****
+09 февр. 2021 05:35:38,210 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,216 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,218 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,220 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,223 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,226 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,228 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,230 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,231 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,233 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,236 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,237 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,239 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,240 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,241 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:35:38,242 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+09 февр. 2021 05:35:38,242 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:35:38,243 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 26b84608-e526-4be5-8054-d66979bf6181
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:35:38,243 [main] INFO  ru.sfedu.photosearch.Main - 
+id: b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+user_id: 65d9f0c8-54a4-4ac3-97d7-9b143471e357
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+09 февр. 2021 05:36:28,917 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,922 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,924 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,925 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,928 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,932 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,935 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,936 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,938 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,939 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,942 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,944 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,946 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,947 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+09 февр. 2021 05:36:28,948 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+09 февр. 2021 05:36:59,052 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 not exists.] Empty response received.
+09 февр. 2021 05:37:22,988 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
