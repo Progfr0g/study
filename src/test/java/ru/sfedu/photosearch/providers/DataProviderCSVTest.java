@@ -8,10 +8,14 @@ import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.PhotoSearchClient;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Photo;
+import ru.sfedu.photosearch.newModels.User;
 import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.XML_util;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,21 +35,21 @@ class DataProviderCSVTest {
 
     @Test
     void createNewProfile() {
-        String args = "CSV CREATE_NEW_PROFILE Evgeniy Tolstoy 12-10-1999 customer Moscow";
+        String args = "CSV CREATE_NEW_PROFILE Maksim Tolstoy 12-10-1999 customer Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
     //243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
     @Test
     void getProfile() {
-        String args = "CSV GET_PROFILE f3148187-21a3-467d-add8-b4a7780d3399";
+        String args = "CSV GET_PROFILE cfcecf3c-5507-41e5-b173-a1a01dd3058d";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editProfileById() {
-        String args = "CSV EDIT_PROFILE f3148187-21a3-467d-add8-b4a7780d3399 name Alexey";
+        String args = "CSV EDIT_PROFILE e7a6ce08-eb38-4101-b457-b3e2d6c85ee5 name Alexey";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -124,5 +128,47 @@ class DataProviderCSVTest {
         String args = "CSV SHOW_PHOTO 26b84608-e526-4be5-8054-d66979bf6181";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
+    }
+
+    @Test
+    void getLastUserId() {
+        String result = provider.getLastUserId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
+    void getLastEventId() {
+        String result = provider.getLastEventId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
+    void getLastPhotoId() {
+        String result = provider.getLastPhotoId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
+    void getAllUsers() {
+        ArrayList<User> result = provider.getAllUsers();
+        result.forEach(x->log.info(x.getUserOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void getAllEvents() {
+        ArrayList<Event> result = provider.getAllEvents();
+        result.forEach(x->log.info(x.getEventOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void getAllPhotos() {
+        ArrayList<Photo> result = provider.getAllPhotos();
+        result.forEach(x->log.info(x.getPhotoOutput()));
+        assertNotNull(result);
     }
 }

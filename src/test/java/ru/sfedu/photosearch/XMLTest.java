@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.models.User;
+import ru.sfedu.photosearch.newModels.User;
 //import ru.sfedu.photosearch.providers.DataProviderXML;
 import ru.sfedu.photosearch.utils.XML_util;
 import ru.sfedu.photosearch.xmlTables.XML_UsersTable;
@@ -52,19 +52,19 @@ class XMLTest {
         File source = new File(Constants.XML_USERS_FILE_PATH);
         XML_UsersTable table = new XML_UsersTable();
         table = serializer.read(XML_UsersTable.class, source);
-        for (User user: table.getxmlUsers()){
-            log.info(String.format("%s, %s, %s, %s",
-                    user.getId(),
-                    user.getName(),
-                    user.getLast_name(),
-                    Integer.parseInt(String.valueOf(user.getAge()))));
-
-            if (user.getName().equals("Elena")){
-                log.info(String.format("class updated and writed to xml %s", user.getName()));
-                user.setName("Kristina");
-                name_k = String.format("%s %s", user.getName(), user.getLast_name());
-            }
-        }
+//        for (User user: table.getxmlUsers()){
+//            log.info(String.format("%s, %s, %s, %s",
+//                    user.getId(),
+//                    user.getName(),
+//                    user.getLast_name(),
+//                    Integer.parseInt(String.valueOf(user.getAge()))));
+//
+//            if (user.getName().equals("Elena")){
+//                log.info(String.format("class updated and writed to xml %s", user.getName()));
+//                user.setName("Kristina");
+//                name_k = String.format("%s %s", user.getName(), user.getLast_name());
+//            }
+//        }
         assertEquals("Kristina Richter", name_k);
 
         File result = new File(Constants.XML_USERS_FILE_PATH);

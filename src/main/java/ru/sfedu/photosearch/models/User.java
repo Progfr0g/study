@@ -11,7 +11,7 @@ import ru.sfedu.photosearch.enums.Role;
 import java.util.ArrayList;
 import java.util.List;
 
-@Root(name="user")
+
 public class User {
     public static final Logger log = LogManager.getLogger(User.class);
     @Attribute

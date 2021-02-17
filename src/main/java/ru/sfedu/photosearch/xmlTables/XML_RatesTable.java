@@ -1,16 +1,14 @@
 package ru.sfedu.photosearch.xmlTables;
 
-import org.simpleframework.xml.ElementArray;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 import ru.sfedu.photosearch.newModels.Event;
-import ru.sfedu.photosearch.newModels.User;
 
 import java.util.List;
 
 
 @Root (name="events_table")
-public class XML_EventsTable {
+public class XML_RatesTable {
     @ElementList
     private List<Event> events;
 

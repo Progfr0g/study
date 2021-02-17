@@ -2,6 +2,7 @@ package ru.sfedu.photosearch.providers;
 
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -50,8 +51,30 @@ public interface DataProvider{
 
     Boolean deletePhotoById(String id);
 
-    ArrayList<Photo> getPortfolio(String user_id);
+    ArrayList<Photo> getPortfolio(String userId);
 
     String getPhotoPathById(String id);
+
+    String getLastUserId();
+
+    String getLastEventId();
+
+    String getLastPhotoId();
+
+    ArrayList<User> getAllUsers();
+
+    ArrayList<Event> getAllEvents();
+
+    ArrayList<Photo> getAllPhotos();
+
+    Boolean addComment(String id, String userId, String photoId, String comment, Date date);
+
+    ArrayList<Comment> getAllComments();
+
+    Boolean addRate(String id, String userId, String photoId, Float rate, Date date);
+
+    Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate);
+
+    Boolean createOffer(String id, String userId, String eventId, Date creationDate);
 
 }

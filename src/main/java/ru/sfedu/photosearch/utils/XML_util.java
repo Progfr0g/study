@@ -27,9 +27,10 @@ public class XML_util {
                 File file = new File(path);
                 if (file.createNewFile()) {
                     log.info("File created: " + file.getName());
-                } else {
-                    log.info("File already exists: "+ file.getName());
                 }
+//                else {
+//                    log.info("File already exists: "+ file.getName());
+//                }
             }
 
         } catch (Exception e) {

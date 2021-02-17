@@ -1,10 +1,20 @@
 package ru.sfedu.photosearch.newModels;
 
+import org.simpleframework.xml.Element;
+
+import java.util.Date;
+
 public class Offer<T> {
+    @Element
     private T id;
+    @Element
     private User user;
+    @Element
     private Event event;
+    @Element
     private Boolean isActive;
+    @Element
+    private Date creationDate;
 
     public T getId() {
         return id;
@@ -41,10 +51,11 @@ public class Offer<T> {
     public Offer() {
     }
 
-    public Offer(T id, User user, Event event, Boolean isActive) {
+    public Offer(T id, User user, Event event, Boolean isActive, Date creationDate) {
         this.id = id;
         this.user = user;
         this.event = event;
         this.isActive = isActive;
+        this.creationDate = creationDate;
     }
 }

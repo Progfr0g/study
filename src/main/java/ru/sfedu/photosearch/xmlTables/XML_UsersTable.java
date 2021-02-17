@@ -2,7 +2,8 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.photosearch.models.User;
+import ru.sfedu.photosearch.newModels.User;
+import ru.sfedu.photosearch.utils.Formatter;
 
 import java.util.List;
 
@@ -17,6 +18,9 @@ public class XML_UsersTable {
     }
 
     public void setUsers(List<User> users) {
+        for (User user: users){
+            user.setId(user.getId().toString());
+        }
         this.users = users;
     }
 }

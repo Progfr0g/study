@@ -2,6 +2,8 @@ package ru.sfedu.photosearch.newModels;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.utils.Formatter;
@@ -11,12 +13,19 @@ import java.util.List;
 
 public class Photo<T> {
     public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.Photo.class);
+    @Element
     private T id;
+    @Element
     private User user;
+    @Element(required = false)
     private String title;
+    @Element(required = false)
     private String description;
+    @Element(required = false)
     private Event event;
+    @Element(required = false)
     private String tag;
+    @Element
     private String path;
 
     public T getId() {

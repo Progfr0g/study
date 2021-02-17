@@ -11446,3 +11446,1526 @@ photo_path: ./testPhotos/test.jpg
 09 февр. 2021 05:36:28,948 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
 09 февр. 2021 05:36:59,052 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id c0bac61d-55ea-4ba9-823a-172dc49ccbb0 not exists.] Empty response received.
 09 февр. 2021 05:37:22,988 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 !****
+10 февр. 2021 03:21:26,828 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:21:26,831 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:21:26,832 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:21:26,832 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:21:26,832 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:21:27,057 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: dfb5378c-ca5d-4536-aa1f-dceb816ae220
+10 февр. 2021 03:21:27,102 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 03:34:27,011 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:34:27,014 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:34:27,014 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:34:27,015 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:34:27,015 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:34:37,168 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:34:37,171 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:34:37,171 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:34:37,171 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:34:37,171 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:34:37,462 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 03:34:37,462 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:35:19,501 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:35:19,504 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:35:19,504 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:35:19,504 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:35:19,505 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:35:23,446 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 824cd076-8aa0-4530-97ed-8c2b8cb4ab49
+10 февр. 2021 03:35:28,596 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 03:36:22,682 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:36:22,685 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:36:22,685 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:36:22,685 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:36:22,685 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:36:22,969 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 03:36:22,969 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:36:36,071 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:36:36,075 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:36:36,075 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:36:36,075 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:36:36,075 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:36:38,736 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 03:36:55,861 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:37:01,512 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:37:01,516 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:37:01,517 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:37:01,517 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:37:01,517 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:37:01,620 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 03:37:01,621 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:37:07,385 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:37:07,388 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:37:07,388 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:37:07,389 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:37:07,389 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:37:37,167 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:37:37,171 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:37:37,172 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:37:37,172 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:37:37,172 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:38:40,490 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: a1074983-82c7-4df8-b569-7010ae3b31e5
+10 февр. 2021 03:39:08,651 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:39:08,654 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:39:08,654 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:39:08,654 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:39:08,654 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:39:42,882 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: a9439067-6186-40e2-82a8-7fb940e2b5db
+10 февр. 2021 03:39:47,136 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:39:47,140 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:39:47,140 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:39:47,141 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:39:47,141 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:40:02,332 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 6f333148-bcb5-412e-9a28-a9d0a4ff5f14
+10 февр. 2021 03:40:07,285 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 03:40:18,837 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:40:31,338 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:40:31,341 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:40:31,341 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:40:31,342 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:40:31,342 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:40:31,444 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 03:40:31,444 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:40:44,822 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:40:44,824 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:40:44,824 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:40:44,825 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:40:44,825 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:41:02,699 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 627115f4-b425-49db-bc18-c810b865ce8e
+10 февр. 2021 03:41:24,523 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 03:41:24,524 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:43:06,993 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:43:06,997 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:43:06,997 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:43:06,997 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:43:06,997 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:43:07,107 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 03:43:07,107 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:43:36,136 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:43:36,139 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:43:36,140 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:43:36,140 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:43:36,140 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:43:42,173 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 81158803-6ba4-45d5-bfc3-52a4faeb76f7
+10 февр. 2021 03:43:48,349 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 03:43:56,326 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:49:00,502 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:49:00,504 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:49:00,504 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:49:00,505 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:49:00,505 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:49:00,608 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 03:49:00,608 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:51:01,983 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:51:01,987 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:51:01,987 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:51:01,988 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:51:01,988 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:51:02,210 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 63ba8a61-6c74-419e-a58c-04ff3110eb9d
+10 февр. 2021 03:51:02,270 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 03:51:10,213 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:51:10,216 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:51:10,216 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:51:10,216 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:51:10,216 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:51:10,307 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:51:10,307 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:51:48,380 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:51:48,384 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:51:48,384 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:51:48,385 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:51:48,385 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:51:48,484 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:51:48,484 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:52:12,091 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:52:12,095 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:52:12,095 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:52:12,095 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:52:12,095 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:52:12,194 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:52:12,195 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:52:19,568 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:52:19,571 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:52:19,571 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:52:19,572 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:52:19,572 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:52:35,063 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:52:35,064 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:52:57,429 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:52:57,432 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:52:57,433 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:52:57,433 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:52:57,433 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:53:27,346 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:53:27,347 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 03:57:21,902 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 03:57:21,906 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 03:57:21,907 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 03:57:21,907 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 03:57:21,907 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 03:57:22,139 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 051f7fcf-3764-45c2-a89e-94200fe72649
+10 февр. 2021 03:57:22,195 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 03:57:32,901 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 03:57:32,904 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 03:57:32,904 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 03:57:32,904 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 03:57:32,904 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 03:57:32,986 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 03:57:32,986 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:01:10,240 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:01:10,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:01:10,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:01:10,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:01:10,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:01:10,302 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,1]
+Message: Content is not allowed in prolog.
+10 февр. 2021 04:01:10,302 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:01:50,982 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:01:50,985 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:01:50,986 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:01:50,986 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:01:50,986 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:06:19,238 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 04:06:19,243 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 04:06:19,243 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 04:06:19,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 04:06:19,244 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 04:06:19,481 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 62bbb28f-0130-4a0b-b033-711706ffb902
+10 февр. 2021 04:06:19,535 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 04:06:32,409 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 04:06:32,412 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 04:06:32,413 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 04:06:32,413 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 04:06:32,413 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 04:06:32,667 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 5a0cefc2-0150-425b-a58b-9769a242e7cf
+10 февр. 2021 04:06:32,731 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 04:08:32,276 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:08:32,278 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:08:32,279 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:08:32,279 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:08:32,279 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:08:32,505 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: c044b94a-967b-4353-bf2e-666db26abb9d
+10 февр. 2021 04:08:32,561 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 04:08:38,330 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:08:38,333 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:08:38,333 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:08:38,333 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:08:38,333 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:08:38,420 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:08:38,420 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:15:24,869 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:15:24,872 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:15:24,872 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:15:24,872 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:15:24,872 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:15:25,090 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 9133e356-3654-4e24-8c82-7c10641a06ef
+10 февр. 2021 04:15:25,150 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 04:17:00,608 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:17:00,611 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:17:00,611 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:17:00,611 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:17:00,611 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:17:00,697 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:17:00,698 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:18:48,218 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:18:48,221 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:18:48,221 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:18:48,221 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:18:48,222 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:18:48,451 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: cf25ab58-6071-45bd-bbe5-d6ac54b1bd03
+10 февр. 2021 04:18:48,508 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 04:18:52,818 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:18:52,820 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:18:52,820 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:18:52,821 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:18:52,821 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:18:52,904 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:18:52,904 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:19:27,055 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:19:27,058 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:19:27,058 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:19:27,058 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:19:27,058 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:19:27,147 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:19:27,147 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:20:02,876 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:20:02,879 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:20:02,879 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:20:02,879 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:20:02,879 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:20:02,970 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Attribute 'id' does not have a match in class java.util.ArrayList at line 3
+10 февр. 2021 04:20:02,970 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:20:29,139 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:20:29,142 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:20:29,143 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:20:29,143 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:20:29,143 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:20:33,001 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:20:33,004 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:20:33,004 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:20:33,004 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:20:33,004 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:20:33,090 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:20:33,090 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:21:03,921 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:21:03,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:21:03,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:21:03,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:21:03,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:22:36,052 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:22:36,055 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:22:36,055 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:22:36,056 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:22:36,056 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:22:36,146 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:22:36,147 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:23:15,160 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:23:15,164 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:23:15,164 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:23:15,164 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:23:15,164 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:23:15,249 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.lang.Object not supported
+10 февр. 2021 04:23:15,249 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 04:23:21,770 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 04:23:21,773 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 04:23:21,773 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 04:23:21,773 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 04:23:21,773 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 04:23:21,995 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 39b5581c-fb24-4b58-9ad1-588eeed3ea8b
+10 февр. 2021 04:23:22,041 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 04:23:22,042 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 22:50:31,662 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+10 февр. 2021 22:50:31,666 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+10 февр. 2021 22:50:31,666 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+10 февр. 2021 22:50:31,666 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+10 февр. 2021 22:50:31,667 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+10 февр. 2021 22:50:31,884 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 38ec5d9c-8a02-4983-8151-00c7aeb375b7
+10 февр. 2021 22:50:31,928 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+10 февр. 2021 22:50:31,928 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 22:58:36,087 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 22:58:36,092 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 22:58:36,092 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 22:58:36,092 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 22:58:36,092 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 22:58:36,188 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: ParseError at [row,col]:[1,14]
+Message: XML document structures must start and end within the same entity.
+10 февр. 2021 22:58:36,189 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 22:59:29,546 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 22:59:29,550 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 22:59:29,550 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 22:59:29,550 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 22:59:29,551 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 22:59:29,777 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 979671b9-f71a-4c87-a535-5be96fce9589
+10 февр. 2021 22:59:29,835 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 23:02:11,962 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 23:02:11,965 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 23:02:11,965 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 23:02:11,965 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 23:02:11,965 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 23:02:12,052 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Attribute 'id' does not have a match in class ru.sfedu.photosearch.newModels.User at line 3
+10 февр. 2021 23:02:12,052 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_PROFILE
+10 февр. 2021 23:02:28,923 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 23:02:28,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 23:02:28,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 23:02:28,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 23:02:28,926 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 23:02:29,155 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: d99fc73e-50a5-439f-9751-b7352d2392e7
+10 февр. 2021 23:02:29,213 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+10 февр. 2021 23:02:39,533 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+10 февр. 2021 23:02:39,535 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+10 февр. 2021 23:02:39,536 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+10 февр. 2021 23:02:39,536 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+10 февр. 2021 23:02:39,536 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+10 февр. 2021 23:02:39,863 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: d924f05a-e3a1-4a66-a0b3-f6f0712332f1
+10 февр. 2021 23:02:39,863 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:17:57,277 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+11 февр. 2021 04:17:57,280 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+11 февр. 2021 04:17:57,281 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+11 февр. 2021 04:17:57,281 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+11 февр. 2021 04:17:57,281 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+11 февр. 2021 04:17:57,414 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:17:57,415 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:17:57,417 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:19:54,034 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+11 февр. 2021 04:19:54,037 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+11 февр. 2021 04:19:54,037 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+11 февр. 2021 04:19:54,037 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+11 февр. 2021 04:19:54,037 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+11 февр. 2021 04:19:54,155 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:19:54,155 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:19:54,157 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:19:58,643 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+11 февр. 2021 04:19:58,646 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+11 февр. 2021 04:19:58,647 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+11 февр. 2021 04:19:58,647 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+11 февр. 2021 04:19:58,647 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+11 февр. 2021 04:19:58,964 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: f5c22050-f304-414f-83d7-b777ea0f672f
+11 февр. 2021 04:19:58,964 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:20:05,064 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: users.xml
+11 февр. 2021 04:20:05,068 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: events.xml
+11 февр. 2021 04:20:05,068 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: photos.xml
+11 февр. 2021 04:20:05,069 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: comments.xml
+11 февр. 2021 04:20:05,069 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File already exists: rates.xml
+11 февр. 2021 04:20:05,199 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:20:05,200 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:20:05,201 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:20:32,344 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:20:32,347 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:20:32,349 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:20:50,770 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:20:50,775 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:20:56,843 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id d99fc73e-50a5-439f-9751-b7352d2392e not exists.] Empty response received.
+11 февр. 2021 04:20:56,846 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 04:21:06,582 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 04:21:06,587 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 04:49:45,845 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 579472ca-8d90-4145-b486-e09022537aca
+11 февр. 2021 04:49:45,847 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:49:49,297 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: a04240fd-1d5f-46ae-a463-d84f62fc3cba
+11 февр. 2021 04:49:49,299 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:50:14,735 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:50:14,739 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:50:36,319 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:50:36,323 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:51:30,219 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:51:30,224 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:52:01,804 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:52:01,811 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:52:36,775 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:52:36,780 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:52:47,520 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:52:47,524 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:53:07,176 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:53:07,182 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:53:10,889 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:53:10,895 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:53:47,902 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 16602bf4-5b16-4f05-b720-d1dddc67edd0
+11 февр. 2021 04:53:47,904 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:53:50,785 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 849af054-8972-4697-bb47-f94b1c077d1d
+11 февр. 2021 04:53:50,787 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:53:55,050 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 911bffa7-0341-41a9-8451-d361957e134b
+11 февр. 2021 04:53:55,053 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:54:23,866 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:54:23,870 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:54:33,226 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:54:33,231 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:54:33,231 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 04:57:08,239 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:57:08,254 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:57:08,254 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 04:58:44,771 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+11 февр. 2021 04:58:45,000 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 1f99a359-e4fe-4b78-bb79-036fc73189d8
+11 февр. 2021 04:58:45,000 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:58:51,543 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 64c6569d-6761-438e-bb49-8cac3d4001f7
+11 февр. 2021 04:58:51,545 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:59:03,647 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: b97e03fc-e347-48c1-83a6-5a8e56e25e62
+11 февр. 2021 04:59:03,650 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 04:59:26,562 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:59:26,566 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:59:26,566 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 04:59:42,680 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 04:59:42,685 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 04:59:42,685 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 05:02:13,502 [main] ERROR ru.sfedu.photosearch.newModels.User - User convertion from csv to User() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 7 out of bounds for length 7
+11 февр. 2021 05:02:13,515 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get profile with id %s. null
+11 февр. 2021 05:02:13,516 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 05:04:03,839 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 03950c91-7157-4195-a173-fe005e37efc8
+11 февр. 2021 05:04:03,841 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:04:17,480 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 7164d3b1-cd9f-4a20-9ae5-06815a7be2e6
+11 февр. 2021 05:04:17,482 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:04:35,049 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+11 февр. 2021 05:05:39,090 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 54698cea-d606-4a52-8564-8423cc2b1ec9
+11 февр. 2021 05:05:39,090 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:05:42,663 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: c0a91bfa-b6ec-4e91-bf19-9ddff3746cb3
+11 февр. 2021 05:05:42,666 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:06:04,527 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id c0a91bfa-b6ec-4e91-bf19-9ddff3746cb3 !****
+11 февр. 2021 05:06:04,532 [main] INFO  ru.sfedu.photosearch.Main - 
+id: c0a91bfa-b6ec-4e91-bf19-9ddff3746cb3
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Thu Aug 13 00:00:00 MSK 16
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:06:21,106 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: e7a6ce08-eb38-4101-b457-b3e2d6c85ee5
+11 февр. 2021 05:06:21,109 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:06:25,476 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: aad163a1-2217-41bb-892e-2880ac941c3e
+11 февр. 2021 05:06:25,478 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:06:38,541 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - Updated profile with id: e7a6ce08-eb38-4101-b457-b3e2d6c85ee5
+11 февр. 2021 05:06:38,546 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id e7a6ce08-eb38-4101-b457-b3e2d6c85ee5 !****
+11 февр. 2021 05:07:06,236 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id e7a6ce08-eb38-4101-b457-b3e2d6c85ee5 !****
+11 февр. 2021 05:07:06,241 [main] INFO  ru.sfedu.photosearch.Main - 
+id: e7a6ce08-eb38-4101-b457-b3e2d6c85ee5
+name: Alexey
+lastName: Tolstoy
+birthDay: Wed Mar 18 00:00:00 MSK 22
+dateOfRegistration: Wed Aug 16 00:00:00 MSK 13
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:09:18,416 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: d1901643-e341-4760-87bd-e453f43cc0e0
+11 февр. 2021 05:09:18,430 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:09:29,525 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+11 февр. 2021 05:10:13,650 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 314ab5fb-8f06-4d99-aaf8-f20649459b15
+11 февр. 2021 05:10:15,849 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:12:01,765 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+11 февр. 2021 05:12:03,818 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:13:43,964 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id cfcecf3c-5507-41e5-b173-a1a01dd3058d !****
+11 февр. 2021 05:13:43,968 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Thu Aug 13 00:00:00 MSK 16
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:15:05,309 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id cfcecf3c-5507-41e5-b173-a1a01dd3058d !****
+11 февр. 2021 05:15:05,314 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Thu Aug 13 00:00:00 MSK 16
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:16:21,820 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id cfcecf3c-5507-41e5-b173-a1a01dd3058d !****
+11 февр. 2021 05:16:21,824 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Mar 22 00:00:00 MSK 18
+dateOfRegistration: Thu Aug 13 00:00:00 MSK 16
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:17:07,555 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:17:07,583 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 3 !****
+11 февр. 2021 05:17:07,583 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Mon Feb 08 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:17:14,482 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:17:14,513 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+11 февр. 2021 05:17:14,514 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:17:21,651 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:17:21,673 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 5 not exists.] Empty response received.
+11 февр. 2021 05:17:21,673 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 февр. 2021 05:17:29,503 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:17:29,529 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 4 !****
+11 февр. 2021 05:17:29,533 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:18:33,644 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:18:49,408 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 4 !****
+11 февр. 2021 05:18:49,413 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:21:46,780 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+11 февр. 2021 05:23:32,130 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 4 !****
+11 февр. 2021 05:23:32,135 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:24:28,146 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id cfcecf3c-5507-41e5-b173-a1a01dd3058d !****
+11 февр. 2021 05:24:28,150 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:25:01,869 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id d99fc73e-50a5-439f-9751-b7352d2392e7 !****
+11 февр. 2021 05:25:01,874 [main] INFO  ru.sfedu.photosearch.Main - 
+id: d99fc73e-50a5-439f-9751-b7352d2392e7
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:26:21,239 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id e7a6ce08-eb38-4101-b457-b3e2d6c85ee5 not exists.] Empty response received.
+11 февр. 2021 05:26:41,011 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id f3148187-21a3-467d-add8-b4a7780d3399 not exists.] Empty response received.
+11 февр. 2021 05:27:04,524 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: fcc7f53b-e708-4779-95b8-688407b000f9
+11 февр. 2021 05:27:04,586 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:27:15,110 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id fcc7f53b-e708-4779-95b8-688407b000f9 !****
+11 февр. 2021 05:27:15,115 [main] INFO  ru.sfedu.photosearch.Main - 
+id: fcc7f53b-e708-4779-95b8-688407b000f9
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:27:29,512 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+11 февр. 2021 05:27:29,515 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:27:32,350 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 85345ef8-33da-4afa-bb26-0d37b18748e9
+11 февр. 2021 05:27:32,352 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 февр. 2021 05:27:49,031 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Updated profile with id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+11 февр. 2021 05:27:49,050 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.EDIT_PROFILE
+11 февр. 2021 05:28:16,878 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Updated profile with id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+11 февр. 2021 05:28:16,901 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+11 февр. 2021 05:28:30,109 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+11 февр. 2021 05:28:30,113 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+name: Alexey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+11 февр. 2021 05:29:50,920 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Updated profile with id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+11 февр. 2021 05:29:50,941 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+11 февр. 2021 05:29:57,490 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+11 февр. 2021 05:29:57,495 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+name: Kostya
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+12 февр. 2021 01:00:23,270 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Deleted profile with id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+12 февр. 2021 01:00:23,287 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+12 февр. 2021 01:01:00,161 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Deleted profile with id: 977ede93-6a7d-4e6e-97f4-a751d66c2035
+12 февр. 2021 01:01:00,178 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted profile with id 977ede93-6a7d-4e6e-97f4-a751d66c2035 !****
+12 февр. 2021 01:06:06,623 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+12 февр. 2021 01:06:26,947 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+12 февр. 2021 01:06:26,949 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+12 февр. 2021 01:06:41,556 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: e332662a-ae85-4f04-8603-690602533b3e
+12 февр. 2021 01:06:41,567 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Transform of class java.util.UUID not supported
+12 февр. 2021 01:06:41,568 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:07:17,805 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: 71cb48ca-40b2-4dd9-af98-17efb7615248
+12 февр. 2021 01:07:17,831 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:07:17,831 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:07:57,774 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: e57c0a05-0b72-4ffd-9494-7885424493bf
+12 февр. 2021 01:07:57,796 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:07:57,796 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:09:51,184 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: e9a4bd38-72e1-4ac2-bf3e-7962e0e43cb0
+12 февр. 2021 01:09:51,205 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:09:51,206 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:11:59,117 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+12 февр. 2021 01:11:59,119 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:12:10,907 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: bece3761-7f16-462e-9aa8-9c1525e768ac
+12 февр. 2021 01:12:10,930 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:12:10,930 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:13:37,685 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: e5c8cdb9-064b-48de-b5bf-44e0bf02a783
+12 февр. 2021 01:13:39,163 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:13:46,071 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:14:03,300 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: 41d9eb1c-f0f6-4f78-8e5b-a2e7e9832b7c
+12 февр. 2021 01:14:22,078 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:14:22,081 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:14:24,932 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+12 февр. 2021 01:14:24,935 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+12 февр. 2021 01:14:55,870 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: 9064d858-56ae-4e94-b58b-61473f58063c
+12 февр. 2021 01:15:06,356 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+12 февр. 2021 01:15:10,752 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:04:51,673 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+17 февр. 2021 01:04:51,676 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:07:41,552 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+17 февр. 2021 01:07:41,554 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:07:59,405 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: cbb074c9-3ea0-4d8e-bb81-95daa456802a
+17 февр. 2021 01:07:59,431 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+17 февр. 2021 01:07:59,431 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:10:02,982 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: 40b5bd8f-6565-47c5-a40d-76b194ecdea0
+17 февр. 2021 01:10:14,645 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+17 февр. 2021 01:10:17,004 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:15:11,129 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: 3b56e8fe-30d7-4f42-a0fc-b4a0211f234c
+17 февр. 2021 01:15:11,151 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'executor' private ru.sfedu.photosearch.newModels.User ru.sfedu.photosearch.newModels.Event.executor is null in class ru.sfedu.photosearch.newModels.Event
+17 февр. 2021 01:15:11,151 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:15:42,396 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+17 февр. 2021 01:15:42,399 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:17:00,629 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: c1a6753c-d783-4071-acbb-143a484490c1
+17 февр. 2021 01:17:14,562 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+17 февр. 2021 01:17:20,918 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+17 февр. 2021 01:17:20,921 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:18:02,646 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Constructor not matched for class java.util.UUID
+17 февр. 2021 01:18:02,659 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.CREATE_NEW_EVENT
+17 февр. 2021 01:23:39,490 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: a680f25f-08dd-44bb-b59a-7bac2bf420c5
+17 февр. 2021 01:23:39,508 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+17 февр. 2021 01:30:38,965 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: cdb12bd3-e8c1-4e81-beae-87bb4492b0aa
+17 февр. 2021 01:30:38,967 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+17 февр. 2021 01:35:51,514 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id cdb12bd3-e8c1-4e81-beae-87bb4492b0aa !****
+17 февр. 2021 01:35:51,520 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cdb12bd3-e8c1-4e81-beae-87bb4492b0aa
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Wed Feb 17 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+executor: 
+status: none
+type: order
+
+17 февр. 2021 01:39:36,875 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Updated event with id: cdb12bd3-e8c1-4e81-beae-87bb4492b0aa
+17 февр. 2021 01:39:36,897 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated event with id cdb12bd3-e8c1-4e81-beae-87bb4492b0aa !****
+17 февр. 2021 01:39:46,495 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get event with id cdb12bd3-e8c1-4e81-beae-87bb4492b0aa !****
+17 февр. 2021 01:39:46,500 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cdb12bd3-e8c1-4e81-beae-87bb4492b0aa
+title: running
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Wed Feb 17 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+executor: 
+status: none
+type: order
+
+17 февр. 2021 02:21:11,243 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Deleted event with id: cdb12bd3-e8c1-4e81-beae-87bb4492b0aa
+17 февр. 2021 02:21:11,265 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id cdb12bd3-e8c1-4e81-beae-87bb4492b0aa !****
+17 февр. 2021 02:53:08,495 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 02:53:08,498 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+17 февр. 2021 02:53:08,513 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Value for @org.simpleframework.xml.Element(name="", type=void.class, data=false, required=true) on field 'event' private ru.sfedu.photosearch.newModels.Event ru.sfedu.photosearch.newModels.Photo.event is null in class ru.sfedu.photosearch.newModels.Photo
+17 февр. 2021 02:53:08,513 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+17 февр. 2021 02:54:24,818 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Attribute 'id' does not have a match in class ru.sfedu.photosearch.newModels.Photo at line 3
+17 февр. 2021 02:54:24,821 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+17 февр. 2021 02:55:12,407 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Attribute 'id' does not have a match in class ru.sfedu.photosearch.newModels.Photo at line 3
+17 февр. 2021 02:55:12,409 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+17 февр. 2021 02:55:55,781 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - INSERT query failed to execute: Attribute 'id' does not have a match in class ru.sfedu.photosearch.newModels.Photo at line 3
+17 февр. 2021 02:55:55,784 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+17 февр. 2021 02:56:14,661 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 02:56:14,664 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+17 февр. 2021 02:56:14,678 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 8f2eaaab-7a67-43ad-a491-45a72f24f2ae !****
+17 февр. 2021 02:57:05,940 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Photo with id 8f2eaaab-7a67-43ad-a491-45a72f24f2ae not exists.] Empty response received.
+17 февр. 2021 02:57:05,943 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+17 февр. 2021 02:57:55,807 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Photo with id 8f2eaaab-7a67-43ad-a491-45a72f24f2ae not exists.] Empty response received.
+17 февр. 2021 02:57:55,811 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PHOTO
+17 февр. 2021 02:58:07,601 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 02:58:07,616 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 1f492bb5-fc83-421b-a8df-d9cd3f12f272
+17 февр. 2021 02:58:07,616 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 8f2eaaab-7a67-43ad-a491-45a72f24f2ae !****
+17 февр. 2021 02:58:17,350 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1f492bb5-fc83-421b-a8df-d9cd3f12f272 !****
+17 февр. 2021 02:58:17,353 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1f492bb5-fc83-421b-a8df-d9cd3f12f272
+user_id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 02:58:43,635 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Updated photo with id: 1f492bb5-fc83-421b-a8df-d9cd3f12f272
+17 февр. 2021 02:58:43,653 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully updated photo from profile with id 1f492bb5-fc83-421b-a8df-d9cd3f12f272 !****
+17 февр. 2021 02:58:48,969 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1f492bb5-fc83-421b-a8df-d9cd3f12f272 !****
+17 февр. 2021 02:58:48,972 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1f492bb5-fc83-421b-a8df-d9cd3f12f272
+user_id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 02:59:04,121 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - Deleted photo with id: 1f492bb5-fc83-421b-a8df-d9cd3f12f272
+17 февр. 2021 02:59:04,141 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 1f492bb5-fc83-421b-a8df-d9cd3f12f272 !****
+17 февр. 2021 03:19:32,861 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: ff406702-f659-494f-9119-90329516f77a
+17 февр. 2021 03:19:32,864 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+17 февр. 2021 03:19:37,194 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+17 февр. 2021 03:19:37,196 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+17 февр. 2021 03:19:55,322 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:19:55,339 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 947dab64-774b-43f2-b438-4c0ad01bdc96
+17 февр. 2021 03:19:55,339 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:20:01,095 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:20:01,113 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: ddbab251-47c8-41da-af8c-68e61399c612
+17 февр. 2021 03:20:01,113 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:20:07,678 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+17 февр. 2021 03:20:07,681 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+17 февр. 2021 03:20:37,516 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:20:37,535 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 5368647f-62b9-47b7-a423-7062bf3bcf8e
+17 февр. 2021 03:20:37,535 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:20:50,911 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Portfolio with profile id bb2bee28-c928-4d4b-aac3-9c17841d6743 not exists.] Empty response received.
+17 февр. 2021 03:20:50,913 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PORTFOLIO
+17 февр. 2021 03:21:12,100 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:21:12,118 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 60cf8662-6ab3-4b54-9acf-153fe0b8a16d
+17 февр. 2021 03:21:12,118 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:21:17,465 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Portfolio with profile id bb2bee28-c928-4d4b-aac3-9c17841d6743 not exists.] Empty response received.
+17 февр. 2021 03:21:17,468 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PORTFOLIO
+17 февр. 2021 03:22:34,188 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:22:34,208 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: cac3678b-9d5a-473a-ba5f-ada1478198fc
+17 февр. 2021 03:22:34,208 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:22:38,356 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:22:38,375 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: b7014497-d679-4fcc-852e-cbd283c5c142
+17 февр. 2021 03:22:38,376 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:22:57,852 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:22:57,872 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: f7d26503-615e-4efc-826d-1d6a146bd575
+17 февр. 2021 03:22:57,872 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:23:11,358 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Portfolio with profile id 9b97eecc-3f17-4fea-8605-a6e06002f67b not exists.] Empty response received.
+17 февр. 2021 03:23:11,362 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PORTFOLIO
+17 февр. 2021 03:23:46,232 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:23:46,234 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 947dab64-774b-43f2-b438-4c0ad01bdc96
+user_id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:23:46,235 [main] INFO  ru.sfedu.photosearch.Main - 
+id: ddbab251-47c8-41da-af8c-68e61399c612
+user_id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:23:46,235 [main] INFO  ru.sfedu.photosearch.Main - 
+id: f7d26503-615e-4efc-826d-1d6a146bd575
+user_id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:24:21,261 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:24:21,281 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 802b5b5f-ca50-45c0-9f72-494418c0a79d
+17 февр. 2021 03:24:21,282 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:24:25,336 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:24:25,357 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 02eaa25d-0b31-4308-9eb2-a29266727a1b
+17 февр. 2021 03:24:25,357 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:24:37,004 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:24:37,026 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: b9784120-c215-45f3-830d-06751752a537
+17 февр. 2021 03:24:37,026 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:24:46,167 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:24:46,171 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 5368647f-62b9-47b7-a423-7062bf3bcf8e
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:24:46,171 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 60cf8662-6ab3-4b54-9acf-153fe0b8a16d
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:24:46,172 [main] INFO  ru.sfedu.photosearch.Main - 
+id: cac3678b-9d5a-473a-ba5f-ada1478198fc
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:24:46,172 [main] INFO  ru.sfedu.photosearch.Main - 
+id: b7014497-d679-4fcc-852e-cbd283c5c142
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:24:46,172 [main] INFO  ru.sfedu.photosearch.Main - 
+id: b9784120-c215-45f3-830d-06751752a537
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:25:02,288 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:25:02,291 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 79d9e449-8573-48e2-95fa-091e671818f9
+17 февр. 2021 03:25:02,305 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:25:08,791 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:25:08,807 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 4ec1167f-dca4-4c4a-bb11-08a1afea59ae
+17 февр. 2021 03:25:08,807 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id bb2bee28-c928-4d4b-aac3-9c17841d6743 !****
+17 февр. 2021 03:25:21,132 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+17 февр. 2021 03:25:21,148 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 93a5a1ee-337f-40eb-a078-583679148dbb
+17 февр. 2021 03:25:21,149 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:25:30,242 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 9b97eecc-3f17-4fea-8605-a6e06002f67b !****
+17 февр. 2021 03:25:30,245 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 93a5a1ee-337f-40eb-a078-583679148dbb
+user_id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+17 февр. 2021 03:28:00,479 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Photo path with photo id 93a5a1ee-337f-40eb-a078-583679148db not exists.] Empty response received.
+17 февр. 2021 03:28:00,482 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 20:32:46,403 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 20:32:46,429 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 2
+17 февр. 2021 20:39:42,242 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 20:39:42,270 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+17 февр. 2021 20:39:42,280 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 1
+17 февр. 2021 21:24:19,093 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:24:19,124 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 3
+17 февр. 2021 21:24:26,687 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:24:26,714 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 4
+17 февр. 2021 21:24:30,027 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:24:30,047 [main] ERROR ru.sfedu.photosearch.providers.DataProviderDatabase - Failed to get photo path with id 8. Нет данных
+No data is available [2000-200]
+17 февр. 2021 21:24:30,047 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 21:25:07,876 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:25:07,906 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 3
+17 февр. 2021 21:25:15,270 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:25:15,285 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 3 !****
+17 февр. 2021 21:25:15,367 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/1.jpg doesn't exist.]
+17 февр. 2021 21:25:15,367 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 3. 
+17 февр. 2021 21:25:15,367 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 21:25:48,032 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:25:48,062 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+17 февр. 2021 21:25:48,062 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 3 !****
+17 февр. 2021 21:25:57,151 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:25:57,180 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 3
+17 февр. 2021 21:26:03,094 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:26:03,108 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 3 !****
+17 февр. 2021 21:26:03,166 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/1.jpg doesn't exist.]
+17 февр. 2021 21:26:03,167 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 3. 
+17 февр. 2021 21:26:03,167 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 21:26:53,403 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:26:53,416 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 3 !****
+17 февр. 2021 21:26:53,476 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/1.jpg doesn't exist.]
+17 февр. 2021 21:26:53,476 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 3. 
+17 февр. 2021 21:26:53,476 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 21:27:02,551 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:27:02,586 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 3
+17 февр. 2021 21:27:17,367 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:27:17,396 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 8
+17 февр. 2021 21:27:26,319 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:27:26,333 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 8 !****
+17 февр. 2021 21:43:05,227 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:05,240 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 8 !****
+17 февр. 2021 21:43:05,292 [main] INFO  ru.sfedu.photosearch.utils.PhotoViewer - [The file: ./testPhotos/test.jpg doesn't exist.]
+17 февр. 2021 21:43:05,293 [main] ERROR ru.sfedu.photosearch.Main - Failed to show photo with id 8. 
+17 февр. 2021 21:43:05,293 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.SHOW_PHOTO
+17 февр. 2021 21:43:22,399 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:22,420 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+17 февр. 2021 21:43:27,700 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:27,719 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 2 not exists.] Empty response received.
+17 февр. 2021 21:43:31,590 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:31,630 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:31,630 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 3 !****
+17 февр. 2021 21:43:36,422 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:36,460 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:36,460 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 4 !****
+17 февр. 2021 21:43:40,366 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:40,402 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:40,402 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 5 !****
+17 февр. 2021 21:43:44,799 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:44,828 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:44,829 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 6 !****
+17 февр. 2021 21:43:49,126 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:49,162 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:49,162 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 7 !****
+17 февр. 2021 21:43:54,097 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:43:54,130 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 21:43:54,130 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted photo from profile with id 8 !****
+17 февр. 2021 21:44:09,543 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:44:09,575 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+17 февр. 2021 21:44:09,575 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 3 !****
+17 февр. 2021 21:44:28,409 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:44:28,423 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 9 !****
+17 февр. 2021 21:44:46,820 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:44:46,853 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+17 февр. 2021 21:44:46,853 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 3 !****
+17 февр. 2021 21:44:51,519 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:44:51,549 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get portfolio from profile with id 3 !****
+17 февр. 2021 21:44:51,549 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 9
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test1.jpg
+17 февр. 2021 21:44:51,549 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 10
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test2.jpg
+17 февр. 2021 21:45:03,357 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 21:45:03,370 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 10 !****
+17 февр. 2021 22:46:09,572 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:48:36,337 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:48:36,367 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 2
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Sun Feb 07 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+17 февр. 2021 22:48:36,367 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Mon Feb 08 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+17 февр. 2021 22:48:36,368 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 4
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+17 февр. 2021 22:54:03,416 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:54:03,439 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+17 февр. 2021 22:54:03,453 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+title: running
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+17 февр. 2021 22:54:03,453 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 2
+executor: 
+status: none
+type: order
+
+17 февр. 2021 22:54:39,194 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:54:39,218 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+17 февр. 2021 22:54:39,228 [main] DEBUG ru.sfedu.photosearch.Database - [DELETED 1 rows]
+17 февр. 2021 22:54:39,229 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id 1 !****
+17 февр. 2021 22:54:56,502 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:54:56,535 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Sat Feb 06 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 2
+executor: 
+status: none
+type: order
+
+17 февр. 2021 22:57:51,449 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+17 февр. 2021 22:57:51,483 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 9
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test1.jpg
+17 февр. 2021 22:57:51,483 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 10
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test2.jpg
+17 февр. 2021 23:25:41,297 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - cfcecf3c-5507-41e5-b173-a1a01dd3058d
+17 февр. 2021 23:28:33,801 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:28:33,812 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:28:33,813 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:28:33,815 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:28:33,816 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:28:33,817 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:28:33,818 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:28:33,819 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:28:33,824 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+17 февр. 2021 23:29:24,883 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:29:24,894 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:29:24,895 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:29:24,896 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:29:24,898 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:29:24,899 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:29:24,900 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:29:24,901 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:29:24,904 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+17 февр. 2021 23:30:30,773 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:30:30,786 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:30:30,787 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:30:30,788 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:30:30,790 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:30:30,791 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:30:30,793 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:30:30,794 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:30:30,799 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+17 февр. 2021 23:55:10,584 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,595 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,596 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,597 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,598 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,599 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,600 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,601 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,602 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,606 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,608 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,609 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,610 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,611 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,612 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,613 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,614 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,614 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,615 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,617 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,617 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,619 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,620 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,621 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,621 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,622 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,623 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,624 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:55:10,624 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,625 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:55:10,626 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+17 февр. 2021 23:56:33,713 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,727 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,729 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,730 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,732 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,733 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,735 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,737 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,739 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,746 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,748 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,750 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,751 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,752 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,754 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,755 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,756 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,758 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,759 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,761 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,763 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,765 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,766 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,767 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,769 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,770 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,771 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,772 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:33,773 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,775 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:33,775 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+17 февр. 2021 23:56:59,398 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,410 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,412 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,413 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,414 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,416 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,417 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,418 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,419 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,425 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,426 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,427 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,428 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,429 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,430 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,431 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,432 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,434 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,435 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,436 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,437 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,438 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,440 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,441 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,443 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,444 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,445 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,447 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+17 февр. 2021 23:56:59,448 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,449 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+17 февр. 2021 23:56:59,449 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+18 февр. 2021 00:28:28,610 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:28,622 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:28,623 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:28,625 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:28,626 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:28,628 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:28,629 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:28,630 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:28,633 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+18 февр. 2021 00:28:33,097 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,109 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,110 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,111 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,112 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,113 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,115 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,116 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,117 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,121 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,122 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,122 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,123 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,124 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,125 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,126 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,127 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,128 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,129 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,130 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,131 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,132 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,133 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,133 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,134 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,135 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,136 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,137 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:33,137 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,138 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:28:33,139 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+18 февр. 2021 00:28:38,294 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 314ab5fb-8f06-4d99-aaf8-f20649459b15
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 00:28:38,305 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: cfcecf3c-5507-41e5-b173-a1a01dd3058d
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 00:28:47,045 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - cfcecf3c-5507-41e5-b173-a1a01dd3058d
+18 февр. 2021 00:28:55,078 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:55,089 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:55,091 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:55,092 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:55,093 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:55,094 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:55,096 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:28:55,097 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:28:55,103 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 107f7926-8341-4b19-b329-d916485a88fe
+title: auto_race
+description: competition
+eventDate: Sun Aug 19 00:00:00 MSK 14
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+18 февр. 2021 00:28:55,104 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 348e1169-30a0-41e2-813f-a53ff1d9a639
+title: auto_race
+description: competition
+eventDate: Sun Aug 19 00:00:00 MSK 14
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+18 февр. 2021 00:28:55,104 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: cedb689e-5123-427c-9c97-f46adf595525
+title: auto_race
+description: competition
+eventDate: Sun Aug 19 00:00:00 MSK 14
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+18 февр. 2021 00:28:55,104 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5
+title: auto_race
+description: competition
+eventDate: Sun Aug 19 00:00:00 MSK 14
+creationDate: Tue Aug 14 00:00:00 MSK 14
+price: 150
+quantity: 2.5
+customer: 
+executor: 
+status: none
+type: order
+
+18 февр. 2021 00:29:06,206 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,218 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,220 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,222 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,224 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,225 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,227 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,228 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,230 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,235 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,236 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,237 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,239 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,240 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,241 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,242 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,243 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,244 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,245 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,246 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,247 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,248 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,250 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,251 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,251 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,252 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,253 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,254 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 00:29:06,255 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,256 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 00:29:06,257 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 1e6a0624-7a81-41c9-9dc4-e465bbc37188
+user_id: 
+event_id: 
+title: test_photo
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+18 февр. 2021 00:29:06,257 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 26b84608-e526-4be5-8054-d66979bf6181
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+18 февр. 2021 00:29:06,257 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: b78cf427-f639-41ff-b2d8-1f63d4e9eb5a
+user_id: 
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+18 февр. 2021 02:17:43,264 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - bb2bee28-c928-4d4b-aac3-9c17841d6743
+18 февр. 2021 02:22:06,027 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - a680f25f-08dd-44bb-b59a-7bac2bf420c5
+18 февр. 2021 02:23:33,956 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 93a5a1ee-337f-40eb-a078-583679148dbb
+18 февр. 2021 02:28:15,898 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 85345ef8-33da-4afa-bb26-0d37b18748e9
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 02:28:15,901 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Fri Feb 12 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 02:28:15,901 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: ff406702-f659-494f-9119-90329516f77a
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 17 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 02:28:15,901 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 17 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 02:28:15,902 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Wed Feb 17 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 02:30:14,995 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: a680f25f-08dd-44bb-b59a-7bac2bf420c5
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Wed Feb 17 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 8f2eaaab-7a67-43ad-a491-45a72f24f2ae
+executor: 
+status: none
+type: order
+
+18 февр. 2021 02:49:12,378 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderXML - Deleted event with id: a680f25f-08dd-44bb-b59a-7bac2bf420c5
+18 февр. 2021 02:49:12,388 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully deleted event with id a680f25f-08dd-44bb-b59a-7bac2bf420c5 !****
+18 февр. 2021 02:49:17,296 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Failed to get all events.] Empty response received.
+18 февр. 2021 02:50:41,371 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Failed to get all events.] Empty response received.
+18 февр. 2021 02:51:06,306 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 79d9e449-8573-48e2-95fa-091e671818f9
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+18 февр. 2021 02:51:06,309 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 4ec1167f-dca4-4c4a-bb11-08a1afea59ae
+user_id: bb2bee28-c928-4d4b-aac3-9c17841d6743
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg
+18 февр. 2021 02:51:06,310 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 93a5a1ee-337f-40eb-a078-583679148dbb
+user_id: 9b97eecc-3f17-4fea-8605-a6e06002f67b
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test.jpg

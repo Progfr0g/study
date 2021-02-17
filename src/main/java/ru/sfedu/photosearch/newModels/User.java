@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.utils.Formatter;
@@ -13,9 +14,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Root(name="user")
 public class User<T> {
-    public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.User.class);
-    @Attribute
+    public static final Logger log = LogManager.getLogger(User.class);
+    @Element
     private T id;
     @Element
     private String name;
@@ -149,18 +151,18 @@ public class User<T> {
             List<ru.sfedu.photosearch.newModels.User> users = new ArrayList<>();
             for (String[] line : data) {
                 if (line[3] != null){
-                    line[3] = Formatter.normalFormatDay(Formatter.csvDateFromString(line[3]));
+                    line[3] = Formatter.birthDayToDB(Formatter.csvDateFromString(line[3]));
                 }
                 if (line[4] != null){
-                    line[4] = Formatter.normalFormatDay(Formatter.csvDateFromString(line[4]));
+                    line[4] = Formatter.birthDayToDB(Formatter.csvDateFromString(line[4]));
                 }
                 users.add(new ru.sfedu.photosearch.newModels.User(line));
             }
             return users;
         }catch (Exception ex){
             log.error(Constants.ERROR_USER_CONVERT + ex);
+            return null;
         }
-        return null;
     }
 
     public User(String[] data){

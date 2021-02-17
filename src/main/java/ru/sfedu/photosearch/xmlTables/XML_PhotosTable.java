@@ -3,9 +3,9 @@ package ru.sfedu.photosearch.xmlTables;
 import org.simpleframework.xml.ElementArray;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-//import ru.sfedu.photosearch.models.Event;
-import ru.sfedu.photosearch.models.Photo;
-import ru.sfedu.photosearch.models.User;
+//import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Photo;
+import ru.sfedu.photosearch.newModels.User;
 
 import java.util.List;
 
@@ -20,6 +20,9 @@ public class XML_PhotosTable {
     }
 
     public void setPhotos(List<Photo> photos) {
+        for (Photo photo: photos){
+            photo.setId(photo.getId().toString());
+        }
         this.photos = photos;
     }
 }

@@ -1,10 +1,17 @@
 package ru.sfedu.photosearch.newModels;
 
+import org.simpleframework.xml.Element;
+
 public class Feedback<T> {
+    @Element
     private T id;
+    @Element
     private User user;
+    @Element
     private User photographer;
+    @Element
     private Float rate;
+    @Element
     private String text;
 
     public T getId() {

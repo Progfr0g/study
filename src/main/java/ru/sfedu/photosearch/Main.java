@@ -11,9 +11,11 @@ import ru.sfedu.photosearch.newModels.User;
 import ru.sfedu.photosearch.providers.DataProvider;
 import ru.sfedu.photosearch.providers.DataProviderCSV;
 import ru.sfedu.photosearch.providers.DataProviderDatabase;
+import ru.sfedu.photosearch.providers.DataProviderXML;
 import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.Formatter;
 import ru.sfedu.photosearch.utils.PhotoViewer;
+import ru.sfedu.photosearch.utils.XML_util;
 
 
 import java.time.LocalDate;
@@ -36,11 +38,11 @@ public class Main {
                 provider.DB.createTables();
                 if (provider != null) return provider;
             }
-//            case Constants.DATAPROVIDER_XML: {
-//                DataProviderXML provider = new DataProviderXML();
-//                XML_util.createFiles();
-//                if (provider != null) return provider;
-//            }
+            case Constants.DATAPROVIDER_XML: {
+                DataProviderXML provider = new DataProviderXML();
+                XML_util.createFiles();
+                if (provider != null) return provider;
+            }
             case Constants.DATAPROVIDER_CSV: {
                 DataProviderCSV provider = new DataProviderCSV();
                 CSV_util.createFiles();

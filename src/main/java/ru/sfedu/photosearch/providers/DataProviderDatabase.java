@@ -7,6 +7,7 @@ import ru.sfedu.photosearch.Database;
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.enums.Tables;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -296,6 +297,248 @@ public class DataProviderDatabase implements DataProvider {
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PHOTO_PATH, id) + ex.getMessage());
         }
+        return null;
+    }
+
+    @Override
+    public String getLastUserId() {
+        String query = Constants.SELECT_LAST_USER_QUERY;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                rows++;
+            }
+            DB.closeConnection();
+            if (rows == 0){
+                log.info(Constants.EMPTY_GET_LAST_USER);
+                return null;
+            } else{
+                User resultUser = new User<String>(strings);
+                return resultUser.getId().toString();
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_LAST_PROFILE + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public String getLastEventId() {
+        String query = Constants.SELECT_LAST_EVENT_QUERY;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                rows++;
+            }
+            DB.closeConnection();
+            if (rows == 0){
+                log.info(Constants.EMPTY_GET_LAST_EVENT);
+                return null;
+            } else{
+                User costumer;
+                if (strings[7]!=null) {
+                    costumer = getProfile(strings[7]);
+                } else
+                    costumer = null;
+                User executor;
+                if (strings[8]!=null) {
+                    executor = getProfile(strings[8]);
+                } else {
+                    executor = null;
+                }
+                Event resultEvent = new Event<String>(strings, costumer, executor);
+                return resultEvent.getId().toString();
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_EVENT + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public String getLastPhotoId() {
+        String query = Constants.SELECT_LAST_PHOTO_QUERY;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                rows++;
+            }
+            DB.closeConnection();
+            if (rows == 0){
+                log.info(Constants.EMPTY_GET_LAST_PHOTO);
+                return null;
+            } else{
+                User user;
+                if (strings[1]!=null) {
+                    user = getProfile(strings[1]);
+                } else user = null;
+                Event event;
+                if (strings[2]!=null) {
+                    event = getEvent(strings[2]);
+                } else event = null;
+                Photo resultPhoto = new Photo<String>(strings, user, event);
+                return resultPhoto.getId().toString();
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_LAST_PHOTO + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<User> getAllUsers() {
+        String query = Constants.SELECT_ALL_USERS;
+        ArrayList<User> resultUsers = new ArrayList<User>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User resultUser = new User<String>(strings);
+                resultUsers.add(resultUser);
+            }
+            DB.closeConnection();
+            if (resultUsers.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_USERS);
+                return null;
+            } else{
+                return resultUsers;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_PROFILES + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<Event> getAllEvents() {
+        String query = Constants.SELECT_ALL_EVENTS;
+        ArrayList<Event> resultEvents = new ArrayList<Event>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User costumer;
+                if (strings[7]!=null) {
+                    costumer = getProfile(strings[7]);
+                } else
+                    costumer = null;
+                User executor;
+                if (strings[8]!=null) {
+                    executor = getProfile(strings[8]);
+                } else {
+                    executor = null;
+                }
+                Event resultEvent = new Event<String>(strings, costumer, executor);
+                resultEvents.add(resultEvent);
+            }
+            DB.closeConnection();
+            if (resultEvents.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_EVENTS);
+                return null;
+            } else{
+                return resultEvents;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_EVENTS + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public ArrayList<Photo> getAllPhotos() {
+        String query = Constants.SELECT_ALL_PHOTOS;
+        ArrayList<Photo> resultPhotos = new ArrayList<Photo>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User user;
+                if (strings[1]!=null) {
+                    user = getProfile(strings[1]);
+                } else user = null;
+                Event event;
+                if (strings[2]!=null) {
+                    event = getEvent(strings[2]);
+                } else event = null;
+                Photo resultPhoto = new Photo<String>(strings, user, event);
+                resultPhotos.add(resultPhoto);
+            }
+            DB.closeConnection();
+            if (resultPhotos.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_PHOTOS);
+                return null;
+            } else{
+                return resultPhotos;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_PHOTOS + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public Boolean addComment(String id, String userId, String photoId, String comment, Date date) {
+        String query = String.format(Constants.INSERT_COMMENTS_QUERY, Tables.COMMENTS.toString(),
+                userId, photoId, comment, Formatter.dateOfRegistration(date));
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public ArrayList<Comment> getAllComments() {
+        return null;
+    }
+
+    @Override
+    public Boolean addRate(String id, String userId, String photoId, Float rate, Date date) {
+        return null;
+    }
+
+    @Override
+    public Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate) {
+        return null;
+    }
+
+    @Override
+    public Boolean createOffer(String id, String userId, String eventId, Date creationDate) {
         return null;
     }
 }

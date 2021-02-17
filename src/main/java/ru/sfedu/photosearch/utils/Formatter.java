@@ -47,6 +47,12 @@ public class Formatter {
         return null;
     }
 
+    public static String birthDayToDB(Date date){
+        String new_date;
+        new_date = dayFormatterFromDB.format(date);
+        return new_date;
+    }
+
     public static String dateOfRegistration(Date date){
         String dateOfRegistration;
         dateOfRegistration = dateFormat.format(date);

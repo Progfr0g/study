@@ -8,6 +8,9 @@ import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.PhotoSearchClient;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Photo;
+import ru.sfedu.photosearch.newModels.User;
 import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.XML_util;
 
@@ -18,6 +21,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,7 +48,7 @@ class DataProviderDatabaseTest {
 
     @Test
     void getProfile() {
-        String args = "DB GET_PROFILE 3";
+        String args = "DB GET_PROFILE 4";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -87,14 +91,14 @@ class DataProviderDatabaseTest {
 
     @Test
     void deleteEventById() {
-        String args = "DB DELETE_EVENT 4";
+        String args = "DB DELETE_EVENT 1";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void addPhoto() {
-        String args = "DB ADD_PHOTO 3 ./testPhotos/test.jpg";
+        String args = "DB ADD_PHOTO 3 ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -115,7 +119,7 @@ class DataProviderDatabaseTest {
 
     @Test
     void deletePhotoById() {
-        String args = "DB DELETE_PHOTO 2";
+        String args = "DB DELETE_PHOTO 8";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -129,10 +133,62 @@ class DataProviderDatabaseTest {
 
     @Test
     void getPhotoPathById() {
-        String args = "DB SHOW_PHOTO 8";
+        String args = "DB SHOW_PHOTO 10";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
+    @Test
+    void getLastUserId() {
+        String result = provider.getLastUserId();
+        log.info(result);
+        assertNotNull(result);
+    }
 
+    @Test
+    void getLastEventId() {
+        String result = provider.getLastEventId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
+    void getLastPhotoId() {
+        String result = provider.getLastPhotoId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+
+    @Test
+    void getAllUsers() {
+        ArrayList<User> result = provider.getAllUsers();
+        result.forEach(x->log.info(x.getUserOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void getAllEvents() {
+        ArrayList<Event> result = provider.getAllEvents();
+        result.forEach(x->log.info(x.getEventOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void getAllPhotos() {
+        ArrayList<Photo> result = provider.getAllPhotos();
+        result.forEach(x->log.info(x.getPhotoOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void addComment() {
+        String args = "DB ADD_COMMENT 7";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void getAllComments() {
+    }
 }

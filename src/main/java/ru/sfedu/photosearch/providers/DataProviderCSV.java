@@ -8,6 +8,7 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.enums.*;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -36,7 +37,7 @@ public class DataProviderCSV implements DataProvider {
                 reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',' , '"' , 0);
                 List<String[]> csvBody = reader.readAll();
                 UUID id = UUID.randomUUID();
-                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
+                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_WALLET);
                 String[] record_to_write = newUser.getCSVUserOutput().split(",");
                 csvBody.add(record_to_write);
                 reader.close();
@@ -47,20 +48,14 @@ public class DataProviderCSV implements DataProvider {
                 log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
                 return true;
             } else {
-                reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',', '"', 1);
-                List<String[]> csvBody = reader.readAll();
-                UUID id = UUID.randomUUID();
-                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
-                String[] record_to_write = newUser.getCSVUserOutput().split(",");
-                CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_USERS_FILE_PATH), ',', '"');
-                writer.writeNext(record_to_write);
-                writer.close();
-                return true;
+                log.error(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.CSV_USERS_FILE_PATH));
+                return false;
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
             return false;
         }
+
     }
 
     @Override
@@ -72,7 +67,6 @@ public class DataProviderCSV implements DataProvider {
                 reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',', '"', 1);
                 List<String[]> csvBody = reader.readAll();
                 List<User> users = User.convertFromCSV(csvBody);
-                Set<String> targetSet = new HashSet<String>();
                 Integer rows = 0;
                 for (User user : users) {
                     if (user.getId().equals(id)) {
@@ -82,7 +76,7 @@ public class DataProviderCSV implements DataProvider {
                 }
                 reader.close();
                 if (rows == 0) {
-                    log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
+                    log.debug(String.format(Constants.EMPTY_GET_PROFILE, id));
                     return null;
                 }
             }
@@ -281,7 +275,7 @@ public class DataProviderCSV implements DataProvider {
                 }
                 reader.close();
                 if (rows == 0) {
-                    log.info(String.format(Constants.EMPTY_GET_EVENT, id));
+                    log.debug(String.format(Constants.EMPTY_GET_EVENT, id));
                     return null;
                 }
             }
@@ -676,8 +670,10 @@ public class DataProviderCSV implements DataProvider {
                 }
                 List<Photo> photos = Photo.convertFromCSV(csvBody, users, events);
                 for (Photo photo: photos) {
-                    result.add(photo);
-                    rows++;
+                    if (photo.getUser().equals(userId)){
+                        result.add(photo);
+                        rows++;
+                    }
                 }
                 if (rows == 1){
                     log.info(String.format(Constants.EMPTY_GET_PORTFOLIO, userId));
@@ -690,7 +686,7 @@ public class DataProviderCSV implements DataProvider {
                 return null;
             }
         } catch (Exception ex) {
-            log.error(Constants.ERROR_GET_PHOTO_PATH + ex.getMessage());
+            log.error(Constants.ERROR_GET_PORTFOLIO + ex.getMessage());
             return null;
         }
     }
@@ -741,4 +737,246 @@ public class DataProviderCSV implements DataProvider {
         }
         return null;
     }
+
+    @Override
+    public String getLastUserId() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_USERS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> users = User.convertFromCSV(csvBody);
+                if (users.size() != 0){
+                    return users.get(users.size()-1).getId().toString();
+                } else {
+                    log.info(Constants.EMPTY_GET_LAST_USER);
+                    reader.close();
+                    return null;
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_LAST_PROFILE + ex.getMessage());
+            return null;
+        }
+        return null;
+    }
+
+    @Override
+    public String getLastEventId() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_EVENTS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_EVENTS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> customers = new ArrayList<>();
+                List<User> executors = new ArrayList<>();
+                for (String[] line : csvBody) {
+                    User customer;
+                    if (line[7]!=null) {
+                        customer = getProfile(line[7]);
+                    } else
+                        customer = null;
+                    User executor;
+                    if (line[8]!=null) {
+                        executor = getProfile(line[8]);
+                    } else {
+                        executor = null;
+                    }
+                    customers.add(customer);
+                    executors.add(executor);
+                }
+                List<Event> events = Event.convertFromCSV(csvBody, customers, executors);
+                if (events.size() != 0){
+                    return events.get(events.size()-1).getId().toString();
+                } else {
+                    log.info(Constants.EMPTY_GET_LAST_EVENT);
+                    reader.close();
+                    return null;
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_LAST_EVENT + ex.getMessage());
+            return null;
+        }
+        return null;
+    }
+
+    @Override
+    public String getLastPhotoId() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_PHOTOS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_PHOTOS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> users = new ArrayList<>();
+                List<Event> events = new ArrayList<>();
+                for (String[] line : csvBody) {
+                    User customer;
+                    if (line[1]!=null) {
+                        customer = getProfile(line[1]);
+                    } else
+                        customer = null;
+                    Event event;
+                    if (line[2]!=null) {
+                        event = getEvent(line[2]);
+                    } else {
+                        event = null;
+                    }
+                    users.add(customer);
+                    events.add(event);
+                }
+                List<Photo> photos = Photo.convertFromCSV(csvBody, users, events);
+                if (photos.size() != 0){
+                    return photos.get(photos.size()-1).getId().toString();
+                } else {
+                    log.info(Constants.EMPTY_GET_LAST_PHOTO);
+                    reader.close();
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
+                return null;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_LAST_PHOTO + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public ArrayList<User> getAllUsers() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_USERS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> users = User.convertFromCSV(csvBody);
+                if (users.size() != 0){
+                    return (ArrayList<User>) users;
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_USERS);
+                    reader.close();
+                    return null;
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_PROFILES + ex.getMessage());
+            return null;
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<Event> getAllEvents() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_EVENTS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_EVENTS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> customers = new ArrayList<>();
+                List<User> executors = new ArrayList<>();
+                for (String[] line : csvBody) {
+                    User customer;
+                    if (line[7]!=null) {
+                        customer = getProfile(line[7]);
+                    } else
+                        customer = null;
+                    User executor;
+                    if (line[8]!=null) {
+                        executor = getProfile(line[8]);
+                    } else {
+                        executor = null;
+                    }
+                    customers.add(customer);
+                    executors.add(executor);
+                }
+                List<Event> events = Event.convertFromCSV(csvBody, customers, executors);
+                if (events.size() != 0){
+                    return (ArrayList<Event>) events;
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_EVENTS);
+                    reader.close();
+                    return null;
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_EVENTS + ex.getMessage());
+            return null;
+        }
+        return null;
+    }
+
+    @Override
+    public ArrayList<Photo> getAllPhotos() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_PHOTOS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_PHOTOS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> users = new ArrayList<>();
+                List<Event> events = new ArrayList<>();
+                for (String[] line : csvBody) {
+                    User customer;
+                    if (line[1]!=null) {
+                        customer = getProfile(line[1]);
+                    } else
+                        customer = null;
+                    Event event;
+                    if (line[2]!=null) {
+                        event = getEvent(line[2]);
+                    } else {
+                        event = null;
+                    }
+                    users.add(customer);
+                    events.add(event);
+                }
+                List<Photo> photos = Photo.convertFromCSV(csvBody, users, events);
+                if (photos.size() != 0){
+                    return (ArrayList<Photo>) photos;
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_PHOTOS);
+                    reader.close();
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
+                return null;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_PHOTOS + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public Boolean addComment(String id, String userId, String photoId, String comment, Date date) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Comment> getAllComments() {
+        return null;
+    }
+
+    @Override
+    public Boolean addRate(String id, String userId, String photoId, Float rate, Date date) {
+        return null;
+    }
+
+    @Override
+    public Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate) {
+        return null;
+    }
+
+    @Override
+    public Boolean createOffer(String id, String userId, String eventId, Date creationDate) {
+        return null;
+    }
+
 }

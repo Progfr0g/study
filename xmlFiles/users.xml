@@ -1,292 +1,54 @@
 <users_table>
    <users class="java.util.ArrayList">
-      <user id="89deaef0-c94b-4489-8512-11c4da9a05f0">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
+      <user>
+         <id class="java.lang.String">85345ef8-33da-4afa-bb26-0d37b18748e9</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-11 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
-         <rating>0.0</rating>
+         <wallet>0.0</wallet>
       </user>
-      <user id="c1ef3afe-480c-41e0-baae-a6fe853831f3">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
+      <user>
+         <id class="java.lang.String">8f2eaaab-7a67-43ad-a491-45a72f24f2ae</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-12 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
-         <rating>0.0</rating>
+         <wallet>0.0</wallet>
       </user>
-      <user id="7935cf2f-d624-4cc5-a8b6-5068f300a93a">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
+      <user>
+         <id class="java.lang.String">ff406702-f659-494f-9119-90329516f77a</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
-         <rating>0.0</rating>
+         <wallet>0.0</wallet>
       </user>
-      <user id="46fe24c1-269c-4fdb-99fe-8826995e5f72">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
+      <user>
+         <id class="java.lang.String">9b97eecc-3f17-4fea-8605-a6e06002f67b</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
-         <rating>0.0</rating>
+         <wallet>0.0</wallet>
       </user>
-      <user id="b8755381-fee2-4ff6-a327-fdf1e3673460">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Saint-Petersburg</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="96c93970-7057-45cd-ad6c-c03edf6fe9e5">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
+      <user>
+         <id class="java.lang.String">bb2bee28-c928-4d4b-aac3-9c17841d6743</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="bbbd9207-788e-458d-9e4e-9017391f1f28">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="9d1f5ad6-9606-4e13-844a-9f7de3af5bef">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="f7ef44b1-7198-4050-a4ad-6b5e61de1131">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="1859e62d-125d-4578-9870-b1a3e111f970">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="56dd47be-073d-4da3-9f9f-ba316c992c65">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="4ed99947-a15c-44c9-b709-469ba9ca97d0">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Saint-Petersburg</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="ff72f2f5-d13c-443d-83ac-581f6083e7d7">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="bd0bb61e-b9a2-454d-84d6-3e259d927208">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="95e2a7f7-dc5d-4f1e-af78-af85d7a86a7e">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="aaa22b80-31db-45f6-a5e8-e64bd81c0b8b">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="f7e030b8-26b7-45b6-b610-2c1e6d2d416c">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="66891cff-aefc-474b-9ef4-bf2a3323c32e">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="e2b54244-f0f6-4a43-b2b6-6f32ccfd4f7a">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="86c0f302-8aac-43d6-8e91-fe840023f31c">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="83e7ecd8-480b-4889-beff-118851fab019">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Saint-Petersburg</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="ba7b366d-3c42-4146-b681-27b0f01b9044">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="2399d1d4-f272-40aa-b326-8807b6ff1232">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="dab46d54-7672-4742-8fe1-98570a2f635c">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="214f5bd9-634d-4046-bc2d-56c97c11f146">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="488bf0cc-9fee-4376-a47b-f6541f1451b3">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="0545e46e-6da9-4867-8cf0-01b12d8064e4">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="fc0c5b0e-b6ca-4d97-9a1a-14177a929d21">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="b793a22e-0ba0-4e32-a5ad-2ca51e21e8b3">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="59ec7e85-cfaf-40f0-8a6a-086208ec9611">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Saint-Petersburg</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="8a7b5f84-0bc1-4585-80d0-c91589b69356">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
-      </user>
-      <user id="85f9b893-7b41-43e9-be82-507d32d1d3c6">
-         <name>Nikolay</name>
-         <last_name>Tolstoy</last_name>
-         <age>50</age>
-         <dateOfRegistration>2021-01-13</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <rating>0.0</rating>
+         <wallet>0.0</wallet>
       </user>
    </users>
 </users_table>

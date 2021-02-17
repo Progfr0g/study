@@ -120,13 +120,35 @@ public class Constants {
     public static final String UPDATE_PHOTO_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String DELETE_PHOTO_QUERY = "DELETE FROM %s WHERE id = ";
 
-    public static final String SELECT_COMMENTS_QUERY = "SELECT * FROM СOMMENTS WHERE id = ";
-    public static final String INSERT_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
+    public static final String INSERT_COMMENTS_QUERY = "INSERT INTO %s " +
+            "(userId, photoId, comment, date) " +
+            "VALUES (%s, %s, '%s',TO_DATE('%s','dd-MM-yyyy'))";
+    public static final String SELECT_COMMENTS_QUERY = "SELECT * FROM %s WHERE id = ";
     public static final String UPDATE_COMMENTS_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
     public static final String DELETE_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
 
+    public static final String INSERT_RATES_QUERY = "INSERT INTO %s " +
+            "(userId, photoId, comment, date) " +
+            "VALUES (%s, %s, %s, TO_DATE('%s','dd-MM-yyyy'))";
+    public static final String DELETE_RATES_QUERY = "DELETE FROM %s WHERE id = ";
+    public static final String SELECT_RATES_FOR_PHOTO = "SELECT * FROM RATES WHERE id = ";
+    public static final String SELECT_AVG_RATE_FOR_PHOTO = "SELECT AVG(rate) FROM RATES WHERE id = ";
+    public static final String SELECT_COMMENTS_FOR_PHOTO = "SELECT * FROM COMMENTS WHERE id = ";
+
     public static final String SELECT_PORTFOLIO_QUERY = "SELECT * FROM PHOTOS WHERE userId = ";
     public static final String SELECT_PHOTO_PATH_QUERY = "SELECT photoPath FROM PHOTOS WHERE id = ";
+
+    public static final String SELECT_LAST_USER_QUERY = "SELECT * FROM USERS order by id desc LIMIT(1)";
+    public static final String SELECT_LAST_EVENT_QUERY = "SELECT * FROM EVENTS order by id desc LIMIT(1)";
+    public static final String SELECT_LAST_PHOTO_QUERY = "SELECT * FROM PHOTOS order by id desc LIMIT(1)";
+    public static final String SELECT_LAST_COMMENT_QUERY = "SELECT * FROM COMMENTS order by id desc LIMIT(1)";
+    public static final String SELECT_LAST_RATE_QUERY = "SELECT * FROM RATES order by id desc LIMIT(1)";
+
+    public static final String SELECT_ALL_USERS = "SELECT * FROM USERS";
+    public static final String SELECT_ALL_EVENTS = "SELECT * FROM EVENTS";
+    public static final String SELECT_ALL_PHOTOS = "SELECT * FROM PHOTOS";
+    public static final String SELECT_ALL_COMMENTS= "SELECT * FROM COMMENTS";
+    public static final String SELECT_ALL_RATES = "SELECT * FROM RATES";
 //    public static final String;
 //    public static final String;
 //    public static final String;
@@ -183,7 +205,11 @@ public class Constants {
     public static final String ERROR_EMPTY_INPUT_ARGS = "Input args is empty.";
     public static final String ERROR_INCORRECT_INPUT_ARGS = "Input args is incorrect.";
     public static final String ERROR_GET_PROFILE = "Failed to get profile with id %s. ";
+    public static final String ERROR_GET_LAST_PROFILE = "Failed to get last profile. ";
+    public static final String ERROR_GET_ALL_PROFILES = "Failed to get all profiles. ";
     public static final String ERROR_GET_EVENT = "Failed to get event with id %s. ";
+    public static final String ERROR_GET_LAST_EVENT = "Failed to get last event. ";
+    public static final String ERROR_GET_ALL_EVENTS = "Failed to get all events. ";
     public static final String ERROR_FAILED_DB_CONNECTION = "Database connection failure: ";
     public static final String ERROR_FAILED_DB_CONNECTION_CLOSE = "Database close connection failure: ";
     public static final String ERROR_SELECT_QUERY = "SELECT query failed to execute: ";
@@ -192,6 +218,8 @@ public class Constants {
     public static final String ERROR_DELETE_QUERY = "DELETE query failed to execute: ";
     public static final String ERROR_EXECUTE_QUERY = "Query failed to execute: ";
     public static final String ERROR_GET_PHOTO = "Failed to get photo with id %s. ";
+    public static final String ERROR_GET_LAST_PHOTO = "Failed to get last photo. ";
+    public static final String ERROR_GET_ALL_PHOTOS = "Failed to get all photos. ";
     public static final String ERROR_GET_PORTFOLIO = "Failed to get portfolio with profile id %s. ";
     public static final String ERROR_SHOW_PHOTO = "Failed to show photo with id %s. ";
     public static final String ERROR_GET_PHOTO_PATH = "Failed to get photo path with id %s. ";
@@ -214,14 +242,25 @@ public class Constants {
     public static final String EMPTY_GET_PORTFOLIO = "[Portfolio with profile id %s not exists.] Empty response received.";
     public static final String EMPTY_GET_PHOTO_PATH = "[Photo path with photo id %s not exists.] Empty response received.";
 
+    public static final String EMPTY_GET_LAST_USER = "[Failed to get last profile.] Empty response received.";
+    public static final String EMPTY_GET_LAST_EVENT = "[Failed to get last event.] Empty response received.";
+    public static final String EMPTY_GET_LAST_PHOTO = "[Failed to get last photo.] Empty response received.";
+
+    public static final String EMPTY_GET_ALL_USERS = "[Failed to get all users.] Empty response received.";
+    public static final String EMPTY_GET_ALL_EVENTS = "[Failed to get all events.] Empty response received.";
+    public static final String EMPTY_GET_ALL_PHOTOS = "[Failed to get all photos.] Empty response received.";
+
     public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
     public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
+    public static final String XML_COMMENTS_OUTPUT = "\nid: %s\nuser_id: %s\nphoto_id: %s\ntext: %s\ndate: %s\n";
+    public static final String XML_RATES_OUTPUT = "\nid: %s\nuser_id: %s\nphotographer_id: %s\nrate: %s\ndate: %s\n";
 
 
-    public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_COMMENTS_OUTPUT = "%s,%s,%s,%s,%s";
 //    public static final String CSV_USERS_OUTPUT= "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
 //    public static final String CSV_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
 //    public static final String CSV_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
@@ -259,6 +298,7 @@ public class Constants {
 
     public static final String UTIL_GET_WORD = "get";
     public static final Float DEFAULT_RATING = 0.0f;
+    public static final Float DEFAULT_WALLET = 0.0f;
 
     public static final String FILE_CREATED = "File created: ";
     public static final String FILE_EXISTS = "File already exists: ";

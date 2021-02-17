@@ -3,6 +3,8 @@ package ru.sfedu.photosearch.newModels;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.sfedu.photosearch.Constants;
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import ru.sfedu.photosearch.enums.EventStatus;
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
@@ -15,16 +17,27 @@ import java.util.List;
 
 public class Event<T> {
     public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.Event.class);
+    @Element
     private T id;
+    @Element
     private String title;
+    @Element
     private String description;
+    @Element
     private Date date;
+    @Element
     private Date creationDate;
+    @Element
     private Integer price;
+    @Element
     private Float quantity;
+    @Element
     private User costumer;
+    @Element(required = false)
     private User executor;
+    @Element
     private EventStatus status;
+    @Element
     private EventType type;
 
     public Date getCreationDate() {
@@ -181,13 +194,12 @@ public class Event<T> {
     public static List<Event> convertFromCSV(List<String[]> data, List<User> costumers, List<User> executors){
         try {
             List<Event> events = new ArrayList<>();
-//            for (String[] line : data) {
             for (int i = 0; i < data.size(); i++) {
                 if (data.get(i)[3] != null){
-                    data.get(i)[3] = Formatter.normalFormatDay(Formatter.csvDateFromString(data.get(i)[3]));
+                    data.get(i)[3] = Formatter.birthDayToDB(Formatter.csvDateFromString(data.get(i)[3]));
                 }
                 if (data.get(i)[4] != null){
-                    data.get(i)[4] = Formatter.normalFormatDay(Formatter.csvDateFromString(data.get(i)[4]));
+                    data.get(i)[4] = Formatter.birthDayToDB(Formatter.csvDateFromString(data.get(i)[4]));
                 }
                 events.add(new Event(data.get(i), costumers.get(i), executors.get(i)));
             }
