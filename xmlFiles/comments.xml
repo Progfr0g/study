@@ -1,0 +1,33 @@
+<comments_table>
+   <comments class="java.util.ArrayList">
+      <comment>
+         <id class="java.lang.String">ea6fbaf2-ccc8-49f2-82ce-7b46c61ea176</id>
+         <user>
+            <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
+            <name>Sergey</name>
+            <lastName>Tolstoy</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <photo>
+            <id class="java.lang.String">5aee6807-0f41-4425-b496-8df5fa62d267</id>
+            <user>
+               <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
+               <name>Sergey</name>
+               <lastName>Tolstoy</lastName>
+               <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+               <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+               <role>CUSTOMER</role>
+               <town>Moscow</town>
+               <wallet>0.0</wallet>
+            </user>
+            <path>./testPhotos/test2.jpg</path>
+         </photo>
+         <text>beautiful_photo</text>
+         <date>2021-02-18 00:00:00.0 MSK</date>
+      </comment>
+   </comments>
+</comments_table>

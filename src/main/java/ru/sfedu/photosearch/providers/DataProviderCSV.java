@@ -955,27 +955,128 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public Boolean addComment(String id, String userId, String photoId, String comment, Date date) {
-        return null;
+    public Boolean addComment(String userId, String photoId, String comment, Date date) {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_COMMENTS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_COMMENTS_FILE_PATH), ',', '"', 0);
+                List<String[]> csvBody = reader.readAll();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId);
+                Photo photo = getPhoto(photoId);
+                Comment newComment = new Comment(newId,
+                        user, photo, comment, date);
+                String[] record_to_write = newComment.getCSVPhotoOutput().split(",");
+                csvBody.add(record_to_write);
+                reader.close();
+                CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_COMMENTS_FILE_PATH), ',', '"');
+                writer.writeAll(csvBody);
+                writer.flush();
+                writer.close();
+                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
+                return true;
+            }
+        } catch (Exception ex){
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
+        return false;
     }
 
     @Override
     public ArrayList<Comment> getAllComments() {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_COMMENTS_FILE_PATH);
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_COMMENTS_FILE_PATH), ',', '"', 1);
+                List<String[]> csvBody = reader.readAll();
+                List<User> users = new ArrayList<>();
+                List<Photo> photos = new ArrayList<>();
+                for (String[] line : csvBody) {
+                    User user;
+                    if (line[1]!=null) {
+                        user = getProfile(line[1]);
+                    } else
+                        user = null;
+                    Photo photo;
+                    if (line[2]!=null) {
+                        photo = getPhoto(line[2]);
+                    } else {
+                        photo = null;
+                    }
+                    users.add(user);
+                    photos.add(photo);
+                }
+                List<Comment> comments = Comment.convertFromCSV(csvBody, users, photos);
+                if (photos.size() != 0){
+                    return (ArrayList<Comment>) comments;
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_COMMENTS);
+                    reader.close();
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
+                return null;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public ArrayList<User> searchUsers(String field, String value) {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_USERS_FILE_PATH);
+            List<String[]> findedRows = new ArrayList<String[]>();
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_USERS_FILE_PATH), ',', '"', 0);
+                List<String[]> csvBody = reader.readAll();
+                String[] first_row = csvBody.get(0);
+                csvBody.remove(0);
+                Integer jj = first_row.length;
+                for (int i = 0; i < first_row.length; i++) {
+                    String ll = first_row[i];
+                    if (first_row[i].toLowerCase().equals(field.toLowerCase())){
+                        for (int j = 1; j < csvBody.size(); j++){
+                            if (csvBody.get(j)[i].toLowerCase().equals(value.toLowerCase())){
+                                findedRows.add(csvBody.get(j));
+                            }
+                        }
+                    }
+                }
+                List<User> users = User.convertFromCSV(findedRows);
+                if (users.size() != 0){
+                    return (ArrayList<User>) users;
+                } else {
+                    log.info(Constants.EMPTY_GET_USERS_SEARCH);
+                    reader.close();
+                    return null;
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
+            return null;
+        }
         return null;
     }
 
     @Override
-    public Boolean addRate(String id, String userId, String photoId, Float rate, Date date) {
+    public Boolean addRate(String userId, String photoId, Float rate, Date date) {
         return null;
     }
 
     @Override
-    public Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate) {
+    public Boolean addFeedback(String userId, String photographerId, Float rate, Date creationDate) {
         return null;
     }
 
     @Override
-    public Boolean createOffer(String id, String userId, String eventId, Date creationDate) {
+    public Boolean createOffer(String userId, String eventId, Date creationDate) {
         return null;
     }
 

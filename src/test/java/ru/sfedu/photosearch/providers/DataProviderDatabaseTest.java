@@ -8,6 +8,7 @@ import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.PhotoSearchClient;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -70,7 +71,7 @@ class DataProviderDatabaseTest {
     @Test
     void createNewEvent() {
 //      title, description, customer, eventDate, creationDate, price, quantity
-        String args = "DB CREATE_NEW_EVENT auto_race competition 3 14-02-2021 150 2.5";
+        String args = "DB CREATE_NEW_EVENT auto_race competition 1 14-02-2021 150 2.5";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -98,14 +99,14 @@ class DataProviderDatabaseTest {
 
     @Test
     void addPhoto() {
-        String args = "DB ADD_PHOTO 3 ./testPhotos/test2.jpg";
+        String args = "DB ADD_PHOTO 1 ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPhoto() {
-        String args = "DB GET_PHOTO 7";
+        String args = "DB GET_PHOTO 1";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -133,7 +134,7 @@ class DataProviderDatabaseTest {
 
     @Test
     void getPhotoPathById() {
-        String args = "DB SHOW_PHOTO 10";
+        String args = "DB SHOW_PHOTO 1";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -159,7 +160,6 @@ class DataProviderDatabaseTest {
         assertNotNull(result);
     }
 
-
     @Test
     void getAllUsers() {
         ArrayList<User> result = provider.getAllUsers();
@@ -183,12 +183,22 @@ class DataProviderDatabaseTest {
 
     @Test
     void addComment() {
-        String args = "DB ADD_COMMENT 7";
+        String args = "DB ADD_COMMENT 1 1 beautiful_photo";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getAllComments() {
+        String args = "DB GET_ALL_COMMENTS";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void searchUsers() {
+        String args = "DB SEARCH_USERS town Moscow";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
     }
 }

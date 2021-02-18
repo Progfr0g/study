@@ -131,7 +131,7 @@ public class Photo<T> {
         return result;
     }
     public String getCSVPhotoOutput(){
-        String result = String.format(Constants.CSV_USERS_OUTPUT,
+        String result = String.format(Constants.CSV_PHOTOS_OUTPUT,
                 checkNull(getId().toString()),
                 checkNullUser(getUser()),
                 checkNullEvent(getEvent()),

@@ -8,6 +8,7 @@ import ru.sfedu.photosearch.CSV;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -93,7 +94,7 @@ class DataProviderXMLTest {
 //  bb2bee28-c928-4d4b-aac3-9c17841d6743
     @Test
     void addPhoto() {
-        String args = "XML ADD_PHOTO 9b97eecc-3f17-4fea-8605-a6e06002f67b ./testPhotos/test.jpg";
+        String args = "XML ADD_PHOTO 92078c3c-a492-406d-98b2-b64267c121c5 ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -171,6 +172,27 @@ class DataProviderXMLTest {
     void getAllPhotos() {
         ArrayList<Photo> result = provider.getAllPhotos();
         result.forEach(x->log.info(x.getPhotoOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void addComment() {
+        String args = "XML ADD_COMMENT 92078c3c-a492-406d-98b2-b64267c121c5 5aee6807-0f41-4425-b496-8df5fa62d267 beautiful_photo";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void getAllComments() {
+        ArrayList<Comment> result = provider.getAllComments();
+        result.forEach(x->log.info(x.getCommentOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void searchUsers() {
+        ArrayList<User> result = provider.searchUsers("name", "Sergey");
+        result.forEach(x->log.info(x.getUserOutput()));
         assertNotNull(result);
     }
 }

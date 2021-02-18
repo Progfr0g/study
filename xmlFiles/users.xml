@@ -1,51 +1,11 @@
 <users_table>
    <users class="java.util.ArrayList">
       <user>
-         <id class="java.lang.String">85345ef8-33da-4afa-bb26-0d37b18748e9</id>
+         <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
          <name>Sergey</name>
          <lastName>Tolstoy</lastName>
          <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-02-11 00:00:00.0 MSK</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <wallet>0.0</wallet>
-      </user>
-      <user>
-         <id class="java.lang.String">8f2eaaab-7a67-43ad-a491-45a72f24f2ae</id>
-         <name>Sergey</name>
-         <lastName>Tolstoy</lastName>
-         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-02-12 00:00:00.0 MSK</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <wallet>0.0</wallet>
-      </user>
-      <user>
-         <id class="java.lang.String">ff406702-f659-494f-9119-90329516f77a</id>
-         <name>Sergey</name>
-         <lastName>Tolstoy</lastName>
-         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <wallet>0.0</wallet>
-      </user>
-      <user>
-         <id class="java.lang.String">9b97eecc-3f17-4fea-8605-a6e06002f67b</id>
-         <name>Sergey</name>
-         <lastName>Tolstoy</lastName>
-         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
-         <role>CUSTOMER</role>
-         <town>Moscow</town>
-         <wallet>0.0</wallet>
-      </user>
-      <user>
-         <id class="java.lang.String">bb2bee28-c928-4d4b-aac3-9c17841d6743</id>
-         <name>Sergey</name>
-         <lastName>Tolstoy</lastName>
-         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
+         <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
          <role>CUSTOMER</role>
          <town>Moscow</town>
          <wallet>0.0</wallet>

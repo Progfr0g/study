@@ -3,7 +3,7 @@ package ru.sfedu.photosearch.xmlTables;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 import ru.sfedu.photosearch.newModels.Comment;
-import ru.sfedu.photosearch.newModels.Event;
+
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class XML_CommentsTable {
     }
 
     public void setComments(List<Comment> comments) {
-        for (Comment comment:comments){
+        for (Comment comment: comments){
             comment.setId(comment.getId().toString());
         }
         this.comments = comments;

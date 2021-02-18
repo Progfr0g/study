@@ -1,41 +1,13 @@
 <photos_table>
    <photos class="java.util.ArrayList">
       <photo>
-         <id class="java.lang.String">79d9e449-8573-48e2-95fa-091e671818f9</id>
+         <id class="java.lang.String">5aee6807-0f41-4425-b496-8df5fa62d267</id>
          <user>
-            <id class="java.lang.String">bb2bee28-c928-4d4b-aac3-9c17841d6743</id>
+            <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
             <name>Sergey</name>
             <lastName>Tolstoy</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
-            <role>CUSTOMER</role>
-            <town>Moscow</town>
-            <wallet>0.0</wallet>
-         </user>
-         <path>./testPhotos/test.jpg</path>
-      </photo>
-      <photo>
-         <id class="java.lang.String">4ec1167f-dca4-4c4a-bb11-08a1afea59ae</id>
-         <user>
-            <id class="java.lang.String">bb2bee28-c928-4d4b-aac3-9c17841d6743</id>
-            <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
-            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
-            <role>CUSTOMER</role>
-            <town>Moscow</town>
-            <wallet>0.0</wallet>
-         </user>
-         <path>./testPhotos/test.jpg</path>
-      </photo>
-      <photo>
-         <id class="java.lang.String">93a5a1ee-337f-40eb-a078-583679148dbb</id>
-         <user>
-            <id class="java.lang.String">9b97eecc-3f17-4fea-8605-a6e06002f67b</id>
-            <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
-            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-17 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>
@@ -43,7 +15,7 @@
          <title></title>
          <description></description>
          <tag></tag>
-         <path>./testPhotos/test.jpg</path>
+         <path>./testPhotos/test2.jpg</path>
       </photo>
    </photos>
 </photos_table>

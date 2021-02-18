@@ -67,14 +67,16 @@ public interface DataProvider{
 
     ArrayList<Photo> getAllPhotos();
 
-    Boolean addComment(String id, String userId, String photoId, String comment, Date date);
+    Boolean addComment(String userId, String photoId, String comment, Date date);
 
     ArrayList<Comment> getAllComments();
 
-    Boolean addRate(String id, String userId, String photoId, Float rate, Date date);
+    Boolean addRate(String userId, String photoId, Float rate, Date date);
 
-    Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate);
+    Boolean addFeedback(String userId, String photographerId, Float rate, Date creationDate);
 
-    Boolean createOffer(String id, String userId, String eventId, Date creationDate);
+    Boolean createOffer(String userId, String eventId, Date creationDate);
+
+    ArrayList<User> searchUsers(String field, String value);
 
 }

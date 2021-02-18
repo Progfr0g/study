@@ -11,6 +11,7 @@ import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
 import ru.sfedu.photosearch.utils.Formatter;
+import ru.sfedu.photosearch.xmlTables.XML_CommentsTable;
 import ru.sfedu.photosearch.xmlTables.XML_EventsTable;
 import ru.sfedu.photosearch.xmlTables.XML_PhotosTable;
 import ru.sfedu.photosearch.xmlTables.XML_UsersTable;
@@ -740,28 +741,135 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public Boolean addComment(String id, String userId, String photoId, String comment, Date date) {
-        return null;
+    public Boolean addComment(String userId, String photoId, String comment, Date date) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
+            XML_CommentsTable table;
+            if (source.length() == 0) {
+                List<Comment> comments_array = new ArrayList<>();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId);
+                Photo photo = getPhoto(photoId);
+                Comment newComment = new Comment(newId,
+                        user, photo, comment, date);
+                comments_array.add(newComment);
+                table = new XML_CommentsTable();
+                table.setComments(comments_array);
+                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
+                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
+                serializer.write(table, result);
+                return true;
+            } else {
+                table = serializer.read(XML_CommentsTable.class, source);
+                List<Comment> writedComments = table.getxmlComments();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId);
+                Photo photo = getPhoto(photoId);
+                Comment newComment = new Comment(newId,
+                        user, photo, comment, date);
+                writedComments.add(newComment);
+                table.setComments(writedComments);
+                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
+                serializer.write(table, result);
+                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
+                return true;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
     }
 
     @Override
     public ArrayList<Comment> getAllComments() {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_CommentsTable table;
+                table = serializer.read(XML_CommentsTable.class, source);
+                List<Comment> comments = table.getxmlComments();
+                if (comments.size() != 0){
+                    return (ArrayList<Comment>) comments;
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_COMMENTS);
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
+                return null;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex);
+            return null;
+        }
+    }
+
+    @Override
+    public Boolean addRate(String userId, String photoId, Float rate, Date date) {
         return null;
     }
 
     @Override
-    public Boolean addRate(String id, String userId, String photoId, Float rate, Date date) {
+    public Boolean addFeedback(String userId, String photographerId, Float rate, Date creationDate) {
         return null;
     }
 
     @Override
-    public Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate) {
+    public Boolean createOffer(String userId, String eventId, Date creationDate) {
         return null;
     }
 
     @Override
-    public Boolean createOffer(String id, String userId, String eventId, Date creationDate) {
-        return null;
+    public ArrayList<User> searchUsers(String field, String value) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_USERS_FILE_PATH);
+            ArrayList<User> findedUsers = new ArrayList<User>();
+            if (source.length() > 0) {
+                XML_UsersTable table;
+                table = serializer.read(XML_UsersTable.class, source);
+                List<User> users = table.getxmlUsers();
+                if (users.size() != 0) {
+                    for (User user : users) {
+                        switch (field.toLowerCase()) {
+                            case Constants.USERS_NAME_SEARCH: {
+                                if (user.getName().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_LAST_NAME_SEARCH: {
+                                if (user.getLastName().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_TOWN_SEARCH: {
+                                if (user.getTown().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            default: {
+                                log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                            }
+                        }
+                    }
+                } else{
+                    log.info(Constants.EMPTY_GET_USERS_SEARCH);
+                    return null;
+                }
+                if (findedUsers.size() != 0) {
+                    return findedUsers;
+                } else {
+                    log.info(Constants.EMPTY_GET_USERS_SEARCH);
+                    return null;
+                }
+                } else {
+                    log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
+                    return null;
+                }
+            } catch(Exception ex){
+                log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex);
+                return null;
+            }
     }
+
 
 }

@@ -12969,3 +12969,925 @@ title:
 description: 
 tag: 
 photo_path: ./testPhotos/test.jpg
+18 февр. 2021 03:03:09,890 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:03:09,915 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 2
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Sun Feb 07 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 03:03:09,915 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Mon Feb 08 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 03:03:09,915 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 4
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 03:03:27,172 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:03:27,202 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 9
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test1.jpg
+18 февр. 2021 03:03:27,202 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 10
+user_id: 3
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test2.jpg
+18 февр. 2021 03:03:53,656 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:03:53,698 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+INSERT INTO COMMENTS (userId, photoId, comment, date) VALUES (2, 9, 'beautiful_photo',TO_DATE('18-02-2021','dd-MM-yyyy')) [42102-200]
+18 февр. 2021 03:03:53,699 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:04:51,904 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:04:51,940 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:04:51,940 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:05:05,759 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:05:05,803 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:05:05,803 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+18 февр. 2021 03:05:16,855 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:05:16,887 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:05:16,887 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+18 февр. 2021 03:05:23,548 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:05:23,576 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id 1 !****
+18 февр. 2021 03:05:23,576 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+user_id: 1
+event_id: 
+title: 
+description: 
+tag: 
+photo_path: ./testPhotos/test2.jpg
+18 февр. 2021 03:05:35,709 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:05:35,723 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderDatabase - ****Successfully get photo path from photo with id 1 !****
+18 февр. 2021 03:05:52,092 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:05:52,132 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+INSERT INTO COMMENTS (userId, photoId, comment, date) VALUES (1, 1, 'beautiful_photo',TO_DATE('18-02-2021','dd-MM-yyyy')) [42102-200]
+18 февр. 2021 03:05:52,132 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:08:51,218 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:08:51,248 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+18 февр. 2021 03:08:51,248 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:09:15,360 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:09:15,378 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+18 февр. 2021 03:09:15,379 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:09:28,090 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:09:28,123 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:09:28,123 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:09:38,408 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:09:38,446 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:09:38,446 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:09:44,662 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:09:44,703 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:10:32,651 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:10:32,677 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:10:54,535 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:10:54,569 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:11:05,209 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:11:05,242 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:13:55,822 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:13:55,850 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:14:14,135 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:14:14,166 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:14:28,646 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:14:28,677 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:15:37,022 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:15:37,054 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:16:11,274 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:16:11,304 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:16:59,678 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:16:59,706 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:17:45,231 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:17:45,260 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:17:54,961 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:17:54,989 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:17:54,997 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:18:25,591 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:18:25,628 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:18:25,628 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+18 февр. 2021 03:18:32,754 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:18:32,790 [main] ERROR ru.sfedu.photosearch.Database - INSERT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+INSERT INTO COMMENTS (userId, photoId, comment, date) VALUES (1, 1, 'beautiful_photo',TO_DATE('18-02-2021','dd-MM-yyyy')) [42102-200]
+18 февр. 2021 03:18:32,790 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:22:31,802 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:22:31,812 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+SELECT * FROM COMMENTS [42102-200]
+18 февр. 2021 03:27:07,076 [main] ERROR ru.sfedu.photosearch.Database - Failed to create database tables.
+18 февр. 2021 03:27:07,080 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:27:07,086 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+SELECT * FROM COMMENTS [42102-200]
+18 февр. 2021 03:27:44,143 [main] ERROR ru.sfedu.photosearch.Database - Failed to create database tables.
+18 февр. 2021 03:27:44,147 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:27:44,153 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Таблица "COMMENTS" не найдена
+Table "COMMENTS" not found; SQL statement:
+SELECT * FROM COMMENTS [42102-200]
+18 февр. 2021 03:34:59,187 [main] ERROR ru.sfedu.photosearch.Database - Failed to create database tables.
+18 февр. 2021 03:34:59,190 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:34:59,204 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get all comments.] Empty response received.
+18 февр. 2021 03:35:22,609 [main] ERROR ru.sfedu.photosearch.Database - Failed to create database tables.
+18 февр. 2021 03:35:22,612 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:35:22,627 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+18 февр. 2021 03:35:22,628 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:35:22,643 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:36:03,032 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:36:03,053 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 1 not exists.] Empty response received.
+18 февр. 2021 03:36:03,054 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Photo with id 1 not exists.] Empty response received.
+18 февр. 2021 03:36:03,067 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:36:18,601 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:36:18,636 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:36:18,636 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:36:24,667 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:36:24,698 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:36:24,698 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+18 февр. 2021 03:36:29,156 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:36:29,199 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:36:29,200 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:36:38,191 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:36:38,225 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+user_id: 1
+photo_id: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:37:30,824 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:37:30,868 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:37:30,868 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:37:40,347 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:37:44,789 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:38:03,760 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 03:38:07,409 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:38:08,669 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:38:09,996 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:38:18,659 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:38:18,699 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+user_id: 1
+photo_id: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:38:18,699 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 2
+user_id: 1
+photo_id: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:38:18,699 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+user_id: 1
+photo_id: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:38:18,700 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 35
+user_id: 1
+photo_id: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:39:12,819 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:39:12,852 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:39:12,853 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 2
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:39:12,853 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:39:12,853 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 35
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:40:09,911 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:09,943 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:09,943 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:40:20,965 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:20,994 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:20,994 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+18 февр. 2021 03:40:24,742 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:24,759 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get all comments.] Empty response received.
+18 февр. 2021 03:40:31,315 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:31,361 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:31,361 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:40:36,435 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:36,468 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:40:41,694 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:41,723 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:40:46,951 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:46,997 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:46,997 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:40:50,412 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:50,458 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:50,458 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:40:53,777 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:53,820 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:53,821 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:40:57,191 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:40:57,237 [main] DEBUG ru.sfedu.photosearch.Database - [INSERTED 1 rows]
+18 февр. 2021 03:40:57,237 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1 !****
+18 февр. 2021 03:41:00,762 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 03:41:00,805 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:41:00,805 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 2
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:41:00,805 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 3
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:41:00,806 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 4
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:41:00,806 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 5
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 03:54:04,381 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+18 февр. 2021 03:54:04,384 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/events.csv
+18 февр. 2021 03:54:04,384 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+18 февр. 2021 03:54:04,385 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 03:54:04,386 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/rates.csv
+18 февр. 2021 03:54:04,603 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: a0410fb3-439f-492c-97de-8f42247796a7
+18 февр. 2021 03:54:04,603 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:54:15,030 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id 65d9f0c8-54a4-4ac3-97d7-9b143471e357 not exists.] Empty response received.
+18 февр. 2021 03:54:27,528 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: a0410fb3-439f-492c-97de-8f42247796a7
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 03:54:53,481 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 03:54:53,485 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 03:54:53,486 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 03:58:06,353 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+18 февр. 2021 03:58:06,356 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/events.csv
+18 февр. 2021 03:58:06,357 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+18 февр. 2021 03:58:06,358 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 03:58:06,358 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/rates.csv
+18 февр. 2021 03:58:06,579 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 2f9b49e8-501b-44a5-8e58-273bdb53f289
+18 февр. 2021 03:58:06,579 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 03:59:07,814 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 03:59:07,817 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 03:59:07,817 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 03:59:20,240 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 03:59:20,243 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 03:59:20,243 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 03:59:45,485 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 03:59:45,488 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 03:59:45,488 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 04:00:27,283 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:01:20,821 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 04:01:20,822 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 04:01:31,426 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:02:00,118 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - INSERT query failed to execute: Format specifier '%s'
+18 февр. 2021 04:02:00,118 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_PHOTO
+18 февр. 2021 04:02:14,712 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:02:14,717 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 2f9b49e8-501b-44a5-8e58-273bdb53f289 !****
+18 февр. 2021 04:03:02,959 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:03:02,969 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 27b44113-28fa-4ddc-89b2-9d46891b25c1
+userId: 2f9b49e8-501b-44a5-8e58-273bdb53f289
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:03:17,952 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:03:18,144 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:03:18,144 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:03:18,146 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New photo id: af3238ee-41ab-4152-af7b-485e485ee9eb
+18 февр. 2021 04:03:18,146 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 2f9b49e8-501b-44a5-8e58-273bdb53f289 !****
+18 февр. 2021 04:04:05,382 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:04:05,385 [main] ERROR ru.sfedu.photosearch.newModels.Photo - Photo convertion from csv to Photo() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+18 февр. 2021 04:04:05,385 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. null
+18 февр. 2021 04:04:05,391 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:08:59,536 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:08:59,541 [main] ERROR ru.sfedu.photosearch.newModels.Photo - Photo convertion from csv to Photo() has been failedjava.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+18 февр. 2021 04:08:59,541 [main] ERROR ru.sfedu.photosearch.providers.DataProviderCSV - Failed to get photo with id %s. null
+18 февр. 2021 04:08:59,547 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:11:00,248 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/users.csv
+18 февр. 2021 04:11:00,251 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/events.csv
+18 февр. 2021 04:11:00,252 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+18 февр. 2021 04:11:00,252 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:11:00,253 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/rates.csv
+18 февр. 2021 04:11:00,466 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+18 февр. 2021 04:11:00,466 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 04:11:30,189 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:11:30,193 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67 !****
+18 февр. 2021 04:12:12,706 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/photos.csv
+18 февр. 2021 04:12:12,950 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:12:12,952 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67 !****
+18 февр. 2021 04:13:05,909 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:13:05,914 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get photo from profile with id ee938869-943e-4a8c-b333-b3a58fad38cd !****
+18 февр. 2021 04:13:05,914 [main] INFO  ru.sfedu.photosearch.Main - 
+id: ee938869-943e-4a8c-b333-b3a58fad38cd
+userId: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:13:42,755 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Profile with id ee938869-943e-4a8c-b333-b3a58fad38cd not exists.] Empty response received.
+18 февр. 2021 04:13:42,768 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:13:42,768 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67 not exists.] Empty response received.
+18 февр. 2021 04:13:42,774 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:14:00,995 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:14:01,187 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:14:01,187 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:14:01,190 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New photo id: 14cb3400-6471-4651-a1c5-224980a30756
+18 февр. 2021 04:14:01,190 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67 !****
+18 февр. 2021 04:14:06,961 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:14:06,972 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:14:06,974 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 14cb3400-6471-4651-a1c5-224980a30756
+userId: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+photoId: 
+text: 
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 04:14:42,151 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:14:42,163 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: ee938869-943e-4a8c-b333-b3a58fad38cd
+userId: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:15:00,456 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:15:00,647 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:15:00,647 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:15:00,649 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New photo id: 3a245b04-038f-4156-a692-9a8336c99ef9
+18 февр. 2021 04:15:00,649 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67 !****
+18 февр. 2021 04:15:05,336 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:15:05,346 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:15:05,348 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:15:05,348 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:15:05,349 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 14cb3400-6471-4651-a1c5-224980a30756
+userId: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+photoId: 
+text: 
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 04:15:05,350 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 3a245b04-038f-4156-a692-9a8336c99ef9
+userId: b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67
+photoId: 
+text: 
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 04:17:13,489 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:20:47,735 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 69461eb8-3eac-45ac-b349-f6bedf62f468
+18 февр. 2021 04:20:47,737 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 04:20:59,541 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:20:59,545 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:21:19,798 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:21:19,809 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: bed882d7-185d-4e33-9d21-99d852205148
+userId: 69461eb8-3eac-45ac-b349-f6bedf62f468
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:21:36,197 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:21:36,208 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: bed882d7-185d-4e33-9d21-99d852205148
+userId: 69461eb8-3eac-45ac-b349-f6bedf62f468
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:21:42,777 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:21:42,789 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: bed882d7-185d-4e33-9d21-99d852205148
+userId: 69461eb8-3eac-45ac-b349-f6bedf62f468
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:21:55,428 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:22:18,918 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:22:18,919 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Photo with id  not exists.] Empty response received.
+18 февр. 2021 04:22:18,925 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 4ec08a1d-c836-4f67-a73a-b06042597b8a
+18 февр. 2021 04:22:18,925 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:22:22,633 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:22:26,267 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:22:50,933 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 5ab6d0c8-b018-475b-a233-350a4fee2d3b
+18 февр. 2021 04:22:56,517 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:23:19,912 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:23:20,107 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:23:20,109 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 6f379bb4-8156-486d-b551-4fdcabe0a376
+18 февр. 2021 04:23:20,109 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:23:52,708 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:23:52,772 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:23:52,956 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:23:52,956 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 2f2dd286-907c-43c3-a622-4ea0d996eb27
+18 февр. 2021 04:23:52,957 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:24:30,916 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:24:31,135 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: b1369fc0-5340-412d-8217-d0f5e5b81bb4
+18 февр. 2021 04:24:31,136 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 04:25:15,834 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:25:42,494 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:25:48,716 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: c0a84789-5fcc-41fd-af6b-d1650eb74502
+18 февр. 2021 04:25:51,550 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:26:02,446 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:26:02,512 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:26:23,263 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:26:35,909 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:26:36,096 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:26:36,098 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: eff7dea4-2af6-4705-8d27-391c9b00e753
+18 февр. 2021 04:26:36,098 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:26:48,523 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:26:48,592 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:27:01,678 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:27:56,551 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 64ed2449-a896-42ec-8698-2c1a836da6d7
+18 февр. 2021 04:27:58,964 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:28:07,211 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:28:47,216 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:28:47,291 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:31:17,150 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:31:17,341 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:31:17,343 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: eaadba45-4506-4b63-9a36-6a4c6b67e5ed
+18 февр. 2021 04:31:17,343 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:32:19,343 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:32:31,219 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:32:31,282 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:32:56,511 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:32:56,704 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:32:56,706 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: dd13a75b-ffb2-447e-a78b-672dcd1940c9
+18 февр. 2021 04:32:56,706 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:33:01,780 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:01,967 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:01,969 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 29404c26-7828-4fd8-88c8-567b779470c1
+18 февр. 2021 04:33:01,969 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:33:05,525 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:05,718 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:05,719 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: 43115fe7-590f-49ee-ac69-77fb24b6117a
+18 февр. 2021 04:33:05,720 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:33:19,964 [main] DEBUG ru.sfedu.photosearch.utils.CSV_util - File created: ./csvFiles/comments.csv
+18 февр. 2021 04:33:20,030 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:20,218 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:20,220 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New comment id: e61f0167-5bdc-4c6e-8012-b523e5672281
+18 февр. 2021 04:33:20,220 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 69461eb8-3eac-45ac-b349-f6bedf62f468 !****
+18 февр. 2021 04:33:26,090 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:33:26,101 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: e61f0167-5bdc-4c6e-8012-b523e5672281
+userId: 69461eb8-3eac-45ac-b349-f6bedf62f468
+photoId: bed882d7-185d-4e33-9d21-99d852205148
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 04:34:35,400 [main] DEBUG ru.sfedu.photosearch.providers.DataProviderCSV - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:34:35,410 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: e61f0167-5bdc-4c6e-8012-b523e5672281
+userId: 69461eb8-3eac-45ac-b349-f6bedf62f468
+photoId: bed882d7-185d-4e33-9d21-99d852205148
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 04:40:36,156 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+18 февр. 2021 04:40:36,159 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+18 февр. 2021 04:40:36,159 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+18 февр. 2021 04:40:36,159 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+18 февр. 2021 04:40:36,160 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+18 февр. 2021 04:40:36,173 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/users.xml is empty. Nothing to read.
+18 февр. 2021 04:40:49,522 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 1e5ff7a0-3013-4b18-81c4-0fcc74e4dfab
+18 февр. 2021 04:40:49,579 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 04:41:04,210 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/events.xml is empty. Nothing to read.
+18 февр. 2021 04:41:04,212 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:41:04,213 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 2120dd5f-889a-4e52-ab7a-7c02f1524cfb
+18 февр. 2021 04:41:04,227 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1e5ff7a0-3013-4b18-81c4-0fcc74e4dfab !****
+18 февр. 2021 04:42:33,215 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 1e5ff7a0-3013-4b18-81c4-0fcc74e4dfab
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 04:42:49,118 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 2120dd5f-889a-4e52-ab7a-7c02f1524cfb
+userId: 1e5ff7a0-3013-4b18-81c4-0fcc74e4dfab
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:42:58,573 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 166dd3b1-7a2c-4d00-8f92-46f719117311
+18 февр. 2021 04:42:58,591 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 1e5ff7a0-3013-4b18-81c4-0fcc74e4dfab !****
+18 февр. 2021 04:43:27,545 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/comments.xml is empty. Nothing to read.
+18 февр. 2021 04:43:42,762 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:43:42,775 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:45:05,871 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:45:05,889 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:45:28,242 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:45:28,254 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:45:42,281 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:45:42,295 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:46:05,246 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:46:05,260 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:46:20,048 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:46:20,063 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:46:39,678 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:46:39,692 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:46:50,860 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:46:50,874 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:47:02,519 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:47:02,538 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:47:20,185 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:47:20,201 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:47:47,616 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:47:47,631 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:48:00,835 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:48:07,587 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.ADD_COMMENT
+18 февр. 2021 04:48:13,888 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get photo with id 2120dd5f-889a-4e52-ab7a-7c02f1524cfb. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:49:01,592 [main] ERROR ru.sfedu.photosearch.providers.DataProviderXML - Failed to get all photos. org.simpleframework.xml.core.ElementException: Element 'comments' does not have a match in class ru.sfedu.photosearch.xmlTables.XML_PhotosTable at line 2
+18 февр. 2021 04:49:23,911 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: users.xml
+18 февр. 2021 04:49:23,914 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: events.xml
+18 февр. 2021 04:49:23,914 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: photos.xml
+18 февр. 2021 04:49:23,914 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: comments.xml
+18 февр. 2021 04:49:23,915 [main] INFO  ru.sfedu.photosearch.utils.XML_util - File created: rates.xml
+18 февр. 2021 04:49:24,137 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 92078c3c-a492-406d-98b2-b64267c121c5
+18 февр. 2021 04:49:24,193 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 04:49:37,958 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/events.xml is empty. Nothing to read.
+18 февр. 2021 04:49:37,960 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Event with id  not exists.] Empty response received.
+18 февр. 2021 04:49:37,961 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New photo id: 5aee6807-0f41-4425-b496-8df5fa62d267
+18 февр. 2021 04:49:37,975 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 92078c3c-a492-406d-98b2-b64267c121c5 !****
+18 февр. 2021 04:50:22,961 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 5aee6807-0f41-4425-b496-8df5fa62d267
+userId: 92078c3c-a492-406d-98b2-b64267c121c5
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:50:44,983 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 5aee6807-0f41-4425-b496-8df5fa62d267
+userId: 92078c3c-a492-406d-98b2-b64267c121c5
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test2.jpg
+18 февр. 2021 04:53:07,629 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New comment id: ea6fbaf2-ccc8-49f2-82ce-7b46c61ea176
+18 февр. 2021 04:53:13,810 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added comment for profile with id 92078c3c-a492-406d-98b2-b64267c121c5 !****
+18 февр. 2021 04:53:50,115 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: ea6fbaf2-ccc8-49f2-82ce-7b46c61ea176
+userId: 92078c3c-a492-406d-98b2-b64267c121c5
+photoId: 5aee6807-0f41-4425-b496-8df5fa62d267
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 05:03:46,050 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 05:03:46,063 [main] ERROR ru.sfedu.photosearch.Database - SELECT query failed to execute: Столбец "ALEXEY" не найден
+Column "ALEXEY" not found; SQL statement:
+SELECT * FROM USERS WHERE name = Alexey [42122-200]
+18 февр. 2021 05:06:32,996 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 05:06:33,025 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:06:41,140 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 05:06:41,168 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:13:18,110 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 05:13:18,140 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabaseTest - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:28:15,788 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:28:37,393 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:30:04,026 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:30:53,456 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:31:43,024 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:32:23,273 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:32:48,178 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:33:54,345 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get all users.] Empty response received.
+18 февр. 2021 05:34:46,005 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 69461eb8-3eac-45ac-b349-f6bedf62f468
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:34:46,015 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: b1369fc0-5340-412d-8217-d0f5e5b81bb4
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:37:24,083 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 69461eb8-3eac-45ac-b349-f6bedf62f468
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:48:12,346 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 92078c3c-a492-406d-98b2-b64267c121c5
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:51:19,140 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Failed to get all users by search.] Empty response received.
+18 февр. 2021 05:51:49,140 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 92078c3c-a492-406d-98b2-b64267c121c5
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:52:02,575 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 92078c3c-a492-406d-98b2-b64267c121c5
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 05:52:07,417 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 92078c3c-a492-406d-98b2-b64267c121c5
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:02:03,216 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:02:03,256 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 06:02:03,257 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 06:02:03,257 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 3
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 06:02:03,257 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 4
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 06:02:03,257 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 5
+userId: 1
+photoId: 1
+text: beautiful_photo
+date: Thu Feb 18 00:00:00 MSK 2021
+
+18 февр. 2021 06:02:03,257 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get all comments!****
+18 февр. 2021 06:02:33,257 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:02:33,290 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:02:33,290 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:02:42,933 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:02:42,960 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:02:42,961 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:03:04,570 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:03:04,599 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:03:04,600 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:04:13,527 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:04:13,556 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:04:13,557 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:04:51,495 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:04:54,998 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:04:54,998 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:05:05,470 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:05:30,668 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:05:30,688 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:05:47,130 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:05:47,149 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:05:54,865 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:05:54,884 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:06:09,258 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:06:09,275 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:06:15,203 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:06:15,222 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:06:32,818 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+18 февр. 2021 06:06:32,851 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:06:32,852 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+18 февр. 2021 06:07:39,750 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXMLTest - 
+id: 92078c3c-a492-406d-98b2-b64267c121c5
+name: Sergey
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:07:48,062 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: 69461eb8-3eac-45ac-b349-f6bedf62f468
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:07:48,073 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSVTest - 
+id: b1369fc0-5340-412d-8217-d0f5e5b81bb4
+name: Maksim
+lastName: Tolstoy
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Feb 18 00:00:00 MSK 2021
+role: CUSTOMER
+town: Moscow
+wallet: 0.0
+
+18 февр. 2021 06:07:53,007 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get users by search.] Empty response received.

@@ -513,7 +513,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public Boolean addComment(String id, String userId, String photoId, String comment, Date date) {
+    public Boolean addComment(String userId, String photoId, String comment, Date date) {
         String query = String.format(Constants.INSERT_COMMENTS_QUERY, Tables.COMMENTS.toString(),
                 userId, photoId, comment, Formatter.dateOfRegistration(date));
         if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
@@ -524,21 +524,85 @@ public class DataProviderDatabase implements DataProvider {
 
     @Override
     public ArrayList<Comment> getAllComments() {
+        String query = Constants.SELECT_ALL_COMMENTS;
+        ArrayList<Comment> resultComments = new ArrayList<Comment>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User user;
+                if (strings[1]!=null) {
+                    user = getProfile(strings[1]);
+                } else user = null;
+                Photo photo;
+                if (strings[2]!=null) {
+                    photo = getPhoto(strings[2]);
+                } else photo = null;
+                Comment resultComment = new Comment(strings, user, photo);
+                resultComments.add(resultComment);
+            }
+            DB.closeConnection();
+            if (resultComments.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_COMMENTS);
+                return null;
+            } else{
+                return resultComments;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
+        }
+        return null;
+    }
+
+
+    @Override
+    public ArrayList<User> searchUsers(String field, String value) {
+        String query = String.format(Constants.SELECT_USER_SEARCH, field, value);
+        ArrayList<User> resultUsers = new ArrayList<User>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User resultUser = new User<String>(strings);
+                resultUsers.add(resultUser);
+            }
+            DB.closeConnection();
+            if (resultUsers.size() == 0){
+                log.info(Constants.EMPTY_GET_USERS_SEARCH);
+                return null;
+            } else{
+                return resultUsers;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
+        }
         return null;
     }
 
     @Override
-    public Boolean addRate(String id, String userId, String photoId, Float rate, Date date) {
+    public Boolean addRate(String userId, String photoId, Float rate, Date date) {
         return null;
     }
 
     @Override
-    public Boolean addFeedback(String id, String userId, String photographerId, Float rate, Date creationDate) {
+    public Boolean addFeedback( String userId, String photographerId, Float rate, Date creationDate) {
         return null;
     }
 
     @Override
-    public Boolean createOffer(String id, String userId, String eventId, Date creationDate) {
+    public Boolean createOffer(String userId, String eventId, Date creationDate) {
         return null;
     }
+
+
 }

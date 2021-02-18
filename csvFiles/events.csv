@@ -1,5 +1,1 @@
 "id","title","description","customer","executor","event_date","price","quantity","payment_method","paid","payment_date","status"
-"107f7926-8341-4b19-b329-d916485a88fe","auto_race","competition","Sun Aug 19 00:00:00 MSK 14","Tue Aug 14 00:00:00 MSK 14","150","2.5","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","none","order"
-"348e1169-30a0-41e2-813f-a53ff1d9a639","auto_race","competition","Sun Aug 19 00:00:00 MSK 14","Tue Aug 14 00:00:00 MSK 14","150","2.5","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","none","order"
-"cedb689e-5123-427c-9c97-f46adf595525","auto_race","competition","Sun Aug 19 00:00:00 MSK 14","Tue Aug 14 00:00:00 MSK 14","150","2.5","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","none","order"
-"a5979372-0b37-4ab6-b6ca-fc3f3a88dcc5","auto_race","competition","Sun Aug 19 00:00:00 MSK 14","Tue Aug 14 00:00:00 MSK 14","150","2.5","65d9f0c8-54a4-4ac3-97d7-9b143471e357","","none","order"

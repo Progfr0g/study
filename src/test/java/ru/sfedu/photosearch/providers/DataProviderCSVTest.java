@@ -8,6 +8,7 @@ import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.PhotoSearchClient;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -39,7 +40,7 @@ class DataProviderCSVTest {
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
-    //243ab70a-fb5c-4f6a-911b-f2bd00ba1fee
+
     @Test
     void getProfile() {
         String args = "CSV GET_PROFILE cfcecf3c-5507-41e5-b173-a1a01dd3058d";
@@ -91,14 +92,14 @@ class DataProviderCSVTest {
 
     @Test
     void addPhoto() {
-        String args = "CSV ADD_PHOTO 65d9f0c8-54a4-4ac3-97d7-9b143471e357 ./testPhotos/test.jpg";
+        String args = "CSV ADD_PHOTO 69461eb8-3eac-45ac-b349-f6bedf62f468 ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPhoto() {
-        String args = "CSV GET_PHOTO 1e6a0624-7a81-41c9-9dc4-e465bbc37188";
+        String args = "CSV GET_PHOTO ee938869-943e-4a8c-b333-b3a58fad38cd";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -169,6 +170,27 @@ class DataProviderCSVTest {
     void getAllPhotos() {
         ArrayList<Photo> result = provider.getAllPhotos();
         result.forEach(x->log.info(x.getPhotoOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void addComment() {
+        String args = "CSV ADD_COMMENT 69461eb8-3eac-45ac-b349-f6bedf62f468 bed882d7-185d-4e33-9d21-99d852205148 beautiful_photo";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void getAllComments() {
+        ArrayList<Comment> result = provider.getAllComments();
+        result.forEach(x->log.info(x.getCommentOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void searchUsers() {
+        ArrayList<User> result = provider.searchUsers("name", "Maksim");
+        result.forEach(x->log.info(x.getUserOutput()));
         assertNotNull(result);
     }
 }

@@ -1,3 +1,4 @@
 "id","name","lastName","age","dateOfRegistration","role","town","rating"
-"314ab5fb-8f06-4d99-aaf8-f20649459b15","Maksim","Tolstoy","Tue Oct 12 00:00:00 MSD 1999","Thu Feb 11 00:00:00 MSK 2021","CUSTOMER","Moscow","0.0"
-"cfcecf3c-5507-41e5-b173-a1a01dd3058d","Maksim","Tolstoy","Tue Oct 12 00:00:00 MSD 1999","Thu Feb 11 00:00:00 MSK 2021","CUSTOMER","Moscow","0.0"
+"b9d7dd22-5bf7-4f09-a2e9-738ca12a5c67","Maksim","Tolstoy","Tue Oct 12 00:00:00 MSD 1999","Thu Feb 18 00:00:00 MSK 2021","CUSTOMER","Moscow","0.0"
+"69461eb8-3eac-45ac-b349-f6bedf62f468","Maksim","Tolstoy","Tue Oct 12 00:00:00 MSD 1999","Thu Feb 18 00:00:00 MSK 2021","CUSTOMER","Moscow","0.0"
+"b1369fc0-5340-412d-8217-d0f5e5b81bb4","Maksim","Tolstoy","Tue Oct 12 00:00:00 MSD 1999","Thu Feb 18 00:00:00 MSK 2021","CUSTOMER","Moscow","0.0"

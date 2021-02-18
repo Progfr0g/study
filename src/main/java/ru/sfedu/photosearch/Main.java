@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
+import ru.sfedu.photosearch.newModels.Comment;
 import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.newModels.Photo;
 import ru.sfedu.photosearch.newModels.User;
@@ -23,6 +24,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class Main {
     private static Logger log = LogManager.getLogger(Main.class);
@@ -250,7 +253,7 @@ public class Main {
                 if (user != null){
                     Boolean result = provider.addPhoto(userId, path);
                     if (result != false) {
-                        log.info(String.format(Constants.SUCCESS_ADD_PHOTO, userId));
+                        log.info(String.format(Constants.SUCCESS_ADD_COMMENT, userId));
                         return true;
                     } else {
                         log.error(Constants.FAILURE + args.get(1));
@@ -371,6 +374,88 @@ public class Main {
                     return false;
                 }
             }
+            case Constants.M_ADD_COMMENT: {
+                String userId = args.get(2);
+                String photoId = args.get(3);
+                User user = provider.getProfile(userId.toLowerCase());
+                Photo photo = provider.getPhoto(photoId.toLowerCase());
+                String text = args.get(4);
+                Date creationDate = Formatter.localAsDate(LocalDate.now());
+                if (user != null && photo != null){
+                    Boolean result = provider.addComment(userId,
+                            photo.getId().toString(),
+                            text,
+                            creationDate);
+                    if (!result.equals(false)) {
+                        log.info(String.format(Constants.SUCCESS_ADD_COMMENT, userId));
+                        return true;
+                    } else {
+                        log.error(Constants.FAILURE + args.get(1));
+                        return false;
+                    }
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_GET_ALL_USERS: {
+                ArrayList<User> result = provider.getAllUsers();
+                result.forEach(x->log.info(x.getUserOutput()));
+                if (!result.equals(null)) {
+                    log.info(Constants.SUCCESS_GET_ALL_USERS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_GET_ALL_EVENTS: {
+                ArrayList<Event> result = provider.getAllEvents();
+                result.forEach(x->log.info(x.getEventOutput()));
+                if (!result.equals(null)) {
+                    log.info(Constants.SUCCESS_GET_ALL_EVENTS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_GET_ALL_PHOTOS: {
+                ArrayList<Photo> result = provider.getAllPhotos();
+                result.forEach(x->log.info(x.getPhotoOutput()));
+                if (!result.equals(null)) {
+                    log.info(Constants.SUCCESS_GET_ALL_PHOTOS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_GET_ALL_COMMENTS: {
+                ArrayList<Comment> result = provider.getAllComments();
+                result.forEach(x->log.info(x.getCommentOutput()));
+                if (!result.equals(null)) {
+                    log.info(Constants.SUCCESS_GET_ALL_COMMENTS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_SEARCH_USERS: {
+                String field = args.get(2);
+                String value = args.get(3);
+                ArrayList<User> result = provider.searchUsers(field, value);
+                result.forEach(x->log.info(x.getUserOutput()));
+                if (!result.equals(null)) {
+                    log.info(Constants.SUCCESS_SEARCH_USERS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+
 
             default:
                 throw new IllegalStateException("Unexpected method: " + args.get(1));

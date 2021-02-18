@@ -29,6 +29,16 @@ public class Database {
         return null;
     }
 
+    public ResultSet select_search(String query){
+        try {
+            ResultSet result = connection.prepareStatement(query).executeQuery();
+            return result;
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_SELECT_QUERY + ex.getMessage());
+        }
+        return null;
+    }
+
     public int insert(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
@@ -78,17 +88,19 @@ public class Database {
             return true;
         } catch (SQLException ex) {
             log.error(Constants.ERROR_FAILED_DB_CONNECTION_CLOSE + ex.getMessage());
+            return false;
         }
-        return false;
     }
 
     public void createTables() {
-        run(Constants.TABLE_USERS);
-        run(Constants.TABLE_EVENTS);
-        run(Constants.TABLE_PHOTOS);
-        run(Constants.TABLE_COMMENTS);
-        run(Constants.TABLE_RATES);
-        log.debug(Constants.SUCCESS_TABLES_CREATING);
+        if (run(Constants.TABLE_USERS) &&
+                run(Constants.TABLE_EVENTS) &&
+                run(Constants.TABLE_PHOTOS) &&
+                run(Constants.TABLE_COMMENTS) &&
+                run(Constants.TABLE_RATES)){
+            log.debug(Constants.SUCCESS_TABLES_CREATING);
+        } else {
+            log.error(Constants.ERROR_TABLES_CREATING);
+        }
     }
-
 }
