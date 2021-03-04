@@ -79,4 +79,6 @@ public interface DataProvider{
 
     ArrayList<User> searchUsers(String field, String value);
 
+    ArrayList<Event> searchEvents(String field, String value);
+
 }

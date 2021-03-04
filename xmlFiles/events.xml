@@ -1,0 +1,25 @@
+<events_table>
+   <events class="java.util.ArrayList">
+      <event>
+         <id class="java.lang.String">d8d1ec37-6eaf-45e2-a0ef-3949ba4773f2</id>
+         <title>wedding</title>
+         <description>competition</description>
+         <date>2021-02-14 00:00:00.0 MSK</date>
+         <creationDate>2021-02-18 00:00:00.0 MSK</creationDate>
+         <price>150</price>
+         <quantity>2.5</quantity>
+         <costumer>
+            <id class="java.lang.String">32bf70e0-75a7-4506-a36b-646ac63f82a6</id>
+            <name>Sergey</name>
+            <lastName>Tolstoy</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </costumer>
+         <status>NONE</status>
+         <type>ORDER</type>
+      </event>
+   </events>
+</events_table>

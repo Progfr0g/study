@@ -10,5 +10,25 @@
          <town>Moscow</town>
          <wallet>0.0</wallet>
       </user>
+      <user>
+         <id class="java.lang.String">cf19c792-8d37-4d3a-9c5f-ac325d51098f</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+         <role>CUSTOMER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+      </user>
+      <user>
+         <id class="java.lang.String">32bf70e0-75a7-4506-a36b-646ac63f82a6</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+         <role>CUSTOMER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+      </user>
    </users>
 </users_table>

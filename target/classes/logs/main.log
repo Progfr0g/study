@@ -13890,3 +13890,16 @@ role: CUSTOMER
 town: Moscow
 wallet: 0.0
 
+18 февр. 2021 06:07:53,007 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - [Failed to get users by search.] Empty response received.
+18 февр. 2021 06:24:05,231 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/events.xml is empty. Nothing to read.
+18 февр. 2021 06:24:57,153 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id 8f2eaaab-7a67-43ad-a491-45a72f24f2ae not exists.] Empty response received.
+18 февр. 2021 06:25:08,527 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: cf19c792-8d37-4d3a-9c5f-ac325d51098f
+18 февр. 2021 06:25:08,529 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 06:25:44,555 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/users.xml is empty. Nothing to read.
+18 февр. 2021 06:25:44,656 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id null not exists.] Empty response received.
+18 февр. 2021 06:26:01,367 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New profile id: 32bf70e0-75a7-4506-a36b-646ac63f82a6
+18 февр. 2021 06:26:01,369 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+18 февр. 2021 06:26:06,668 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - File ./xmlFiles/users.xml is empty. Nothing to read.
+18 февр. 2021 06:26:06,768 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - [Profile with id null not exists.] Empty response received.
+18 февр. 2021 06:26:30,470 [main] INFO  ru.sfedu.photosearch.providers.DataProviderXML - New event id: d8d1ec37-6eaf-45e2-a0ef-3949ba4773f2
+18 февр. 2021 06:26:30,487 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****

@@ -316,6 +316,10 @@ public class Constants {
     public static final String EVENTS_CUSTOMER = "customer";
     public static final String EVENTS_QUANTITY = "quantity";
 
+    public static final String EVENTS_TITLE_SEARCH = "title";
+    public static final String EVENTS_PRICE_SEARCH = "price";
+    public static final String EVENTS_TYPE_SEARCH = "type";
+
     public static final String PHOTOS_TITLE = "title";
     public static final String PHOTOS_USER = "user";
     public static final String PHOTOS_EVENT = "eventId";

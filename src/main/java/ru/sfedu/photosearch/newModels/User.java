@@ -146,9 +146,9 @@ public class User<T> {
         return result;
     }
 
-    public static List<ru.sfedu.photosearch.newModels.User> convertFromCSV(List<String[]> data){
+    public static List<User> convertFromCSV(List<String[]> data){
         try {
-            List<ru.sfedu.photosearch.newModels.User> users = new ArrayList<>();
+            List<User> users = new ArrayList<>();
             for (String[] line : data) {
                 if (line[3] != null){
                     line[3] = Formatter.birthDayToDB(Formatter.csvDateFromString(line[3]));
@@ -156,7 +156,7 @@ public class User<T> {
                 if (line[4] != null){
                     line[4] = Formatter.birthDayToDB(Formatter.csvDateFromString(line[4]));
                 }
-                users.add(new ru.sfedu.photosearch.newModels.User(line));
+                users.add(new User(line));
             }
             return users;
         }catch (Exception ex){

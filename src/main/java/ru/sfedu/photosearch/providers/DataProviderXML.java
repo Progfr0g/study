@@ -48,7 +48,7 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_UsersTable.class, source);
                 List<User> writedUsers = table.getxmlUsers();
                 UUID id = UUID.randomUUID();
-                User<UUID> newUser = new ru.sfedu.photosearch.newModels.User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
+                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
                 writedUsers.add(newUser);
                 File result = new File(Constants.XML_USERS_FILE_PATH);
                 table.setUsers(writedUsers);
@@ -871,5 +871,53 @@ public class DataProviderXML implements DataProvider {
             }
     }
 
-
+    @Override
+    public ArrayList<Event> searchEvents(String field, String value) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_EVENTS_FILE_PATH);
+            ArrayList<Event> findedEvents = new ArrayList<Event>();
+            if (source.length() > 0) {
+                XML_EventsTable table;
+                table = serializer.read(XML_EventsTable.class, source);
+                List<Event> events = table.getxmlEvents();
+                if (events.size() != 0) {
+                    for (Event event : events) {
+                        switch (field.toLowerCase()) {
+                            case Constants.EVENTS_TITLE_SEARCH: {
+                                if (event.getTitle().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
+                                break;
+                            }
+                            case Constants.EVENTS_PRICE_SEARCH: {
+                                if (event.getPrice().toString().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
+                                break;
+                            }
+                            case Constants.EVENTS_TYPE_SEARCH: {
+                                if (event.getType().toString().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
+                                break;
+                            }
+                            default: {
+                                log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                            }
+                        }
+                    }
+                } else{
+                    log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
+                    return null;
+                }
+                if (findedEvents.size() != 0) {
+                    return findedEvents;
+                } else {
+                    log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_EVENTS_FILE_PATH));
+                return null;
+            }
+        } catch(Exception ex){
+            log.error(Constants.ERROR_GET_EVENTS_SEARCH + ex);
+            return null;
+        }
+    }
 }

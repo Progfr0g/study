@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Photo<T> {
-    public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.Photo.class);
+    public static final Logger log = LogManager.getLogger(Photo.class);
     @Element
     private T id;
     @Element
@@ -144,9 +144,9 @@ public class Photo<T> {
 
     public static List<Photo> convertFromCSV(List<String[]> data, List<User> users, List<Event> events){
         try {
-            List<ru.sfedu.photosearch.newModels.Photo> photos = new ArrayList<>();
+            List<Photo> photos = new ArrayList<>();
             for (int i = 0; i < data.size(); i++) {
-                photos.add(new ru.sfedu.photosearch.newModels.Photo(data.get(i), users.get(i), events.get(i)));
+                photos.add(new Photo(data.get(i), users.get(i), events.get(i)));
             }
             return photos;
         }catch (Exception ex){

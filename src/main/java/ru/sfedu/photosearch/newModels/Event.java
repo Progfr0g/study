@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Event<T> {
-    public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.Event.class);
+    public static final Logger log = LogManager.getLogger(Event.class);
     @Element
     private T id;
     @Element

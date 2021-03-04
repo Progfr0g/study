@@ -1066,6 +1066,11 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
+    public ArrayList<Event> searchEvents(String field, String value) {
+        return null;
+    }
+
+    @Override
     public Boolean addRate(String userId, String photoId, Float rate, Date date) {
         return null;
     }

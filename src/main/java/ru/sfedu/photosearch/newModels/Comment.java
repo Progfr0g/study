@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Comment<T> {
-    public static final Logger log = LogManager.getLogger(ru.sfedu.photosearch.newModels.Comment.class);
+    public static final Logger log = LogManager.getLogger(Comment.class);
     @Element
     private T id;
     @Element

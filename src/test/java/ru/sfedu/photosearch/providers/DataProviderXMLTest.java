@@ -66,7 +66,8 @@ class DataProviderXMLTest {
 
     @Test
     void createNewEvent() {
-        String args = "XML CREATE_NEW_EVENT auto_race competition 8f2eaaab-7a67-43ad-a491-45a72f24f2ae 14-02-2021 150 2.5";
+
+        String args = "XML CREATE_NEW_EVENT wedding one_couple " + provider.getLastUserId() + " 14-02-2021 150 2.5";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -193,6 +194,13 @@ class DataProviderXMLTest {
     void searchUsers() {
         ArrayList<User> result = provider.searchUsers("name", "Sergey");
         result.forEach(x->log.info(x.getUserOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void searchEvents() {
+        ArrayList<Event> result = provider.searchEvents("title", "wedding");
+        result.forEach(x->log.info(x.getEventOutput()));
         assertNotNull(result);
     }
 }
