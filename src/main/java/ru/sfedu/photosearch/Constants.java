@@ -14,6 +14,7 @@ public class Constants {
 
     public static final String XML_DIR_PATH = "./xmlFiles";
     public static final String XML_USERS_FILE_PATH = "./xmlFiles/users.xml";
+    public static final String XML_PHOTOGRAPHERS_FILE_PATH = "./xmlFiles/photographers.xml";
     public static final String XML_EVENTS_FILE_PATH = "./xmlFiles/events.xml";
     public static final String XML_PHOTOS_FILE_PATH = "./xmlFiles/photos.xml";
     public static final String XML_COMMENTS_FILE_PATH = "./xmlFiles/comments.xml";
@@ -21,12 +22,14 @@ public class Constants {
 
     public static final String CSV_DIR_PATH = "./csvFiles";
     public static final String CSV_USERS_FILE_PATH = "./csvFiles/users.csv";
+    public static final String CSV_PHOTOGRAPHERS_FILE_PATH = "./csvFiles/photographers.csv";
     public static final String CSV_EVENTS_FILE_PATH = "./csvFiles/events.csv";
     public static final String CSV_PHOTOS_FILE_PATH = "./csvFiles/photos.csv";
     public static final String CSV_COMMENTS_FILE_PATH = "./csvFiles/comments.csv";
     public static final String CSV_RATES_FILE_PATH = "./csvFiles/rates.csv";
 
-    public static final String CSV_USERS_COLUMNS = "id, name, lastName, age, dateOfRegistration, role, town, rating";
+    public static final String CSV_USERS_COLUMNS = "id, name, lastName, age, dateOfRegistration, role, town, wallet";
+    public static final String CSV_PHOTOGRAPHERS_COLUMNS = "id, name, lastName, age, dateOfRegistration, role, town, wallet, rating, experience, costLevel";
     public static final String CSV_EVENTS_COLUMNS = "id, title, description, customer, executor, event_date, price, quantity, payment_method, paid, payment_date, status";
     public static final String CSV_PHOTOS_COLUMNS = "id, user_id, event_id, title, description, tag, photo_path";
     public static final String CSV_COMMENTS_COLUMNS = "id, user_id, photo_id, text, date";
@@ -44,7 +47,7 @@ public class Constants {
                     "wallet FLOAT(1) default 0.0," +
                     "rating FLOAT(1) default 0.0," +
                     "experience INT default 0," +
-                    "costLevel ENUM('cheap', 'average', 'expensive', 'none'))";
+                    "costLevel ENUM('cheap', 'average', 'expensive', 'none') default 'none')";
     public static final String TABLE_EVENTS =
             "CREATE TABLE IF NOT EXISTS EVENTS (" +
                     "id IDENTITY, " +
@@ -275,6 +278,7 @@ public class Constants {
     public static final String EMPTY_GET_ALL_COMMENTS = "[Failed to get all comments.] Empty response received.";
 
     public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
+    public static final String XML_PHOTOGRAPHERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\nrating: %s\nexperience: %s\ncostLevel: %s\n";
     public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuserId: %s\neventId: %s\ntitle: %s\ndescription: %s\ntag: %s\nphotoPath: %s";
     public static final String XML_COMMENTS_OUTPUT = "\nid: %s\nuserId: %s\nphotoId: %s\ntext: %s\ndate: %s\n";
@@ -282,6 +286,7 @@ public class Constants {
 
 
     public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s";
+    public static final String CSV_PHOTOGRAPHERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_COMMENTS_OUTPUT = "%s,%s,%s,%s,%s";

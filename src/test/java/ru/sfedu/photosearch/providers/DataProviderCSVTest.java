@@ -36,14 +36,14 @@ class DataProviderCSVTest {
 
     @Test
     void createNewProfile() {
-        String args = "CSV CREATE_NEW_PROFILE Maksim Tolstoy 12-10-1999 customer Moscow";
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getProfile() {
-        String args = "CSV GET_PROFILE cfcecf3c-5507-41e5-b173-a1a01dd3058d";
+        String args = "CSV GET_PROFILE 80b39404-d8f5-417d-bc4b-0c0b51781fe8";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -64,7 +64,7 @@ class DataProviderCSVTest {
 
     @Test
     void createNewEvent() {
-        String args = "CSV CREATE_NEW_EVENT auto_race competition 65d9f0c8-54a4-4ac3-97d7-9b143471e357 14-02-2021 150 2.5";
+        String args = "CSV CREATE_NEW_EVENT auto_race competition 78cc72f9-faa7-40de-92d6-14b5330e6f76 14-02-2021 150 2.5";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -191,6 +191,13 @@ class DataProviderCSVTest {
     void searchUsers() {
         ArrayList<User> result = provider.searchUsers("name", "Maksim");
         result.forEach(x->log.info(x.getUserOutput()));
+        assertNotNull(result);
+    }
+
+    @Test
+    void searchEvents() {
+        ArrayList<Event> result = provider.searchEvents("description", "competition");
+        result.forEach(x->log.info(x.getEventOutput()));
         assertNotNull(result);
     }
 }

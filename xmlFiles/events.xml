@@ -21,5 +21,47 @@
          <status>NONE</status>
          <type>ORDER</type>
       </event>
+      <event>
+         <id class="java.lang.String">6cd6b41a-0dd5-4457-acb8-49768b828361</id>
+         <title>wedding</title>
+         <description>one_couple</description>
+         <date>2021-02-14 00:00:00.0 MSK</date>
+         <creationDate>2021-03-05 00:00:00.0 MSK</creationDate>
+         <price>150</price>
+         <quantity>2.5</quantity>
+         <costumer>
+            <id class="java.lang.String">32bf70e0-75a7-4506-a36b-646ac63f82a6</id>
+            <name>Sergey</name>
+            <lastName>Tolstoy</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </costumer>
+         <status>NONE</status>
+         <type>ORDER</type>
+      </event>
+      <event>
+         <id class="java.lang.String">5aa92761-8f5f-49a8-90cf-42e336a005d7</id>
+         <title>wedding</title>
+         <description>one_couple</description>
+         <date>2021-02-14 00:00:00.0 MSK</date>
+         <creationDate>2021-03-05 00:00:00.0 MSK</creationDate>
+         <price>150</price>
+         <quantity>2.5</quantity>
+         <costumer>
+            <id class="java.lang.String">94125053-6aab-4cb9-b3f2-fee6fa147744</id>
+            <name>Sergey</name>
+            <lastName>Tolstoy</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-05 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </costumer>
+         <status>NONE</status>
+         <type>ORDER</type>
+      </event>
    </events>
 </events_table>

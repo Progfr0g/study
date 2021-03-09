@@ -42,14 +42,14 @@ class DataProviderDatabaseTest {
 
     @Test
     void createNewProfile() {
-        String args = "DB CREATE_NEW_PROFILE Sergey Tolstoy 12-10-1999 customer Moscow";
+        String args = "DB CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 customer Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getProfile() {
-        String args = "DB GET_PROFILE 4";
+        String args = "DB GET_PROFILE 1";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -198,6 +198,13 @@ class DataProviderDatabaseTest {
     @Test
     void searchUsers() {
         String args = "DB SEARCH_USERS town Moscow";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void searchEvents() {
+        String args = "DB SEARCH_EVENTS description competition";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }

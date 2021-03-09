@@ -7,10 +7,7 @@ import ru.sfedu.photosearch.Database;
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
 import ru.sfedu.photosearch.enums.Tables;
-import ru.sfedu.photosearch.newModels.Comment;
-import ru.sfedu.photosearch.newModels.Event;
-import ru.sfedu.photosearch.newModels.Photo;
-import ru.sfedu.photosearch.newModels.User;
+import ru.sfedu.photosearch.newModels.*;
 import ru.sfedu.photosearch.utils.Formatter;
 
 import java.sql.ResultSet;
@@ -66,8 +63,13 @@ public class DataProviderDatabase implements DataProvider {
                 log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
                 return null;
             } else{
-                User resultUser = new User<String>(strings);
-                return resultUser;
+                if (strings[5].equals(Role.CUSTOMER.toString().toLowerCase())){
+                    User resultUser = new User<String>(strings);
+                    return resultUser;
+                } else if (strings[5].equals(Role.PHOTOGRAPHER.toString().toLowerCase())){
+                    Photographer resultUser = new Photographer<String>(strings);
+                    return resultUser;
+                }
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex.getMessage());
@@ -591,6 +593,41 @@ public class DataProviderDatabase implements DataProvider {
 
     @Override
     public ArrayList<Event> searchEvents(String field, String value) {
+        String query = String.format(Constants.SELECT_EVENT_SEARCH, field, value);
+        ArrayList<Event> resultEvents = new ArrayList<Event>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User costumer;
+                if (strings[7]!=null) {
+                    costumer = getProfile(strings[7]);
+                } else
+                    costumer = null;
+                User executor;
+                if (strings[8]!=null) {
+                    executor = getProfile(strings[8]);
+                } else {
+                    executor = null;
+                }
+                Event resultEvent = new Event<String>(strings, costumer, executor);
+                resultEvents.add(resultEvent);
+            }
+            DB.closeConnection();
+            if (resultEvents.size() == 0){
+                log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
+                return null;
+            } else{
+                return resultEvents;
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_EVENTS_SEARCH + ex.getMessage());
+        }
         return null;
     }
 

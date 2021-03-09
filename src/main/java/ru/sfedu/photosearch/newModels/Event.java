@@ -128,7 +128,7 @@ public class Event<T> {
         this.type = type;
     }
 
-    public Event() {
+    public Event() { super();
     }
 
     public Event(T id, String title, String description, Date date, Date creationDate, Integer price, Float quantity, User costumer, EventStatus status, EventType type) {

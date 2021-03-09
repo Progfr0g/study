@@ -146,7 +146,7 @@ public class Main {
                 if (customer != null){
                     if (customer.getRole() == Role.CUSTOMER){
                         type = EventType.ORDER;
-                    }else if (customer.getRole() == Role.EXECUTOR) {
+                    }else if (customer.getRole() == Role.PHOTOGRAPHER) {
                         type = EventType.OFFER;
                     }
                 } else {
@@ -447,7 +447,7 @@ public class Main {
                 String value = args.get(3);
                 ArrayList<User> result = provider.searchUsers(field, value);
                 result.forEach(x->log.info(x.getUserOutput()));
-                if (!result.equals(null)) {
+                if (result != null) {
                     log.info(Constants.SUCCESS_SEARCH_USERS);
                     return true;
                 } else {
@@ -455,7 +455,19 @@ public class Main {
                     return false;
                 }
             }
-
+            case Constants.M_SEARCH_EVENTS: {
+                String field = args.get(2);
+                String value = args.get(3);
+                ArrayList<Event> result = provider.searchEvents(field, value);
+                result.forEach(x->log.info(x.getEventOutput()));
+                if (result != null) {
+                    log.info(Constants.SUCCESS_SEARCH_EVENTS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
 
             default:
                 throw new IllegalStateException("Unexpected method: " + args.get(1));

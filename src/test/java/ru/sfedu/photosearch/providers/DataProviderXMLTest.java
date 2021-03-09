@@ -38,28 +38,28 @@ class DataProviderXMLTest {
 
     @Test
     void createNewProfile() {
-        String args = "XML CREATE_NEW_PROFILE Sergey Tolstoy 12-10-1999 customer Moscow";
+        String args = "XML CREATE_NEW_PROFILE Sergey Tolstoy 12-10-1999 photographer Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getProfile() {
-        String args = "XML GET_PROFILE 977ede93-6a7d-4e6e-97f4-a751d66c2035";
+        String args = "XML GET_PROFILE 76d3edfe-bfa5-4a5d-a411-fc6f30fcece2";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editProfileById() {
-        String args = "XML EDIT_PROFILE 977ede93-6a7d-4e6e-97f4-a751d66c2035 name Kostya";
+        String args = "XML EDIT_PROFILE 76d3edfe-bfa5-4a5d-a411-fc6f30fcece2 name Kostya";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deleteProfileById() {
-        String args = "XML DELETE_PROFILE 977ede93-6a7d-4e6e-97f4-a751d66c2035";
+        String args = "XML DELETE_PROFILE 76d3edfe-bfa5-4a5d-a411-fc6f30fcece2";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }

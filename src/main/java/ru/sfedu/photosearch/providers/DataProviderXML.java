@@ -6,15 +6,9 @@ import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.enums.*;
-import ru.sfedu.photosearch.newModels.Comment;
-import ru.sfedu.photosearch.newModels.Event;
-import ru.sfedu.photosearch.newModels.Photo;
-import ru.sfedu.photosearch.newModels.User;
+import ru.sfedu.photosearch.newModels.*;
 import ru.sfedu.photosearch.utils.Formatter;
-import ru.sfedu.photosearch.xmlTables.XML_CommentsTable;
-import ru.sfedu.photosearch.xmlTables.XML_EventsTable;
-import ru.sfedu.photosearch.xmlTables.XML_PhotosTable;
-import ru.sfedu.photosearch.xmlTables.XML_UsersTable;
+import ru.sfedu.photosearch.xmlTables.*;
 
 import java.io.File;
 import java.util.*;
@@ -31,31 +25,69 @@ public class DataProviderXML implements DataProvider {
                                     String town) {
         try {
             Serializer serializer = new Persister();
-            File source = new File(Constants.XML_USERS_FILE_PATH);
             XML_UsersTable table;
-            if (source.length() == 0) {
-                List<User> users_array = new ArrayList<>();
-                UUID id = UUID.randomUUID();
-                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
-                table = new XML_UsersTable();
-                users_array.add(newUser);
-                table.setUsers(users_array);
-                File result = new File(Constants.XML_USERS_FILE_PATH);
-                log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
-                serializer.write(table, result);
-                return true;
-            } else {
-                table = serializer.read(XML_UsersTable.class, source);
-                List<User> writedUsers = table.getxmlUsers();
-                UUID id = UUID.randomUUID();
-                User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
-                writedUsers.add(newUser);
-                File result = new File(Constants.XML_USERS_FILE_PATH);
-                table.setUsers(writedUsers);
-                serializer.write(table, result);
-                log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
-                return true;
-            }
+            XML_PhotographersTable phTable;
+            if (Role.PHOTOGRAPHER.equals(role)){
+                File source = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+                if (source.length() == 0) {
+                    List<Photographer> photographers_array = new ArrayList<>();
+                    UUID id = UUID.randomUUID();
+                    Photographer<UUID> newUser = new Photographer<UUID>(id, name, lastName, birthDay, dateOfRegistration, role,
+                            town,
+                            Constants.DEFAULT_WALLET,
+                            Constants.DEFAULT_RATING,
+                            0,
+                            CostLevel.NONE);
+                    phTable = new XML_PhotographersTable();
+                    photographers_array.add(newUser);
+                    phTable.setUsers(photographers_array);
+                    File result = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+                    log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
+                    serializer.write(phTable, result);
+                    return true;
+                } else {
+                    phTable = serializer.read(XML_PhotographersTable.class, source);
+                    List<Photographer> writedUsers = phTable.getxmlPhotographers();
+                    UUID id = UUID.randomUUID();
+                    Photographer<UUID> newUser = new Photographer<UUID>(id, name, lastName, birthDay, dateOfRegistration, role,
+                            town,
+                            Constants.DEFAULT_WALLET,
+                            Constants.DEFAULT_RATING,
+                            0,
+                            CostLevel.NONE);
+                    writedUsers.add(newUser);
+                    File result = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+                    phTable.setUsers(writedUsers);
+                    serializer.write(phTable, result);
+                    log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
+                    return true;
+                }
+            } else if (Role.CUSTOMER.equals(role)){
+                File source = new File(Constants.XML_USERS_FILE_PATH);
+                if (source.length() == 0) {
+                    List<User> users_array = new ArrayList<>();
+                    UUID id = UUID.randomUUID();
+                    User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
+                    table = new XML_UsersTable();
+                    users_array.add(newUser);
+                    table.setUsers(users_array);
+                    File result = new File(Constants.XML_USERS_FILE_PATH);
+                    log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
+                    serializer.write(table, result);
+                    return true;
+                } else {
+                    table = serializer.read(XML_UsersTable.class, source);
+                    List<User> writedUsers = table.getxmlUsers();
+                    UUID id = UUID.randomUUID();
+                    User<UUID> newUser = new User<UUID>(id, name, lastName, birthDay, dateOfRegistration, role, town, Constants.DEFAULT_RATING);
+                    writedUsers.add(newUser);
+                    File result = new File(Constants.XML_USERS_FILE_PATH);
+                    table.setUsers(writedUsers);
+                    serializer.write(table, result);
+                    log.info(String.format(Constants.SUCCESS_NEW_PROFILE_XML, id));
+                    return true;
+                }
+            } else return false;
         } catch (Exception ex) {
             log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
             return false;
@@ -71,10 +103,24 @@ public class DataProviderXML implements DataProvider {
             if (source.length() > 0) {
                 XML_UsersTable table;
                 table = serializer.read(XML_UsersTable.class, source);
-                for (User user: table.getxmlUsers()) {
+                for (User user : table.getxmlUsers()) {
                     if (user.getId().equals(id)) {
                         rows++;
                         return user;
+                    }
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOGRAPHERS_FILE_PATH));
+                return null;
+            }
+            source = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_PhotographersTable phTable;
+                phTable = serializer.read(XML_PhotographersTable.class, source);
+                for (Photographer photographer: phTable.getxmlPhotographers()) {
+                    if (photographer.getId().equals(id)) {
+                        rows++;
+                        return photographer;
                     }
                 }
             } else {
@@ -96,31 +142,34 @@ public class DataProviderXML implements DataProvider {
     public Boolean editProfileById(String id, String field, String value) {
         try {
             Serializer serializer = new Persister();
-            File source = new File(Constants.XML_USERS_FILE_PATH);
+            File sourceUsers = new File(Constants.XML_USERS_FILE_PATH);
+            File sourcePhotographers = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
             XML_UsersTable table;
-            Integer rows = 0;
-            if (source.length() > 0) {
-                table = serializer.read(XML_UsersTable.class, source);
+            XML_PhotographersTable phTable;
+            Integer rowsUsers = 0;
+            Integer rowsPhotographers = 0;
+            if (sourceUsers.length() > 0) {
+                table = serializer.read(XML_UsersTable.class, sourceUsers);
                 List<User> writedUsers = table.getxmlUsers();
                 for (User user: writedUsers) {
-                    if (id.equals(user.getId())){
-                        switch (field){
-                            case Constants.USERS_NAME:{
+                    if (id.equals(user.getId())) {
+                        switch (field) {
+                            case Constants.USERS_NAME: {
                                 user.setName(value);
                                 log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
                                 break;
                             }
-                            case Constants.USERS_LAST_NAME:{
+                            case Constants.USERS_LAST_NAME: {
                                 user.setLastName(value);
                                 log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
                                 break;
                             }
-                            case Constants.USERS_BIRTHDAY:{
+                            case Constants.USERS_BIRTHDAY: {
                                 user.setBirthDay(Formatter.normalFormatDay(value));
                                 log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
                                 break;
                             }
-                            case Constants.USERS_TOWN:{
+                            case Constants.USERS_TOWN: {
                                 user.setTown(value);
                                 log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
                                 break;
@@ -129,21 +178,64 @@ public class DataProviderXML implements DataProvider {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
                             }
                         }
-                        rows++;
+                        rowsUsers++;
                     }
                 }
-                if (rows == 0) {
-                    log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
-                    return false;
+                if (rowsUsers != 0) {
+                    table.setUsers(writedUsers);
+                    File result = new File(Constants.XML_USERS_FILE_PATH);
+                    serializer.write(table, result);
+                    return true;
                 }
-                table.setUsers(writedUsers);
-                File result = new File(Constants.XML_USERS_FILE_PATH);
-                serializer.write(table, result);
-                return true;
-            }else {
-                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
-                return false;
+            } else {
+                log.warn(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
             }
+            if (sourcePhotographers.length() > 0) {
+                phTable = serializer.read(XML_PhotographersTable.class, sourcePhotographers);
+                List<Photographer> writedPhotographers = phTable.getxmlPhotographers();
+                for (Photographer photographer : writedPhotographers) {
+                    if (id.equals(photographer.getId())) {
+                        switch (field) {
+                            case Constants.USERS_NAME: {
+                                photographer.setName(value);
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
+                            case Constants.USERS_LAST_NAME: {
+                                photographer.setLastName(value);
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
+                            case Constants.USERS_BIRTHDAY: {
+                                photographer.setBirthDay(Formatter.normalFormatDay(value));
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
+                            case Constants.USERS_TOWN: {
+                                photographer.setTown(value);
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
+                            default: {
+                                log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                            }
+                        }
+                        rowsPhotographers++;
+                    }
+                }
+                if (rowsPhotographers != 0) {
+                    phTable.setUsers(writedPhotographers);
+                    File result = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+                    serializer.write(phTable, result);
+                    return true;
+                }
+            } else {
+                log.warn(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOGRAPHERS_FILE_PATH));
+            }
+            if (rowsPhotographers == 0){
+                log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
+                return false;
+            } else return false;
         } catch (Exception ex) {
             log.error(Constants.ERROR_UPDATE_QUERY + ex.getMessage());
             return false;
@@ -154,33 +246,57 @@ public class DataProviderXML implements DataProvider {
     public Boolean deleteProfileById(String id) {
         try {
             Serializer serializer = new Persister();
-            File source = new File(Constants.XML_USERS_FILE_PATH);
+            File sourceUsers = new File(Constants.XML_USERS_FILE_PATH);
+            File sourcePhotographers = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
             XML_UsersTable table;
-            Integer rows = 0;
-            if (source.length() > 0) {
-                table = serializer.read(XML_UsersTable.class, source);
+            XML_PhotographersTable phTable;
+            Integer rowsUsers = 0;
+            Integer rowsPhotographers = 0;
+            if (sourceUsers.length() > 0) {
+                table = serializer.read(XML_UsersTable.class, sourceUsers);
                 List<User> writedUsers = table.getxmlUsers();
                 for (User user: writedUsers){
                     if (id.equals(user.getId())){
                         writedUsers.remove(user);
-                        rows++;
+                        rowsUsers++;
                         break;
                     }
                 }
-                if (rows != 0){
+                if (rowsUsers != 0) {
                     log.debug(String.format(Constants.SUCCESS_DELETE_PROFILE_XML, id));
                     table.setUsers(writedUsers);
                     File result = new File(Constants.XML_USERS_FILE_PATH);
                     serializer.write(table, result);
                     return true;
-                } else {
-                    log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
+                }
+            } else {
+                log.warn(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
+            }
+            if (sourcePhotographers.length() > 0) {
+                phTable = serializer.read(XML_PhotographersTable.class, sourcePhotographers);
+                List<Photographer> writedPhotographers = phTable.getxmlPhotographers();
+                for (Photographer photographer: writedPhotographers){
+                    if (id.equals(photographer.getId())){
+                        writedPhotographers.remove(photographer);
+                        rowsPhotographers++;
+                        break;
+                    }
+                }
+                if (rowsPhotographers != 0){
+                    log.debug(String.format(Constants.SUCCESS_DELETE_PROFILE_XML, id));
+                    phTable.setUsers(writedPhotographers);
+                    File result = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+                    serializer.write(phTable, result);
                     return true;
                 }
-            }else {
-                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
+            } else {
+                log.warn(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOGRAPHERS_FILE_PATH));
                 return false;
             }
+            if (rowsPhotographers == 0){
+                log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
+                return true;
+            } else return false;
         } catch (Exception ex) {
             log.error(Constants.ERROR_DELETE_QUERY + ex.getMessage());
             return false;

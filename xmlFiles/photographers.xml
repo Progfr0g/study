@@ -1,0 +1,17 @@
+<photographers_table>
+   <photographers class="java.util.ArrayList">
+      <user>
+         <id class="java.lang.String">f11a19e8-5beb-4d1b-aad9-0b9bf1fd76ab</id>
+         <name>Sergey</name>
+         <lastName>Tolstoy</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-09 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+   </photographers>
+</photographers_table>

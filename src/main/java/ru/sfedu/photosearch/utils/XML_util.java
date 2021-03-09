@@ -14,6 +14,7 @@ public class XML_util {
     public static void createFiles(){
         List<String> paths = new ArrayList<>();
         paths.add(Constants.XML_USERS_FILE_PATH);
+        paths.add(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
         paths.add(Constants.XML_EVENTS_FILE_PATH);
         paths.add(Constants.XML_PHOTOS_FILE_PATH);
         paths.add(Constants.XML_COMMENTS_FILE_PATH);

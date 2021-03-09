@@ -17,6 +17,7 @@ public class CSV_util {
     public static void createFiles(){
         List<String> paths = new ArrayList<>();
         paths.add(Constants.CSV_USERS_FILE_PATH);
+        paths.add(Constants.CSV_PHOTOGRAPHERS_FILE_PATH);
         paths.add(Constants.CSV_EVENTS_FILE_PATH);
         paths.add(Constants.CSV_PHOTOS_FILE_PATH);
         paths.add(Constants.CSV_COMMENTS_FILE_PATH);
@@ -35,6 +36,11 @@ public class CSV_util {
                     switch (path){
                         case Constants.CSV_USERS_FILE_PATH:{
                             String[] record = Constants.CSV_USERS_COLUMNS.split(", ");
+                            writer.writeNext(record);
+                            break;
+                        }
+                        case Constants.CSV_PHOTOGRAPHERS_FILE_PATH:{
+                            String[] record = Constants.CSV_PHOTOGRAPHERS_COLUMNS.split(", ");
                             writer.writeNext(record);
                             break;
                         }
