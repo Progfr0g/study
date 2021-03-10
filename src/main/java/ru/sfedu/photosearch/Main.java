@@ -20,10 +20,7 @@ import ru.sfedu.photosearch.utils.XML_util;
 
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -75,7 +72,7 @@ public class Main {
                             dateOfRegistration,
                             role,
                             town);
-                    if (result != false) {
+                    if (result) {
                         log.info(Constants.SUCCESS_NEW_PROFILE);
                         return true;
                     } else {
@@ -90,10 +87,10 @@ public class Main {
             }
             case Constants.M_GET_PROFILE: {
                 String id = args.get(2);
-                User result = provider.getProfile(id);
-                if (result != null) {
+                Optional<User> result = provider.getProfile(id);
+                if (result.isPresent()) {
                     log.debug(String.format(Constants.SUCCESS_GET_PROFILE, id));
-                    log.info(result.getUserOutput());
+                    log.info(result.get().getUserOutput());
                     return true;
                 } else {
                     log.error(Constants.FAILURE + args.get(1));
@@ -104,10 +101,10 @@ public class Main {
                 String id = args.get(2);
                 String field = args.get(3);
                 String value = args.get(4);
-                User customer = provider.getProfile(id.toLowerCase());;
-                if (customer != null){
+                Optional<User> customer = provider.getProfile(id.toLowerCase());
+                if (customer.isPresent()){
                     Boolean result = provider.editProfileById(id, field, value);
-                    if (result != false) {
+                    if (result) {
                         log.info(String.format(Constants.SUCCESS_UPDATE_PROFILE, id));
                         return true;
                     } else {
@@ -120,10 +117,10 @@ public class Main {
             }
             case Constants.M_DELETE_PROFILE: {
                 String id = args.get(2);
-                User customer = provider.getProfile(id.toLowerCase());;
-                if (customer != null){
+                Optional<User> customer = provider.getProfile(id.toLowerCase());;
+                if (customer.isPresent()){
                     Boolean result = provider.deleteProfileById(id);
-                    if (result != false) {
+                    if (result) {
                         log.info(String.format(Constants.SUCCESS_DELETE_PROFILE, id));
                         return true;
                     } else {
@@ -137,16 +134,16 @@ public class Main {
             case Constants.M_CREATE_NEW_EVENT:{
                 String title = args.get(2);
                 String description = args.get(3);
-                User customer = provider.getProfile(args.get(4).toLowerCase());
+                Optional<User> customer = provider.getProfile(args.get(4).toLowerCase());
                 Date eventDate = Formatter.normalFormatDay(args.get(5));
                 Date creationDate = Formatter.localAsDate(LocalDate.now());
                 Integer price = Integer.parseInt(args.get(6));
                 Float quantity = Float.parseFloat(args.get(7));
                 EventType type = null;
-                if (customer != null){
-                    if (customer.getRole() == Role.CUSTOMER){
+                if (customer.isPresent()){
+                    if (customer.get().getRole() == Role.CUSTOMER){
                         type = EventType.ORDER;
-                    }else if (customer.getRole() == Role.PHOTOGRAPHER) {
+                    }else if (customer.get().getRole() == Role.PHOTOGRAPHER) {
                         type = EventType.OFFER;
                     }
                 } else {
@@ -155,13 +152,13 @@ public class Main {
                 Boolean result = provider.createNewEvent(
                         title,
                         description,
-                        customer.getId().toString(),
+                        customer.get().getId().toString(),
                         eventDate,
                         creationDate,
                         price,
                         quantity,
                         type);
-                if (result != false) {
+                if (result) {
                     log.info(Constants.SUCCESS_NEW_EVENT);
                     return true;
                 } else {
@@ -171,10 +168,10 @@ public class Main {
             }
             case Constants.M_GET_EVENT: {
                 String id = args.get(2);
-                Event result = provider.getEvent(id);
-                if (result != null) {
+                Optional<Event> result = provider.getEvent(id);
+                if (result.isPresent()) {
                     log.debug(String.format(Constants.SUCCESS_GET_EVENT, id));
-                    log.info(result.getEventOutput());
+                    log.info(result.get().getEventOutput());
                     return true;
                 } else {
                     log.error(Constants.FAILURE + args.get(1));
@@ -185,13 +182,13 @@ public class Main {
                 String id = args.get(2);
                 String field = args.get(3);
                 String value = args.get(4);
-                Event event = provider.getEvent(id.toLowerCase());
-                if (event != null){
+                Optional<Event> event = provider.getEvent(id.toLowerCase());
+                if (event.isPresent()){
                     if (field.equals(Constants.EVENTS_CUSTOMER)){
-                        User user = provider.getProfile(value.toLowerCase());
-                        if (user != null){
+                        Optional<User> user = provider.getProfile(value.toLowerCase());
+                        if (user.isPresent()){
                             Boolean result = provider.editEventById(id, field, value);
-                            if (result != false) {
+                            if (result) {
                                 log.info(String.format(Constants.SUCCESS_UPDATE_EVENT, id));
                                 return true;
                             } else {
@@ -203,10 +200,10 @@ public class Main {
                         }
                     }
                     if (field.equals(Constants.EVENTS_EXECUTOR)){
-                        User user = provider.getProfile(value.toLowerCase());
-                        if (user != null){
+                        Optional<User> user = provider.getProfile(value.toLowerCase());
+                        if (user.isPresent()){
                             Boolean result = provider.editEventById(id, field, value);
-                            if (result != false) {
+                            if (result) {
                                 log.info(String.format(Constants.SUCCESS_UPDATE_EVENT, id));
                                 return true;
                             } else {
@@ -218,7 +215,7 @@ public class Main {
                         }
                     } else {
                         Boolean result = provider.editEventById(id, field, value);
-                        if (result != false) {
+                        if (result) {
                             log.info(String.format(Constants.SUCCESS_UPDATE_EVENT, id));
                             return true;
                         } else {
@@ -232,10 +229,10 @@ public class Main {
             }
             case Constants.M_DELETE_EVENT: {
                 String id = args.get(2);
-                Event event = provider.getEvent(id.toLowerCase());;
-                if (event != null){
+                Optional<Event> event = provider.getEvent(id.toLowerCase());;
+                if (event.isPresent()){
                     Boolean result = provider.deleteEventById(id);
-                    if (result != false) {
+                    if (result) {
                         log.info(String.format(Constants.SUCCESS_DELETE_EVENT, id));
                         return true;
                     } else {
@@ -248,11 +245,11 @@ public class Main {
             }
             case Constants.M_ADD_PHOTO: {
                 String userId = args.get(2);
-                User user = provider.getProfile(userId.toLowerCase());
+                Optional<User> user = provider.getProfile(userId.toLowerCase());
                 String path = args.get(3);
-                if (user != null){
+                if (user.isPresent()){
                     Boolean result = provider.addPhoto(userId, path);
-                    if (result != false) {
+                    if (result) {
                         log.info(String.format(Constants.SUCCESS_ADD_COMMENT, userId));
                         return true;
                     } else {
@@ -267,13 +264,13 @@ public class Main {
                 String id = args.get(2);
                 String field = args.get(3);
                 String value = args.get(4);
-                Photo photo = provider.getPhoto(id.toLowerCase());
-                if (photo != null){
+                Optional<Photo> photo = provider.getPhoto(id.toLowerCase());
+                if (photo.isPresent()){
                     if (field.equals(Constants.PHOTOS_USER)){
-                        User user = provider.getProfile(value.toLowerCase());
-                        if (user != null){
+                        Optional<User> user = provider.getProfile(value.toLowerCase());
+                        if (user.isPresent()){
                             Boolean result = provider.editPhotoById(id, field, value);
-                            if (result != false) {
+                            if (result) {
                                 log.info(String.format(Constants.SUCCESS_UPDATE_PHOTO, id));
                                 return true;
                             } else {
@@ -285,10 +282,10 @@ public class Main {
                         }
                     }
                     if (field.equals(Constants.PHOTOS_EVENT)){
-                        Event event = provider.getEvent(value.toLowerCase());
-                        if (event != null){
+                        Optional<Event> event = provider.getEvent(value.toLowerCase());
+                        if (event.isPresent()){
                             Boolean result = provider.editPhotoById(id, field, value);
-                            if (result != false) {
+                            if (result) {
                                 log.info(String.format(Constants.SUCCESS_UPDATE_PHOTO, id));
                                 return true;
                             } else {
@@ -300,7 +297,7 @@ public class Main {
                         }
                     } else {
                         Boolean result = provider.editPhotoById(id, field, value);
-                        if (result != false) {
+                        if (result) {
                             log.info(String.format(Constants.SUCCESS_UPDATE_PHOTO, id));
                             return true;
                         } else {
@@ -315,10 +312,10 @@ public class Main {
             }
             case Constants.M_GET_PHOTO: {
                 String id = args.get(2);
-                Photo result = provider.getPhoto(id);
-                if (result != null) {
+                Optional<Photo> result = provider.getPhoto(id);
+                if (result.isPresent()) {
                     log.debug(String.format(Constants.SUCCESS_GET_PHOTO, id));
-                    log.info(result.getPhotoOutput());
+                    log.info(result.get().getPhotoOutput());
                     return true;
                 } else {
                     log.error(Constants.FAILURE + args.get(1));
@@ -327,10 +324,10 @@ public class Main {
             }
             case Constants.M_DELETE_PHOTO: {
                 String id = args.get(2);
-                Photo photo = provider.getPhoto(id.toLowerCase());;
-                if (photo != null){
+                Optional<Photo> photo = provider.getPhoto(id.toLowerCase());;
+                if (photo.isPresent()){
                     Boolean result = provider.deletePhotoById(id);
-                    if (result != false) {
+                    if (result) {
                         log.info(String.format(Constants.SUCCESS_DELETE_PHOTO, id));
                         return true;
                     } else {
@@ -344,10 +341,10 @@ public class Main {
 
             case Constants.M_GET_PORTFOLIO: {
                 String userId = args.get(2);
-                ArrayList<Photo> result = provider.getPortfolio(userId);
-                if (result != null) {
+                Optional<ArrayList<Photo>> result = provider.getPortfolio(userId);
+                if (result.isPresent()) {
                     log.debug(String.format(Constants.SUCCESS_GET_PORTFOLIO, userId));
-                    for (Photo photo: result){
+                    for (Photo photo: result.get()){
                         log.info(photo.getPhotoOutput());
                     }
                     return true;
@@ -362,7 +359,7 @@ public class Main {
                 String result = provider.getPhotoPathById(id);
                 if (result != null) {
                     Boolean showResult = PhotoViewer.showPhoto(result);
-                    if (showResult != false) {
+                    if (showResult) {
                         return true;
                     } else {
                         log.error(String.format(Constants.ERROR_SHOW_PHOTO, id));
@@ -377,13 +374,13 @@ public class Main {
             case Constants.M_ADD_COMMENT: {
                 String userId = args.get(2);
                 String photoId = args.get(3);
-                User user = provider.getProfile(userId.toLowerCase());
-                Photo photo = provider.getPhoto(photoId.toLowerCase());
+                Optional<User> user = provider.getProfile(userId.toLowerCase());
+                Optional<Photo> photo = provider.getPhoto(photoId.toLowerCase());
                 String text = args.get(4);
                 Date creationDate = Formatter.localAsDate(LocalDate.now());
-                if (user != null && photo != null){
+                if (user.isPresent() && photo.isPresent()){
                     Boolean result = provider.addComment(userId,
-                            photo.getId().toString(),
+                            photo.get().getId().toString(),
                             text,
                             creationDate);
                     if (!result.equals(false)) {
@@ -399,9 +396,9 @@ public class Main {
                 }
             }
             case Constants.M_GET_ALL_USERS: {
-                ArrayList<User> result = provider.getAllUsers();
-                result.forEach(x->log.info(x.getUserOutput()));
-                if (!result.equals(null)) {
+                Optional<ArrayList<User>> result = provider.getAllUsers();
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getUserOutput()));
                     log.info(Constants.SUCCESS_GET_ALL_USERS);
                     return true;
                 } else {
@@ -410,9 +407,9 @@ public class Main {
                 }
             }
             case Constants.M_GET_ALL_EVENTS: {
-                ArrayList<Event> result = provider.getAllEvents();
-                result.forEach(x->log.info(x.getEventOutput()));
-                if (!result.equals(null)) {
+                Optional<ArrayList<Event>> result = provider.getAllEvents();
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getEventOutput()));
                     log.info(Constants.SUCCESS_GET_ALL_EVENTS);
                     return true;
                 } else {
@@ -421,9 +418,9 @@ public class Main {
                 }
             }
             case Constants.M_GET_ALL_PHOTOS: {
-                ArrayList<Photo> result = provider.getAllPhotos();
-                result.forEach(x->log.info(x.getPhotoOutput()));
-                if (!result.equals(null)) {
+                Optional<ArrayList<Photo>> result = provider.getAllPhotos();
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getPhotoOutput()));
                     log.info(Constants.SUCCESS_GET_ALL_PHOTOS);
                     return true;
                 } else {
@@ -432,9 +429,9 @@ public class Main {
                 }
             }
             case Constants.M_GET_ALL_COMMENTS: {
-                ArrayList<Comment> result = provider.getAllComments();
-                result.forEach(x->log.info(x.getCommentOutput()));
-                if (!result.equals(null)) {
+                Optional<ArrayList<Comment>> result = provider.getAllComments();
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getCommentOutput()));
                     log.info(Constants.SUCCESS_GET_ALL_COMMENTS);
                     return true;
                 } else {
@@ -445,9 +442,22 @@ public class Main {
             case Constants.M_SEARCH_USERS: {
                 String field = args.get(2);
                 String value = args.get(3);
-                ArrayList<User> result = provider.searchUsers(field, value);
-                result.forEach(x->log.info(x.getUserOutput()));
-                if (result != null) {
+                Optional<ArrayList<User>> result = provider.searchUsers(field, value);
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getUserOutput()));
+                    log.info(Constants.SUCCESS_SEARCH_USERS);
+                    return true;
+                } else {
+                    log.error(Constants.FAILURE + args.get(1));
+                    return false;
+                }
+            }
+            case Constants.M_SEARCH_PHOTOGRAPHERS: {
+                String field = args.get(2);
+                String value = args.get(3);
+                Optional<ArrayList<User>> result = provider.searchPhotographers(field, value);
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getUserOutput()));
                     log.info(Constants.SUCCESS_SEARCH_USERS);
                     return true;
                 } else {
@@ -458,9 +468,9 @@ public class Main {
             case Constants.M_SEARCH_EVENTS: {
                 String field = args.get(2);
                 String value = args.get(3);
-                ArrayList<Event> result = provider.searchEvents(field, value);
-                result.forEach(x->log.info(x.getEventOutput()));
-                if (result != null) {
+                Optional<ArrayList<Event>> result = provider.searchEvents(field, value);
+                if (result.isPresent()) {
+                    result.get().forEach(x->log.info(x.getEventOutput()));
                     log.info(Constants.SUCCESS_SEARCH_EVENTS);
                     return true;
                 } else {

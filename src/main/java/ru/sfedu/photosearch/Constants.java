@@ -105,10 +105,10 @@ public class Constants {
     public static final String M_GET_ALL_PHOTOS = "GET_ALL_PHOTOS";
     public static final String M_GET_ALL_COMMENTS = "GET_ALL_COMMENTS";
     public static final String M_SEARCH_USERS = "SEARCH_USERS";
+    public static final String M_SEARCH_PHOTOGRAPHERS = "SEARCH_PHOTOGRAPHERS";
     public static final String M_SEARCH_EVENTS = "SEARCH_EVENTS";
 
     public static final String M_ADD_RATE = "ADD_RATE";
-    public static final String M_SEARCH_PHOTOGRAPHER = "SEARCH_PHOTOGRAPHER";
 
     public static final String INSERT_USERS_QUERY = "INSERT INTO USERS " +
             "(name, last_name, birthday, date_of_registration, role, town) VALUES ('%s','%s',TO_DATE('%s','dd-MM-yyyy'),TO_DATE('%s','dd-MM-yyyy'),'%s','%s')";
@@ -154,6 +154,7 @@ public class Constants {
     public static final String SELECT_LAST_RATE_QUERY = "SELECT * FROM RATES order by id desc LIMIT(1)";
 
     public static final String SELECT_USER_SEARCH = "SELECT * FROM USERS WHERE %s = '%s'";
+    public static final String SELECT_PHOTOGRAPHER_SEARCH = "SELECT * FROM USERS WHERE %s = '%s' and role = 'photographer'";
     public static final String SELECT_EVENT_SEARCH = "SELECT * FROM EVENTS WHERE %s = '%s'";
 
     public static final String SELECT_ALL_USERS = "SELECT * FROM USERS";
@@ -272,13 +273,14 @@ public class Constants {
 
     public static final String EMPTY_GET_ALL_USERS = "[Failed to get all users.] Empty response received.";
     public static final String EMPTY_GET_USERS_SEARCH= "[Failed to get users by search.] Empty response received.";
+    public static final String EMPTY_GET_PHOTOGRAPHERS_SEARCH= "[Failed to get photographers by search.] Empty response received.";
     public static final String EMPTY_GET_ALL_EVENTS = "[Failed to get all events.] Empty response received.";
     public static final String EMPTY_GET_EVENTS_SEARCH = "[Failed to get events by search.] Empty response received.";
     public static final String EMPTY_GET_ALL_PHOTOS = "[Failed to get all photos.] Empty response received.";
     public static final String EMPTY_GET_ALL_COMMENTS = "[Failed to get all comments.] Empty response received.";
 
     public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
-    public static final String XML_PHOTOGRAPHERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\nrating: %s\nexperience: %s\ncostLevel: %s\n";
+    public static final String XML_PHOTOGRAPHERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nrating: %s\nexperience: %s\ncostLevel: %s\n";
     public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuserId: %s\neventId: %s\ntitle: %s\ndescription: %s\ntag: %s\nphotoPath: %s";
     public static final String XML_COMMENTS_OUTPUT = "\nid: %s\nuserId: %s\nphotoId: %s\ntext: %s\ndate: %s\n";
@@ -307,12 +309,18 @@ public class Constants {
     public static final String USERS_NAME = "name";
     public static final String USERS_LAST_NAME = "last_name";
     public static final String USERS_BIRTHDAY = "birthday";
-    public static final String USERS_EXPERIENCE = "experience";
     public static final String USERS_TOWN = "town";
+
+    public static final String PHOTOGRAPHERS_EXPERIENCE = "experience";
+    public static final String PHOTOGRAPHERS_COSTLEVEL = "costLevel";
 
     public static final String USERS_NAME_SEARCH = "name";
     public static final String USERS_LAST_NAME_SEARCH = "lastName";
     public static final String USERS_TOWN_SEARCH = "town";
+
+    public static final String USERS_EXPERIENCE_SEARCH = "experience";
+    public static final String USERS_RATING_SEARCH = "rating";
+    public static final String USERS_COSTLEVEL_SEARCH = "costlevel";
 
     public static final String EVENTS_TITLE = "title";
     public static final String EVENTS_DESCRIPTION = "description";
@@ -322,6 +330,7 @@ public class Constants {
     public static final String EVENTS_QUANTITY = "quantity";
 
     public static final String EVENTS_TITLE_SEARCH = "title";
+    public static final String EVENTS_DESCRIPTION_SEARCH = "description";
     public static final String EVENTS_PRICE_SEARCH = "price";
     public static final String EVENTS_TYPE_SEARCH = "type";
 

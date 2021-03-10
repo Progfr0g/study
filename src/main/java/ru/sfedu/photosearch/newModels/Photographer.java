@@ -96,7 +96,6 @@ public class Photographer<T> extends User<T> {
                 checkNull(getDateOfRegistration().toString()),
                 checkNull(getRole().toString()),
                 checkNull(getTown()),
-                checkNull(getWallet().toString()),
                 checkNull(getRating().toString()),
                 checkNull(getExperience().toString()),
                 checkNull(getCostLevel().toString()));

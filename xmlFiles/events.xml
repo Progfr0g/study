@@ -1,19 +1,19 @@
 <events_table>
    <events class="java.util.ArrayList">
       <event>
-         <id class="java.lang.String">d8d1ec37-6eaf-45e2-a0ef-3949ba4773f2</id>
-         <title>wedding</title>
+         <id class="java.lang.String">374fe91c-c449-4445-bc98-5e0657f68d6c</id>
+         <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
-         <creationDate>2021-02-18 00:00:00.0 MSK</creationDate>
+         <creationDate>2021-03-10 00:00:00.0 MSK</creationDate>
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">32bf70e0-75a7-4506-a36b-646ac63f82a6</id>
+            <id class="java.lang.String">62f3a19d-0fa6-40f9-984e-8979529fa9bf</id>
             <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
+            <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>
@@ -22,19 +22,19 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">6cd6b41a-0dd5-4457-acb8-49768b828361</id>
-         <title>wedding</title>
-         <description>one_couple</description>
+         <id class="java.lang.String">3e78cf84-5fb9-4ca4-9043-f5c322d230b3</id>
+         <title>auto_race</title>
+         <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
-         <creationDate>2021-03-05 00:00:00.0 MSK</creationDate>
+         <creationDate>2021-03-10 00:00:00.0 MSK</creationDate>
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">32bf70e0-75a7-4506-a36b-646ac63f82a6</id>
+            <id class="java.lang.String">8dd7abb3-2dfe-4eb6-b372-f3146b86b6fa</id>
             <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
+            <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>
@@ -43,19 +43,61 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">5aa92761-8f5f-49a8-90cf-42e336a005d7</id>
-         <title>wedding</title>
-         <description>one_couple</description>
+         <id class="java.lang.String">3043d83a-23a4-4f8d-a84b-a0cea9defad0</id>
+         <title>auto_race</title>
+         <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
-         <creationDate>2021-03-05 00:00:00.0 MSK</creationDate>
+         <creationDate>2021-03-10 00:00:00.0 MSK</creationDate>
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">94125053-6aab-4cb9-b3f2-fee6fa147744</id>
+            <id class="java.lang.String">0b68467e-1537-495f-94cb-8eff76c76268</id>
             <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
+            <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-03-05 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </costumer>
+         <status>NONE</status>
+         <type>ORDER</type>
+      </event>
+      <event>
+         <id class="java.lang.String">f699eca9-0acf-42e7-8012-b7447dabfcf5</id>
+         <title>racing</title>
+         <description>competition</description>
+         <date>2021-02-14 00:00:00.0 MSK</date>
+         <creationDate>2021-03-10 00:00:00.0 MSK</creationDate>
+         <price>150</price>
+         <quantity>2.5</quantity>
+         <costumer>
+            <id class="java.lang.String">5d811a90-e49e-4f1d-863d-7b63dbaa6bff</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </costumer>
+         <status>NONE</status>
+         <type>ORDER</type>
+      </event>
+      <event>
+         <id class="java.lang.String">b391243b-96cf-4f77-8173-d1fb35902f97</id>
+         <title>auto_race</title>
+         <description>competition</description>
+         <date>2021-02-14 00:00:00.0 MSK</date>
+         <creationDate>2021-03-10 00:00:00.0 MSK</creationDate>
+         <price>150</price>
+         <quantity>2.5</quantity>
+         <costumer>
+            <id class="java.lang.String">7f30f12b-12d6-4da5-a2a2-8d6ce2e07d96</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>

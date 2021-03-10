@@ -17,11 +17,8 @@ import ru.sfedu.photosearch.utils.XML_util;
 
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.*;
 import java.text.SimpleDateFormat;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -49,21 +46,24 @@ class DataProviderDatabaseTest {
 
     @Test
     void getProfile() {
-        String args = "DB GET_PROFILE 1";
+        createNewProfile();
+        String args = "DB GET_PROFILE " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editProfileById() {
-        String args = "DB EDIT_PROFILE 3 name Alexey";
+        createNewProfile();
+        String args = "DB EDIT_PROFILE " + provider.getLastUserId() + " name Alexey";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deleteProfileById() {
-        String args = "DB DELETE_PROFILE 3";
+        createNewProfile();
+        String args = "DB DELETE_PROFILE " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -71,76 +71,87 @@ class DataProviderDatabaseTest {
     @Test
     void createNewEvent() {
 //      title, description, customer, eventDate, creationDate, price, quantity
-        String args = "DB CREATE_NEW_EVENT auto_race competition 1 14-02-2021 150 2.5";
+        createNewProfile();
+        String args = "DB CREATE_NEW_EVENT auto_race competition " + provider.getLastUserId() +  " 14-02-2021 150 2.5";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getEvent() {
-        String args = "DB GET_EVENT 4";
+        createNewEvent();
+        String args = "DB GET_EVENT " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editEventById() {
-        String args = "DB EDIT_EVENT 4 customer 2";
+        createNewProfile();
+        String args = "DB EDIT_EVENT " + provider.getLastEventId() + " customer " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deleteEventById() {
-        String args = "DB DELETE_EVENT 1";
+        createNewEvent();
+        String args = "DB DELETE_EVENT " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void addPhoto() {
-        String args = "DB ADD_PHOTO 1 ./testPhotos/test2.jpg";
+        createNewProfile();
+        String args = "DB ADD_PHOTO " + provider.getLastUserId() + " ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPhoto() {
-        String args = "DB GET_PHOTO 1";
+        addPhoto();
+        String args = "DB GET_PHOTO " + provider.getLastPhotoId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editPhotoById() {
-        String args = "DB EDIT_PHOTO 7 title test_photo";
+        addPhoto();
+        String args = "DB EDIT_PHOTO " + provider.getLastPhotoId() + " title test_photo";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deletePhotoById() {
-        String args = "DB DELETE_PHOTO 8";
+        addPhoto();
+        String args = "DB DELETE_PHOTO " + provider.getLastPhotoId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPortfolio() {
-        String args = "DB GET_PORTFOLIO 3";
+        addPhoto();
+        String args = "DB GET_PORTFOLIO " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
-    @Test
-    void getPhotoPathById() {
-        String args = "DB SHOW_PHOTO 1";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
+//    @Test
+//    void getPhotoPathById() {
+//        addPhoto();
+//        String args = "DB SHOW_PHOTO " + provider.getLastPhotoId();
+//        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+//        assertTrue(result);
+//    }
 
     @Test
     void getLastUserId() {
+        createNewProfile();
         String result = provider.getLastUserId();
         log.info(result);
         assertNotNull(result);
@@ -148,6 +159,7 @@ class DataProviderDatabaseTest {
 
     @Test
     void getLastEventId() {
+        createNewEvent();
         String result = provider.getLastEventId();
         log.info(result);
         assertNotNull(result);
@@ -155,6 +167,7 @@ class DataProviderDatabaseTest {
 
     @Test
     void getLastPhotoId() {
+        addPhoto();
         String result = provider.getLastPhotoId();
         log.info(result);
         assertNotNull(result);
@@ -162,34 +175,39 @@ class DataProviderDatabaseTest {
 
     @Test
     void getAllUsers() {
-        ArrayList<User> result = provider.getAllUsers();
-        result.forEach(x->log.info(x.getUserOutput()));
-        assertNotNull(result);
+        createNewProfile();
+        Optional<ArrayList<User>> result = provider.getAllUsers();
+        result.ifPresent(users -> users.forEach(x -> log.info(x.getUserOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void getAllEvents() {
-        ArrayList<Event> result = provider.getAllEvents();
-        result.forEach(x->log.info(x.getEventOutput()));
-        assertNotNull(result);
+        createNewEvent();
+        Optional<ArrayList<Event>> result = provider.getAllEvents();
+        result.ifPresent(events -> events.forEach(x -> log.info(x.getEventOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void getAllPhotos() {
-        ArrayList<Photo> result = provider.getAllPhotos();
-        result.forEach(x->log.info(x.getPhotoOutput()));
-        assertNotNull(result);
+        addPhoto();
+        Optional<ArrayList<Photo>> result = provider.getAllPhotos();
+        result.ifPresent(photos -> photos.forEach(x -> log.info(x.getPhotoOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void addComment() {
-        String args = "DB ADD_COMMENT 1 1 beautiful_photo";
+        addPhoto();
+        String args = "DB ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getAllComments() {
+        addPhoto();
         String args = "DB GET_ALL_COMMENTS";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
@@ -197,13 +215,24 @@ class DataProviderDatabaseTest {
 
     @Test
     void searchUsers() {
+        createNewProfile();
         String args = "DB SEARCH_USERS town Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
+    void searchPhotographers() {
+        String args = "DB CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        args = "DB SEARCH_PHOTOGRAPHERS town Moscow";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
     void searchEvents() {
+        createNewEvent();
         String args = "DB SEARCH_EVENTS description competition";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);

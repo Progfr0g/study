@@ -9,6 +9,7 @@ import ru.sfedu.photosearch.newModels.User;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Optional;
 
 public interface DataProvider{
      Boolean createNewProfile(
@@ -19,7 +20,7 @@ public interface DataProvider{
              Role role,
              String town);
 
-    User getProfile(
+    Optional<User> getProfile(
             String id);
 
     Boolean editProfileById(String id, String field, String value);
@@ -36,7 +37,7 @@ public interface DataProvider{
             Float quantity,
             EventType type);
 
-    Event getEvent(
+    Optional<Event> getEvent(
             String id);
 
     Boolean editEventById(String id, String field, String value);
@@ -45,13 +46,13 @@ public interface DataProvider{
 
     Boolean addPhoto(String id, String path);
 
-    Photo getPhoto(String id);
+    Optional<Photo> getPhoto(String id);
 
     Boolean editPhotoById(String id, String field, String value);
 
     Boolean deletePhotoById(String id);
 
-    ArrayList<Photo> getPortfolio(String userId);
+    Optional<ArrayList<Photo>> getPortfolio(String userId);
 
     String getPhotoPathById(String id);
 
@@ -61,15 +62,15 @@ public interface DataProvider{
 
     String getLastPhotoId();
 
-    ArrayList<User> getAllUsers();
+    Optional<ArrayList<User>> getAllUsers();
 
-    ArrayList<Event> getAllEvents();
+    Optional<ArrayList<Event>> getAllEvents();
 
-    ArrayList<Photo> getAllPhotos();
+    Optional<ArrayList<Photo>> getAllPhotos();
 
     Boolean addComment(String userId, String photoId, String comment, Date date);
 
-    ArrayList<Comment> getAllComments();
+    Optional<ArrayList<Comment>> getAllComments();
 
     Boolean addRate(String userId, String photoId, Float rate, Date date);
 
@@ -77,8 +78,10 @@ public interface DataProvider{
 
     Boolean createOffer(String userId, String eventId, Date creationDate);
 
-    ArrayList<User> searchUsers(String field, String value);
+    Optional<ArrayList<User>> searchUsers(String field, String value);
 
-    ArrayList<Event> searchEvents(String field, String value);
+    Optional<ArrayList<User>> searchPhotographers(String field, String value);
+
+    Optional<ArrayList<Event>> searchEvents(String field, String value);
 
 }

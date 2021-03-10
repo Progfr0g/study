@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.Optional;
 
 
 public class DataProviderDatabase implements DataProvider {
@@ -44,7 +44,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public User getProfile(String id) {
+    public Optional<User> getProfile(String id) {
         String query = Constants.SELECT_PROFILE_QUERY + id;
         try {
             DB.connect();
@@ -61,20 +61,20 @@ public class DataProviderDatabase implements DataProvider {
             DB.closeConnection();
             if (rows == 0){
                 log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
-                return null;
+                return Optional.empty();
             } else{
                 if (strings[5].equals(Role.CUSTOMER.toString().toLowerCase())){
                     User resultUser = new User<String>(strings);
-                    return resultUser;
+                    return Optional.of(resultUser);
                 } else if (strings[5].equals(Role.PHOTOGRAPHER.toString().toLowerCase())){
                     Photographer resultUser = new Photographer<String>(strings);
-                    return resultUser;
+                    return Optional.of(resultUser);
                 }
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -121,7 +121,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public Event getEvent(String id) {
+    public Optional<Event> getEvent(String id) {
         String query = Constants.SELECT_EVENT_QUERY + id;
         try {
             DB.connect();
@@ -138,25 +138,24 @@ public class DataProviderDatabase implements DataProvider {
             DB.closeConnection();
             if (rows == 0){
                 log.info(String.format(Constants.EMPTY_GET_EVENT, id));
-                return null;
+                return Optional.empty();
             } else{
-                User costumer;
+                Optional<User> getCostumer = getProfile(strings[7]);
+                User costumer = null;
                 if (strings[7]!=null) {
-                    costumer = getProfile(strings[7]);
-                } else
-                    costumer = null;
-                User executor;
+                    costumer = getCostumer.orElse(null);
+                }
+                Optional<User> getExecutor = getProfile(strings[8]);
+                User executor = null;
                 if (strings[8]!=null) {
-                    executor = getProfile(strings[8]);
-                } else {
-                    executor = null;
+                    executor = getExecutor.orElse(null);
                 }
                 Event resultEvent = new Event<String>(strings, costumer, executor);
-                return resultEvent;
+                return Optional.of(resultEvent);
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -188,7 +187,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public Photo getPhoto(String id) {
+    public Optional<Photo> getPhoto(String id) {
         String query = Constants.SELECT_PHOTO_QUERY + id;
         try {
             DB.connect();
@@ -205,23 +204,25 @@ public class DataProviderDatabase implements DataProvider {
             DB.closeConnection();
             if (rows == 0){
                 log.info(String.format(Constants.EMPTY_GET_PHOTO, id));
-                return null;
+                return Optional.empty();
             } else{
-                User user;
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
                 if (strings[1]!=null) {
-                    user = getProfile(strings[1]);
-                } else user = null;
-                Event event;
+                    user = getUser.orElse(null);
+                }
+                Optional<Event> getEvent = getEvent(strings[2]);
+                Event event = null;
                 if (strings[2]!=null) {
-                    event = getEvent(strings[2]);
-                } else event = null;
+                    event = getEvent.orElse(null);
+                }
                 Photo resultPhoto = new Photo<String>(strings, user, event);
-                return resultPhoto;
+                return Optional.of(resultPhoto);
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PHOTO, id) + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -243,7 +244,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public ArrayList<Photo> getPortfolio(String userId) {
+    public Optional<ArrayList<Photo>> getPortfolio(String userId) {
         String query = Constants.SELECT_PORTFOLIO_QUERY + userId;
         try {
             DB.connect();
@@ -256,29 +257,30 @@ public class DataProviderDatabase implements DataProvider {
                 for (int i = 0; i < rsMetaSize; i++) {
                     strings[i] = rs.getString(i+1);
                 }
-                rows++;
-                User user;
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
                 if (strings[1]!=null) {
-                    user = getProfile(strings[1]);
-                } else user = null;
-                Event event;
+                    user = getUser.orElse(null);
+                }
+                Optional<Event> getEvent = getEvent(strings[2]);
+                Event event = null;
                 if (strings[2]!=null) {
-                    event = getEvent(strings[2]);
-                } else event = null;
+                    event = getEvent.orElse(null);
+                }
                 Photo resultPhoto = new Photo<String>(strings, user, event);
                 photos.add(resultPhoto);
             }
             DB.closeConnection();
-            if (rows == 0){
+            if (photos.size() == 0){
                 log.info(String.format(Constants.EMPTY_GET_PORTFOLIO, userId));
-                return null;
+                return Optional.empty();
             } else{
-                return photos;
+                return Optional.of(photos);
             }
         } catch (SQLException ex) {
             log.error(String.format(Constants.ERROR_GET_PORTFOLIO, userId) + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -291,7 +293,7 @@ public class DataProviderDatabase implements DataProvider {
             rs.next();
             if (rs.getString(1) != null) result = rs.getString(1);
             DB.closeConnection();
-            if (result == Constants.UTIL_NEW_LINE){
+            if (result.equals(Constants.UTIL_NEW_LINE)){
                 return String.format(Constants.EMPTY_GET_PHOTO_PATH, id);
             } else
                 log.debug(String.format(Constants.SUCCESS_GET_PHOTO_PATH, id));
@@ -351,16 +353,15 @@ public class DataProviderDatabase implements DataProvider {
                 log.info(Constants.EMPTY_GET_LAST_EVENT);
                 return null;
             } else{
-                User costumer;
+                Optional<User> getUser = getProfile(strings[7]);
+                User costumer = null;
                 if (strings[7]!=null) {
-                    costumer = getProfile(strings[7]);
-                } else
-                    costumer = null;
-                User executor;
+                    costumer = getUser.orElse(null);
+                }
+                Optional<User> getExecutor = getProfile(strings[8]);
+                User executor = null;
                 if (strings[8]!=null) {
-                    executor = getProfile(strings[8]);
-                } else {
-                    executor = null;
+                    executor = getExecutor.orElse(null);
                 }
                 Event resultEvent = new Event<String>(strings, costumer, executor);
                 return resultEvent.getId().toString();
@@ -391,14 +392,16 @@ public class DataProviderDatabase implements DataProvider {
                 log.info(Constants.EMPTY_GET_LAST_PHOTO);
                 return null;
             } else{
-                User user;
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
                 if (strings[1]!=null) {
-                    user = getProfile(strings[1]);
-                } else user = null;
-                Event event;
+                    user = getUser.orElse(null);
+                }
+                Optional<Event> getEvent = getEvent(strings[2]);
+                Event event = null;
                 if (strings[2]!=null) {
-                    event = getEvent(strings[2]);
-                } else event = null;
+                    event = getEvent.orElse(null);
+                }
                 Photo resultPhoto = new Photo<String>(strings, user, event);
                 return resultPhoto.getId().toString();
             }
@@ -409,7 +412,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public ArrayList<User> getAllUsers() {
+    public  Optional<ArrayList<User>> getAllUsers() {
         String query = Constants.SELECT_ALL_USERS;
         ArrayList<User> resultUsers = new ArrayList<User>();
         try {
@@ -427,18 +430,18 @@ public class DataProviderDatabase implements DataProvider {
             DB.closeConnection();
             if (resultUsers.size() == 0){
                 log.info(Constants.EMPTY_GET_ALL_USERS);
-                return null;
+                return Optional.empty();
             } else{
-                return resultUsers;
+                return Optional.of(resultUsers);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_ALL_PROFILES + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public ArrayList<Event> getAllEvents() {
+    public  Optional<ArrayList<Event>> getAllEvents() {
         String query = Constants.SELECT_ALL_EVENTS;
         ArrayList<Event> resultEvents = new ArrayList<Event>();
         try {
@@ -450,35 +453,34 @@ public class DataProviderDatabase implements DataProvider {
                 for (int i = 0; i < rsMetaSize; i++) {
                     strings[i] = rs.getString(i+1);
                 }
-                User costumer;
+                Optional<User> getCustomer = getProfile(strings[7]);
+                User customer = null;
                 if (strings[7]!=null) {
-                    costumer = getProfile(strings[7]);
-                } else
-                    costumer = null;
-                User executor;
-                if (strings[8]!=null) {
-                    executor = getProfile(strings[8]);
-                } else {
-                    executor = null;
+                    customer = getCustomer.orElse(null);
                 }
-                Event resultEvent = new Event<String>(strings, costumer, executor);
+                Optional<User> getExecutor = getProfile(strings[8]);
+                User executor = null;
+                if (strings[8]!=null) {
+                    executor = getExecutor.orElse(null);
+                }
+                Event resultEvent = new Event<String>(strings, customer, executor);
                 resultEvents.add(resultEvent);
             }
             DB.closeConnection();
             if (resultEvents.size() == 0){
                 log.info(Constants.EMPTY_GET_ALL_EVENTS);
-                return null;
+                return Optional.empty();
             } else{
-                return resultEvents;
+                return Optional.of(resultEvents);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_ALL_EVENTS + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
     @Override
-    public ArrayList<Photo> getAllPhotos() {
+    public Optional<ArrayList<Photo>> getAllPhotos() {
         String query = Constants.SELECT_ALL_PHOTOS;
         ArrayList<Photo> resultPhotos = new ArrayList<Photo>();
         try {
@@ -490,28 +492,30 @@ public class DataProviderDatabase implements DataProvider {
                 for (int i = 0; i < rsMetaSize; i++) {
                     strings[i] = rs.getString(i+1);
                 }
-                User user;
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
                 if (strings[1]!=null) {
-                    user = getProfile(strings[1]);
-                } else user = null;
-                Event event;
+                    user = getUser.orElse(null);
+                }
+                Optional<Event> getEvent = getEvent(strings[2]);
+                Event event = null;
                 if (strings[2]!=null) {
-                    event = getEvent(strings[2]);
-                } else event = null;
+                    event = getEvent.orElse(null);
+                }
                 Photo resultPhoto = new Photo<String>(strings, user, event);
                 resultPhotos.add(resultPhoto);
             }
             DB.closeConnection();
             if (resultPhotos.size() == 0){
                 log.info(Constants.EMPTY_GET_ALL_PHOTOS);
-                return null;
+                return Optional.empty();
             } else{
-                return resultPhotos;
+                return Optional.of(resultPhotos);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_ALL_PHOTOS + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -525,7 +529,7 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public ArrayList<Comment> getAllComments() {
+    public Optional<ArrayList<Comment>> getAllComments() {
         String query = Constants.SELECT_ALL_COMMENTS;
         ArrayList<Comment> resultComments = new ArrayList<Comment>();
         try {
@@ -537,33 +541,35 @@ public class DataProviderDatabase implements DataProvider {
                 for (int i = 0; i < rsMetaSize; i++) {
                     strings[i] = rs.getString(i+1);
                 }
-                User user;
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
                 if (strings[1]!=null) {
-                    user = getProfile(strings[1]);
-                } else user = null;
-                Photo photo;
+                    user = getUser.orElse(null);
+                }
+                Optional<Photo> getPhoto = getPhoto(strings[2]);
+                Photo photo = null;
                 if (strings[2]!=null) {
-                    photo = getPhoto(strings[2]);
-                } else photo = null;
+                    photo = getPhoto.orElse(null);
+                }
                 Comment resultComment = new Comment(strings, user, photo);
                 resultComments.add(resultComment);
             }
             DB.closeConnection();
             if (resultComments.size() == 0){
                 log.info(Constants.EMPTY_GET_ALL_COMMENTS);
-                return null;
+                return Optional.empty();
             } else{
-                return resultComments;
+                return Optional.of(resultComments);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
 
     @Override
-    public ArrayList<User> searchUsers(String field, String value) {
+    public Optional<ArrayList<User>> searchUsers(String field, String value) {
         String query = String.format(Constants.SELECT_USER_SEARCH, field, value);
         ArrayList<User> resultUsers = new ArrayList<User>();
         try {
@@ -581,18 +587,47 @@ public class DataProviderDatabase implements DataProvider {
             DB.closeConnection();
             if (resultUsers.size() == 0){
                 log.info(Constants.EMPTY_GET_USERS_SEARCH);
-                return null;
+                return Optional.empty();
             } else{
-                return resultUsers;
+                return Optional.of(resultUsers);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public ArrayList<Event> searchEvents(String field, String value) {
+    public Optional<ArrayList<User>> searchPhotographers(String field, String value) {
+        String query = String.format(Constants.SELECT_PHOTOGRAPHER_SEARCH, field, value);
+        ArrayList<User> resultUsers = new ArrayList<User>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                User resultUser = new Photographer<String>(strings);
+                resultUsers.add(resultUser);
+            }
+            DB.closeConnection();
+            if (resultUsers.size() == 0){
+                log.info(Constants.EMPTY_GET_PHOTOGRAPHERS_SEARCH);
+                return Optional.empty();
+            } else{
+                return Optional.of(resultUsers);
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<ArrayList<Event>> searchEvents(String field, String value) {
         String query = String.format(Constants.SELECT_EVENT_SEARCH, field, value);
         ArrayList<Event> resultEvents = new ArrayList<Event>();
         try {
@@ -604,31 +639,30 @@ public class DataProviderDatabase implements DataProvider {
                 for (int i = 0; i < rsMetaSize; i++) {
                     strings[i] = rs.getString(i+1);
                 }
-                User costumer;
+                Optional<User> getCustomer = getProfile(strings[7]);
+                User customer = null;
                 if (strings[7]!=null) {
-                    costumer = getProfile(strings[7]);
-                } else
-                    costumer = null;
-                User executor;
-                if (strings[8]!=null) {
-                    executor = getProfile(strings[8]);
-                } else {
-                    executor = null;
+                    customer = getCustomer.orElse(null);
                 }
-                Event resultEvent = new Event<String>(strings, costumer, executor);
+                Optional<User> getExecutor = getProfile(strings[8]);
+                User executor = null;
+                if (strings[8]!=null) {
+                    executor = getExecutor.orElse(null);
+                }
+                Event resultEvent = new Event<String>(strings, customer, executor);
                 resultEvents.add(resultEvent);
             }
             DB.closeConnection();
             if (resultEvents.size() == 0){
                 log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
-                return null;
+                return Optional.empty() ;
             } else{
-                return resultEvents;
+                return Optional.of(resultEvents);
             }
         } catch (SQLException ex) {
             log.error(Constants.ERROR_GET_EVENTS_SEARCH + ex.getMessage());
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override

@@ -95,7 +95,7 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public User getProfile(String id) {
+    public Optional<User> getProfile(String id) {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_USERS_FILE_PATH);
@@ -106,12 +106,12 @@ public class DataProviderXML implements DataProvider {
                 for (User user : table.getxmlUsers()) {
                     if (user.getId().equals(id)) {
                         rows++;
-                        return user;
+                        return Optional.of(user);
                     }
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOGRAPHERS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
             source = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
             if (source.length() > 0) {
@@ -120,22 +120,22 @@ public class DataProviderXML implements DataProvider {
                 for (Photographer photographer: phTable.getxmlPhotographers()) {
                     if (photographer.getId().equals(id)) {
                         rows++;
-                        return photographer;
+                        return Optional.of(photographer);
                     }
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
             if (rows == 0) {
                 log.info(String.format(Constants.EMPTY_GET_PROFILE, id));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(String.format(Constants.ERROR_GET_PROFILE, id) + ex);
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -176,6 +176,7 @@ public class DataProviderXML implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
                         rowsUsers++;
@@ -216,8 +217,19 @@ public class DataProviderXML implements DataProvider {
                                 log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
                                 break;
                             }
+                            case Constants.PHOTOGRAPHERS_EXPERIENCE: {
+                                photographer.setExperience(Integer.parseInt(value));
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
+                            case Constants.PHOTOGRAPHERS_COSTLEVEL: {
+                                photographer.setCostLevel(CostLevel.valueOf(value.toUpperCase()));
+                                log.debug(String.format(Constants.SUCCESS_UPDATE_PROFILE_XML, id));
+                                break;
+                            }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return null;
                             }
                         }
                         rowsPhotographers++;
@@ -320,7 +332,7 @@ public class DataProviderXML implements DataProvider {
                 List<Event> events_array = new ArrayList<>();
                 UUID id = UUID.randomUUID();
                 EventStatus status = EventStatus.NONE;
-                User userCustomer = getProfile(customer);
+                User userCustomer = getProfile(customer).orElse(null);
                 Event<UUID> newEvent = new Event<UUID>(id, title, description, eventDate, creationDate, price, quantity, userCustomer, status, type);
                 events_array.add(newEvent);
                 table = new XML_EventsTable();
@@ -334,7 +346,7 @@ public class DataProviderXML implements DataProvider {
                 List<Event> writedEvents = table.getxmlEvents();
                 UUID id = UUID.randomUUID();
                 EventStatus status = EventStatus.NONE;
-                User userCustomer = getProfile(customer);
+                User userCustomer = getProfile(customer).orElse(null);
                 Event<UUID> newEvent = new Event<UUID>(id, title, description, eventDate, creationDate, price, quantity, userCustomer, status, type);
                 writedEvents.add(newEvent);
                 table.setEvents(writedEvents);
@@ -350,7 +362,7 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public Event getEvent(String id) {
+    public Optional<Event> getEvent(String id) {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_EVENTS_FILE_PATH);
@@ -362,7 +374,7 @@ public class DataProviderXML implements DataProvider {
                 for (Event event: table.getxmlEvents()){
                     if (event.getId().equals(id)){
                         rows++;
-                        return event;
+                        return Optional.of(event);
                     }
                 }
             } else {
@@ -370,13 +382,13 @@ public class DataProviderXML implements DataProvider {
             }
             if (rows == 0) {
                 log.info(String.format(Constants.EMPTY_GET_EVENT, id));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(String.format(Constants.ERROR_GET_EVENT, id) + ex);
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -414,6 +426,7 @@ public class DataProviderXML implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
                         rows++;
@@ -485,8 +498,8 @@ public class DataProviderXML implements DataProvider {
             if (source.length() == 0) {
                 List<Photo> photos_array = new ArrayList<>();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(id);
-                Event event = getEvent(Constants.UTIL_EMPTY_STRING);
+                User user = getProfile(id).orElse(null);
+                Event event = getEvent(Constants.UTIL_EMPTY_STRING).orElse(null);
                 Photo photo = new Photo(newId, user, Constants.UTIL_EMPTY_STRING, Constants.UTIL_EMPTY_STRING, event, Constants.UTIL_EMPTY_STRING, path);
                 photos_array.add(photo);
                 table = new XML_PhotosTable();
@@ -499,8 +512,8 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_PhotosTable.class, source);
                 List<Photo> writedPhotos = table.getxmlPhotos();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(id);
-                Event event = getEvent(Constants.UTIL_EMPTY_STRING);
+                User user = getProfile(id).orElse(null);
+                Event event = getEvent(Constants.UTIL_EMPTY_STRING).orElse(null);
                 Photo photo = new Photo(newId, user, Constants.UTIL_EMPTY_STRING, Constants.UTIL_EMPTY_STRING, event, Constants.UTIL_EMPTY_STRING, path);
                 writedPhotos.add(photo);
                 table.setPhotos(writedPhotos);
@@ -517,7 +530,7 @@ public class DataProviderXML implements DataProvider {
 
 
     @Override
-    public Photo getPhoto(String id) {
+    public Optional<Photo> getPhoto(String id) {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_PHOTOS_FILE_PATH);
@@ -528,22 +541,22 @@ public class DataProviderXML implements DataProvider {
                 for (Photo photo: table.getxmlPhotos()){
                     if (photo.getId().equals(id)){
                         rows++;
-                        return photo;
+                        return Optional.of(photo);
                     }
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
             if (rows == 0) {
                 log.info(String.format(Constants.EMPTY_GET_PHOTO, id));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(String.format(Constants.ERROR_GET_PHOTO, id) + ex);
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
 
@@ -582,6 +595,7 @@ public class DataProviderXML implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
                         rows++;
@@ -646,7 +660,7 @@ public class DataProviderXML implements DataProvider {
 
 
     @Override
-    public ArrayList<Photo> getPortfolio(String userId) {
+    public Optional<ArrayList<Photo>> getPortfolio(String userId) {
         try {
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_PHOTOS_FILE_PATH);
@@ -662,15 +676,15 @@ public class DataProviderXML implements DataProvider {
                 }
                 if (result.size() == 0) {
                     log.info(String.format(Constants.EMPTY_GET_PORTFOLIO, userId));
-                    return null;
-                } else return result;
+                    return Optional.empty();
+                } else return Optional.of(result);
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_PORTFOLIO + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -782,7 +796,7 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public ArrayList<User> getAllUsers() {
+    public Optional<ArrayList<User>> getAllUsers() {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_USERS_FILE_PATH);
@@ -791,23 +805,23 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_UsersTable.class, source);
                 List<User> users = table.getxmlUsers();
                 if (users.size() != 0){
-                    return (ArrayList<User>) users;
+                    return Optional.of((ArrayList<User>) users);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_USERS);
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_PROFILES + ex);
-            return null;
+            return Optional.empty();
         }
     }
 
     @Override
-    public ArrayList<Event> getAllEvents() {
+    public Optional<ArrayList<Event>> getAllEvents() {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_EVENTS_FILE_PATH);
@@ -816,23 +830,23 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_EventsTable.class, source);
                 List<Event> events = table.getxmlEvents();
                 if (events.size() != 0){
-                    return (ArrayList<Event>) events;
+                    return Optional.of((ArrayList<Event>) events);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_EVENTS);
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_EVENTS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_EVENTS + ex);
-            return null;
+            return Optional.empty();
         }
     }
 
     @Override
-    public ArrayList<Photo> getAllPhotos() {
+    public Optional<ArrayList<Photo>> getAllPhotos() {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_PHOTOS_FILE_PATH);
@@ -841,18 +855,18 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_PhotosTable.class, source);
                 List<Photo> photos = table.getxmlPhotos();
                 if (photos.size() != 0){
-                    return (ArrayList<Photo>) photos;
+                    return Optional.of((ArrayList<Photo>) photos);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_PHOTOS);
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_PHOTOS + ex);
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -865,8 +879,8 @@ public class DataProviderXML implements DataProvider {
             if (source.length() == 0) {
                 List<Comment> comments_array = new ArrayList<>();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(userId);
-                Photo photo = getPhoto(photoId);
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
                 Comment newComment = new Comment(newId,
                         user, photo, comment, date);
                 comments_array.add(newComment);
@@ -880,8 +894,8 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_CommentsTable.class, source);
                 List<Comment> writedComments = table.getxmlComments();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(userId);
-                Photo photo = getPhoto(photoId);
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
                 Comment newComment = new Comment(newId,
                         user, photo, comment, date);
                 writedComments.add(newComment);
@@ -898,7 +912,7 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public ArrayList<Comment> getAllComments() {
+    public Optional<ArrayList<Comment>> getAllComments() {
         try{
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_COMMENTS_FILE_PATH);
@@ -907,18 +921,18 @@ public class DataProviderXML implements DataProvider {
                 table = serializer.read(XML_CommentsTable.class, source);
                 List<Comment> comments = table.getxmlComments();
                 if (comments.size() != 0){
-                    return (ArrayList<Comment>) comments;
+                    return Optional.of((ArrayList<Comment>) comments);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_COMMENTS);
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_COMMENTS + ex);
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -938,7 +952,7 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
-    public ArrayList<User> searchUsers(String field, String value) {
+    public Optional<ArrayList<User>> searchUsers(String field, String value) {
         try {
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_USERS_FILE_PATH);
@@ -964,31 +978,95 @@ public class DataProviderXML implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return Optional.empty();
                             }
                         }
                     }
                 } else{
                     log.info(Constants.EMPTY_GET_USERS_SEARCH);
-                    return null;
+                    return Optional.empty();
                 }
                 if (findedUsers.size() != 0) {
-                    return findedUsers;
+                    return Optional.of(findedUsers);
                 } else {
                     log.info(Constants.EMPTY_GET_USERS_SEARCH);
-                    return null;
+                    return Optional.empty();
                 }
                 } else {
                     log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
-                    return null;
+                    return Optional.empty();
                 }
             } catch(Exception ex){
                 log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex);
-                return null;
+                return Optional.empty();
             }
     }
 
     @Override
-    public ArrayList<Event> searchEvents(String field, String value) {
+    public Optional<ArrayList<User>> searchPhotographers(String field, String value) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+            ArrayList<User> findedUsers = new ArrayList<User>();
+            if (source.length() > 0) {
+                XML_PhotographersTable phTable;
+                phTable = serializer.read(XML_PhotographersTable.class, source);
+                List<Photographer> users = phTable.getxmlPhotographers();
+                if (users.size() != 0) {
+                    for (Photographer user : users) {
+                        switch (field.toLowerCase()) {
+                            case Constants.USERS_NAME_SEARCH: {
+                                if (user.getName().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_LAST_NAME_SEARCH: {
+                                if (user.getLastName().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_TOWN_SEARCH: {
+                                if (user.getTown().toLowerCase().equals(value.toLowerCase())) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_RATING_SEARCH: {
+                                if (user.getRating().toString().equals(value)) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_EXPERIENCE_SEARCH: {
+                                if (user.getExperience().toString().equals(value)) findedUsers.add(user);
+                                break;
+                            }
+                            case Constants.USERS_COSTLEVEL_SEARCH: {
+                                if (user.getCostLevel().equals(CostLevel.valueOf(value.toUpperCase()))) findedUsers.add(user);
+                                break;
+                            }
+                            default: {
+                                log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return Optional.empty();
+                            }
+                        }
+                    }
+                } else{
+                    log.info(Constants.EMPTY_GET_PHOTOGRAPHERS_SEARCH);
+                    return Optional.empty();
+                }
+                if (findedUsers.size() != 0) {
+                    return Optional.of(findedUsers);
+                } else {
+                    log.info(Constants.EMPTY_GET_PHOTOGRAPHERS_SEARCH);
+                    return Optional.empty();
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_USERS_FILE_PATH));
+                return Optional.empty();
+            }
+        } catch(Exception ex){
+            log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex);
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Optional<ArrayList<Event>> searchEvents(String field, String value) {
         try {
             Serializer serializer = new Persister();
             File source = new File(Constants.XML_EVENTS_FILE_PATH);
@@ -1004,6 +1082,10 @@ public class DataProviderXML implements DataProvider {
                                 if (event.getTitle().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
                                 break;
                             }
+                            case Constants.EVENTS_DESCRIPTION_SEARCH: {
+                                if (event.getDescription().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
+                                break;
+                            }
                             case Constants.EVENTS_PRICE_SEARCH: {
                                 if (event.getPrice().toString().toLowerCase().equals(value.toLowerCase())) findedEvents.add(event);
                                 break;
@@ -1014,26 +1096,27 @@ public class DataProviderXML implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return Optional.empty();
                             }
                         }
                     }
                 } else{
                     log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
-                    return null;
+                    return Optional.empty();
                 }
                 if (findedEvents.size() != 0) {
-                    return findedEvents;
+                    return Optional.of(findedEvents);
                 } else {
                     log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_EVENTS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch(Exception ex){
             log.error(Constants.ERROR_GET_EVENTS_SEARCH + ex);
-            return null;
+            return Optional.empty();
         }
     }
 }

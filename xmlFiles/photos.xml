@@ -1,13 +1,112 @@
 <photos_table>
    <photos class="java.util.ArrayList">
       <photo>
-         <id class="java.lang.String">5aee6807-0f41-4425-b496-8df5fa62d267</id>
+         <id class="java.lang.String">e6976d09-1416-43b2-81e2-fffeaadd5c58</id>
          <user>
-            <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
+            <id class="java.lang.String">64b29e7e-c732-46f3-b298-8216559022df</id>
             <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
+            <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">9769ca71-f75e-470e-855a-105a15427dfd</id>
+         <user>
+            <id class="java.lang.String">d5592a8d-8c42-4a28-ba92-a38e39be47e1</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">29518b0f-5141-44d0-a8e6-3693475de71a</id>
+         <user>
+            <id class="java.lang.String">66cb350f-22ff-4f15-9876-c125a9ac776d</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">dc7a37f2-6f81-4d5e-a6e7-6298dd1e0ab5</id>
+         <user>
+            <id class="java.lang.String">315c4085-a17a-4c2f-a7c4-eabdf413e6fe</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">dd29d47a-cf7c-443d-8db6-23bd4c1c60e6</id>
+         <user>
+            <id class="java.lang.String">952e39b6-695c-41bf-9af9-239bb2806122</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <title>test_photo</title>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">43bec92b-410b-4aa8-80ca-b388bedd614e</id>
+         <user>
+            <id class="java.lang.String">d0863e0b-99cf-4cf3-bdcb-5cf9e80d4232</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">746a586e-a147-4118-931b-554b99d5b5d6</id>
+         <user>
+            <id class="java.lang.String">b7f1b4cf-e34c-45b1-b761-2a50b7ddc209</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <path>./testPhotos/test2.jpg</path>
+      </photo>
+      <photo>
+         <id class="java.lang.String">7a88294d-963a-4709-834b-62223b8b063d</id>
+         <user>
+            <id class="java.lang.String">ed4fbd19-b199-45bb-bee2-b66a5b66c877</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>

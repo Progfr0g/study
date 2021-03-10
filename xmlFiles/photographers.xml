@@ -1,11 +1,11 @@
 <photographers_table>
    <photographers class="java.util.ArrayList">
       <user>
-         <id class="java.lang.String">f11a19e8-5beb-4d1b-aad9-0b9bf1fd76ab</id>
+         <id class="java.lang.String">79e2d242-0766-4cbf-a703-40b07da67039</id>
          <name>Sergey</name>
-         <lastName>Tolstoy</lastName>
+         <lastName>Esenin</lastName>
          <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-03-09 00:00:00.0 MSK</dateOfRegistration>
+         <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
          <role>PHOTOGRAPHER</role>
          <town>Moscow</town>
          <wallet>0.0</wallet>

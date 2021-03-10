@@ -75,7 +75,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public User getProfile(String id) {
+    public Optional<User> getProfile(String id) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_USERS_FILE_PATH);
@@ -87,7 +87,7 @@ public class DataProviderCSV implements DataProvider {
                 for (User user : users) {
                     if (user.getId().equals(id)) {
                         rows++;
-                        return user;
+                        return Optional.of(user);
                     }
                 }
                 reader.close();
@@ -100,20 +100,20 @@ public class DataProviderCSV implements DataProvider {
                 for (User photographer : photographers) {
                     if (photographer.getId().equals(id)) {
                         rows++;
-                        return photographer;
+                        return Optional.of(photographer);
                     }
                 }
                 reader.close();
             }
             if (rows == 0) {
                 log.debug(String.format(Constants.EMPTY_GET_PROFILE, id));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_PROFILE + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -157,6 +157,7 @@ public class DataProviderCSV implements DataProvider {
 //                            }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
                         rows++;
@@ -194,12 +195,10 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = User.convertFromCSV(csvBody);
                 Set<String> targetSet = new HashSet<String>();
                 List<String[]> usersWrite = new ArrayList<>();
-                Integer rows = 0;
+
                 for (User user: users) {
                     if (!user.getId().equals(id)) {
                         usersWrite.add(user.getCSVUserOutput().split(","));
-                    } else {
-                        rows++;
                     }
                 }
                 CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_USERS_FILE_PATH), ',', '"');
@@ -240,7 +239,7 @@ public class DataProviderCSV implements DataProvider {
                 List<String[]> csvBody = reader.readAll();
                 UUID id = UUID.randomUUID();
                 EventStatus status = EventStatus.NONE;
-                User userCustomer = getProfile(customer);
+                User userCustomer = getProfile(customer).orElse(null);
                 Event<UUID> newEvent = new Event<UUID>(id, title, description, eventDate, creationDate, price, quantity, userCustomer, status, type);
                 String[] record_to_write = newEvent.getCSVEventOutput().split(",");
                 csvBody.add(record_to_write);
@@ -254,7 +253,7 @@ public class DataProviderCSV implements DataProvider {
             } else {
                 UUID id = UUID.randomUUID();
                 EventStatus status = EventStatus.NONE;
-                User userCustomer = getProfile(customer);
+                User userCustomer = getProfile(customer).orElse(null);
                 Event<UUID> newEvent = new Event<UUID>(id, title, description, eventDate, creationDate, price, quantity, userCustomer, status, type);
                 String[] record_to_write = newEvent.getCSVEventOutput().split(",");
                 CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_EVENTS_FILE_PATH), ',', '"');
@@ -270,7 +269,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public Event getEvent(String id) {
+    public Optional<Event> getEvent(String id) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_EVENTS_FILE_PATH);
@@ -280,16 +279,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
@@ -299,20 +297,20 @@ public class DataProviderCSV implements DataProvider {
                 for (Event event: events) {
                     if (event.getId().equals(id)) {
                         rows++;
-                        return event;
+                        return Optional.of(event);
                     }
                 }
                 reader.close();
                 if (rows == 0) {
                     log.debug(String.format(Constants.EMPTY_GET_EVENT, id));
-                    return null;
+                    return Optional.empty();
                 }
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_EVENT + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -326,23 +324,21 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
                 }
                 List<Event> events = Event.convertFromCSV(csvBody, customers, executors);
                 List<String[]> eventsWrite = new ArrayList<>();
-                Integer rows = 0;
                 for (Event event: events) {
                     if (event.getId().equals(id)) {
                         switch (field) {
@@ -368,9 +364,9 @@ public class DataProviderCSV implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
-                        rows++;
                     }
                     eventsWrite.add(event.getCSVEventOutput().split(","));
                 }
@@ -404,28 +400,24 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
                 }
                 List<Event> events = Event.convertFromCSV(csvBody, customers, executors);
                 List<String[]> eventsWrite = new ArrayList<>();
-                Integer rows = 0;
                 for (Event event: events) {
                     if (!event.getId().equals(id)) {
                         eventsWrite.add(event.getCSVEventOutput().split(","));
-                    } else {
-                        rows++;
                     }
                 }
                 CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_EVENTS_FILE_PATH), ',', '"');
@@ -458,8 +450,8 @@ public class DataProviderCSV implements DataProvider {
                 reader = new CSVReader(new FileReader(Constants.CSV_PHOTOS_FILE_PATH), ',', '"', 0);
                 List<String[]> csvBody = reader.readAll();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(id);
-                Event event = getEvent(Constants.UTIL_EMPTY_STRING);
+                User user = getProfile(id).orElse(null);
+                Event event = getEvent(Constants.UTIL_EMPTY_STRING).orElse(null);
                 Photo photo = new Photo(newId, user, Constants.UTIL_EMPTY_STRING, Constants.UTIL_EMPTY_STRING, event, Constants.UTIL_EMPTY_STRING, path);
                 String[] record_to_write = photo.getCSVPhotoOutput().split(",");
                 csvBody.add(record_to_write);
@@ -471,8 +463,8 @@ public class DataProviderCSV implements DataProvider {
                 return true;
             } else {
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(id);
-                Event event = getEvent(Constants.UTIL_EMPTY_STRING);
+                User user = getProfile(id).orElse(null);
+                Event event = getEvent(Constants.UTIL_EMPTY_STRING).orElse(null);
                 Photo photo = new Photo(newId, user, Constants.UTIL_EMPTY_STRING, Constants.UTIL_EMPTY_STRING, event, Constants.UTIL_EMPTY_STRING, path);
                 String[] record_to_write = photo.getCSVPhotoOutput().split(",");
                 CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_PHOTOS_FILE_PATH), ',', '"');
@@ -488,7 +480,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public Photo getPhoto(String id) {
+    public Optional<Photo> getPhoto(String id) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_PHOTOS_FILE_PATH);
@@ -498,16 +490,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
@@ -517,23 +508,23 @@ public class DataProviderCSV implements DataProvider {
                 for (Photo photo: photos) {
                     if (photo.getId().equals(id)) {
                         rows++;
-                        return photo;
+                        return Optional.of(photo);
                     }
                 }
                 reader.close();
                 if (rows == 0) {
                     log.info(String.format(Constants.EMPTY_GET_PHOTO, id));
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_PHOTO + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -546,18 +537,16 @@ public class DataProviderCSV implements DataProvider {
                 List<String[]> csvBody = reader.readAll();
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
-                Integer rows = 0;
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
@@ -589,9 +578,9 @@ public class DataProviderCSV implements DataProvider {
                             }
                             default: {
                                 log.warn(String.format(Constants.ERROR_WRONG_FIELD, field));
+                                return false;
                             }
                         }
-                        rows++;
                     }
                     photosWrite.add(photo.getCSVPhotoOutput().split(","));
                 }
@@ -625,28 +614,25 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
                 }
                 List<Photo> photos = Photo.convertFromCSV(csvBody, users, events);
                 List<String[]> photosWrite = new ArrayList<>();
-                Integer rows = 0;
+
                 for (Photo photo: photos) {
                     if (!photo.getId().equals(id)) {
                         photosWrite.add(photo.getCSVPhotoOutput().split(","));
-                    } else {
-                        rows++;
                     }
                 }
                 CSVWriter writer = new CSVWriter(new FileWriter(Constants.CSV_PHOTOS_FILE_PATH), ',', '"');
@@ -671,7 +657,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public ArrayList<Photo> getPortfolio(String userId) {
+    public Optional<ArrayList<Photo>> getPortfolio(String userId) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_PHOTOS_FILE_PATH);
@@ -683,16 +669,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
@@ -706,17 +691,17 @@ public class DataProviderCSV implements DataProvider {
                 }
                 if (rows == 1){
                     log.info(String.format(Constants.EMPTY_GET_PORTFOLIO, userId));
-                    return null;
+                    return Optional.empty();
                 } else {
-                    return result;
+                    return Optional.of(result);
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_PORTFOLIO + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -732,16 +717,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
@@ -802,16 +786,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
@@ -843,16 +826,15 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
@@ -876,7 +858,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public ArrayList<User> getAllUsers() {
+    public Optional<ArrayList<User>> getAllUsers() {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_USERS_FILE_PATH);
@@ -885,22 +867,22 @@ public class DataProviderCSV implements DataProvider {
                 List<String[]> csvBody = reader.readAll();
                 List<User> users = User.convertFromCSV(csvBody);
                 if (users.size() != 0){
-                    return (ArrayList<User>) users;
+                    return Optional.of((ArrayList<User>) users);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_USERS);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_PROFILES + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public ArrayList<Event> getAllEvents() {
+    public Optional<ArrayList<Event>> getAllEvents() {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_EVENTS_FILE_PATH);
@@ -910,38 +892,37 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
                 }
                 List<Event> events = Event.convertFromCSV(csvBody, customers, executors);
                 if (events.size() != 0){
-                    return (ArrayList<Event>) events;
+                    return Optional.of((ArrayList<Event>) events);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_EVENTS);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_EVENTS + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public ArrayList<Photo> getAllPhotos() {
+    public Optional<ArrayList<Photo>> getAllPhotos() {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_PHOTOS_FILE_PATH);
@@ -951,35 +932,34 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Event> events = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[1]);
+                    User customer = null;
                     if (line[1]!=null) {
-                        customer = getProfile(line[1]);
-                    } else
-                        customer = null;
-                    Event event;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<Event> getEvent = getEvent(line[2]);
+                    Event event = null;
                     if (line[2]!=null) {
-                        event = getEvent(line[2]);
-                    } else {
-                        event = null;
+                        event = getEvent.orElse(null);
                     }
                     users.add(customer);
                     events.add(event);
                 }
                 List<Photo> photos = Photo.convertFromCSV(csvBody, users, events);
                 if (photos.size() != 0){
-                    return (ArrayList<Photo>) photos;
+                    return Optional.of((ArrayList<Photo>) photos);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_PHOTOS);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_PHOTOS + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
@@ -992,8 +972,8 @@ public class DataProviderCSV implements DataProvider {
                 reader = new CSVReader(new FileReader(Constants.CSV_COMMENTS_FILE_PATH), ',', '"', 0);
                 List<String[]> csvBody = reader.readAll();
                 UUID newId = UUID.randomUUID();
-                User user = getProfile(userId);
-                Photo photo = getPhoto(photoId);
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
                 Comment newComment = new Comment(newId,
                         user, photo, comment, date);
                 String[] record_to_write = newComment.getCSVPhotoOutput().split(",");
@@ -1014,7 +994,7 @@ public class DataProviderCSV implements DataProvider {
     }
 
     @Override
-    public ArrayList<Comment> getAllComments() {
+    public Optional<ArrayList<Comment>> getAllComments() {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_COMMENTS_FILE_PATH);
@@ -1024,40 +1004,39 @@ public class DataProviderCSV implements DataProvider {
                 List<User> users = new ArrayList<>();
                 List<Photo> photos = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User user;
+                    Optional<User> getUser = getProfile(line[1]);
+                    User user = null;
                     if (line[1]!=null) {
-                        user = getProfile(line[1]);
-                    } else
-                        user = null;
-                    Photo photo;
+                        user = getUser.orElse(null);
+                    }
+                    Optional<Photo> getPhoto = getPhoto(line[2]);
+                    Photo photo = null;
                     if (line[2]!=null) {
-                        photo = getPhoto(line[2]);
-                    } else {
-                        photo = null;
+                        photo = getPhoto.orElse(null);
                     }
                     users.add(user);
                     photos.add(photo);
                 }
                 List<Comment> comments = Comment.convertFromCSV(csvBody, users, photos);
                 if (photos.size() != 0){
-                    return (ArrayList<Comment>) comments;
+                    return Optional.of((ArrayList<Comment>) comments);
                 } else {
                     log.info(Constants.EMPTY_GET_ALL_COMMENTS);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             } else {
                 log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
-                return null;
+                return Optional.empty();
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
     }
 
     @Override
-    public ArrayList<User> searchUsers(String field, String value) {
+    public Optional<ArrayList<User>> searchUsers(String field, String value) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_USERS_FILE_PATH);
@@ -1069,7 +1048,7 @@ public class DataProviderCSV implements DataProvider {
                 csvBody.remove(0);
                 for (int i = 0; i < first_row.length; i++) {
                     if (first_row[i].toLowerCase().equals(field.toLowerCase())){
-                        for (int j = 1; j < csvBody.size(); j++){
+                        for (int j = 0; j < csvBody.size(); j++){
                             if (csvBody.get(j)[i].toLowerCase().equals(value.toLowerCase())){
                                 findedRows.add(csvBody.get(j));
                             }
@@ -1078,22 +1057,58 @@ public class DataProviderCSV implements DataProvider {
                 }
                 List<User> users = User.convertFromCSV(findedRows);
                 if (users.size() != 0){
-                    return (ArrayList<User>) users;
+                    return Optional.of((ArrayList<User>) users);
                 } else {
                     log.info(Constants.EMPTY_GET_USERS_SEARCH);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public ArrayList<Event> searchEvents(String field, String value) {
+    public Optional<ArrayList<User>> searchPhotographers(String field, String value) {
+        try {
+            CSVReader reader;
+            File source = new File(Constants.CSV_PHOTOGRAPHERS_FILE_PATH);
+            List<String[]> findedRows = new ArrayList<String[]>();
+            if (source.length() > 0) {
+                reader = new CSVReader(new FileReader(Constants.CSV_PHOTOGRAPHERS_FILE_PATH), ',', '"', 0);
+                List<String[]> csvBody = reader.readAll();
+                String[] first_row = csvBody.get(0);
+                csvBody.remove(0);
+                for (int i = 0; i < first_row.length; i++) {
+                    if (first_row[i].toLowerCase().equals(field.toLowerCase())){
+                        for (int j = 0; j < csvBody.size(); j++){
+                            if (csvBody.get(j)[i].toLowerCase().equals(value.toLowerCase())){
+                                findedRows.add(csvBody.get(j));
+                            }
+                        }
+                    }
+                }
+                List<User> users = Photographer.convertFromCSV(findedRows);
+                if (users.size() != 0){
+                    return Optional.of((ArrayList<User>) users);
+                } else {
+                    log.info(Constants.EMPTY_GET_PHOTOGRAPHERS_SEARCH);
+                    reader.close();
+                    return Optional.empty();
+                }
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_PROFILES_SEARCH + ex.getMessage());
+            return Optional.empty();
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<ArrayList<Event>> searchEvents(String field, String value) {
         try {
             CSVReader reader;
             File source = new File(Constants.CSV_EVENTS_FILE_PATH);
@@ -1106,23 +1121,22 @@ public class DataProviderCSV implements DataProvider {
                 List<User> customers = new ArrayList<>();
                 List<User> executors = new ArrayList<>();
                 for (String[] line : csvBody) {
-                    User customer;
+                    Optional<User> getCustomer = getProfile(line[7]);
+                    User customer = null;
                     if (line[7]!=null) {
-                        customer = getProfile(line[7]);
-                    } else
-                        customer = null;
-                    User executor;
+                        customer = getCustomer.orElse(null);
+                    }
+                    Optional<User> getExecutor = getProfile(line[8]);
+                    User executor = null;
                     if (line[8]!=null) {
-                        executor = getProfile(line[8]);
-                    } else {
-                        executor = null;
+                        executor = getExecutor.orElse(null);
                     }
                     customers.add(customer);
                     executors.add(executor);
                 }
                 for (int i = 0; i < first_row.length; i++) {
                     if (first_row[i].toLowerCase().equals(field.toLowerCase())){
-                        for (int j = 1; j < csvBody.size(); j++){
+                        for (int j = 0; j < csvBody.size(); j++){
                             if (csvBody.get(j)[i].toLowerCase().equals(value.toLowerCase())){
                                 findedRows.add(csvBody.get(j));
                             }
@@ -1131,18 +1145,18 @@ public class DataProviderCSV implements DataProvider {
                 }
                 List<Event> events = Event.convertFromCSV(findedRows, customers, executors);
                 if (events.size() != 0){
-                    return (ArrayList<Event>) events;
+                    return Optional.of((ArrayList<Event>) events);
                 } else {
                     log.info(Constants.EMPTY_GET_EVENTS_SEARCH);
                     reader.close();
-                    return null;
+                    return Optional.empty();
                 }
             }
         } catch (Exception ex) {
             log.error(Constants.ERROR_GET_EVENTS_SEARCH + ex.getMessage());
-            return null;
+            return Optional.empty();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override

@@ -1,25 +1,25 @@
 <comments_table>
    <comments class="java.util.ArrayList">
       <comment>
-         <id class="java.lang.String">ea6fbaf2-ccc8-49f2-82ce-7b46c61ea176</id>
+         <id class="java.lang.String">2d35dc1c-a352-44af-833e-c5b4a0511b69</id>
          <user>
-            <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
+            <id class="java.lang.String">64b29e7e-c732-46f3-b298-8216559022df</id>
             <name>Sergey</name>
-            <lastName>Tolstoy</lastName>
+            <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-            <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+            <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
             <role>CUSTOMER</role>
             <town>Moscow</town>
             <wallet>0.0</wallet>
          </user>
          <photo>
-            <id class="java.lang.String">5aee6807-0f41-4425-b496-8df5fa62d267</id>
+            <id class="java.lang.String">e6976d09-1416-43b2-81e2-fffeaadd5c58</id>
             <user>
-               <id class="java.lang.String">92078c3c-a492-406d-98b2-b64267c121c5</id>
+               <id class="java.lang.String">64b29e7e-c732-46f3-b298-8216559022df</id>
                <name>Sergey</name>
-               <lastName>Tolstoy</lastName>
+               <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-               <dateOfRegistration>2021-02-18 00:00:00.0 MSK</dateOfRegistration>
+               <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
                <role>CUSTOMER</role>
                <town>Moscow</town>
                <wallet>0.0</wallet>
@@ -27,7 +27,7 @@
             <path>./testPhotos/test2.jpg</path>
          </photo>
          <text>beautiful_photo</text>
-         <date>2021-02-18 00:00:00.0 MSK</date>
+         <date>2021-03-10 00:00:00.0 MSK</date>
       </comment>
    </comments>
 </comments_table>

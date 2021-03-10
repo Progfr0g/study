@@ -18,6 +18,7 @@ import ru.sfedu.photosearch.utils.XML_util;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,103 +37,119 @@ class DataProviderCSVTest {
 
     @Test
     void createNewProfile() {
-        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 customer Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getProfile() {
-        String args = "CSV GET_PROFILE 80b39404-d8f5-417d-bc4b-0c0b51781fe8";
+        createNewProfile();
+        String args = "CSV GET_PROFILE " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editProfileById() {
-        String args = "CSV EDIT_PROFILE e7a6ce08-eb38-4101-b457-b3e2d6c85ee5 name Alexey";
+        createNewProfile();
+        String args = "CSV EDIT_PROFILE " + provider.getLastUserId() + " name Alexey";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deleteProfileById() {
-        String args = "CSV DELETE_PROFILE 65d9f0c8-54a4-4ac3-97d7-9b143471e357";
+        createNewProfile();
+        String args = "CSV DELETE_PROFILE " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void createNewEvent() {
-        String args = "CSV CREATE_NEW_EVENT auto_race competition 78cc72f9-faa7-40de-92d6-14b5330e6f76 14-02-2021 150 2.5";
+//      title, description, customer, eventDate, creationDate, price, quantity
+        createNewProfile();
+        String args = "CSV CREATE_NEW_EVENT auto_race competition " + provider.getLastUserId() +  " 14-02-2021 150 2.5";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getEvent() {
-        String args = "CSV GET_EVENT 8e0f8a56-05f7-4dcd-ae1b-60811778f413";
+        createNewEvent();
+        String args = "CSV GET_EVENT " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editEventById() {
-        String args = "CSV EDIT_EVENT 8e0f8a56-05f7-4dcd-ae1b-60811778f413 title running";
+        createNewProfile();
+        String args = "CSV EDIT_EVENT " + provider.getLastEventId() + " title racing";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void deleteEventById() {
-        String args = "CSV DELETE_EVENT 8e0f8a56-05f7-4dcd-ae1b-60811778f413";
+        createNewEvent();
+        String args = "CSV DELETE_EVENT " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void addPhoto() {
-        String args = "CSV ADD_PHOTO 69461eb8-3eac-45ac-b349-f6bedf62f468 ./testPhotos/test2.jpg";
+        createNewProfile();
+        String args = "CSV ADD_PHOTO " + provider.getLastUserId() + " ./testPhotos/test2.jpg";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPhoto() {
-        String args = "CSV GET_PHOTO ee938869-943e-4a8c-b333-b3a58fad38cd";
+        addPhoto();
+        String args = "CSV GET_PHOTO " + provider.getLastPhotoId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void editPhotoById() {
-        String args = "CSV EDIT_PHOTO 1e6a0624-7a81-41c9-9dc4-e465bbc37188 title test_photo";
+        addPhoto();
+        String args = "CSV EDIT_PHOTO " + provider.getLastPhotoId() + " title test_photo";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
+
     @Test
     void deletePhotoById() {
-        String args = "CSV DELETE_PHOTO 2edbee71-9c58-433d-a675-dab4377a528b";
+        addPhoto();
+        String args = "CSV DELETE_PHOTO " + provider.getLastPhotoId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getPortfolio() {
-        String args = "CSV GET_PORTFOLIO 65d9f0c8-54a4-4ac3-97d7-9b143471e357";
+        addPhoto();
+        String args = "CSV GET_PORTFOLIO " + provider.getLastUserId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
-    @Test
-    void getPhotoPathById() {
-        String args = "CSV SHOW_PHOTO 26b84608-e526-4be5-8054-d66979bf6181";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
+//    @Test
+//    void getPhotoPathById() {
+//        addPhoto();
+//        String args = "DB SHOW_PHOTO " + provider.getLastPhotoId();
+//        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+//        assertTrue(result);
+//    }
 
     @Test
     void getLastUserId() {
+        createNewProfile();
         String result = provider.getLastUserId();
         log.info(result);
         assertNotNull(result);
@@ -140,6 +157,7 @@ class DataProviderCSVTest {
 
     @Test
     void getLastEventId() {
+        createNewEvent();
         String result = provider.getLastEventId();
         log.info(result);
         assertNotNull(result);
@@ -147,6 +165,7 @@ class DataProviderCSVTest {
 
     @Test
     void getLastPhotoId() {
+        addPhoto();
         String result = provider.getLastPhotoId();
         log.info(result);
         assertNotNull(result);
@@ -154,50 +173,66 @@ class DataProviderCSVTest {
 
     @Test
     void getAllUsers() {
-        ArrayList<User> result = provider.getAllUsers();
-        result.forEach(x->log.info(x.getUserOutput()));
-        assertNotNull(result);
+        createNewProfile();
+        Optional<ArrayList<User>> result = provider.getAllUsers();
+        result.ifPresent(users -> users.forEach(x -> log.info(x.getUserOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void getAllEvents() {
-        ArrayList<Event> result = provider.getAllEvents();
-        result.forEach(x->log.info(x.getEventOutput()));
-        assertNotNull(result);
+        createNewEvent();
+        Optional<ArrayList<Event>> result = provider.getAllEvents();
+        result.ifPresent(events -> events.forEach(x -> log.info(x.getEventOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void getAllPhotos() {
-        ArrayList<Photo> result = provider.getAllPhotos();
-        result.forEach(x->log.info(x.getPhotoOutput()));
-        assertNotNull(result);
+        addPhoto();
+        Optional<ArrayList<Photo>> result = provider.getAllPhotos();
+        result.ifPresent(photos -> photos.forEach(x -> log.info(x.getPhotoOutput())));
+        assertNotNull(result.orElse(null));
     }
 
     @Test
     void addComment() {
-        String args = "CSV ADD_COMMENT 69461eb8-3eac-45ac-b349-f6bedf62f468 bed882d7-185d-4e33-9d21-99d852205148 beautiful_photo";
+        addPhoto();
+        String args = "CSV ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
 
     @Test
     void getAllComments() {
-        ArrayList<Comment> result = provider.getAllComments();
-        result.forEach(x->log.info(x.getCommentOutput()));
-        assertNotNull(result);
+        addPhoto();
+        String args = "CSV GET_ALL_COMMENTS";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
     }
 
     @Test
     void searchUsers() {
-        ArrayList<User> result = provider.searchUsers("name", "Maksim");
-        result.forEach(x->log.info(x.getUserOutput()));
-        assertNotNull(result);
+        createNewProfile();
+        String args = "CSV SEARCH_USERS town Moscow";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void searchPhotographers() {
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        args = "CSV SEARCH_PHOTOGRAPHERS town Moscow";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
     }
 
     @Test
     void searchEvents() {
-        ArrayList<Event> result = provider.searchEvents("description", "competition");
-        result.forEach(x->log.info(x.getEventOutput()));
-        assertNotNull(result);
+        createNewEvent();
+        String args = "CSV SEARCH_EVENTS description competition";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
     }
 }
