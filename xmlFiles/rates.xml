@@ -1,9 +1,9 @@
 <rates_table>
    <rates class="java.util.ArrayList">
       <rate>
-         <id class="java.lang.String">38626814-d701-4708-a330-8c02f8702c80</id>
+         <id class="java.lang.String">8ad31049-3732-42a5-8aff-059a8fa55a1e</id>
          <user>
-            <id class="java.lang.String">a8e90142-dbeb-45ef-a363-d6a4ad9c69f3</id>
+            <id class="java.lang.String">b34f0962-f855-42c4-a19b-1240af8d5057</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -13,9 +13,9 @@
             <wallet>0.0</wallet>
          </user>
          <photo>
-            <id class="java.lang.String">f52657bf-6790-4e76-a06a-519dc25de6a1</id>
+            <id class="java.lang.String">97370272-ca80-4896-865c-557af93e60a8</id>
             <user>
-               <id class="java.lang.String">a8e90142-dbeb-45ef-a363-d6a4ad9c69f3</id>
+               <id class="java.lang.String">b34f0962-f855-42c4-a19b-1240af8d5057</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -30,9 +30,9 @@
          <date>2021-03-11 00:00:00.0 MSK</date>
       </rate>
       <rate>
-         <id class="java.lang.String">428625d6-93de-4833-b520-a4959f69fcf5</id>
+         <id class="java.lang.String">f0faa211-6cb9-4412-9bfd-09c008f1ab1b</id>
          <user>
-            <id class="java.lang.String">a0705c39-eb25-4ec1-a7d0-8ad973e514a7</id>
+            <id class="java.lang.String">e73a2e22-b763-4ff7-914b-74b0483da186</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -42,9 +42,9 @@
             <wallet>0.0</wallet>
          </user>
          <photo>
-            <id class="java.lang.String">c978f03c-3bbc-45f9-a8dc-2adfbc92fb1e</id>
+            <id class="java.lang.String">e919a726-c5df-4cc1-b620-d90e5b423cc5</id>
             <user>
-               <id class="java.lang.String">a0705c39-eb25-4ec1-a7d0-8ad973e514a7</id>
+               <id class="java.lang.String">e73a2e22-b763-4ff7-914b-74b0483da186</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>

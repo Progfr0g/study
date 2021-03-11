@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.sfedu.photosearch.Constants;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 
 public class Database {
@@ -12,9 +14,15 @@ public class Database {
 
     public boolean connect(){
         try {
-            connection = DriverManager.getConnection(Constants.DB_FILE_PATH);
+            String db_file;
+            if (System.getProperty(Constants.DB_FILE_PATH) != null) {
+                db_file = System.getProperty(Constants.DB_FILE_PATH);
+            } else {
+                db_file = Constants.DB_FORMAT + ConfigurationUtil.getConfigurationEntry(Constants.DB_FILE_PATH);
+            }
+            connection = DriverManager.getConnection(db_file);
             return true;
-        } catch (SQLException ex) {
+        } catch (SQLException | IOException ex) {
             log.error(Constants.ERROR_FAILED_DB_CONNECTION + ex.getMessage());
         }
         return false;

@@ -5,10 +5,32 @@ public class Constants {
     public static final String DATAPROVIDER_CSV = "csv";
     public static final String DATAPROVIDER_XML = "xml";
 
+    public static final String DEFAULT_CONFIG_PATH = "./src/main/resources/environment.properties";
     public static final String CONFIG_PATH = "config.path";
+    public static final String DB_FORMAT = "jdbc:h2:.";
 
     //  Queries for create tables
-    public static final String DB_FILE_PATH = "jdbc:h2:./dbFile/photosearch";
+    public static final String DB_FILE_PATH = "db.filepath";
+
+    public static final String XML_CONFIG_DIR_PATH = "xml.dir_path";
+    public static final String XML_CONFIG_USERS_FILE_PATH = "xml.users_file_path";
+    public static final String XML_CONFIG_PHOTOGRAPHERS_FILE_PATH = "xml.photographers_file_path";
+    public static final String XML_CONFIG_EVENTS_FILE_PATH = "xml.events_file_path";
+    public static final String XML_CONFIG_PHOTOS_FILE_PATH  = "xml.photos_file_path";
+    public static final String XML_CONFIG_COMMENTS_FILE_PATH = "xml.comments_file_path";
+    public static final String XML_CONFIG_RATES_FILE_PATH  = "xml.rates_file_path";
+    public static final String XML_CONFIG_FEEDBACKS_FILE_PATH = "xml.feedbacks_file_path";
+    public static final String XML_CONFIG_OFFERS_FILE_PATH  = "xml.offers_file_path";
+
+    public static final String CSV_CONFIG_DIR_PATH = "csv.dir_path";
+    public static final String CSV_CONFIG_USERS_FILE_PATH = "csv.users_file_path";
+    public static final String CSV_CONFIG_PHOTOGRAPHERS_FILE_PATH = "csv.photographers_file_path";
+    public static final String CSV_CONFIG_EVENTS_FILE_PATH =  "csv.events_file_path";
+    public static final String CSV_CONFIG_PHOTOS_FILE_PATH =  "csv.photos_file_path";
+    public static final String CSV_CONFIG_COMMENTS_FILE_PATH =  "csv.comments_file_path";
+    public static final String CSV_CONFIG_RATES_FILE_PATH = "csv.rates_file_path";
+    public static final String CSV_CONFIG_FEEDBACKS_FILE_PATH =  "csv.feedbacks_file_path";
+    public static final String CSV_CONFIG_OFFERS_FILE_PATH =  "csv.offers_file_path";
 
     public static final String XML_DIR_PATH = "./xmlFiles";
     public static final String XML_USERS_FILE_PATH = "./xmlFiles/users.xml";

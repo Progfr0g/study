@@ -11,6 +11,7 @@ import ru.sfedu.photosearch.Models.Photo;
 import ru.sfedu.photosearch.Models.User;
 import ru.sfedu.photosearch.utils.CSV_util;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
@@ -22,7 +23,7 @@ class DataProviderCSVTest {
     DataProviderCSV provider;
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws IOException {
         provider = new DataProviderCSV();
         CSV_util.createFiles();
     }

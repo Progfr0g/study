@@ -8,24 +8,32 @@ import ru.sfedu.photosearch.Constants;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  класс для работы с CSV файлами (создание файлов)
+ */
 public class CSV_util {
     private static Logger log = LogManager.getLogger(CSV_util.class);
 
-    public static void createFiles(){
+    /**
+     * Создание файлов и папок CSV
+     * @throws IOException
+     */
+    public static void createFiles() throws IOException {
         List<String> paths = new ArrayList<>();
-        paths.add(Constants.CSV_USERS_FILE_PATH);
-        paths.add(Constants.CSV_PHOTOGRAPHERS_FILE_PATH);
-        paths.add(Constants.CSV_EVENTS_FILE_PATH);
-        paths.add(Constants.CSV_PHOTOS_FILE_PATH);
-        paths.add(Constants.CSV_COMMENTS_FILE_PATH);
-        paths.add(Constants.CSV_RATES_FILE_PATH);
-        paths.add(Constants.CSV_FEEDBACKS_FILE_PATH);
-        paths.add(Constants.CSV_OFFERS_FILE_PATH);
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_USERS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_PHOTOGRAPHERS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_EVENTS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_PHOTOS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_COMMENTS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_RATES_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_FEEDBACKS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_OFFERS_FILE_PATH));
         try {
-            File theDir = new File(Constants.CSV_DIR_PATH);
+            File theDir = new File(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_DIR_PATH));
             if (!theDir.exists()){
                 theDir.mkdirs();
             }

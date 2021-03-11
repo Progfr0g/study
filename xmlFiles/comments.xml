@@ -1,9 +1,9 @@
 <comments_table>
    <comments class="java.util.ArrayList">
       <comment>
-         <id class="java.lang.String">4db78874-cec2-402a-aa95-c68888af8597</id>
+         <id class="java.lang.String">1e9be421-a64c-46f5-b9cb-83c8aabf1abc</id>
          <user>
-            <id class="java.lang.String">a5f723bb-2d80-4412-a2ab-a624866b4901</id>
+            <id class="java.lang.String">7bbd122f-bd07-4154-82c5-6b559e78f120</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -13,9 +13,9 @@
             <wallet>0.0</wallet>
          </user>
          <photo>
-            <id class="java.lang.String">e4458015-f426-4f6c-8c4c-f4bfc426bf75</id>
+            <id class="java.lang.String">58b5f3ad-aa9b-43a2-8f15-f7bd9308a1c5</id>
             <user>
-               <id class="java.lang.String">a5f723bb-2d80-4412-a2ab-a624866b4901</id>
+               <id class="java.lang.String">7bbd122f-bd07-4154-82c5-6b559e78f120</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -30,9 +30,9 @@
          <date>2021-03-11 00:00:00.0 MSK</date>
       </comment>
       <comment>
-         <id class="java.lang.String">ad732379-c11d-4a3d-8e96-965028d0109c</id>
+         <id class="java.lang.String">bc62c211-8190-4c43-a381-13ccebade95f</id>
          <user>
-            <id class="java.lang.String">d1930e22-673b-4797-99ed-7f24d7b972b7</id>
+            <id class="java.lang.String">4635612e-c983-45c9-b4c0-866748fa4e09</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -42,9 +42,9 @@
             <wallet>0.0</wallet>
          </user>
          <photo>
-            <id class="java.lang.String">00aa6106-8d49-4df2-9546-d4d19f483fb4</id>
+            <id class="java.lang.String">42a31839-3f36-49de-9e12-c70eaa2b5def</id>
             <user>
-               <id class="java.lang.String">d1930e22-673b-4797-99ed-7f24d7b972b7</id>
+               <id class="java.lang.String">4635612e-c983-45c9-b4c0-866748fa4e09</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>

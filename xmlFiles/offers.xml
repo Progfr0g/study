@@ -1,9 +1,9 @@
 <offers_table>
    <offers class="java.util.ArrayList">
       <offer>
-         <id class="java.lang.String">c4c85319-262a-456b-a877-626e09451cd0</id>
+         <id class="java.lang.String">71929da7-e713-48d8-bc16-d4722fde419f</id>
          <user>
-            <id class="java.lang.String">93362943-ca57-49a6-88ed-c2e4ee8ad16c</id>
+            <id class="java.lang.String">d7918c3f-fa75-4636-9eba-3d908f8b13fa</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -13,7 +13,7 @@
             <wallet>0.0</wallet>
          </user>
          <event>
-            <id class="java.lang.String">5c76c378-f84e-4ba5-a0be-1e3aeb1261b7</id>
+            <id class="java.lang.String">8cbeb484-c298-442d-a6ab-0b640f1ea08c</id>
             <title>auto_race</title>
             <description>competition</description>
             <date>2021-02-14 00:00:00.0 MSK</date>
@@ -21,7 +21,7 @@
             <price>150</price>
             <quantity>2.5</quantity>
             <costumer>
-               <id class="java.lang.String">93362943-ca57-49a6-88ed-c2e4ee8ad16c</id>
+               <id class="java.lang.String">d7918c3f-fa75-4636-9eba-3d908f8b13fa</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -33,8 +33,8 @@
             <status>NONE</status>
             <type>ORDER</type>
          </event>
-         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
-            <id class="java.lang.String">0f3f3185-6e1a-4528-937b-1bb85a7a93af</id>
+         <photographer class="ru.sfedu.photosearch.Models.Photographer">
+            <id class="java.lang.String">3c3b6735-6f32-4caf-afc1-4ca3af43c62b</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -50,9 +50,9 @@
          <date>2021-03-11 00:00:00.0 MSK</date>
       </offer>
       <offer>
-         <id class="java.lang.String">bca9d883-5eff-4b49-9051-961ec6acca38</id>
+         <id class="java.lang.String">06fde451-1ba8-4a67-8ef9-38f94051eedb</id>
          <user>
-            <id class="java.lang.String">1f289551-d309-4e3e-87cf-149aa0a48248</id>
+            <id class="java.lang.String">0ef451af-dcbd-41ef-8d8d-7261d04a66c1</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -62,7 +62,7 @@
             <wallet>0.0</wallet>
          </user>
          <event>
-            <id class="java.lang.String">65c9396b-905a-4355-b395-88b884fdff38</id>
+            <id class="java.lang.String">995f2cc5-0c0b-4c07-8059-2da0f2272d12</id>
             <title>auto_race</title>
             <description>competition</description>
             <date>2021-02-14 00:00:00.0 MSK</date>
@@ -70,7 +70,7 @@
             <price>150</price>
             <quantity>2.5</quantity>
             <costumer>
-               <id class="java.lang.String">1f289551-d309-4e3e-87cf-149aa0a48248</id>
+               <id class="java.lang.String">0ef451af-dcbd-41ef-8d8d-7261d04a66c1</id>
                <name>Sergey</name>
                <lastName>Esenin</lastName>
                <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -82,8 +82,8 @@
             <status>NONE</status>
             <type>ORDER</type>
          </event>
-         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
-            <id class="java.lang.String">22b8e6c3-2972-4599-bd5a-418b25e7f552</id>
+         <photographer class="ru.sfedu.photosearch.Models.Photographer">
+            <id class="java.lang.String">7b02ac23-580b-46bd-9989-26dda64d2948</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>

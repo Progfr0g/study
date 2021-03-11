@@ -11,6 +11,7 @@ import ru.sfedu.photosearch.Models.Photo;
 import ru.sfedu.photosearch.Models.User;
 import ru.sfedu.photosearch.utils.XML_util;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
@@ -22,7 +23,7 @@ class DataProviderXMLTest {
     DataProviderXML provider;
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws IOException {
         provider = new DataProviderXML();
         XML_util.createFiles();
     }

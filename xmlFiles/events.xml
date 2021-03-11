@@ -1,7 +1,7 @@
 <events_table>
    <events class="java.util.ArrayList">
       <event>
-         <id class="java.lang.String">89e7e4a6-d325-487f-9394-02141464f635</id>
+         <id class="java.lang.String">dff4cfcc-cde0-4397-9d3f-bfc850d38b4e</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -9,7 +9,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">64c45950-646a-4ea8-918f-f95efef1e25e</id>
+            <id class="java.lang.String">417a37c7-1d69-4eb4-9bcc-b22199b58ee0</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -22,7 +22,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">5c76c378-f84e-4ba5-a0be-1e3aeb1261b7</id>
+         <id class="java.lang.String">8cbeb484-c298-442d-a6ab-0b640f1ea08c</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -30,7 +30,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">93362943-ca57-49a6-88ed-c2e4ee8ad16c</id>
+            <id class="java.lang.String">d7918c3f-fa75-4636-9eba-3d908f8b13fa</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -43,7 +43,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">b5277e39-a2ea-4183-9d6c-e281e03a8e82</id>
+         <id class="java.lang.String">0b50d626-ce6c-46bf-a7eb-1da646a58aa9</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -51,7 +51,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">32b8e02e-0ff1-43a6-842d-37c7faf97b5e</id>
+            <id class="java.lang.String">362e3c33-f463-4152-b8e1-ad50184403f2</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -64,7 +64,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">65c9396b-905a-4355-b395-88b884fdff38</id>
+         <id class="java.lang.String">995f2cc5-0c0b-4c07-8059-2da0f2272d12</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -72,7 +72,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">1f289551-d309-4e3e-87cf-149aa0a48248</id>
+            <id class="java.lang.String">0ef451af-dcbd-41ef-8d8d-7261d04a66c1</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -85,7 +85,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">e2093530-2f5e-4231-8e7e-9ab0e3326dc2</id>
+         <id class="java.lang.String">ffca654a-f6da-4199-8a4a-909e7bb52a50</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -93,7 +93,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">8f7a7291-64ba-4324-b11a-313b504d4ced</id>
+            <id class="java.lang.String">5e23f0c6-5a47-4edc-b5ba-5bbe3d891f96</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -106,7 +106,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">58d0dfac-6cfb-43ad-a5f9-202db27117f7</id>
+         <id class="java.lang.String">a518b5af-4f30-4a9b-a61d-a84ce95efc70</id>
          <title>racing</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -114,7 +114,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">05748362-f21c-4544-8ded-e6d3b51d18b9</id>
+            <id class="java.lang.String">53ad1b06-b9c5-4e9e-9b4c-ca05e74ae198</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -127,7 +127,7 @@
          <type>ORDER</type>
       </event>
       <event>
-         <id class="java.lang.String">70f1a866-0135-48ab-84dd-3dc6fe5acb9f</id>
+         <id class="java.lang.String">7367609c-fae7-4002-9d1f-2c5974f94dfd</id>
          <title>auto_race</title>
          <description>competition</description>
          <date>2021-02-14 00:00:00.0 MSK</date>
@@ -135,7 +135,7 @@
          <price>150</price>
          <quantity>2.5</quantity>
          <costumer>
-            <id class="java.lang.String">17855811-2fc8-408d-bea2-daeca8900331</id>
+            <id class="java.lang.String">f32fcf93-7a38-4059-b631-84cdea491fb4</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>

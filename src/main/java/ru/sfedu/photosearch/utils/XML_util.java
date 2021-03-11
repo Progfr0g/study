@@ -6,21 +6,22 @@ import ru.sfedu.photosearch.Constants;
 
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class XML_util {
     private static Logger log = LogManager.getLogger(XML_util.class);
-    public static void createFiles(){
+    public static void createFiles() throws IOException {
         List<String> paths = new ArrayList<>();
-        paths.add(Constants.XML_USERS_FILE_PATH);
-        paths.add(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
-        paths.add(Constants.XML_EVENTS_FILE_PATH);
-        paths.add(Constants.XML_PHOTOS_FILE_PATH);
-        paths.add(Constants.XML_COMMENTS_FILE_PATH);
-        paths.add(Constants.XML_RATES_FILE_PATH);
-        paths.add(Constants.XML_FEEDBACKS_FILE_PATH);
-        paths.add(Constants.XML_OFFERS_FILE_PATH);
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_USERS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_PHOTOGRAPHERS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_EVENTS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_PHOTOS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_COMMENTS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_RATES_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_FEEDBACKS_FILE_PATH));
+        paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_OFFERS_FILE_PATH));
         try {
             File theDir = new File(Constants.XML_DIR_PATH);
             if (!theDir.exists()){
@@ -36,6 +37,18 @@ public class XML_util {
 //                }
             }
 
+        } catch (Exception e) {
+            log.info("An error occurred." + e.getMessage());
+        }
+    }
+
+
+    public static void deleteFiles() throws IOException {
+        try {
+            File theDir = new File(Constants.XML_DIR_PATH);
+            if (theDir.exists()) {
+                theDir.delete();
+            }
         } catch (Exception e) {
             log.info("An error occurred." + e.getMessage());
         }

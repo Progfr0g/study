@@ -1,9 +1,9 @@
 <feedbacks_table>
    <feedbacks class="java.util.ArrayList">
       <feedback>
-         <id class="java.lang.String">e695cace-1c28-4453-9157-9fe68a65dc0f</id>
+         <id class="java.lang.String">d9455321-45b7-4561-b2e6-9f6f925fc1f6</id>
          <user>
-            <id class="java.lang.String">c180bff9-5980-4406-9101-97e0032edd1d</id>
+            <id class="java.lang.String">4a7691e7-0184-48fb-b26a-8f5c55c0815b</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -12,8 +12,8 @@
             <town>Moscow</town>
             <wallet>0.0</wallet>
          </user>
-         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
-            <id class="java.lang.String">963dd22a-7027-4f17-b5af-a1f3fe57883c</id>
+         <photographer class="ru.sfedu.photosearch.Models.Photographer">
+            <id class="java.lang.String">bcd90c8c-e9b5-45d8-8f30-acd5ace6793c</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -30,9 +30,9 @@
          <date>2021-03-11 00:00:00.0 MSK</date>
       </feedback>
       <feedback>
-         <id class="java.lang.String">8e140220-9f02-4215-882d-6a908484ed78</id>
+         <id class="java.lang.String">78ae2c60-9e0f-4a37-937a-3c98b4ec37bc</id>
          <user>
-            <id class="java.lang.String">b9fb1f88-ec83-4630-9778-2d4008056f0f</id>
+            <id class="java.lang.String">a279c087-4042-41bc-88db-7bb24607382b</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
@@ -41,8 +41,8 @@
             <town>Moscow</town>
             <wallet>0.0</wallet>
          </user>
-         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
-            <id class="java.lang.String">f6568497-49af-4579-aaa9-8bdc8a4d1ca9</id>
+         <photographer class="ru.sfedu.photosearch.Models.Photographer">
+            <id class="java.lang.String">83f301d5-eed5-4805-a62e-60a0bd1e8542</id>
             <name>Sergey</name>
             <lastName>Esenin</lastName>
             <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>

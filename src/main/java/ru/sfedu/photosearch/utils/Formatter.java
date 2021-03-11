@@ -11,6 +11,9 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ *  класс для работы с датами, их форматами
+ */
 public class Formatter {
     private static SimpleDateFormat dayFormatter = new SimpleDateFormat("dd-MM-yyyy");
     private static DateFormat csvDayFormatter = new SimpleDateFormat("EEE MMM dd kk:mm:ss z yyyy", Locale.ENGLISH);

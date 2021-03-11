@@ -14,6 +14,8 @@ import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.Formatter;
 import ru.sfedu.photosearch.utils.PhotoViewer;
 import ru.sfedu.photosearch.utils.XML_util;
+
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -36,7 +38,7 @@ public class Main {
      * @see DataProviderXML
      * @see DataProvider - интерфейс дата-провайдера
      */
-    private static DataProvider chooseDataProvider(String argProvider) {
+    private static DataProvider chooseDataProvider(String argProvider) throws IOException {
         switch (argProvider) {
             case Constants.DATAPROVIDER_DB: {
                 DataProviderDatabase provider = new DataProviderDatabase();
@@ -631,7 +633,7 @@ public class Main {
                 }
             }
             System.exit(1);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException | IOException e) {
             log.error(Constants.ERROR_INCORRECT_INPUT_ARGS);
             System.exit(1);
         }
