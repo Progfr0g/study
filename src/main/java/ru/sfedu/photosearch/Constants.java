@@ -1,7 +1,5 @@
 package ru.sfedu.photosearch;
 
-import ru.sfedu.photosearch.newModels.Event;
-
 public class Constants {
     public static final String DATAPROVIDER_DB = "db";
     public static final String DATAPROVIDER_CSV = "csv";

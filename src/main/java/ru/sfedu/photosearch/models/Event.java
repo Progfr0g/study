@@ -1,251 +1,271 @@
-//package ru.sfedu.photosearch.models;
-//
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
-//import org.simpleframework.xml.Attribute;
-//import org.simpleframework.xml.Element;
-//import org.simpleframework.xml.Root;
-//import ru.sfedu.photosearch.Constants;
-//import ru.sfedu.photosearch.enums.Status;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//@Root(name="event")
-//public class Event {
-//    public static final Logger log = LogManager.getLogger(Event.class);
-//    @Attribute
-//    private String id;
-//    @Element
-//    private String title;
-//    @Element
-//    private String description;
-//    @Element
-//    private String customer;
-//    @Element(required = false)
-//    private String executor;
-//    @Element
-//    private String event_date;
-//    @Element
-//    private int price;
-//    @Element
-//    private float quantity;
-//    @Element(required = false)
-//    private PaymentMethod payment_method;
-//    @Element
-//    private boolean paid;
-//    @Element(required = false)
-//    private String payment_date;
-//    @Element
-//    private Status status;
-//
-//    public Event() {
-//        super();
-//    }
-//
-//    public Event(String id, String title, String description, String customer, String executor, String event_date, int price, float quantity, String payment_method, boolean paid, String payment_date, Status status) {
-//        this.id = id;
-//        this.title = title;
-//        this.description = description;
-//        this.customer = checkNull(customer);
-//        this.executor = checkNull(executor);
-//        this.event_date = event_date;
-//        this.price = price;
-//        this.quantity = quantity;
-//        if (payment_method.equals(Constants.UTIL_EMPTY_STRING)){
-//            this.payment_method = PaymentMethod.NONE;
-//        } else {
-//            this.payment_method = PaymentMethod.valueOf(payment_method);
-//        }
-//        this.paid = paid;
-//        this.payment_date = checkNull(payment_date);
-//        this.status = status;
-//    }
-//
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getDescription() {
-//        return description;
-//    }
-//
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
-//
-//    public String getCustomer() {
-//        return customer;
-//    }
-//
-//    public void setCustomer(String customer) {
-//        this.customer = customer;
-//    }
-//
-//    public String getExecutor() {
-//        return executor;
-//    }
-//
-//    public void setExecutor(String executor) {
-//        this.executor = executor;
-//    }
-//
-//    public String getEvent_date() {
-//        return event_date;
-//    }
-//
-//    public void setEvent_date(String event_date) {
-//        this.event_date = event_date;
-//    }
-//
-//    public int getPrice() {
-//        return price;
-//    }
-//
-//    public void setPrice(int price) {
-//        this.price = price;
-//    }
-//
-//    public float getQuantity() {
-//        return quantity;
-//    }
-//
-//    public void setQuantity(float quantity) {
-//        this.quantity = quantity;
-//    }
-//
-//    public PaymentMethod getPayment_method() {
-//        return payment_method;
-//    }
-//
-//    public void setPayment_method(String payment_method) {
-//        this.payment_method = PaymentMethod.valueOf(payment_method);
-//    }
-//
-//    public boolean isPaid() {
-//        return paid;
-//    }
-//
-//    public void setPaid(boolean paid) {
-//        this.paid = paid;
-//    }
-//
-//    public String getPayment_date() {
-//        return payment_date;
-//    }
-//
-//    public void setPayment_date(String payment_date) {
-//        this.payment_date = payment_date;
-//    }
-//
-//    public Status getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(Status status) {
-//        this.status = status;
-//    }
-//
-//    public String checkNull(String value){
-//        if (value == null){
-//            return Constants.UTIL_EMPTY_STRING;
-//        } else {
-//            return value;
-//        }
-//
-//    }
-//
-////        this.id = id;
-////        this.title = title;
-////        this.description = description;
-////        this.customer = customer;
-////        this.executor = executor;
-////        this.event_date = event_date;
-////        this.price = price;
-////        this.quantity = quantity;
-////        this.payment_method = payment_method;
-////        this.paid = paid;
-////        this.payment_date = payment_date;
-////        this.status = status;
-//    public String getEventOutput(){
-//        String result = String.format(Constants.XML_EVENTS_OUTPUT,
-//                checkNull(String.valueOf(getId())),
-//                checkNull(getTitle()),
-//                checkNull(getDescription()),
-//                checkNull(getCustomer()),
-//                checkNull(getExecutor()),
-//                checkNull(getEvent_date()),
-//                checkNull(String.valueOf(getQuantity())),
-//                checkNull(String.valueOf(getPrice())),
-//                checkNull(getPayment_method().toString()),
-//                checkNull(String.valueOf(isPaid())),
-//                checkNull(getPayment_date()),
-//                checkNull(getStatus().toString().toLowerCase()));
-//            ;
-//        return result;
-//    }
-//
-//    public String getCSVEventOutput(){
-//        String result = String.format(Constants.CSV_EVENTS_OUTPUT,
-//                checkNull(String.valueOf(getId())),
-//                checkNull(getTitle()),
-//                checkNull(getDescription()),
-//                checkNull(getCustomer()),
-//                checkNull(getExecutor()),
-//                checkNull(getEvent_date()),
-//                checkNull(String.valueOf(getQuantity())),
-//                checkNull(String.valueOf(getPrice())),
-//                checkNull(getPayment_method().toString()),
-//                checkNull(String.valueOf(isPaid())),
-//                checkNull(getPayment_date()),
-//                checkNull(getStatus().toString().toLowerCase()));
-//        return result;
-//    }
-//
-//    public static List<Event> convertFromCSV(List<String[]> data){
-//        try {
-//            List<Event> events = new ArrayList<>();
-//            for (String[] line : data) {
-//                events.add(new Event(line));
-//            }
-//            return events;
-//        }catch (Exception ex){
-//            log.error(Constants.ERROR_EVENT_CONVERT + ex);
-//        }
-//        return null;
-//    }
-//
-//    public Event(String[] data){
-//        this.id = data[0];
-//        this.title = data[1];
-//        this.description = data[2];
-//        this.customer = checkNull(data[3]);
-//        this.executor = checkNull(data[4]);
-//        this.event_date = data[5];
-//        this.price = Integer.parseInt(data[7]);
-//        this.quantity = Float.parseFloat(data[6]);
-//        if (data[8].equals(Constants.UTIL_EMPTY_STRING)){
-//            this.payment_method = PaymentMethod.NONE;
-//        } else {
-//            this.payment_method = PaymentMethod.valueOf(data[8]);
-//        }
-//        this.paid = Boolean.parseBoolean(data[9]);
-//        this.payment_date = checkNull(data[10]);
-//        this.status = Status.valueOf(data[11].toUpperCase());
-//    }
-//
-//
-//
-//}
+package ru.sfedu.photosearch.Models;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import ru.sfedu.photosearch.Constants;
+import org.simpleframework.xml.Element;
+import ru.sfedu.photosearch.enums.EventStatus;
+import ru.sfedu.photosearch.enums.EventType;
+import ru.sfedu.photosearch.utils.Formatter;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+
+/**
+ * Класс Event
+ * используется для создания событий (предложений) в приложении
+ * @param <T>
+ */
+public class Event<T> {
+    public static final Logger log = LogManager.getLogger(Event.class);
+    @Element
+    private T id;
+    @Element
+    private String title;
+    @Element
+    private String description;
+    @Element
+    private Date date;
+    @Element
+    private Date creationDate;
+    @Element
+    private Integer price;
+    @Element
+    private Float quantity;
+    @Element
+    private User costumer;
+    @Element(required = false)
+    private User executor;
+    @Element
+    private EventStatus status;
+    @Element
+    private EventType type;
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public T getId() {
+        return id;
+    }
+
+    public void setId(T id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Float getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Float quantity) {
+        this.quantity = quantity;
+    }
+
+    public User getCostumer() {
+        return costumer;
+    }
+
+    public void setCostumer(User costumer) {
+        this.costumer = costumer;
+    }
+
+    public User getExecutor() {
+        return executor;
+    }
+
+    public void setExecutor(User executor) {
+        this.executor = executor;
+    }
+
+    public EventStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(EventStatus status) {
+        this.status = status;
+    }
+
+    public EventType getType() {
+        return type;
+    }
+
+    public void setType(EventType type) {
+        this.type = type;
+    }
+
+    public Event() { super();
+    }
+
+    /**
+     * Конструктор создания события
+     * @param id - новый ID для создаваемого события, который будет записан (не используется в DataProviderDB)
+     * @param title - название события
+     * @param description - описание события
+     * @param date - дата начала события
+     * @param creationDate - дата создания события
+     * @param price - цена события за единицу времени
+     * @param quantity - количество единиц времени (часы), которое нужно для осуществления события
+     * @param costumer - пользователь (заказчик)
+     * @param status - статус события
+     * @param type - тип события
+     */
+    public Event(T id, String title, String description, Date date, Date creationDate, Integer price, Float quantity, User costumer, EventStatus status, EventType type) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.creationDate = creationDate;
+        this.price = price;
+        this.quantity = quantity;
+        this.costumer = costumer;
+        this.status = status;
+        this.type = type;
+    }
+    /**
+     * Используется для проверки на null значение различных типов объектов
+     * @param value - входящее значение
+     * @return если объект == null, выходящее значение - '' (пустая строка)
+     *         если объект != null, выходящее значение - значение объекта
+     */
+    public String checkNull(String value){
+        if (value == null){
+            return Constants.UTIL_EMPTY_STRING;
+        } else {
+            return value;
+        }
+    }
+    /**
+     * Используется для проверки на null значение объектов типа User
+     * @see User
+     * @param value - входящее знаечение
+     * @return если объект == null, выходящее значение - '' (пустая строка)
+     *         если объект != null, выходящее значение - ID пользователя
+     */
+    public String checkNullUser(User value){
+        if (value == null){
+            return Constants.UTIL_EMPTY_STRING;
+        } else {
+            return value.getId().toString();
+        }
+    }
+    /**
+     * Используется для финального вывода в коммандную строку
+     * @return строка со всеми значениями объекта Event (null значения заменяются пустой строкой)
+     */
+    public String getEventOutput(){
+        String result = String.format(Constants.XML_EVENTS_OUTPUT,
+                checkNull(getId().toString()),
+                checkNull(getTitle()),
+                checkNull(getDescription()),
+                checkNull(getDate().toString()),
+                checkNull(getCreationDate().toString()),
+                checkNull(getPrice().toString()),
+                checkNull(getQuantity().toString()),
+                checkNullUser(getCostumer()),
+                checkNullUser(getExecutor()),
+                checkNull(getStatus().toString().toLowerCase()),
+                checkNull(getType().toString().toLowerCase()));
+        return result;
+    }
+    /**
+     * Используется для конвертирования объекта из строки csv-файла
+     * @return List со всеми объектами Event в файле
+     */
+    public String getCSVEventOutput(){
+        String result = String.format(Constants.CSV_EVENTS_OUTPUT,
+                checkNull(getId().toString()),
+                checkNull(getTitle()),
+                checkNull(getDescription()),
+                checkNull(getDate().toString()),
+                checkNull(getCreationDate().toString()),
+                checkNull(getPrice().toString()),
+                checkNull(getQuantity().toString()),
+                checkNullUser(getCostumer()),
+                checkNullUser(getExecutor()),
+                checkNull(getStatus().toString().toLowerCase()),
+                checkNull(getType().toString().toLowerCase()));
+        return result;
+    }
+
+    /**
+     * Используется для конвертирования объекта из строки csv-файла
+     * @return List со всеми объектами Event в файле
+     */
+    public static List<Event> convertFromCSV(List<String[]> data, List<User> costumers, List<User> executors){
+        try {
+            List<Event> events = new ArrayList<>();
+            for (int i = 0; i < data.size(); i++) {
+                if (data.get(i)[3] != null){
+                    data.get(i)[3] = Formatter.birthDayToDB(Formatter.csvDateFromString(data.get(i)[3]));
+                }
+                if (data.get(i)[4] != null){
+                    data.get(i)[4] = Formatter.birthDayToDB(Formatter.csvDateFromString(data.get(i)[4]));
+                }
+                events.add(new Event(data.get(i), costumers.get(i), executors.get(i)));
+            }
+            return events;
+        }catch (Exception ex){
+            log.error(Constants.ERROR_EVENT_CONVERT + ex);
+        }
+        return null;
+    }
+
+    /**
+     * Дополнительный конструктор Event для создания объекта из csv-файла
+     * @param data - данные (строка) из csv-файла
+     * @param costumer - пользователь (объект User)
+     * @param executor - исполнитель (объект User)
+     */
+    public Event(String[] data, User costumer, User executor){
+        this.id = (T) data[0];
+        this.title = data[1];
+        this.description = data[2];
+        this.date = Formatter.birthDayFromDB(data[3]);
+        this.creationDate = Formatter.birthDayFromDB(data[4]);
+        this.price = Integer.parseInt(data[5]);
+        this.quantity = Float.parseFloat(data[6]);
+        this.costumer = costumer;
+        this.executor = executor;
+        this.status = EventStatus.valueOf(data[9].toUpperCase());
+        this.type = EventType.valueOf(data[10].toUpperCase());
+    }
+
+}

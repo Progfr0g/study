@@ -6,30 +6,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.photosearch.Constants;
 import ru.sfedu.photosearch.Main;
-import ru.sfedu.photosearch.PhotoSearchClient;
-import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.newModels.Comment;
-import ru.sfedu.photosearch.newModels.Event;
-import ru.sfedu.photosearch.newModels.Photo;
-import ru.sfedu.photosearch.newModels.User;
-import ru.sfedu.photosearch.utils.CSV_util;
-import ru.sfedu.photosearch.utils.XML_util;
 
-import java.text.ParseException;
-import java.time.LocalDate;
+import ru.sfedu.photosearch.Models.Event;
+import ru.sfedu.photosearch.Models.Photo;
+import ru.sfedu.photosearch.Models.User;
+
 import java.util.*;
-import java.text.SimpleDateFormat;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DataProviderDatabaseTest {
     public static final Logger log = LogManager.getLogger(DataProviderDatabaseTest.class);
     public static final DataProviderDatabase provider = new DataProviderDatabase();
-    public static final String id = "1";
-    String xml_profile_id_global = Constants.UTIL_EMPTY_STRING;
-    String xml_photo_id_global = Constants.UTIL_EMPTY_STRING;
-    String xml_event_id_global = Constants.UTIL_EMPTY_STRING;
 
     @BeforeEach
     void setUp() {
@@ -175,7 +163,8 @@ class DataProviderDatabaseTest {
 
     @Test
     void getLastPhotographerId() {
-        addPhoto();
+        String args = "DB CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         String result = provider.getLastPhotographerId();
         log.info(result);
         assertNotNull(result);

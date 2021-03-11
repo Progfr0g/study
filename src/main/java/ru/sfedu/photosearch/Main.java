@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.newModels.*;
+import ru.sfedu.photosearch.Models.*;
 import ru.sfedu.photosearch.providers.DataProvider;
 import ru.sfedu.photosearch.providers.DataProviderCSV;
 import ru.sfedu.photosearch.providers.DataProviderDatabase;
@@ -17,12 +17,25 @@ import ru.sfedu.photosearch.utils.XML_util;
 import java.time.LocalDate;
 import java.util.*;
 
+/**
+ *  Main class where program starts working
+ */
 public class Main {
     private static Logger log = LogManager.getLogger(Main.class);
 
     public Main() {
     }
 
+    /**
+     * Возвращает провайдер в соответствии с входными параметрами из коммандной строки
+     * @param argProvider
+     * @return provider одного из трех типов (DataProviderXML, DataProviderCSV, DataProviderDB)
+     *
+     * @see DataProviderDatabase
+     * @see DataProviderCSV
+     * @see DataProviderXML
+     * @see DataProvider - интерфейс дата-провайдера
+     */
     private static DataProvider chooseDataProvider(String argProvider) {
         switch (argProvider) {
             case Constants.DATAPROVIDER_DB: {
@@ -46,9 +59,15 @@ public class Main {
         return null;
     }
 
-
+    /**
+     * Данный метод вызывает нужный метод взаимодействия с API, в соответствии
+     * с входящими параметрами из командной строки
+     * @param provider
+     * @param args
+     * @return Boolean значение. True - если метод отработал без ошибок
+     *                           False - если при выполнении возникли ошибки
+     */
     public static Boolean chooseMethod(DataProvider provider, List<String> args) {
-
         switch (args.get(1)) {
             case Constants.M_CREATE_NEW_PROFILE: {
                 try {
@@ -590,8 +609,11 @@ public class Main {
         }
     }
 
-
-
+    /**
+     * Главная точка входа в приложение. Здесь параметры, полученные из командной строки используются
+     * для вызова нужного дата-провайдера и соответствующего метода API
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             List<String> listArgs = Arrays.asList(args);

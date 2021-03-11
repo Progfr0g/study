@@ -2,8 +2,7 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.photosearch.newModels.User;
-import ru.sfedu.photosearch.utils.Formatter;
+import ru.sfedu.photosearch.Models.User;
 
 import java.util.List;
 
