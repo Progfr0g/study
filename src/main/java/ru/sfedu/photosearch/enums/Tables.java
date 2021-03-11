@@ -5,5 +5,7 @@ public enum Tables {
     EVENTS,
     PHOTOS,
     COMMENTS,
-    RATES
+    RATES,
+    FEEDBACKS,
+    OFFERS
 }

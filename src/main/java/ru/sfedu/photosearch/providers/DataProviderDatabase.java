@@ -334,6 +334,35 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
+    public String getLastPhotographerId() {
+        String query = Constants.SELECT_LAST_PHOTOGRAPHER_QUERY;
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            Integer rows = 0;
+            String[] strings = new String[rsMetaSize];
+            while (rs.next()){
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                rows++;
+            }
+            DB.closeConnection();
+            if (rows == 0){
+                log.info(Constants.EMPTY_GET_LAST_PHOTOGRAPHER);
+                return null;
+            } else{
+                Photographer resultUser = new Photographer(strings);
+                return resultUser.getId().toString();
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_LAST_PHOTOGRAPHER + ex.getMessage());
+        }
+        return null;
+    }
+
+    @Override
     public String getLastEventId() {
         String query = Constants.SELECT_LAST_EVENT_QUERY;
         try {
@@ -518,54 +547,6 @@ public class DataProviderDatabase implements DataProvider {
         return Optional.empty();
     }
 
-    @Override
-    public Boolean addComment(String userId, String photoId, String comment, Date date) {
-        String query = String.format(Constants.INSERT_COMMENTS_QUERY, Tables.COMMENTS.toString(),
-                userId, photoId, comment, Formatter.dateOfRegistration(date));
-        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public Optional<ArrayList<Comment>> getAllComments() {
-        String query = Constants.SELECT_ALL_COMMENTS;
-        ArrayList<Comment> resultComments = new ArrayList<Comment>();
-        try {
-            DB.connect();
-            ResultSet rs = DB.select(query);
-            int rsMetaSize = rs.getMetaData().getColumnCount();
-            while (rs.next()){
-                String[] strings = new String[rsMetaSize];
-                for (int i = 0; i < rsMetaSize; i++) {
-                    strings[i] = rs.getString(i+1);
-                }
-                Optional<User> getUser = getProfile(strings[1]);
-                User user = null;
-                if (strings[1]!=null) {
-                    user = getUser.orElse(null);
-                }
-                Optional<Photo> getPhoto = getPhoto(strings[2]);
-                Photo photo = null;
-                if (strings[2]!=null) {
-                    photo = getPhoto.orElse(null);
-                }
-                Comment resultComment = new Comment(strings, user, photo);
-                resultComments.add(resultComment);
-            }
-            DB.closeConnection();
-            if (resultComments.size() == 0){
-                log.info(Constants.EMPTY_GET_ALL_COMMENTS);
-                return Optional.empty();
-            } else{
-                return Optional.of(resultComments);
-            }
-        } catch (SQLException ex) {
-            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
-        }
-        return Optional.empty();
-    }
 
 
     @Override
@@ -666,18 +647,205 @@ public class DataProviderDatabase implements DataProvider {
     }
 
     @Override
-    public Boolean addRate(String userId, String photoId, Float rate, Date date) {
-        return null;
+    public Boolean addComment(String userId, String photoId, String comment, Date date) {
+        String query = String.format(Constants.INSERT_COMMENTS_QUERY, Tables.COMMENTS.toString(),
+                userId, photoId, comment, Formatter.dateOfRegistration(date));
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public Boolean addFeedback( String userId, String photographerId, Float rate, Date creationDate) {
-        return null;
+    public Optional<ArrayList<Comment>> getAllCommentsById(String photoId) {
+        String query = String.format(Constants.SELECT_ALL_COMMENTS, photoId);
+        ArrayList<Comment> resultComments = new ArrayList<Comment>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
+                if (strings[1]!=null) {
+                    user = getUser.orElse(null);
+                }
+                Optional<Photo> getPhoto = getPhoto(strings[2]);
+                Photo photo = null;
+                if (strings[2]!=null) {
+                    photo = getPhoto.orElse(null);
+                }
+                Comment resultComment = new Comment(strings, user, photo);
+                resultComments.add(resultComment);
+            }
+            DB.closeConnection();
+            if (resultComments.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_COMMENTS);
+                return Optional.empty();
+            } else{
+                return Optional.of(resultComments);
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex.getMessage());
+        }
+        return Optional.empty();
     }
 
     @Override
-    public Boolean createOffer(String userId, String eventId, Date creationDate) {
-        return null;
+    public Boolean addRate(String userId, String photoId, Integer rate, Date date) {
+        String query = String.format(Constants.INSERT_RATES_QUERY, Tables.RATES.toString(),
+                userId, photoId, rate, Formatter.dateOfRegistration(date));
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public Optional<ArrayList<Rate>> getAllRatesById(String photoId) {
+        String query = String.format(Constants.SELECT_ALL_RATES, photoId);
+        ArrayList<Rate> resultRates = new ArrayList<Rate>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
+                if (strings[1]!=null) {
+                    user = getUser.orElse(null);
+                }
+                Optional<Photo> getPhoto = getPhoto(strings[2]);
+                Photo photo = null;
+                if (strings[2]!=null) {
+                    photo = getPhoto.orElse(null);
+                }
+                Rate resultRate = new Rate(strings, user, photo);
+                resultRates.add(resultRate);
+            }
+            DB.closeConnection();
+            if (resultRates.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_RATES);
+                return Optional.empty();
+            } else{
+                return Optional.of(resultRates);
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_RATES + ex.getMessage());
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Boolean addFeedback(String userId, String photographerId, Integer rate, String text, Date date) {
+        String query = String.format(Constants.INSERT_FEEDBACKS_QUERY, Tables.FEEDBACKS.toString(),
+                userId, photographerId, rate, text, Formatter.dateOfRegistration(date));
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Optional<ArrayList<Feedback>> getAllFeedbacksById(String photographerId) {
+        String query = String.format(Constants.SELECT_ALL_FEEDBACKS, photographerId);
+        ArrayList<Feedback> resultFeedbacks = new ArrayList<Feedback>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
+                if (strings[1]!=null) {
+                    user = getUser.orElse(null);
+                }
+                Optional<User> getPhotographer = getProfile(strings[2]);
+                User photographer = null;
+                if (strings[2]!=null) {
+                    user = getPhotographer.orElse(null);
+                }
+                Feedback resultFeedback = new Feedback(strings, user, photographer);
+                resultFeedbacks.add(resultFeedback);
+            }
+            DB.closeConnection();
+            if (resultFeedbacks.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_FEEDBACKS);
+                return Optional.empty();
+            } else{
+                return Optional.of(resultFeedbacks);
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_FEEDBACKS + ex.getMessage());
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public Boolean createOffer(String userId, String eventId, String photographerId, Boolean isActive, Date creationDate) {
+        String query = String.format(Constants.INSERT_OFFERS_QUERY, Tables.OFFERS.toString(),
+                userId, eventId, photographerId, isActive, Formatter.dateOfRegistration(creationDate));
+        if (DB.connect() && (DB.insert(query) > 0) && DB.closeConnection()) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public Optional<ArrayList<Offer>> getAllOffersById(String eventId) {
+        String query = String.format(Constants.SELECT_ALL_OFFERS, eventId);
+        ArrayList<Offer> resultOffers = new ArrayList<Offer>();
+        try {
+            DB.connect();
+            ResultSet rs = DB.select(query);
+            int rsMetaSize = rs.getMetaData().getColumnCount();
+            while (rs.next()){
+                String[] strings = new String[rsMetaSize];
+                for (int i = 0; i < rsMetaSize; i++) {
+                    strings[i] = rs.getString(i+1);
+                }
+                Optional<User> getUser = getProfile(strings[1]);
+                User user = null;
+                if (strings[1]!=null) {
+                    user = getUser.orElse(null);
+                }
+                Optional<Event> getEvent = getEvent(strings[2]);
+                Event event = null;
+                if (strings[2]!=null) {
+                    event = getEvent.orElse(null);
+                }
+                Optional<User> getPhotographer = getProfile(strings[3]);
+                User photographer = null;
+                if (strings[3]!=null) {
+                    user = getPhotographer.orElse(null);
+                }
+                Offer resultOffer = new Offer(strings, user, event, photographer);
+                resultOffers.add(resultOffer);
+            }
+            DB.closeConnection();
+            if (resultOffers.size() == 0){
+                log.info(Constants.EMPTY_GET_ALL_OFFERS);
+                return Optional.empty();
+            } else{
+                return Optional.of(resultOffers);
+            }
+        } catch (SQLException ex) {
+            log.error(Constants.ERROR_GET_ALL_OFFERS + ex.getMessage());
+        }
+        return Optional.empty();
     }
 
 

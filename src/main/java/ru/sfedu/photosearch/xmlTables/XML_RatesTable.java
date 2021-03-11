@@ -2,24 +2,25 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Comment;
+import ru.sfedu.photosearch.newModels.Rate;
 
 import java.util.List;
 
 
-@Root (name="events_table")
+@Root (name="rates_table")
 public class XML_RatesTable {
     @ElementList
-    private List<Event> events;
+    private List<Rate> rates;
 
-    public List<Event> getxmlEvents() {
-        return events;
+    public List<Rate> getxmlRates() {
+        return rates;
     }
 
-    public void setEvents(List<Event> events) {
-        for (Event event:events){
-            event.setId(event.getId().toString());
+    public void setRates(List<Rate> rates) {
+        for (Rate rate: rates){
+            rate.setId(rate.getId().toString());
         }
-        this.events = events;
+        this.rates = rates;
     }
 }

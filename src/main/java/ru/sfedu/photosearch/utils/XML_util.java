@@ -19,6 +19,8 @@ public class XML_util {
         paths.add(Constants.XML_PHOTOS_FILE_PATH);
         paths.add(Constants.XML_COMMENTS_FILE_PATH);
         paths.add(Constants.XML_RATES_FILE_PATH);
+        paths.add(Constants.XML_FEEDBACKS_FILE_PATH);
+        paths.add(Constants.XML_OFFERS_FILE_PATH);
         try {
             File theDir = new File(Constants.XML_DIR_PATH);
             if (!theDir.exists()){
@@ -30,7 +32,7 @@ public class XML_util {
                     log.info("File created: " + file.getName());
                 }
 //                else {
-//                    log.info("File already exists: "+ file.getName());
+//                    log.debug("File already exists: "+ file.getName());
 //                }
             }
 

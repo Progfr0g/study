@@ -98,3 +98,47 @@ SELECT * FROM EVENTS WHERE town = 'rostov' [42122-200]
 10 мар. 2021 19:28:06,329 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
 10 мар. 2021 19:28:06,329 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
 10 мар. 2021 19:28:06,340 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+10 мар. 2021 23:58:33,013 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+10 мар. 2021 23:58:33,015 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+10 мар. 2021 23:58:33,136 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+10 мар. 2021 23:58:33,137 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+10 мар. 2021 23:58:33,148 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id 3 not exists.] Empty response received.
+10 мар. 2021 23:58:33,148 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+10 мар. 2021 23:58:33,148 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.
+10 мар. 2021 23:58:55,605 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+10 мар. 2021 23:58:55,607 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+10 мар. 2021 23:58:55,726 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+10 мар. 2021 23:58:55,726 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+10 мар. 2021 23:58:55,744 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 1 !****
+10 мар. 2021 23:58:55,748 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: evgeniy
+lastName: govor
+birthDay: Mon Oct 11 00:00:00 MSD 1999
+dateOfRegistration: Wed Mar 10 00:00:00 MSK 2021
+role: CUSTOMER
+town: rostov
+wallet: 0.0
+
+10 мар. 2021 23:59:11,693 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+10 мар. 2021 23:59:11,695 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+10 мар. 2021 23:59:11,818 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+10 мар. 2021 23:59:11,818 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+10 мар. 2021 23:59:11,819 [main] ERROR ru.sfedu.photosearch.Main - Input args is incorrect.
+10 мар. 2021 23:59:16,583 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+10 мар. 2021 23:59:16,585 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+10 мар. 2021 23:59:16,703 [main] DEBUG ru.sfedu.photosearch.Database - TABLES IS CREATED
+10 мар. 2021 23:59:16,703 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+10 мар. 2021 23:59:16,722 [main] DEBUG ru.sfedu.photosearch.Main - ****Successfully get profile with id 2 !****
+10 мар. 2021 23:59:16,727 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+name: evgeniy
+lastName: govor
+birthDay: Mon Oct 11 00:00:00 MSD 1999
+dateOfRegistration: Wed Mar 10 00:00:00 MSK 2021
+role: PHOTOGRAPHER
+town: rostov
+rating: 0.0
+experience: 0
+costLevel: NONE
+

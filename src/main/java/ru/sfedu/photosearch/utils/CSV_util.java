@@ -22,6 +22,8 @@ public class CSV_util {
         paths.add(Constants.CSV_PHOTOS_FILE_PATH);
         paths.add(Constants.CSV_COMMENTS_FILE_PATH);
         paths.add(Constants.CSV_RATES_FILE_PATH);
+        paths.add(Constants.CSV_FEEDBACKS_FILE_PATH);
+        paths.add(Constants.CSV_OFFERS_FILE_PATH);
         try {
             File theDir = new File(Constants.CSV_DIR_PATH);
             if (!theDir.exists()){
@@ -61,6 +63,16 @@ public class CSV_util {
                         }
                         case Constants.CSV_RATES_FILE_PATH:{
                             String[] record = Constants.CSV_RATES_COLUMNS.split(", ");
+                            writer.writeNext(record);
+                            break;
+                        }
+                        case Constants.CSV_FEEDBACKS_FILE_PATH:{
+                            String[] record = Constants.CSV_FEEDBACKS_COLUMNS.split(", ");
+                            writer.writeNext(record);
+                            break;
+                        }
+                        case Constants.CSV_OFFERS_FILE_PATH:{
+                            String[] record = Constants.CSV_OFFERS_COLUMNS.split(", ");
                             writer.writeNext(record);
                             break;
                         }

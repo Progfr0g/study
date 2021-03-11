@@ -1,0 +1,102 @@
+<offers_table>
+   <offers class="java.util.ArrayList">
+      <offer>
+         <id class="java.lang.String">c4c85319-262a-456b-a877-626e09451cd0</id>
+         <user>
+            <id class="java.lang.String">93362943-ca57-49a6-88ed-c2e4ee8ad16c</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <event>
+            <id class="java.lang.String">5c76c378-f84e-4ba5-a0be-1e3aeb1261b7</id>
+            <title>auto_race</title>
+            <description>competition</description>
+            <date>2021-02-14 00:00:00.0 MSK</date>
+            <creationDate>2021-03-11 00:00:00.0 MSK</creationDate>
+            <price>150</price>
+            <quantity>2.5</quantity>
+            <costumer>
+               <id class="java.lang.String">93362943-ca57-49a6-88ed-c2e4ee8ad16c</id>
+               <name>Sergey</name>
+               <lastName>Esenin</lastName>
+               <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+               <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+               <role>CUSTOMER</role>
+               <town>Moscow</town>
+               <wallet>0.0</wallet>
+            </costumer>
+            <status>NONE</status>
+            <type>ORDER</type>
+         </event>
+         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
+            <id class="java.lang.String">0f3f3185-6e1a-4528-937b-1bb85a7a93af</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>PHOTOGRAPHER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+            <rating>0.0</rating>
+            <experience>0</experience>
+            <costLevel>NONE</costLevel>
+         </photographer>
+         <isActive>true</isActive>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </offer>
+      <offer>
+         <id class="java.lang.String">bca9d883-5eff-4b49-9051-961ec6acca38</id>
+         <user>
+            <id class="java.lang.String">1f289551-d309-4e3e-87cf-149aa0a48248</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <event>
+            <id class="java.lang.String">65c9396b-905a-4355-b395-88b884fdff38</id>
+            <title>auto_race</title>
+            <description>competition</description>
+            <date>2021-02-14 00:00:00.0 MSK</date>
+            <creationDate>2021-03-11 00:00:00.0 MSK</creationDate>
+            <price>150</price>
+            <quantity>2.5</quantity>
+            <costumer>
+               <id class="java.lang.String">1f289551-d309-4e3e-87cf-149aa0a48248</id>
+               <name>Sergey</name>
+               <lastName>Esenin</lastName>
+               <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+               <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+               <role>CUSTOMER</role>
+               <town>Moscow</town>
+               <wallet>0.0</wallet>
+            </costumer>
+            <status>NONE</status>
+            <type>ORDER</type>
+         </event>
+         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
+            <id class="java.lang.String">22b8e6c3-2972-4599-bd5a-418b25e7f552</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>PHOTOGRAPHER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+            <rating>0.0</rating>
+            <experience>0</experience>
+            <costLevel>NONE</costLevel>
+         </photographer>
+         <isActive>true</isActive>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </offer>
+   </offers>
+</offers_table>

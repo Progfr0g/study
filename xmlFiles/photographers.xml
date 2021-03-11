@@ -1,11 +1,76 @@
 <photographers_table>
    <photographers class="java.util.ArrayList">
       <user>
-         <id class="java.lang.String">79e2d242-0766-4cbf-a703-40b07da67039</id>
+         <id class="java.lang.String">3c74c937-9128-4bc1-a698-8391c29c41e6</id>
          <name>Sergey</name>
          <lastName>Esenin</lastName>
          <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
-         <dateOfRegistration>2021-03-10 00:00:00.0 MSK</dateOfRegistration>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+      <user>
+         <id class="java.lang.String">98ad89fe-db62-4323-acd0-4b5041184a9a</id>
+         <name>Sergey</name>
+         <lastName>Esenin</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+      <user>
+         <id class="java.lang.String">0f3f3185-6e1a-4528-937b-1bb85a7a93af</id>
+         <name>Sergey</name>
+         <lastName>Esenin</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+      <user>
+         <id class="java.lang.String">963dd22a-7027-4f17-b5af-a1f3fe57883c</id>
+         <name>Sergey</name>
+         <lastName>Esenin</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+      <user>
+         <id class="java.lang.String">22b8e6c3-2972-4599-bd5a-418b25e7f552</id>
+         <name>Sergey</name>
+         <lastName>Esenin</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+         <role>PHOTOGRAPHER</role>
+         <town>Moscow</town>
+         <wallet>0.0</wallet>
+         <rating>0.0</rating>
+         <experience>0</experience>
+         <costLevel>NONE</costLevel>
+      </user>
+      <user>
+         <id class="java.lang.String">f6568497-49af-4579-aaa9-8bdc8a4d1ca9</id>
+         <name>Sergey</name>
+         <lastName>Esenin</lastName>
+         <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+         <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
          <role>PHOTOGRAPHER</role>
          <town>Moscow</town>
          <wallet>0.0</wallet>

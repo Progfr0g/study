@@ -746,6 +746,31 @@ public class DataProviderXML implements DataProvider {
     }
 
     @Override
+    public String getLastPhotographerId() {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_PHOTOGRAPHERS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_PhotographersTable table;
+                table = serializer.read(XML_PhotographersTable.class, source);
+                List<Photographer> photographers = table.getxmlPhotographers();
+                if (photographers.size() != 0){
+                    return photographers.get(photographers.size()-1).getId().toString();
+                } else {
+                    log.info(Constants.EMPTY_GET_LAST_PHOTOGRAPHER);
+                    return null;
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_PHOTOGRAPHERS_FILE_PATH));
+                return null;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_LAST_PHOTOGRAPHER + ex.getMessage());
+            return null;
+        }
+    }
+
+    @Override
     public String getLastEventId() {
         try{
             Serializer serializer = new Persister();
@@ -868,87 +893,6 @@ public class DataProviderXML implements DataProvider {
             log.error(Constants.ERROR_GET_ALL_PHOTOS + ex);
             return Optional.empty();
         }
-    }
-
-    @Override
-    public Boolean addComment(String userId, String photoId, String comment, Date date) {
-        try {
-            Serializer serializer = new Persister();
-            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
-            XML_CommentsTable table;
-            if (source.length() == 0) {
-                List<Comment> comments_array = new ArrayList<>();
-                UUID newId = UUID.randomUUID();
-                User user = getProfile(userId).orElse(null);
-                Photo photo = getPhoto(photoId).orElse(null);
-                Comment newComment = new Comment(newId,
-                        user, photo, comment, date);
-                comments_array.add(newComment);
-                table = new XML_CommentsTable();
-                table.setComments(comments_array);
-                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
-                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
-                serializer.write(table, result);
-                return true;
-            } else {
-                table = serializer.read(XML_CommentsTable.class, source);
-                List<Comment> writedComments = table.getxmlComments();
-                UUID newId = UUID.randomUUID();
-                User user = getProfile(userId).orElse(null);
-                Photo photo = getPhoto(photoId).orElse(null);
-                Comment newComment = new Comment(newId,
-                        user, photo, comment, date);
-                writedComments.add(newComment);
-                table.setComments(writedComments);
-                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
-                serializer.write(table, result);
-                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
-                return true;
-            }
-        } catch (Exception ex) {
-            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
-            return false;
-        }
-    }
-
-    @Override
-    public Optional<ArrayList<Comment>> getAllComments() {
-        try{
-            Serializer serializer = new Persister();
-            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
-            if (source.length() > 0) {
-                XML_CommentsTable table;
-                table = serializer.read(XML_CommentsTable.class, source);
-                List<Comment> comments = table.getxmlComments();
-                if (comments.size() != 0){
-                    return Optional.of((ArrayList<Comment>) comments);
-                } else {
-                    log.info(Constants.EMPTY_GET_ALL_COMMENTS);
-                    return Optional.empty();
-                }
-            } else {
-                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
-                return Optional.empty();
-            }
-        } catch (Exception ex) {
-            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex);
-            return Optional.empty();
-        }
-    }
-
-    @Override
-    public Boolean addRate(String userId, String photoId, Float rate, Date date) {
-        return null;
-    }
-
-    @Override
-    public Boolean addFeedback(String userId, String photographerId, Float rate, Date creationDate) {
-        return null;
-    }
-
-    @Override
-    public Boolean createOffer(String userId, String eventId, Date creationDate) {
-        return null;
     }
 
     @Override
@@ -1119,4 +1063,291 @@ public class DataProviderXML implements DataProvider {
             return Optional.empty();
         }
     }
+
+    @Override
+    public Boolean addComment(String userId, String photoId, String comment, Date date) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
+            XML_CommentsTable table;
+            if (source.length() == 0) {
+                List<Comment> comments_array = new ArrayList<>();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
+                Comment newComment = new Comment(newId,
+                        user, photo, comment, date);
+                comments_array.add(newComment);
+                table = new XML_CommentsTable();
+                table.setComments(comments_array);
+                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
+                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
+                serializer.write(table, result);
+                return true;
+            } else {
+                table = serializer.read(XML_CommentsTable.class, source);
+                List<Comment> writedComments = table.getxmlComments();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
+                Comment newComment = new Comment(newId,
+                        user, photo, comment, date);
+                writedComments.add(newComment);
+                table.setComments(writedComments);
+                File result = new File(Constants.XML_COMMENTS_FILE_PATH);
+                serializer.write(table, result);
+                log.info(String.format(Constants.SUCCESS_NEW_COMMENT_XML, newId));
+                return true;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public Optional<ArrayList<Comment>> getAllCommentsById(String photoId) {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_COMMENTS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_CommentsTable table;
+                table = serializer.read(XML_CommentsTable.class, source);
+                List<Comment> comments = table.getxmlComments();
+                for (int i=0; i < comments.size(); i++) {
+                    if (!comments.get(i).getPhoto().getId().equals(photoId)){
+                        comments.remove(i);
+                    }
+                }
+                if (comments.size() != 0){
+                    return Optional.of((ArrayList<Comment>) comments);
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_COMMENTS);
+                    return Optional.empty();
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_COMMENTS_FILE_PATH));
+                return Optional.empty();
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_COMMENTS + ex);
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Boolean addRate(String userId, String photoId, Integer rate, Date date) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_RATES_FILE_PATH);
+            XML_RatesTable table;
+            if (source.length() == 0) {
+                List<Rate> rates_array = new ArrayList<>();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
+                Rate newRate = new Rate(newId,
+                        user, photo, rate, date);
+                rates_array.add(newRate);
+                table = new XML_RatesTable();
+                table.setRates(rates_array);
+                File result = new File(Constants.XML_RATES_FILE_PATH);
+                log.info(String.format(Constants.SUCCESS_NEW_RATE_XML, newId));
+                serializer.write(table, result);
+                return true;
+            } else {
+                table = serializer.read(XML_RatesTable.class, source);
+                List<Rate> writedRates = table.getxmlRates();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Photo photo = getPhoto(photoId).orElse(null);
+                Rate newRate = new Rate(newId,
+                        user, photo, rate, date);
+                writedRates.add(newRate);
+                table.setRates(writedRates);
+                File result = new File(Constants.XML_RATES_FILE_PATH);
+                serializer.write(table, result);
+                log.info(String.format(Constants.SUCCESS_NEW_RATE_XML, newId));
+                return true;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public Optional<ArrayList<Rate>> getAllRatesById(String photoId) {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_RATES_FILE_PATH);
+            if (source.length() > 0) {
+                XML_RatesTable table;
+                table = serializer.read(XML_RatesTable.class, source);
+                List<Rate> rates = table.getxmlRates();
+                for (int i=0; i < rates.size(); i++) {
+                    if (!rates.get(i).getPhoto().getId().equals(photoId)){
+                        rates.remove(i);
+                    }
+                }
+                if (rates.size() != 0){
+                    return Optional.of((ArrayList<Rate>) rates);
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_RATES);
+                    return Optional.empty();
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_RATES_FILE_PATH));
+                return Optional.empty();
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_RATES + ex);
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Boolean addFeedback(String userId, String photographerId, Integer rate, String text, Date creationDate) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_FEEDBACKS_FILE_PATH);
+            XML_FeedbacksTable table;
+            if (source.length() == 0) {
+                List<Feedback> feedbacks_array = new ArrayList<>();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                User photographer = getProfile(photographerId).orElse(null);
+                Feedback newFeedback = new Feedback(newId,
+                        user, photographer, rate, text, creationDate);
+                feedbacks_array.add(newFeedback);
+                table = new XML_FeedbacksTable();
+                table.setFeedbacks(feedbacks_array);
+                File result = new File(Constants.XML_FEEDBACKS_FILE_PATH);
+                log.info(String.format(Constants.SUCCESS_NEW_FEEDBACK_XML, newId));
+                serializer.write(table, result);
+                return true;
+            } else {
+                table = serializer.read(XML_FeedbacksTable.class, source);
+                List<Feedback> writedFeedbacks = table.getxmlFeedbacks();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                User photographer = getProfile(photographerId).orElse(null);
+                Feedback newFeedback = new Feedback(newId,
+                        user, photographer, rate, text, creationDate);
+                writedFeedbacks.add(newFeedback);
+                table.setFeedbacks(writedFeedbacks);
+                File result = new File(Constants.XML_FEEDBACKS_FILE_PATH);
+                serializer.write(table, result);
+                log.info(String.format(Constants.SUCCESS_NEW_FEEDBACK_XML, newId));
+                return true;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public Optional<ArrayList<Feedback>> getAllFeedbacksById(String photographerId) {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_FEEDBACKS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_FeedbacksTable table;
+                table = serializer.read(XML_FeedbacksTable.class, source);
+                List<Feedback> feedbacks = table.getxmlFeedbacks();
+                for (int i=0; i < feedbacks.size(); i++) {
+                    if (!feedbacks.get(i).getPhotographer().getId().equals(photographerId)){
+                        feedbacks.remove(i);
+                    }
+                }
+                if (feedbacks.size() != 0){
+                    return Optional.of((ArrayList<Feedback>) feedbacks);
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_FEEDBACKS);
+                    return Optional.empty();
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_FEEDBACKS_FILE_PATH));
+                return Optional.empty();
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_FEEDBACKS + ex);
+            return Optional.empty();
+        }
+    }
+
+    @Override
+    public Boolean createOffer(String userId, String eventId, String photographerId, Boolean isActive, Date creationDate) {
+        try {
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_OFFERS_FILE_PATH);
+            XML_OffersTable table;
+            if (source.length() == 0) {
+                List<Offer> offers_array = new ArrayList<>();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Event event = getEvent(eventId).orElse(null);
+                User photographer = getProfile(photographerId).orElse(null);
+                Offer newOffer = new Offer(newId,
+                        user, event, photographer, isActive, creationDate);
+                offers_array.add(newOffer);
+                table = new XML_OffersTable();
+                table.setOffers(offers_array);
+                File result = new File(Constants.XML_OFFERS_FILE_PATH);
+                log.info(String.format(Constants.SUCCESS_NEW_OFFER_XML, newId));
+                serializer.write(table, result);
+                return true;
+            } else {
+                table = serializer.read(XML_OffersTable.class, source);
+                List<Offer> writedOffers = table.getxmlOffers();
+                UUID newId = UUID.randomUUID();
+                User user = getProfile(userId).orElse(null);
+                Event event = getEvent(eventId).orElse(null);
+                User photographer = getProfile(photographerId).orElse(null);
+                Offer newOffer = new Offer(newId,
+                        user, event, photographer, isActive, creationDate);
+                writedOffers.add(newOffer);
+                table.setOffers(writedOffers);
+                File result = new File(Constants.XML_OFFERS_FILE_PATH);
+                serializer.write(table, result);
+                log.info(String.format(Constants.SUCCESS_NEW_OFFER_XML, newId));
+                return true;
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_INSERT_QUERY + ex.getMessage());
+            return false;
+        }
+    }
+
+    @Override
+    public Optional<ArrayList<Offer>> getAllOffersById(String eventId) {
+        try{
+            Serializer serializer = new Persister();
+            File source = new File(Constants.XML_OFFERS_FILE_PATH);
+            if (source.length() > 0) {
+                XML_OffersTable table;
+                table = serializer.read(XML_OffersTable.class, source);
+                List<Offer> offers = table.getxmlOffers();
+                for (int i=0; i < offers.size(); i++) {
+                    if (!offers.get(i).getEvent().getId().equals(eventId)){
+                        offers.remove(i);
+                    }
+                }
+                if (offers.size() != 0){
+                    return Optional.of((ArrayList<Offer>) offers);
+                } else {
+                    log.info(Constants.EMPTY_GET_ALL_OFFERS);
+                    return Optional.empty();
+                }
+            } else {
+                log.info(String.format(Constants.ERROR_XML_EMPTY_FILE, Constants.XML_OFFERS_FILE_PATH));
+                return Optional.empty();
+            }
+        } catch (Exception ex) {
+            log.error(Constants.ERROR_GET_ALL_OFFERS + ex);
+            return Optional.empty();
+        }
+    }
+
 }

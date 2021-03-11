@@ -1,0 +1,62 @@
+<feedbacks_table>
+   <feedbacks class="java.util.ArrayList">
+      <feedback>
+         <id class="java.lang.String">e695cace-1c28-4453-9157-9fe68a65dc0f</id>
+         <user>
+            <id class="java.lang.String">c180bff9-5980-4406-9101-97e0032edd1d</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
+            <id class="java.lang.String">963dd22a-7027-4f17-b5af-a1f3fe57883c</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>PHOTOGRAPHER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+            <rating>0.0</rating>
+            <experience>0</experience>
+            <costLevel>NONE</costLevel>
+         </photographer>
+         <rate>5</rate>
+         <text>thank_you</text>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </feedback>
+      <feedback>
+         <id class="java.lang.String">8e140220-9f02-4215-882d-6a908484ed78</id>
+         <user>
+            <id class="java.lang.String">b9fb1f88-ec83-4630-9778-2d4008056f0f</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <photographer class="ru.sfedu.photosearch.newModels.Photographer">
+            <id class="java.lang.String">f6568497-49af-4579-aaa9-8bdc8a4d1ca9</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>PHOTOGRAPHER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+            <rating>0.0</rating>
+            <experience>0</experience>
+            <costLevel>NONE</costLevel>
+         </photographer>
+         <rate>5</rate>
+         <text>thank_you</text>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </feedback>
+   </feedbacks>
+</feedbacks_table>

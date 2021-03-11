@@ -25,9 +25,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class DataProviderCSVTest {
     public static final Logger log = LogManager.getLogger(DataProviderCSVTest.class);
     DataProviderCSV provider;
-    String xml_profile_id_global = Constants.UTIL_EMPTY_STRING;
-    String xml_photo_id_global = Constants.UTIL_EMPTY_STRING;
-    String xml_event_id_global = Constants.UTIL_EMPTY_STRING;
 
     @BeforeEach
     void setUp() {
@@ -142,7 +139,7 @@ class DataProviderCSVTest {
 //    @Test
 //    void getPhotoPathById() {
 //        addPhoto();
-//        String args = "DB SHOW_PHOTO " + provider.getLastPhotoId();
+//        String args = "CSV SHOW_PHOTO " + provider.getLastPhotoId();
 //        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
 //        assertTrue(result);
 //    }
@@ -172,6 +169,15 @@ class DataProviderCSVTest {
     }
 
     @Test
+    void getLastPhotographerId() {
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        String result = provider.getLastPhotographerId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
     void getAllUsers() {
         createNewProfile();
         Optional<ArrayList<User>> result = provider.getAllUsers();
@@ -196,22 +202,6 @@ class DataProviderCSVTest {
     }
 
     @Test
-    void addComment() {
-        addPhoto();
-        String args = "CSV ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
-
-    @Test
-    void getAllComments() {
-        addPhoto();
-        String args = "CSV GET_ALL_COMMENTS";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
-
-    @Test
     void searchUsers() {
         createNewProfile();
         String args = "CSV SEARCH_USERS town Moscow";
@@ -232,6 +222,82 @@ class DataProviderCSVTest {
     void searchEvents() {
         createNewEvent();
         String args = "CSV SEARCH_EVENTS description competition";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addComment() {
+        addPhoto();
+        String args = "CSV ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void getAllCommentsById() {
+        addComment();
+        String args = "CSV GET_ALL_COMMENTS " + provider.getLastPhotoId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addRate() {
+        addPhoto();
+        String args = "CSV ADD_RATE " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " 5";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllRates() {
+        addRate();
+        String args = "CSV GET_ALL_RATES " + provider.getLastPhotoId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addFeedback() {
+        createNewProfile();
+        String userId = provider.getLastUserId();
+
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+
+        String photographerId = provider.getLastPhotographerId();
+
+        args = "CSV ADD_FEEDBACK " + userId + " " + photographerId + " 5 thank_you";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllFeedbacks() {
+        addFeedback();
+        String args = "CSV GET_ALL_FEEDBACKS " + provider.getLastPhotographerId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addOffer() {
+        createNewProfile();
+        createNewEvent();
+        String args = "CSV CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+
+        String userId = provider.getLastUserId();
+        String eventId = provider.getLastEventId();
+        String photographerId = provider.getLastPhotographerId();
+
+        args = "CSV CREATE_OFFER " + userId + " " + eventId + " " + photographerId;
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllOffers() {
+        addOffer();
+        String args = "CSV GET_ALL_OFFERS " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }

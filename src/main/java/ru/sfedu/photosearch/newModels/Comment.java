@@ -110,7 +110,7 @@ public class Comment<T> {
         return result;
     }
 
-    public String getCSVPhotoOutput(){
+    public String getCSVCommentOutput(){
         String result = String.format(Constants.CSV_COMMENTS_OUTPUT,
                 checkNull(getId().toString()),
                 checkNullUser(getUser()),

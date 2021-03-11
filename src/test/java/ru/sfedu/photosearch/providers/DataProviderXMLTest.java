@@ -25,10 +25,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class DataProviderXMLTest {
     public static final Logger log = LogManager.getLogger(DataProviderXMLTest.class);
     DataProviderXML provider;
-    String xml_profile_id_global = Constants.UTIL_EMPTY_STRING;
-    String xml_photo_id_global  = Constants.UTIL_EMPTY_STRING;
-    String xml_event_id_global  = Constants.UTIL_EMPTY_STRING;
-
 
     @BeforeEach
     void setUp() {
@@ -144,7 +140,7 @@ class DataProviderXMLTest {
 //    @Test
 //    void getPhotoPathById() {
 //        addPhoto();
-//        String args = "DB SHOW_PHOTO " + provider.getLastPhotoId();
+//        String args = "XML SHOW_PHOTO " + provider.getLastPhotoId();
 //        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
 //        assertTrue(result);
 //    }
@@ -174,6 +170,15 @@ class DataProviderXMLTest {
     }
 
     @Test
+    void getLastPhotographerId() {
+        String args = "XML CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        String result = provider.getLastPhotographerId();
+        log.info(result);
+        assertNotNull(result);
+    }
+
+    @Test
     void getAllUsers() {
         createNewProfile();
         Optional<ArrayList<User>> result = provider.getAllUsers();
@@ -198,22 +203,6 @@ class DataProviderXMLTest {
     }
 
     @Test
-    void addComment() {
-        addPhoto();
-        String args = "XML ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
-
-    @Test
-    void getAllComments() {
-        addPhoto();
-        String args = "XML GET_ALL_COMMENTS";
-        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        assertTrue(result);
-    }
-
-    @Test
     void searchUsers() {
         createNewProfile();
         String args = "XML SEARCH_USERS town Moscow";
@@ -223,9 +212,9 @@ class DataProviderXMLTest {
 
     @Test
     void searchPhotographers() {
-        String args = "DB CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        String args = "XML CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
         Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
-        args = "DB SEARCH_PHOTOGRAPHERS town Moscow";
+        args = "XML SEARCH_PHOTOGRAPHERS town Moscow";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -234,6 +223,82 @@ class DataProviderXMLTest {
     void searchEvents() {
         createNewEvent();
         String args = "XML SEARCH_EVENTS description competition";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addComment() {
+        addPhoto();
+        String args = "XML ADD_COMMENT " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " beautiful_photo";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void getAllCommentsById() {
+        addComment();
+        String args = "XML GET_ALL_COMMENTS " + provider.getLastPhotoId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addRate() {
+        addPhoto();
+        String args = "XML ADD_RATE " + provider.getLastUserId() + " " + provider.getLastPhotoId() + " 5";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllRates() {
+        addRate();
+        String args = "XML GET_ALL_RATES " + provider.getLastPhotoId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addFeedback() {
+        createNewProfile();
+        String userId = provider.getLastUserId();
+
+        String args = "XML CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+
+        String photographerId = provider.getLastPhotographerId();
+
+        args = "XML ADD_FEEDBACK " + userId + " " + photographerId + " 5 thank_you";
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllFeedbacks() {
+        addFeedback();
+        String args = "XML GET_ALL_FEEDBACKS " + provider.getLastPhotographerId();
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+
+    @Test
+    void addOffer() {
+        createNewProfile();
+        createNewEvent();
+        String args = "XML CREATE_NEW_PROFILE Sergey Esenin 12-10-1999 photographer Moscow";
+        Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+
+        String userId = provider.getLastUserId();
+        String eventId = provider.getLastEventId();
+        String photographerId = provider.getLastPhotographerId();
+
+        args = "XML CREATE_OFFER " + userId + " " + eventId + " " + photographerId;
+        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
+        assertTrue(result);
+    }
+    @Test
+    void getAllOffers() {
+        addOffer();
+        String args = "XML GET_ALL_OFFERS " + provider.getLastEventId();
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }

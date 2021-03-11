@@ -2,10 +2,7 @@ package ru.sfedu.photosearch.providers;
 
 import ru.sfedu.photosearch.enums.EventType;
 import ru.sfedu.photosearch.enums.Role;
-import ru.sfedu.photosearch.newModels.Comment;
-import ru.sfedu.photosearch.newModels.Event;
-import ru.sfedu.photosearch.newModels.Photo;
-import ru.sfedu.photosearch.newModels.User;
+import ru.sfedu.photosearch.newModels.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -62,6 +59,8 @@ public interface DataProvider{
 
     String getLastPhotoId();
 
+    String getLastPhotographerId();
+
     Optional<ArrayList<User>> getAllUsers();
 
     Optional<ArrayList<Event>> getAllEvents();
@@ -70,13 +69,19 @@ public interface DataProvider{
 
     Boolean addComment(String userId, String photoId, String comment, Date date);
 
-    Optional<ArrayList<Comment>> getAllComments();
+    Optional<ArrayList<Comment>> getAllCommentsById(String photoId);
 
-    Boolean addRate(String userId, String photoId, Float rate, Date date);
+    Boolean addRate(String userId, String photoId, Integer rate, Date date);
 
-    Boolean addFeedback(String userId, String photographerId, Float rate, Date creationDate);
+    Optional<ArrayList<Rate>> getAllRatesById(String photoId);
 
-    Boolean createOffer(String userId, String eventId, Date creationDate);
+    Boolean addFeedback(String userId, String photographerId, Integer rate, String text, Date creationDate);
+
+    Optional<ArrayList<Feedback>> getAllFeedbacksById(String photographerId);
+
+    Boolean createOffer(String userId, String eventId, String photographerId, Boolean isActive, Date creationDate);
+
+    Optional<ArrayList<Offer>> getAllOffersById(String eventId);
 
     Optional<ArrayList<User>> searchUsers(String field, String value);
 

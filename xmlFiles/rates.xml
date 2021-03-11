@@ -1,0 +1,62 @@
+<rates_table>
+   <rates class="java.util.ArrayList">
+      <rate>
+         <id class="java.lang.String">38626814-d701-4708-a330-8c02f8702c80</id>
+         <user>
+            <id class="java.lang.String">a8e90142-dbeb-45ef-a363-d6a4ad9c69f3</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <photo>
+            <id class="java.lang.String">f52657bf-6790-4e76-a06a-519dc25de6a1</id>
+            <user>
+               <id class="java.lang.String">a8e90142-dbeb-45ef-a363-d6a4ad9c69f3</id>
+               <name>Sergey</name>
+               <lastName>Esenin</lastName>
+               <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+               <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+               <role>CUSTOMER</role>
+               <town>Moscow</town>
+               <wallet>0.0</wallet>
+            </user>
+            <path>./testPhotos/test2.jpg</path>
+         </photo>
+         <rate>5</rate>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </rate>
+      <rate>
+         <id class="java.lang.String">428625d6-93de-4833-b520-a4959f69fcf5</id>
+         <user>
+            <id class="java.lang.String">a0705c39-eb25-4ec1-a7d0-8ad973e514a7</id>
+            <name>Sergey</name>
+            <lastName>Esenin</lastName>
+            <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+            <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+            <role>CUSTOMER</role>
+            <town>Moscow</town>
+            <wallet>0.0</wallet>
+         </user>
+         <photo>
+            <id class="java.lang.String">c978f03c-3bbc-45f9-a8dc-2adfbc92fb1e</id>
+            <user>
+               <id class="java.lang.String">a0705c39-eb25-4ec1-a7d0-8ad973e514a7</id>
+               <name>Sergey</name>
+               <lastName>Esenin</lastName>
+               <birthDay>1999-10-12 00:00:00.0 MSD</birthDay>
+               <dateOfRegistration>2021-03-11 00:00:00.0 MSK</dateOfRegistration>
+               <role>CUSTOMER</role>
+               <town>Moscow</town>
+               <wallet>0.0</wallet>
+            </user>
+            <path>./testPhotos/test2.jpg</path>
+         </photo>
+         <rate>5</rate>
+         <date>2021-03-11 00:00:00.0 MSK</date>
+      </rate>
+   </rates>
+</rates_table>

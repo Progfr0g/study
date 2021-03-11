@@ -19,6 +19,8 @@ public class Constants {
     public static final String XML_PHOTOS_FILE_PATH = "./xmlFiles/photos.xml";
     public static final String XML_COMMENTS_FILE_PATH = "./xmlFiles/comments.xml";
     public static final String XML_RATES_FILE_PATH = "./xmlFiles/rates.xml";
+    public static final String XML_FEEDBACKS_FILE_PATH = "./xmlFiles/feedbacks.xml";
+    public static final String XML_OFFERS_FILE_PATH = "./xmlFiles/offers.xml";
 
     public static final String CSV_DIR_PATH = "./csvFiles";
     public static final String CSV_USERS_FILE_PATH = "./csvFiles/users.csv";
@@ -27,13 +29,17 @@ public class Constants {
     public static final String CSV_PHOTOS_FILE_PATH = "./csvFiles/photos.csv";
     public static final String CSV_COMMENTS_FILE_PATH = "./csvFiles/comments.csv";
     public static final String CSV_RATES_FILE_PATH = "./csvFiles/rates.csv";
+    public static final String CSV_FEEDBACKS_FILE_PATH = "./csvFiles/feedbacks.csv";
+    public static final String CSV_OFFERS_FILE_PATH = "./csvFiles/offers.csv";
 
     public static final String CSV_USERS_COLUMNS = "id, name, lastName, age, dateOfRegistration, role, town, wallet";
     public static final String CSV_PHOTOGRAPHERS_COLUMNS = "id, name, lastName, age, dateOfRegistration, role, town, wallet, rating, experience, costLevel";
     public static final String CSV_EVENTS_COLUMNS = "id, title, description, customer, executor, event_date, price, quantity, payment_method, paid, payment_date, status";
     public static final String CSV_PHOTOS_COLUMNS = "id, user_id, event_id, title, description, tag, photo_path";
-    public static final String CSV_COMMENTS_COLUMNS = "id, user_id, photo_id, text, date";
-    public static final String CSV_RATES_COLUMNS = "id, user_id, photo_id, rate, date";
+    public static final String CSV_COMMENTS_COLUMNS = "id, userId, photoId, text, date";
+    public static final String CSV_RATES_COLUMNS = "id, userId, photoId, rate, date";
+    public static final String CSV_FEEDBACKS_COLUMNS = "id, userId, photographerId, rate, text, date";
+    public static final String CSV_OFFERS_COLUMNS = "id, userId, eventId, photographerId, isActive, date";
 
     public static final String TABLE_USERS =
             "CREATE TABLE IF NOT EXISTS USERS (" +
@@ -81,9 +87,26 @@ public class Constants {
             "CREATE TABLE IF NOT EXISTS RATES (" +
                     "id IDENTITY, " +
                     "userId INT," +
-                    "photographerId INT," +
-                    "rate FLOAT(2)," +
+                    "photoId INT," +
+                    "rate INT," +
                     "date DATE)";
+    public static final String TABLE_FEEDBACKS =
+            "CREATE TABLE IF NOT EXISTS FEEDBACKS (" +
+                    "id IDENTITY, " +
+                    "userId INT," +
+                    "photographerId INT," +
+                    "rate INT," +
+                    "text VARCHAR,"+
+                    "date DATE)";
+    public static final String TABLE_OFFERS =
+            "CREATE TABLE IF NOT EXISTS OFFERS (" +
+                    "id IDENTITY, " +
+                    "userId INT," +
+                    "eventId INT," +
+                    "photographerId INT," +
+                    "isActive boolean,"+
+                    "date DATE)";
+
 
     public static final String M_CREATE_NEW_PROFILE = "CREATE_NEW_PROFILE";
     public static final String M_CREATE_NEW_EVENT = "CREATE_NEW_EVENT";
@@ -104,11 +127,16 @@ public class Constants {
     public static final String M_GET_ALL_EVENTS = "GET_ALL_EVENTS";
     public static final String M_GET_ALL_PHOTOS = "GET_ALL_PHOTOS";
     public static final String M_GET_ALL_COMMENTS = "GET_ALL_COMMENTS";
+    public static final String M_GET_ALL_RATES = "GET_ALL_RATES";
+    public static final String M_GET_ALL_FEEDBACKS = "GET_ALL_FEEDBACKS";
+    public static final String M_GET_ALL_OFFERS = "GET_ALL_OFFERS";
     public static final String M_SEARCH_USERS = "SEARCH_USERS";
     public static final String M_SEARCH_PHOTOGRAPHERS = "SEARCH_PHOTOGRAPHERS";
     public static final String M_SEARCH_EVENTS = "SEARCH_EVENTS";
-
     public static final String M_ADD_RATE = "ADD_RATE";
+    public static final String M_ADD_FEEDBACK = "ADD_FEEDBACK";
+    public static final String M_CREATE_OFFER = "CREATE_OFFER";
+
 
     public static final String INSERT_USERS_QUERY = "INSERT INTO USERS " +
             "(name, last_name, birthday, date_of_registration, role, town) VALUES ('%s','%s',TO_DATE('%s','dd-MM-yyyy'),TO_DATE('%s','dd-MM-yyyy'),'%s','%s')";
@@ -132,26 +160,25 @@ public class Constants {
     public static final String INSERT_COMMENTS_QUERY = "INSERT INTO %s " +
             "(userId, photoId, comment, date) " +
             "VALUES (%s, %s, '%s',TO_DATE('%s','dd-MM-yyyy'))";
-    public static final String SELECT_COMMENTS_QUERY = "SELECT * FROM %s WHERE id = ";
-    public static final String UPDATE_COMMENTS_QUERY = "UPDATE %s SET %s = '%s' WHERE id = ";
-    public static final String DELETE_COMMENTS_QUERY = "DELETE FROM %s WHERE id = ";
 
     public static final String INSERT_RATES_QUERY = "INSERT INTO %s " +
-            "(userId, photoId, comment, date) " +
+            "(userId, photoId, rate, date) " +
             "VALUES (%s, %s, %s, TO_DATE('%s','dd-MM-yyyy'))";
-    public static final String DELETE_RATES_QUERY = "DELETE FROM %s WHERE id = ";
-    public static final String SELECT_RATES_FOR_PHOTO = "SELECT * FROM RATES WHERE id = ";
-    public static final String SELECT_AVG_RATE_FOR_PHOTO = "SELECT AVG(rate) FROM RATES WHERE id = ";
-    public static final String SELECT_COMMENTS_FOR_PHOTO = "SELECT * FROM COMMENTS WHERE id = ";
 
+    public static final String INSERT_FEEDBACKS_QUERY = "INSERT INTO %s " +
+            "(userId, photographerId, rate, text, date) " +
+            "VALUES (%s, %s, %s,'%s', TO_DATE('%s','dd-MM-yyyy'))";
+
+    public static final String INSERT_OFFERS_QUERY = "INSERT INTO %s " +
+            "(userId, eventId, photographerId, isActive, date) " +
+            "VALUES (%s, %s, %s, %s, TO_DATE('%s','dd-MM-yyyy'))";
     public static final String SELECT_PORTFOLIO_QUERY = "SELECT * FROM PHOTOS WHERE userId = ";
     public static final String SELECT_PHOTO_PATH_QUERY = "SELECT photoPath FROM PHOTOS WHERE id = ";
 
     public static final String SELECT_LAST_USER_QUERY = "SELECT * FROM USERS order by id desc LIMIT(1)";
     public static final String SELECT_LAST_EVENT_QUERY = "SELECT * FROM EVENTS order by id desc LIMIT(1)";
     public static final String SELECT_LAST_PHOTO_QUERY = "SELECT * FROM PHOTOS order by id desc LIMIT(1)";
-    public static final String SELECT_LAST_COMMENT_QUERY = "SELECT * FROM COMMENTS order by id desc LIMIT(1)";
-    public static final String SELECT_LAST_RATE_QUERY = "SELECT * FROM RATES order by id desc LIMIT(1)";
+    public static final String SELECT_LAST_PHOTOGRAPHER_QUERY = "SELECT * FROM USERS where role = 'photographer' order by id desc LIMIT(1)";
 
     public static final String SELECT_USER_SEARCH = "SELECT * FROM USERS WHERE %s = '%s'";
     public static final String SELECT_PHOTOGRAPHER_SEARCH = "SELECT * FROM USERS WHERE %s = '%s' and role = 'photographer'";
@@ -160,27 +187,11 @@ public class Constants {
     public static final String SELECT_ALL_USERS = "SELECT * FROM USERS";
     public static final String SELECT_ALL_EVENTS = "SELECT * FROM EVENTS";
     public static final String SELECT_ALL_PHOTOS = "SELECT * FROM PHOTOS";
-    public static final String SELECT_ALL_COMMENTS= "SELECT * FROM COMMENTS";
-    public static final String SELECT_ALL_RATES = "SELECT * FROM RATES";
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;'
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
-//    public static final String;
+    public static final String SELECT_ALL_COMMENTS= "SELECT * FROM COMMENTS where photoId = %s";
+    public static final String SELECT_ALL_RATES = "SELECT * FROM RATES where photoId = %s";
+    public static final String SELECT_ALL_FEEDBACKS = "SELECT * FROM FEEDBACKS where photographerId = %s";
+    public static final String SELECT_ALL_OFFERS = "SELECT * FROM OFFERS where eventId = %s";
+
     public static final String DEBUG_SUCCESS_INSERT = "[INSERTED %d rows]";
     public static final String DEBUG_SUCCESS_UPDATE = "[UPDATED %d rows]";
     public static final String DEBUG_SUCCESS_DELETE = "[DELETED %d rows]";
@@ -199,11 +210,17 @@ public class Constants {
     public static final String SUCCESS_DELETE_PROFILE = "****Successfully deleted profile with id %s !****";
     public static final String SUCCESS_DELETE_EVENT = "****Successfully deleted event with id %s !****";
     public static final String SUCCESS_ADD_PHOTO = "****Successfully added photo for profile with id %s !****";
-    public static final String SUCCESS_ADD_COMMENT = "****Successfully added comment for profile with id %s !****";
+    public static final String SUCCESS_ADD_COMMENT = "****Successfully added comment for photo with id %s !****";
+    public static final String SUCCESS_ADD_RATE = "****Successfully added rate for photo with id %s !****";
+    public static final String SUCCESS_ADD_FEEDBACK = "****Successfully added feedback for photographer with id %s !****";
+    public static final String SUCCESS_ADD_OFFER = "****Successfully added offer for event with id %s !****";
     public static final String SUCCESS_GET_ALL_USERS = "****Successfully get all users!****";
     public static final String SUCCESS_GET_ALL_EVENTS = "****Successfully get all events!****";
     public static final String SUCCESS_GET_ALL_PHOTOS = "****Successfully get all photos!****";
     public static final String SUCCESS_GET_ALL_COMMENTS = "****Successfully get all comments!****";
+    public static final String SUCCESS_GET_ALL_RATES = "****Successfully get all rates!****";
+    public static final String SUCCESS_GET_ALL_FEEDBACKS = "****Successfully get all feedbacks!****";
+    public static final String SUCCESS_GET_ALL_OFFERS = "****Successfully get all offers!****";
 
     public static final String SUCCESS_GET_PHOTO = "****Successfully get photo from profile with id %s !****";
     public static final String SUCCESS_UPDATE_PHOTO = "****Successfully updated photo from profile with id %s !****";
@@ -222,7 +239,9 @@ public class Constants {
     public static final String SUCCESS_DELETE_PHOTO_XML = "Deleted photo with id: %s";
     public static final String SUCCESS_NEW_PHOTO_XML = "New photo id: %s";;
     public static final String SUCCESS_NEW_COMMENT_XML = "New comment id: %s";;
-    public static final String SUCCESS_NEW_RATE_XML = "New photo id: %s";;
+    public static final String SUCCESS_NEW_RATE_XML = "New rate id: %s";;
+    public static final String SUCCESS_NEW_FEEDBACK_XML = "New feedback id: %s";;
+    public static final String SUCCESS_NEW_OFFER_XML = "New offer id: %s";;
 
     public static final String ERROR_INCORRECTLY_CHOSEN_PROVIDER = "Dataprovider was chosen incorrectly: ";
     public static final String ERROR_TABLES_CREATING = "Failed to create database tables.";
@@ -230,6 +249,7 @@ public class Constants {
     public static final String ERROR_INCORRECT_INPUT_ARGS = "Input args is incorrect.";
     public static final String ERROR_GET_PROFILE = "Failed to get profile with id %s. ";
     public static final String ERROR_GET_LAST_PROFILE = "Failed to get last profile. ";
+    public static final String ERROR_GET_LAST_PHOTOGRAPHER= "Failed to get last photographer. ";
     public static final String ERROR_GET_ALL_PROFILES = "Failed to get all profiles. ";
     public static final String ERROR_GET_PROFILES_SEARCH = "Failed to get all profiles by search. ";
     public static final String ERROR_GET_EVENTS_SEARCH = "Failed to get all events by search. ";
@@ -247,6 +267,9 @@ public class Constants {
     public static final String ERROR_GET_LAST_PHOTO = "Failed to get last photo. ";
     public static final String ERROR_GET_ALL_PHOTOS = "Failed to get all photos. ";
     public static final String ERROR_GET_ALL_COMMENTS = "Failed to get all comments. ";
+    public static final String ERROR_GET_ALL_RATES = "Failed to get all rates. ";
+    public static final String ERROR_GET_ALL_FEEDBACKS = "Failed to get all feedbacks. ";
+    public static final String ERROR_GET_ALL_OFFERS = "Failed to get all offers. ";
     public static final String ERROR_GET_PORTFOLIO = "Failed to get portfolio with profile id %s. ";
     public static final String ERROR_SHOW_PHOTO = "Failed to show photo with id %s. ";
     public static final String ERROR_GET_PHOTO_PATH = "Failed to get photo path with id %s. ";
@@ -257,6 +280,8 @@ public class Constants {
     public static final String ERROR_PHOTO_CONVERT = "Photo convertion from csv to Photo() has been failed";
     public static final String ERROR_COMMENT_CONVERT = "Comment convertion from csv to Comment() has been failed";
     public static final String ERROR_RATE_CONVERT = "Rate convertion from csv to Rate() has been failed";
+    public static final String ERROR_FEEDBACK_CONVERT = "Feedback convertion from csv to Feedback() has been failed";
+    public static final String ERROR_OFFER_CONVERT = "Offer convertion from csv to Offer() has been failed";
     public static final String ERROR_FILE_DOESNT_EXISTS = "[The file: %s doesn't exist.]";
 
     public static final String FAILURE = "Failed to run method.";
@@ -268,6 +293,7 @@ public class Constants {
     public static final String EMPTY_GET_PHOTO_PATH = "[Photo path with photo id %s not exists.] Empty response received.";
 
     public static final String EMPTY_GET_LAST_USER = "[Failed to get last profile.] Empty response received.";
+    public static final String EMPTY_GET_LAST_PHOTOGRAPHER = "[Failed to get last photographer.] Empty response received.";
     public static final String EMPTY_GET_LAST_EVENT = "[Failed to get last event.] Empty response received.";
     public static final String EMPTY_GET_LAST_PHOTO = "[Failed to get last photo.] Empty response received.";
 
@@ -278,13 +304,18 @@ public class Constants {
     public static final String EMPTY_GET_EVENTS_SEARCH = "[Failed to get events by search.] Empty response received.";
     public static final String EMPTY_GET_ALL_PHOTOS = "[Failed to get all photos.] Empty response received.";
     public static final String EMPTY_GET_ALL_COMMENTS = "[Failed to get all comments.] Empty response received.";
+    public static final String EMPTY_GET_ALL_RATES = "[Failed to get all rates.] Empty response received.";
+    public static final String EMPTY_GET_ALL_FEEDBACKS = "[Failed to get all feedbacks.] Empty response received.";
+    public static final String EMPTY_GET_ALL_OFFERS = "[Failed to get all offers.] Empty response received.";
 
     public static final String XML_USERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
     public static final String XML_PHOTOGRAPHERS_OUTPUT = "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nrating: %s\nexperience: %s\ncostLevel: %s\n";
     public static final String XML_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
     public static final String XML_PHOTOS_OUTPUT = "\nid: %s\nuserId: %s\neventId: %s\ntitle: %s\ndescription: %s\ntag: %s\nphotoPath: %s";
     public static final String XML_COMMENTS_OUTPUT = "\nid: %s\nuserId: %s\nphotoId: %s\ntext: %s\ndate: %s\n";
-    public static final String XML_RATES_OUTPUT = "\nid: %s\nuserId: %s\nphotographerId: %s\nrate: %s\ndate: %s\n";
+    public static final String XML_FEEDBACKS_OUTPUT = "\nid: %s\nuserId: %s\nphotographerId: %s\nrate: %s\ntext: %s\ndate: %s";
+    public static final String XML_OFFERS_OUTPUT = "\nid: %s\nuserId: %s\neventId: %s\nphotographerId: %s\nisActive: %s\ndate: %s";
+    public static final String XML_RATES_OUTPUT = "\nid: %s\nuserId: %s\nphotoId: %s\nrate: %s\ndate: %s\n";
 
 
     public static final String CSV_USERS_OUTPUT  = "%s,%s,%s,%s,%s,%s,%s,%s";
@@ -292,9 +323,9 @@ public class Constants {
     public static final String CSV_EVENTS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_PHOTOS_OUTPUT = "%s,%s,%s,%s,%s,%s,%s";
     public static final String CSV_COMMENTS_OUTPUT = "%s,%s,%s,%s,%s";
-//    public static final String CSV_USERS_OUTPUT= "\nid: %s\nname: %s\nlastName: %s\nbirthDay: %s\ndateOfRegistration: %s\nrole: %s\ntown: %s\nwallet: %s\n";
-//    public static final String CSV_EVENTS_OUTPUT = "\nid: %s\ntitle: %s\ndescription: %s\neventDate: %s\ncreationDate: %s\nprice: %s\nquantity: %s\ncustomer: %s\nexecutor: %s\nstatus: %s\ntype: %s\n";
-//    public static final String CSV_PHOTOS_OUTPUT = "\nid: %s\nuser_id: %s\nevent_id: %s\ntitle: %s\ndescription: %s\ntag: %s\nphoto_path: %s";
+    public static final String CSV_FEEDBACKS_OUTPUT = "%s,%s,%s,%s,%s,%s";
+    public static final String CSV_RATES_OUTPUT = "%s,%s,%s,%s,%s";
+    public static final String CSV_OFFERS_OUTPUT = "%s,%s,%s,%s,%s,%s";
 
     public static final String UTIL_SPACE = " ";
     public static final String UTIL_NEW_LINE = "\n";

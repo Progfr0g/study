@@ -2,24 +2,25 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import ru.sfedu.photosearch.newModels.Event;
+import ru.sfedu.photosearch.newModels.Comment;
+import ru.sfedu.photosearch.newModels.Feedback;
 
 import java.util.List;
 
 
-@Root (name="events_table")
+@Root (name="feedbacks_table")
 public class XML_FeedbacksTable {
     @ElementList
-    private List<Event> events;
+    private List<Feedback> feedbacks;
 
-    public List<Event> getxmlEvents() {
-        return events;
+    public List<Feedback> getxmlFeedbacks() {
+        return feedbacks;
     }
 
-    public void setEvents(List<Event> events) {
-        for (Event event:events){
-            event.setId(event.getId().toString());
+    public void setFeedbacks(List<Feedback> feedbacks) {
+        for (Feedback feedback: feedbacks){
+            feedback.setId(feedback.getId().toString());
         }
-        this.events = events;
+        this.feedbacks = feedbacks;
     }
 }

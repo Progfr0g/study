@@ -97,6 +97,8 @@ public class Database {
                 run(Constants.TABLE_EVENTS) &&
                 run(Constants.TABLE_PHOTOS) &&
                 run(Constants.TABLE_COMMENTS) &&
+                run(Constants.TABLE_FEEDBACKS) &&
+                run(Constants.TABLE_OFFERS) &&
                 run(Constants.TABLE_RATES)){
             log.debug(Constants.SUCCESS_TABLES_CREATING);
         } else {
