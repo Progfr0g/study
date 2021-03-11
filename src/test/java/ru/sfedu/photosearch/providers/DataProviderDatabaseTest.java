@@ -75,8 +75,8 @@ class DataProviderDatabaseTest {
 
     @Test
     void editEventById() {
-        createNewProfile();
-        String args = "DB EDIT_EVENT " + provider.getLastEventId() + " customer " + provider.getLastUserId();
+        createNewEvent();
+        String args = "DB EDIT_EVENT " + provider.getLastEventId() + " title racing";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
@@ -132,7 +132,7 @@ class DataProviderDatabaseTest {
 //    @Test
 //    void getPhotoPathById() {
 //        addPhoto();
-//        String args = "DB SHOW_PHOTO " + provider.getLastPhotoId();
+//        String args = "CSV SHOW_PHOTO " + provider.getLastPhotoId();
 //        Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
 //        assertTrue(result);
 //    }

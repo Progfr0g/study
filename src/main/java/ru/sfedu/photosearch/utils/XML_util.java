@@ -12,6 +12,11 @@ import java.util.List;
 
 public class XML_util {
     private static Logger log = LogManager.getLogger(XML_util.class);
+
+    /**
+     * Создание файлов и папок XML
+     * @throws IOException
+     */
     public static void createFiles() throws IOException {
         List<String> paths = new ArrayList<>();
         paths.add(ConfigurationUtil.getConfigurationEntry(Constants.XML_CONFIG_USERS_FILE_PATH));
@@ -42,12 +47,19 @@ public class XML_util {
         }
     }
 
-
+    /**
+     * используется для удаления файлов после тестов
+     */
     public static void deleteFiles() throws IOException {
         try {
             File theDir = new File(Constants.XML_DIR_PATH);
             if (theDir.exists()) {
                 theDir.delete();
+                String[] entries = theDir.list();
+                for(String s: entries){
+                    File currentFile = new File(theDir.getPath(),s);
+                    currentFile.delete();
+                }
             }
         } catch (Exception e) {
             log.info("An error occurred." + e.getMessage());

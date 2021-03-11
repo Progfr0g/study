@@ -142,3 +142,170 @@ rating: 0.0
 experience: 0
 costLevel: NONE
 
+11 мар. 2021 07:21:22,519 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:21:22,521 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:21:22,523 [main] ERROR ru.sfedu.photosearch.utils.Database - Database connection failure: java.io.FileNotFoundException: .\src\main\resources\environment.properties (Не удается найти указанный файл)
+11 мар. 2021 07:22:16,260 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:22:16,262 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:22:16,265 [main] ERROR ru.sfedu.photosearch.utils.Database - Database connection failure: java.io.FileNotFoundException: .\src\main\resources\environment.properties (Не удается найти указанный файл)
+11 мар. 2021 07:23:17,742 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:23:17,744 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:23:17,873 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:23:17,895 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 мар. 2021 07:23:33,601 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:23:33,603 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:23:33,724 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:23:33,745 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: evgeniy
+lastName: govor
+birthDay: Mon Oct 11 00:00:00 MSD 1999
+dateOfRegistration: Thu Mar 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: rostov
+wallet: 0.0
+
+11 мар. 2021 07:23:33,745 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get all users!****
+11 мар. 2021 07:23:42,856 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:23:42,858 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:23:42,981 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:23:43,002 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+name: evgeniy
+lastName: govor
+birthDay: Mon Oct 11 00:00:00 MSD 1999
+dateOfRegistration: Thu Mar 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: rostov
+wallet: 0.0
+
+11 мар. 2021 07:23:57,426 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:23:57,428 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:23:57,438 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:23:57,441 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 мар. 2021 07:23:57,441 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.
+11 мар. 2021 07:24:15,554 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:24:15,556 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:24:15,560 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:24:15,746 [main] INFO  ru.sfedu.photosearch.providers.DataProviderCSV - New profile id: 2952e07f-f995-459e-a4d2-bbd7b5b3e8f1
+11 мар. 2021 07:24:15,747 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 мар. 2021 07:24:19,275 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:24:19,277 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:24:19,280 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:24:19,325 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.GET_PROFILE
+11 мар. 2021 07:24:19,325 [main] ERROR ru.sfedu.photosearch.Main - Failed to run method.
+11 мар. 2021 07:24:30,336 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:24:30,337 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:24:30,341 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:24:38,098 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:24:38,100 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:24:38,106 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:24:38,152 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2952e07f-f995-459e-a4d2-bbd7b5b3e8f1
+name: evgeniy
+lastName: govor
+birthDay: Mon Oct 11 00:00:00 MSD 1999
+dateOfRegistration: Thu Mar 11 00:00:00 MSK 2021
+role: CUSTOMER
+town: rostov
+wallet: 0.0
+
+11 мар. 2021 07:24:38,152 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully get all users!****
+11 мар. 2021 07:25:50,624 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:25:50,626 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:25:50,746 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:25:50,763 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "150"
+11 мар. 2021 07:26:06,245 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:26:06,247 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:26:06,365 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:15,809 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:15,811 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:15,931 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:29,218 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:29,220 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:29,342 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:29,358 [main] ERROR ru.sfedu.photosearch.utils.Formatter - java.text.ParseException: Unparseable date: "11-10"
+11 мар. 2021 07:28:29,364 [main] ERROR ru.sfedu.photosearch.Main - Input args is incorrect.
+11 мар. 2021 07:28:33,216 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:33,218 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:33,343 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:39,917 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:39,919 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:40,039 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:40,069 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new event!****
+11 мар. 2021 07:28:51,170 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:51,171 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:51,292 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:51,292 [main] ERROR ru.sfedu.photosearch.Main - Input args is incorrect.
+11 мар. 2021 07:28:54,047 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:28:54,048 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:28:54,168 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:28:54,188 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Profile with id null not exists.] Empty response received.
+11 мар. 2021 07:28:54,193 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+title: auto_race
+description: competition
+eventDate: Sun Feb 14 00:00:00 MSK 2021
+creationDate: Thu Mar 11 00:00:00 MSK 2021
+price: 150
+quantity: 2.5
+customer: 1
+executor: 
+status: none
+type: order
+
+11 мар. 2021 07:31:43,556 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:31:43,558 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:31:43,681 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:31:43,704 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully created new profile!****
+11 мар. 2021 07:31:56,408 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:31:56,410 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:31:56,533 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:31:56,556 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+name: Sergey
+lastName: Esenin
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Mar 11 00:00:00 MSK 2021
+role: PHOTOGRAPHER
+town: Moscow
+rating: 0.0
+experience: 0
+costLevel: NONE
+
+11 мар. 2021 07:31:56,556 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+11 мар. 2021 07:32:07,159 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:32:07,161 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:32:07,282 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:32:07,304 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 2
+name: Sergey
+lastName: Esenin
+birthDay: Tue Oct 12 00:00:00 MSD 1999
+dateOfRegistration: Thu Mar 11 00:00:00 MSK 2021
+role: PHOTOGRAPHER
+town: Moscow
+rating: 0.0
+experience: 0
+costLevel: NONE
+
+11 мар. 2021 07:32:07,304 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully finded users by search !****
+11 мар. 2021 07:32:39,987 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:32:39,989 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:32:40,108 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:32:40,128 [main] INFO  ru.sfedu.photosearch.Main - ****Successfully added photo for profile with id 1 !****
+11 мар. 2021 07:32:47,547 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:32:47,549 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:32:47,670 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------
+11 мар. 2021 07:32:47,688 [main] INFO  ru.sfedu.photosearch.providers.DataProviderDatabase - [Event with id null not exists.] Empty response received.
+11 мар. 2021 07:32:47,689 [main] INFO  ru.sfedu.photosearch.Main - 
+id: 1
+userId: 1
+eventId: 
+title: 
+description: 
+tag: 
+photoPath: ./testPhotos/test3.jpg
+11 мар. 2021 07:32:53,852 [main] INFO  ru.sfedu.photosearch.Main - App starting...
+11 мар. 2021 07:32:53,853 [main] INFO  ru.sfedu.photosearch.Main - DataProvider initialising...
+11 мар. 2021 07:32:53,977 [main] INFO  ru.sfedu.photosearch.Main - ---------APP IS WORKING---------

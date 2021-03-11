@@ -2,6 +2,7 @@ package ru.sfedu.photosearch.providers;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.photosearch.Constants;
@@ -11,7 +12,9 @@ import ru.sfedu.photosearch.Models.Photo;
 import ru.sfedu.photosearch.Models.User;
 import ru.sfedu.photosearch.utils.CSV_util;
 
+import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
@@ -24,9 +27,15 @@ class DataProviderCSVTest {
 
     @BeforeEach
     void setUp() throws IOException {
+        CSV_util.deleteFiles();
         provider = new DataProviderCSV();
         CSV_util.createFiles();
     }
+
+//    @AfterAll
+//    static void clean(){
+//        CSV_util.deleteFiles();
+//    }
 
     @Test
     void createNewProfile() {
@@ -78,7 +87,7 @@ class DataProviderCSVTest {
 
     @Test
     void editEventById() {
-        createNewProfile();
+        createNewEvent();
         String args = "CSV EDIT_EVENT " + provider.getLastEventId() + " title racing";
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
@@ -297,4 +306,5 @@ class DataProviderCSVTest {
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);
     }
+
 }

@@ -2,6 +2,7 @@ package ru.sfedu.photosearch.providers;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.photosearch.Constants;
@@ -9,6 +10,7 @@ import ru.sfedu.photosearch.Main;
 import ru.sfedu.photosearch.Models.Event;
 import ru.sfedu.photosearch.Models.Photo;
 import ru.sfedu.photosearch.Models.User;
+import ru.sfedu.photosearch.utils.CSV_util;
 import ru.sfedu.photosearch.utils.XML_util;
 
 import java.io.IOException;
@@ -24,10 +26,15 @@ class DataProviderXMLTest {
 
     @BeforeEach
     void setUp() throws IOException {
+        XML_util.deleteFiles();
         provider = new DataProviderXML();
         XML_util.createFiles();
     }
 
+    @AfterAll
+    static void clean() throws IOException {
+        XML_util.deleteFiles();
+    }
 
     @Test
     void createNewProfile() {
@@ -79,7 +86,7 @@ class DataProviderXMLTest {
 
     @Test
     void editEventById() {
-        createNewProfile();
+        createNewEvent();
         String args = "XML EDIT_EVENT " + provider.getLastEventId() + " title racing";;
         Boolean result = Main.chooseMethod(provider, Arrays.asList(args.split(Constants.UTIL_SPACE)));
         assertTrue(result);

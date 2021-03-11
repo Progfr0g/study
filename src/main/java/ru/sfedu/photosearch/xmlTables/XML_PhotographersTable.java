@@ -2,11 +2,15 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
+import ru.sfedu.photosearch.Models.Offer;
 import ru.sfedu.photosearch.Models.Photographer;
 
 import java.util.List;
 
-
+/**
+ * таблица для конвертации фотографов из XML
+ * @see Photographer
+ */
 @Root (name="photographers_table")
 public class XML_PhotographersTable {
     @ElementList

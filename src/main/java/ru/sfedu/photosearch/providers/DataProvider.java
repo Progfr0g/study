@@ -16,7 +16,7 @@ public interface DataProvider{
      * Создание нового профиля
      * @param name - имя пользователя
      * @param lastName - фамилия пользователя
-     * @param birthDay - день рождение пользователя
+     * @param birthDay - день рождения пользователя
      * @param dateOfRegistration - дата регистрации пользователя
      * @param role - роль пользователя
      * @param town - город проживания
@@ -134,7 +134,7 @@ public interface DataProvider{
 
     /**
      * Удаление фотографии по ID
-     * @param id - ID профиля
+     * @param id - ID фото
      * @return Boolean: true - метод выполнен успешно
      *                  false - метод выполнен с ошибками
      */
@@ -233,7 +233,7 @@ public interface DataProvider{
 
     /**
      * Создание отзыва к фотографу
-     * @param userId - ID пользователя, который оставляет отзыва
+     * @param userId - ID пользователя, который оставляет отзыв
      * @param photographerId - ID фотографии, к которой адресован отзыв
      * @param rate - оценка
      * @param text - текст отзыва
@@ -241,7 +241,11 @@ public interface DataProvider{
      * @return Boolean: true - метод выполнен успешно
      *                  false - метод выполнен с ошибками
      */
-    Boolean addFeedback(String userId, String photographerId, Integer rate, String text, Date creationDate);
+    Boolean addFeedback(String userId,
+                        String photographerId,
+                        Integer rate,
+                        String text,
+                        Date creationDate);
 
     /**
      * Получение всех отзывов по ID фотографа
@@ -253,19 +257,23 @@ public interface DataProvider{
     /**
      * Создание заявки к событию
      * @param userId - ID пользователя (заказчика)
-     * @param eventId - ID события, на который идет заявка
+     * @param eventId - ID события, на которое идет заявка
      * @param photographerId - ID фотографа, которой откликается на заявку
      * @param isActive - состояние заявки
      * @param creationDate - дата создания заявки
      * @return Boolean: true - метод выполнен успешно
      *                  false - метод выполнен с ошибками
      */
-    Boolean createOffer(String userId, String eventId, String photographerId, Boolean isActive, Date creationDate);
+    Boolean createOffer(String userId,
+                        String eventId,
+                        String photographerId,
+                        Boolean isActive,
+                        Date creationDate);
 
     /**
      * Получение всех заявок по ID события
      * @param eventId - ID события
-     * @return Объект Optional<ArrayList<Offer>> - все объекты отзывов данного события
+     * @return Объект Optional<ArrayList<Offer>> - все объекты заявок данного события
      */
     Optional<ArrayList<Offer>> getAllOffersById(String eventId);
 
@@ -275,7 +283,8 @@ public interface DataProvider{
      * @param value - искомое значение
      * @return Объект Optional<ArrayList<User>> - все объекты пользоватей, соответствующие критерию поиска
      */
-    Optional<ArrayList<User>> searchUsers(String field, String value);
+    Optional<ArrayList<User>> searchUsers(String field,
+                                          String value);
 
     /**
      * Поиск среди всех фотографов по полю и значению

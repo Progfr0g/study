@@ -13,6 +13,7 @@ public class Constants {
     public static final String DB_FILE_PATH = "db.filepath";
 
     public static final String XML_CONFIG_DIR_PATH = "xml.dir_path";
+    public static final String DB_DIR_PATH = "./dbFile";
     public static final String XML_CONFIG_USERS_FILE_PATH = "xml.users_file_path";
     public static final String XML_CONFIG_PHOTOGRAPHERS_FILE_PATH = "xml.photographers_file_path";
     public static final String XML_CONFIG_EVENTS_FILE_PATH = "xml.events_file_path";

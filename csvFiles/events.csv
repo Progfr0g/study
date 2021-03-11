@@ -1,8 +1,1 @@
 "id","title","description","customer","executor","event_date","price","quantity","payment_method","paid","payment_date","status"
-"fd4b35da-07a4-40e5-9c26-8cd59b8f59b7","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","55bb8656-5587-45e9-a28e-4454079a74b5","","none","order"
-"7d5b115b-286f-44f3-a813-8ef7d831c4f1","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","d5174e28-dd45-4b61-bd94-d7888fdf92e5","","none","order"
-"eb1736c5-a7dc-4740-a99b-5a5632f419d6","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","0f6e137e-8dc3-4c8b-9551-a25df34aab84","","none","order"
-"cabc987b-f02c-4c82-ab48-3303c816107f","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","9d4a5298-d94c-4f4d-be85-325130943ec5","","none","order"
-"7aea331c-b3cb-4394-910c-9acacfc1eeba","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","9bc06059-021d-4aa9-a90a-5f2e07b9e0ab","","none","order"
-"032a76e8-fb51-4926-b890-13dff27876c5","racing","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","2c461fb5-98e0-4895-9f3a-ddb47230ebb7","","none","order"
-"d57198ab-07d4-4ab0-90f2-e330cc42c933","auto_race","competition","Sun Feb 14 00:00:00 MSK 2021","Thu Mar 11 00:00:00 MSK 2021","150","2.5","289ef47e-5b36-4eba-ad85-8d71ce036a38","","none","order"

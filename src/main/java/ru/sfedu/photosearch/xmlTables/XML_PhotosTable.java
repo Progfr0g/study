@@ -4,10 +4,14 @@ import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 //import ru.sfedu.photosearch.newModels.Event;
 import ru.sfedu.photosearch.Models.Photo;
+import ru.sfedu.photosearch.Models.Photographer;
 
 import java.util.List;
 
-
+/**
+ * таблица для конвертации фотографий из XML
+ * @see Photo
+ */
 @Root (name="photos_table")
 public class XML_PhotosTable {
     @ElementList

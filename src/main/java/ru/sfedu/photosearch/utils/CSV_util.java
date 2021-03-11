@@ -97,4 +97,23 @@ public class CSV_util {
             log.info("An error occurred." + ex.getMessage());
         }
     }
+
+    /**
+     * используется для удаления файлов после тестов
+     */
+    public static void deleteFiles() {
+        try {
+            File theDir = new File(ConfigurationUtil.getConfigurationEntry(Constants.CSV_CONFIG_DIR_PATH));
+            if (theDir.exists()) {
+                theDir.delete();
+                String[] entries = theDir.list();
+                for(String s: entries){
+                    File currentFile = new File(theDir.getPath(),s);
+                    currentFile.delete();
+                }
+            }
+        } catch (Exception e) {
+            log.info("An error occurred." + e.getMessage());
+        }
+    }
 }

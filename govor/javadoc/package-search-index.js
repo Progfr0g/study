@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ru.sfedu.photosearch"},{"l":"ru.sfedu.photosearch.enums"},{"l":"ru.sfedu.photosearch.Models"},{"l":"ru.sfedu.photosearch.providers"},{"l":"ru.sfedu.photosearch.utils"},{"l":"ru.sfedu.photosearch.xmlTables"}]

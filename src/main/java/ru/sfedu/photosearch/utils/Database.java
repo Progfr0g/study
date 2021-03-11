@@ -12,6 +12,11 @@ public class Database {
     private static Logger log = LogManager.getLogger(Database.class);
     private static Connection connection;
 
+    /**
+     * Подключение к БД
+     * @return Boolean: true - метод выполнен успешно
+     *                  false - метод выполнен с ошибками
+     */
     public boolean connect(){
         try {
             String db_file;
@@ -28,6 +33,10 @@ public class Database {
         return false;
     }
 
+    /**
+     * Выполнение запроса на выборку
+     * @return ResultSet - полученные значения
+     */
     public ResultSet select(String query){
         try {
             ResultSet result = connection.prepareStatement(query).executeQuery();
@@ -38,6 +47,11 @@ public class Database {
         return null;
     }
 
+    /**
+     * Выполнение запроса на поиск
+     * @return ResultSet - выбранные значения
+     * @deprecated (не используется)
+     */
     public ResultSet select_search(String query){
         try {
             ResultSet result = connection.prepareStatement(query).executeQuery();
@@ -48,6 +62,10 @@ public class Database {
         return null;
     }
 
+    /**
+     * Выполнение запроса на вставку
+     * @return int кол-во изменненных строк
+     */
     public int insert(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
@@ -59,6 +77,10 @@ public class Database {
         return 0;
     }
 
+    /**
+     * Выполнение запроса на обновление
+     * @return int кол-во изменненных строк
+     */
     public int update(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
@@ -70,6 +92,10 @@ public class Database {
         return 0;
     }
 
+    /**
+     * Выполнение запроса на удаление
+     * @return int кол-во изменненных строк
+     */
     public int delete(String query){
         try {
             int result = connection.prepareStatement(query).executeUpdate();
@@ -81,6 +107,11 @@ public class Database {
         return 0;
     }
 
+    /**
+     * Выполнение различных запросов
+     * @return Boolean: true - метод выполнен успешно
+     *                  false - метод выполнен с ошибками
+     */
     public boolean run(String query){
         try {
             connection.prepareStatement(query).execute();
@@ -91,6 +122,11 @@ public class Database {
         return false;
     }
 
+    /**
+     * Закрытие соединения с БД
+     * @return Boolean: true - метод выполнен успешно
+     *                  false - метод выполнен с ошибками
+     */
     public boolean closeConnection(){
         try {
             connection.close();
@@ -101,6 +137,9 @@ public class Database {
         }
     }
 
+    /**
+     * Создание таблиц
+     */
     public void createTables() {
         if (run(Constants.TABLE_USERS) &&
                 run(Constants.TABLE_EVENTS) &&
@@ -112,6 +151,22 @@ public class Database {
             log.debug(Constants.SUCCESS_TABLES_CREATING);
         } else {
             log.error(Constants.ERROR_TABLES_CREATING);
+        }
+    }
+
+    public static void deleteFiles() throws IOException {
+        try {
+            File theDir = new File(Constants.DB_DIR_PATH);
+            if (theDir.exists()) {
+                theDir.delete();
+                String[] entries = theDir.list();
+                for(String s: entries){
+                    File currentFile = new File(theDir.getPath(),s);
+                    currentFile.delete();
+                }
+            }
+        } catch (Exception e) {
+            log.info("An error occurred." + e.getMessage());
         }
     }
 }

@@ -7,7 +7,10 @@ import ru.sfedu.photosearch.Models.Comment;
 
 import java.util.List;
 
-
+/**
+ * таблица для конвертации комментариев из XML
+ * @see Comment
+ */
 @Root (name="comments_table")
 public class XML_CommentsTable {
     @ElementList

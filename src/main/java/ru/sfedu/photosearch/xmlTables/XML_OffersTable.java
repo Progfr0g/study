@@ -2,11 +2,15 @@ package ru.sfedu.photosearch.xmlTables;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
+import ru.sfedu.photosearch.Models.Feedback;
 import ru.sfedu.photosearch.Models.Offer;
 
 import java.util.List;
 
-
+/**
+ * таблица для конвертации заявок из XML
+ * @see Offer
+ */
 @Root (name="offers_table")
 public class XML_OffersTable {
     @ElementList

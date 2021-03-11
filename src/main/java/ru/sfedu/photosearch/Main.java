@@ -607,7 +607,8 @@ public class Main {
                 }
             }
             default:
-                throw new IllegalStateException("Unexpected method: " + args.get(1));
+                log.error("Unexpected method: " + args.get(1));
+                return false;
         }
     }
 
